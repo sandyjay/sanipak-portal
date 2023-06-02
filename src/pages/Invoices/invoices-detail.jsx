@@ -42,27 +42,37 @@ const InvoiceDetail = (props) => {
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Invoices" breadcrumbItem="Invoice Detail" />
+          <Breadcrumbs title='Invoices' breadcrumbItem='Invoice Detail' />
           {!isEmpty(invoiceDetail) && (
             <Row>
-              <Col lg="12">
+              <Col lg='12'>
                 <Card>
                   <CardBody>
-                    <div className="invoice-title">
-                      <h4 className="float-end font-size-16">
+                    <div className='invoice-title'>
+                      <h4 className='float-end font-size-16'>
                         Order # {invoiceDetail.orderId}
                       </h4>
-                      <div className="mb-4">
-                        <img src={logo} alt="logo-dark" className="logo-dark-element" height="20" />
-                          <img src={logoLight} alt="logo-light" className="logo-light-element" height="20" />
+                      <div className='mb-4'>
+                        <img
+                          src={logo}
+                          alt='logo-dark'
+                          className='logo-dark-element'
+                          height='20'
+                        />
+                        <img
+                          src={logoLight}
+                          alt='logo-light'
+                          className='logo-light-element'
+                          height='20'
+                        />
                       </div>
                     </div>
                     <hr />
                     <Row>
-                      <Col sm="6">
+                      <Col sm='6'>
                         <address>
                           <strong>Billed To:</strong>
                           <br />
@@ -77,7 +87,7 @@ const InvoiceDetail = (props) => {
                           )}
                         </address>
                       </Col>
-                      <Col sm="6" className="text-sm-end">
+                      <Col sm='6' className='text-sm-end'>
                         <address>
                           <strong>Shipped To:</strong>
                           <br />
@@ -94,7 +104,7 @@ const InvoiceDetail = (props) => {
                       </Col>
                     </Row>
                     <Row>
-                      <Col sm="6" className="mt-3">
+                      <Col sm='6' className='mt-3'>
                         <address>
                           <strong>Payment Method:</strong>
                           <br />
@@ -103,7 +113,7 @@ const InvoiceDetail = (props) => {
                           {invoiceDetail.email}
                         </address>
                       </Col>
-                      <Col sm="6" className="mt-3 text-sm-end">
+                      <Col sm='6' className='mt-3 text-sm-end'>
                         <address>
                           <strong>Order Date:</strong>
                           <br />
@@ -113,16 +123,16 @@ const InvoiceDetail = (props) => {
                         </address>
                       </Col>
                     </Row>
-                    <div className="py-2 mt-3">
-                      <h3 className="font-size-15 fw-bold">Order summary</h3>
+                    <div className='py-2 mt-3'>
+                      <h3 className='font-size-15 fw-bold'>Order summary</h3>
                     </div>
-                    <div className="table-responsive">
-                      <Table className="table-nowrap">
+                    <div className='table-responsive'>
+                      <Table className='table-nowrap'>
                         <thead>
                           <tr>
                             <th style={{ width: "70px" }}>No.</th>
                             <th>Item</th>
-                            <th className="text-end">Price</th>
+                            <th className='text-end'>Price</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -132,32 +142,32 @@ const InvoiceDetail = (props) => {
                               <tr key={key}>
                                 <td>{item.id}</td>
                                 <td>{item.item}</td>
-                                <td className="text-end">{item.price}</td>
+                                <td className='text-end'>{item.price}</td>
                               </tr>
                             )
                           )}
                           <tr>
-                            <td colSpan="2" className="text-end">
+                            <td colSpan='2' className='text-end'>
                               Sub Total
                             </td>
-                            <td className="text-end">
+                            <td className='text-end'>
                               {invoiceDetail.orderSummary.subTotal}
                             </td>
                           </tr>
                           <tr>
-                            <td colSpan="2" className="border-0 text-end">
+                            <td colSpan='2' className='border-0 text-end'>
                               <strong>Shipping</strong>
                             </td>
-                            <td className="border-0 text-end">
+                            <td className='border-0 text-end'>
                               {invoiceDetail.orderSummary.shipping}
                             </td>
                           </tr>
                           <tr>
-                            <td colSpan="2" className="border-0 text-end">
+                            <td colSpan='2' className='border-0 text-end'>
                               <strong>Total</strong>
                             </td>
-                            <td className="border-0 text-end">
-                              <h4 className="m-0">
+                            <td className='border-0 text-end'>
+                              <h4 className='m-0'>
                                 {invoiceDetail.orderSummary.total}
                               </h4>
                             </td>
@@ -165,17 +175,17 @@ const InvoiceDetail = (props) => {
                         </tbody>
                       </Table>
                     </div>
-                    <div className="d-print-none">
-                      <div className="float-end">
+                    <div className='d-print-none'>
+                      <div className='float-end'>
                         <Link
-                          to="#"
+                          to='#'
                           onClick={printInvoice}
-                          className="btn btn-success  me-2"
+                          className='btn btn-success  me-2'
                         >
-                          <i className="fa fa-print" />
+                          <i className='fa fa-print' />
                         </Link>
-                        <Link to="#" className="btn btn-primary w-md ">
-                          Send
+                        <Link to='#' className='btn btn-primary w-md m-1 '>
+                          Pay now
                         </Link>
                       </div>
                     </div>

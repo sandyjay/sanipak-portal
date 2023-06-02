@@ -30,23 +30,46 @@ const InvoicesList = (props) => {
     dispatch(onGetInvoices());
   }, [dispatch]);
 
+  const invoiceData = [
+    {
+      id: "1",
+      invoiceID: "NH78IG65",
+      company: "ABC Hospital",
+      invoicePrice: "5945",
+      date: "June 12, 2023",
+      due: true,
+    },
+  ];
+
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Invoices" breadcrumbItem="Invoice List" />
-
+          <div className='page-title-box d-sm-flex align-items-center justify-content-between'>
+            <h4 className='mb-0 font-size-18'>Accounting</h4>
+          </div>
           <Row>
+            <div className='page-title-box d-sm-flex align-items-center justify-content-between'>
+              <h3 className='mb-0 font-size-18'>Payment due</h3>
+            </div>
+            {map(invoiceData, (invoice, key) => (
+              <CardInvoice data={invoice} key={"_invoice_" + key} />
+            ))}
+          </Row>
+          <Row>
+            <div className='page-title-box d-sm-flex align-items-center justify-content-between'>
+              <h3 className='mb-0 font-size-18'>Paid invoices</h3>
+            </div>
             {map(invoices, (invoice, key) => (
               <CardInvoice data={invoice} key={"_invoice_" + key} />
             ))}
           </Row>
           <Row>
-            <Col xs="12">
-              <div className="text-center my-3">
-                <Link to="#" className="text-success">
-                  <i className="bx bx-loader bx-spin font-size-18 align-middle me-2" />
+            <Col xs='12'>
+              <div className='text-center my-3'>
+                <Link to='#' className='text-success'>
+                  <i className='bx bx-loader bx-spin font-size-18 align-middle me-2' />
                   Load more
                 </Link>
               </div>

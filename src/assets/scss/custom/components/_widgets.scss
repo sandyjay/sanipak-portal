@@ -1,37 +1,52 @@
-// 
+//
 // Widgets.scss
-// 
+//
 
-.mini-stats-wid{
-    .mini-stat-icon{
-        overflow: hidden;
-        position: relative;
-        &:before, &:after{
-            content: "";
-            position: absolute;
-            width: 8px;
-            height: 54px;
-            background-color: rgba($white,.1);
-            left: 16px;
-            transform: rotate(32deg);
-            top: -5px;
-            transition: all 0.4s;
-        }
-
-        &::after{
-            left: -12px;
-            width: 12px;
-            transition: all 0.2s;
-        }
+.mini-stats-wid {
+  .mini-stat-icon {
+    overflow: hidden;
+    position: relative;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 54px;
+      background-color: rgba($white, 0.1);
+      left: 16px;
+      transform: rotate(32deg);
+      top: -5px;
+      transition: all 0.4s;
     }
 
-    &:hover{
-        .mini-stat-icon{
-            &::after{
-                left: 60px;
-            }
-        }
+    &::after {
+      left: -12px;
+      width: 12px;
+      transition: all 0.2s;
     }
+  }
+
+  &:hover {
+    .mini-stat-icon {
+      &::after {
+        left: 60px;
+      }
+    }
+  }
 }
 
+.bluebg {
+  background-color: #d5eaf6 !important;
+}
+.biegebg {
+  background-color: #f7f2ee !important;
+}
 
+.dashboard-cardbody {
+  justify-content: center;
+  flex-direction: column;
+  min-height: 250px;
+  .avatar-sm {
+    margin-bottom: 20px;
+  }
+}

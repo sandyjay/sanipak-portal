@@ -1,7 +1,7 @@
 const invoiceList = [
   {
     id: 1,
-    founder: "Marion Burton",
+    founder: "ABC hospital",
     founderAt: "Skote",
     invoiceID: "14251",
     company: "Skote Dashboard UI",
@@ -18,17 +18,17 @@ const invoiceList = [
       items: [
         {
           id: 1,
-          item: "Skote - Admin Dashboard Template",
+          item: "May 2023",
           price: "$499.00",
         },
         {
           id: 2,
-          item: "Skote - Landing Template",
+          item: "Apr 2023",
           price: "$399.00",
         },
         {
           id: 3,
-          item: "Veltrix - Admin Dashboard Template",
+          item: "Mar 2023",
           price: "$499.00",
         },
       ],
@@ -341,6 +341,6 @@ const invoiceList = [
       total: "$1410.00",
     },
   },
-]
+];
 
-export { invoiceList }
+export { invoiceList };

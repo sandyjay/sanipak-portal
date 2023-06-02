@@ -26,10 +26,10 @@ function GlobalFilter({
 
   return (
     <Col sm={4}>
-      <div className="search-box me-2 mb-2 d-inline-block">
-        <div className="position-relative">
-          <label htmlFor="search-bar-0" className="search-label">
-            <span id="search-bar-0-label" className="sr-only">
+      <div className='search-box me-2 mb-2 d-inline-block'>
+        <div className='position-relative'>
+          <label htmlFor='search-bar-0' className='search-label'>
+            <span id='search-bar-0-label' className='sr-only'>
               Search this table
             </span>
             <input
@@ -37,14 +37,14 @@ function GlobalFilter({
                 setValue(e.target.value);
                 onChange(e.target.value);
               }}
-              id="search-bar-0"
-              type="text"
-              className="form-control"
+              id='search-bar-0'
+              type='text'
+              className='form-control'
               placeholder={`${count} records...`}
               value={value || ""}
             />
           </label>
-          <i className="bx bx-search-alt search-icon"></i>
+          <i className='bx bx-search-alt search-icon'></i>
         </div>
       </div>
     </Col>
@@ -119,16 +119,16 @@ const TableContainer = ({
   };
   return (
     <Fragment>
-      <Row className="mb-2">
+      <Row className='mb-2'>
         <Col md={customPageSizeOptions ? 2 : 1}>
           <select
-            className="form-select"
+            className='form-select'
             value={pageSize}
             onChange={onChangeInSelect}
           >
             {[10, 20, 30, 40, 50].map((pageSize) => (
               <option key={pageSize} value={pageSize}>
-                Show {pageSize}
+                {pageSize}
               </option>
             ))}
           </select>
@@ -141,45 +141,45 @@ const TableContainer = ({
           />
         )} */}
         {isAddOptions && (
-          <Col sm="11">
-            <div className="text-sm-end">
+          <Col sm='11'>
+            <div className='text-sm-end'>
               <Button
-                type="button"
-                color="success"
-                className="btn-rounded  mb-2 me-2"
+                type='button'
+                color='success'
+                className='btn-rounded  mb-2 me-2'
                 onClick={handleOrderClicks}
               >
-                <i className="mdi mdi-plus me-1" />
-                Add New Order
+                <i className='mdi mdi-plus me-1' />
+                Add a new record
               </Button>
             </div>
           </Col>
         )}
         {isAddUserList && (
-          <Col sm="11">
-            <div className="text-sm-end">
+          <Col sm='11'>
+            <div className='text-sm-end'>
               <Button
-                type="button"
-                color="primary"
-                className="btn mb-2 me-2"
+                type='button'
+                color='primary'
+                className='btn mb-2 me-2'
                 onClick={handleUserClick}
               >
-                <i className="mdi mdi-plus-circle-outline me-1" />
+                <i className='mdi mdi-plus-circle-outline me-1' />
                 Create New User
               </Button>
             </div>
           </Col>
         )}
         {isAddCustList && (
-          <Col sm="11">
-            <div className="text-sm-end">
+          <Col sm='11'>
+            <div className='text-sm-end'>
               <Button
-                type="button"
-                color="success"
-                className="btn-rounded mb-2 me-2"
+                type='button'
+                color='success'
+                className='btn-rounded mb-2 me-2'
                 onClick={handleCustomerClick}
               >
-                <i className="mdi mdi-plus me-1" />
+                <i className='mdi mdi-plus me-1' />
                 New Customers
               </Button>
             </div>
@@ -187,14 +187,14 @@ const TableContainer = ({
         )}
       </Row>
 
-      <div className="table-responsive react-table">
+      <div className='table-responsive react-table'>
         <Table bordered hover {...getTableProps()} className={className}>
-          <thead className="table-light table-nowrap">
+          <thead className='table-light table-nowrap'>
             {headerGroups.map((headerGroup) => (
               <tr key={headerGroup.id} {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column) => (
                   <th key={column.id}>
-                    <div className="mb-2" {...column.getSortByToggleProps()}>
+                    <div className='mb-2' {...column.getSortByToggleProps()}>
                       {column.render("Header")}
                       {generateSortingIndicator(column)}
                     </div>
@@ -226,18 +226,18 @@ const TableContainer = ({
         </Table>
       </div>
 
-      <Row className="justify-content-md-end justify-content-center align-items-center">
-        <Col className="col-md-auto">
-          <div className="d-flex gap-1">
+      <Row className='justify-content-md-end justify-content-center align-items-center'>
+        <Col className='col-md-auto'>
+          <div className='d-flex gap-1'>
             <Button
-              color="primary"
+              color='primary'
               onClick={() => gotoPage(0)}
               disabled={!canPreviousPage}
             >
               {"<<"}
             </Button>
             <Button
-              color="primary"
+              color='primary'
               onClick={previousPage}
               disabled={!canPreviousPage}
             >
@@ -245,15 +245,15 @@ const TableContainer = ({
             </Button>
           </div>
         </Col>
-        <Col className="col-md-auto d-none d-md-block">
+        <Col className='col-md-auto d-none d-md-block'>
           Page{" "}
           <strong>
             {pageIndex + 1} of {pageOptions.length}
           </strong>
         </Col>
-        <Col className="col-md-auto">
+        <Col className='col-md-auto'>
           <Input
-            type="number"
+            type='number'
             min={1}
             style={{ width: 70 }}
             max={pageOptions.length}
@@ -262,13 +262,13 @@ const TableContainer = ({
           />
         </Col>
 
-        <Col className="col-md-auto">
-          <div className="d-flex gap-1">
-            <Button color="primary" onClick={nextPage} disabled={!canNextPage}>
+        <Col className='col-md-auto'>
+          <div className='d-flex gap-1'>
+            <Button color='primary' onClick={nextPage} disabled={!canNextPage}>
               {">"}
             </Button>
             <Button
-              color="primary"
+              color='primary'
               onClick={() => gotoPage(pageCount - 1)}
               disabled={!canNextPage}
             >

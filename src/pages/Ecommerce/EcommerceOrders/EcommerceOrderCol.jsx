@@ -14,7 +14,7 @@ const toLowerCase1 = (str) => {
 
 const OrderId = (cell) => {
   return (
-    <Link to="#" className="text-body fw-bold">
+    <Link to='#' className='text-body fw-bold'>
       {cell.value ? cell.value : ""}
     </Link>
   );
@@ -32,23 +32,28 @@ const Total = (cell) => {
   return cell.value ? cell.value : "";
 };
 
+const Color = (cell) => {
+  return cell.value ? cell.value : "";
+};
+
 const PaymentStatus = (cell) => {
   return (
     <div
       className={
         "badge font-size-12 badge-soft-" +
-        (cell.value === "Paid"
+        (cell.value === "Pass"
           ? "success"
-          : "danger" && cell.value === "Refund"
+          : "danger" && cell.value === "Undetermined"
           ? "warning"
           : "danger")
       }
-      pill="true"
+      pill='true'
     >
       {cell.value}
     </div>
   );
 };
+
 const PaymentMethod = (cell) => {
   return (
     <span>

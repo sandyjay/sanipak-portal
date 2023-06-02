@@ -106,65 +106,65 @@ const ContactsProfile = (props) => {
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Contacts" breadcrumbItem="Profile" />
+          <Breadcrumbs title='Company ' breadcrumbItem='Company Overview' />
 
           <Row>
-            <Col xl="4">
-              <Card className="overflow-hidden">
-                <div className="bg-primary bg-soft">
+            <Col xl='4'>
+              <Card className='overflow-hidden'>
+                <div className='bg-primary bg-soft'>
                   <Row>
-                    <Col xs="7">
-                      <div className="text-primary p-3">
-                        <h5 className="text-primary">Welcome Back !</h5>
+                    <Col xs='7'>
+                      <div className='text-primary p-3'>
+                        <h5 className='text-primary'>Welcome Back !</h5>
                         <p>It will seem like simplified</p>
                       </div>
                     </Col>
-                    <Col xs="5" className="align-self-end">
-                      <img src={profile1} alt="" className="img-fluid" />
+                    <Col xs='5' className='align-self-end'>
+                      <img src={profile1} alt='' className='img-fluid' />
                     </Col>
                   </Row>
                 </div>
-                <CardBody className="pt-0">
+                <CardBody className='pt-0'>
                   <Row>
-                    <Col sm="4">
-                      <div className="avatar-md profile-user-wid mb-4">
+                    <Col sm='4'>
+                      <div className='avatar-md profile-user-wid mb-4'>
                         <img
                           src={userProfile.img}
-                          alt=""
-                          className="img-thumbnail rounded-circle"
+                          alt=''
+                          className='img-thumbnail rounded-circle'
                         />
                       </div>
-                      <h5 className="font-size-15 text-truncate">
+                      <h5 className='font-size-15 text-truncate'>
                         {userProfile.name}
                       </h5>
-                      <p className="text-muted mb-0 text-truncate">
+                      <p className='text-muted mb-0 text-truncate'>
                         {userProfile.designation}
                       </p>
                     </Col>
 
                     <Col sm={8}>
-                      <div className="pt-4">
+                      <div className='pt-4'>
                         <Row>
-                          <Col xs="6">
-                            <h5 className="font-size-15">
+                          <Col xs='6'>
+                            <h5 className='font-size-15'>
                               {userProfile.projectCount}
                             </h5>
-                            <p className="text-muted mb-0">Projects</p>
+                            <p className='text-muted mb-0'>Projects</p>
                           </Col>
-                          <Col xs="6">
-                            <h5 className="font-size-15">
+                          <Col xs='6'>
+                            <h5 className='font-size-15'>
                               ${userProfile.revenue}
                             </h5>
-                            <p className="text-muted mb-0">Revenue</p>
+                            <p className='text-muted mb-0'>Revenue</p>
                           </Col>
                         </Row>
-                        <div className="mt-4">
-                          <Link to="" className="btn btn-primary  btn-sm">
+                        <div className='mt-4'>
+                          <Link to='' className='btn btn-primary  btn-sm'>
                             View Profile{" "}
-                            <i className="mdi mdi-arrow-right ms-1" />
+                            <i className='mdi mdi-arrow-right ms-1' />
                           </Link>
                         </div>
                       </div>
@@ -175,27 +175,27 @@ const ContactsProfile = (props) => {
 
               <Card>
                 <CardBody>
-                  <CardTitle className="mb-4">Personal Information</CardTitle>
-                  <p className="text-muted mb-4">
+                  <CardTitle className='mb-4'>Personal Information</CardTitle>
+                  <p className='text-muted mb-4'>
                     {userProfile.personalDetail}
                   </p>
-                  <div className="table-responsive">
-                    <Table className="table-nowrap mb-0">
+                  <div className='table-responsive'>
+                    <Table className='table-nowrap mb-0'>
                       <tbody>
                         <tr>
-                          <th scope="row">Full Name :</th>
+                          <th scope='row'>Full Name :</th>
                           <td>{userProfile.name}</td>
                         </tr>
                         <tr>
-                          <th scope="row">Mobile :</th>
+                          <th scope='row'>Mobile :</th>
                           <td>{userProfile.phone}</td>
                         </tr>
                         <tr>
-                          <th scope="row">E-mail :</th>
+                          <th scope='row'>E-mail :</th>
                           <td>{userProfile.email}</td>
                         </tr>
                         <tr>
-                          <th scope="row">Location :</th>
+                          <th scope='row'>Location :</th>
                           <td>{userProfile.location}</td>
                         </tr>
                       </tbody>
@@ -204,11 +204,11 @@ const ContactsProfile = (props) => {
                 </CardBody>
               </Card>
 
-              <Card>
+              {/* <Card>
                 <CardBody>
-                  <CardTitle className="mb-5">Experience</CardTitle>
+                  <CardTitle className='mb-5'>Experience</CardTitle>
                   <div>
-                    <ul className="verti-timeline list-unstyled">
+                    <ul className='verti-timeline list-unstyled'>
                       {map(userProfile.experiences, (experience, i) => (
                         <li
                           className={
@@ -218,7 +218,7 @@ const ContactsProfile = (props) => {
                           }
                           key={"_exp_" + i}
                         >
-                          <div className="event-timeline-dot">
+                          <div className='event-timeline-dot'>
                             <i
                               className={
                                 experience.id === 1
@@ -227,8 +227,8 @@ const ContactsProfile = (props) => {
                               }
                             />
                           </div>
-                          <div className="d-flex">
-                            <div className="me-3">
+                          <div className='d-flex'>
+                            <div className='me-3'>
                               <i
                                 className={
                                   "bx " +
@@ -237,17 +237,17 @@ const ContactsProfile = (props) => {
                                 }
                               />
                             </div>
-                            <div className="flex-grow-1">
+                            <div className='flex-grow-1'>
                               <div>
-                                <h5 className="font-size-15">
+                                <h5 className='font-size-15'>
                                   <Link
                                     to={experience.link}
-                                    className="text-dark"
+                                    className='text-dark'
                                   >
                                     {experience.designation}
                                   </Link>
                                 </h5>
-                                <span className="text-primary">
+                                <span className='text-primary'>
                                   {experience.timeDuration}
                                 </span>
                               </div>
@@ -258,10 +258,10 @@ const ContactsProfile = (props) => {
                     </ul>
                   </div>
                 </CardBody>
-              </Card>
+              </Card> */}
             </Col>
 
-            <Col xl="8">
+            <Col xl='8'>
               <Row>
                 {map(miniCards, (card, key) => (
                   <MiniCards
@@ -272,17 +272,17 @@ const ContactsProfile = (props) => {
                   />
                 ))}
               </Row>
-              <Card>
+              {/* <Card>
                 <CardBody>
-                  <CardTitle className="mb-4">Revenue</CardTitle>
-                  <div id="revenue-chart">
+                  <CardTitle className='mb-4'>Revenue</CardTitle>
+                  <div id='revenue-chart'>
                     <ApexRevenue dataColors='["--bs-primary"]' />
                   </div>
                 </CardBody>
-              </Card>
-              <Card>
+              </Card> */}
+              {/* <Card>
                 <CardBody>
-                  <CardTitle className="mb-4">My Projects</CardTitle>
+                  <CardTitle className='mb-4'>My Projects</CardTitle>
 
                   <TableContainer
                     columns={columns}
@@ -292,7 +292,7 @@ const ContactsProfile = (props) => {
                     customPageSizeOptions={true}
                   />
                 </CardBody>
-              </Card>
+              </Card> */}
             </Col>
           </Row>
         </Container>

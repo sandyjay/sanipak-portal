@@ -65,6 +65,7 @@ function EcommerceOrder() {
 
     initialValues: {
       orderId: (order && order.orderId) || "",
+      color: (order && order.color) || "black",
       billingName: (order && order.billingName) || "",
       orderdate: (order && order.orderdate) || "",
       total: (order && order.total) || "",
@@ -90,6 +91,7 @@ function EcommerceOrder() {
         const updateOrder = {
           id: order ? order.id : 0,
           orderId: values.orderId,
+          color: values.color,
           billingName: values.billingName,
           orderdate: values.orderdate,
           total: values.total,
@@ -104,6 +106,7 @@ function EcommerceOrder() {
         const newOrder = {
           id: Math.floor(Math.random() * (30 - 20)) + 20,
           orderId: values["orderId"],
+          color: values["color"],
           billingName: values["billingName"],
           orderdate: values["orderdate"],
           total: values["total"],
@@ -194,7 +197,7 @@ function EcommerceOrder() {
   const columns = useMemo(
     () => [
       {
-        Header: "Order ID",
+        Header: "BI Lot",
         accessor: "orderId",
         width: "150px",
         style: {
@@ -208,7 +211,23 @@ function EcommerceOrder() {
         },
       },
       {
-        Header: "Billing Name",
+        Header: "Color",
+        accessor: "color",
+        filterable: true,
+        Cell: () => {
+          return "Purple";
+        },
+      },
+      {
+        Header: "Version",
+        accessor: "verion",
+        filterable: true,
+        Cell: (cellProps) => {
+          return "Test";
+        },
+      },
+      {
+        Header: "Created by",
         accessor: "billingName",
         filterable: true,
         Cell: (cellProps) => {
@@ -216,7 +235,7 @@ function EcommerceOrder() {
         },
       },
       {
-        Header: "Date",
+        Header: "Created at",
         accessor: "orderdate",
         filterable: true,
         Cell: (cellProps) => {
@@ -224,15 +243,7 @@ function EcommerceOrder() {
         },
       },
       {
-        Header: "Total",
-        accessor: "total",
-        filterable: true,
-        Cell: (cellProps) => {
-          return <Total {...cellProps} />;
-        },
-      },
-      {
-        Header: "Payment Status",
+        Header: "Result",
         accessor: "paymentStatus",
         filterable: true,
         Cell: (cellProps) => {
@@ -240,27 +251,26 @@ function EcommerceOrder() {
         },
       },
       {
-        Header: "Payment Method",
+        Header: "Temp",
+        accessor: "total",
+        filterable: true,
+        Cell: (cellProps) => {
+          return "36 degrees";
+        },
+      },
+
+      {
+        Header: "Time in",
         accessor: "paymentMethod",
         Cell: (cellProps) => {
-          return <PaymentMethod {...cellProps} />;
+          return "2023-01-06, 04:19PM";
         },
       },
       {
-        Header: "View Details",
-        accessor: "view",
-        disableFilters: true,
-        Cell: () => {
-          return (
-            <Button
-              type='button'
-              color='primary'
-              className='btn-sm btn-rounded'
-              onClick={toggleViewModal}
-            >
-              View Details
-            </Button>
-          );
+        Header: "Time out",
+        accessor: "paymentMethosd",
+        Cell: (cellProps) => {
+          return "2023-01-06, 04:19PM";
         },
       },
       {
@@ -314,7 +324,9 @@ function EcommerceOrder() {
       />
       <div className='page-content'>
         <div className='container-fluid'>
-          <Breadcrumbs title='Ecommerce' breadcrumbItem='Orders' />
+          <div className='page-title-box d-sm-flex align-items-center justify-content-between'>
+            <h4 className='mb-0 font-size-18'>BI records</h4>
+          </div>
           <Row>
             <Col xs='12'>
               <Card>
@@ -334,7 +346,7 @@ function EcommerceOrder() {
           </Row>
           <Modal isOpen={modal} toggle={toggle}>
             <ModalHeader toggle={toggle} tag='h4'>
-              {!!isEdit ? "Edit Order" : "Add Order"}
+              {!!isEdit ? "Edit Order" : "Add a new record"}
             </ModalHeader>
             <ModalBody>
               <Form
@@ -347,7 +359,7 @@ function EcommerceOrder() {
                 <Row>
                   <Col className='col-12'>
                     <div className='mb-3'>
-                      <Label className='form-label'>Order Id</Label>
+                      <Label className='form-label'>BI lot</Label>
                       <Input
                         name='orderId'
                         type='text'

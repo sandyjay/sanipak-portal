@@ -6,6 +6,9 @@ import {
   Col,
   Button,
   Card,
+  CardHeader,
+  CardTitle,
+  CardText,
   CardBody,
   Input,
   Modal,
@@ -57,11 +60,13 @@ const Dashboard = (props) => {
       title: "Create, edit and delete BI records",
       iconClass: "bx-task",
       description: "BI records",
+      color: "#f0f8ff",
     },
     {
       title: "Watch, read or download helpful docs",
       iconClass: "bx-video",
       description: "Training Materials",
+      color: "",
     },
     {
       title: "View and download invoices",
@@ -115,52 +120,75 @@ const Dashboard = (props) => {
     <React.Fragment>
       <div className='page-content'>
         <Container fluid>
-          {/* Render Breadcrumb */}
-          {/* <Breadcrumbs
-            title={props.t("Dashboards")}
-            breadcrumbItem={props.t("Dashboard")}
-          /> */}
-
           <Row>
-            <Col xl='8'>
+            {/* <Col xl='8'>
               <WelcomeComp />
             </Col>
             <Col xl='4'>
               <ActivityComp />
-            </Col>
+            </Col> */}
             <Col xl='12'>
               <Row>
                 {/* Reports Render */}
                 {reports.map((report, key) => (
                   <Col md='4' key={"_col_" + key} className='p-100'>
                     <Link to=''>
-                      <Card className='mini-stats-wid'>
-                        <CardBody>
+                      <Card
+                        className={
+                          key % 2 === 0
+                            ? "mini-stats-wid biegebg"
+                            : "mini-stats-wid bluebg"
+                        }
+                      >
+                        <CardBody className='d-flex dashboard-cardbody'>
+                          <div className='avatar-sm rounded-circle mini-stat-icon mb-4'>
+                            <span className='avatar-title rounded-circle bg-primary mb-15'>
+                              <i
+                                className={
+                                  "bx " + report.iconClass + " font-size-24"
+                                }
+                              ></i>
+                            </span>
+                          </div>
                           <div className='d-flex'>
                             <div className='flex-grow-1'>
-                              <p className='text-muted fw-medium'>
+                              <h4 className='mb-3'>{report.description}</h4>
+                              <p className='text-muted fw-medium' color='#fff'>
                                 {report.title}
                               </p>
-                              <h4 className='mb-0'>{report.description}</h4>
-                            </div>
-                            <div className='avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon'>
-                              <span className='avatar-title rounded-circle bg-primary'>
-                                <i
-                                  className={
-                                    "bx " + report.iconClass + " font-size-24"
-                                  }
-                                ></i>
-                              </span>
                             </div>
                           </div>
                         </CardBody>
                       </Card>
+                      {/* <Card
+                        color='primary'
+                        inverse
+                        style={{
+                          width: "18rem",
+                        }}
+                      >
+                        <CardHeader>
+                          <div className='avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon'>
+                            <span className='avatar-title rounded-circle bg-primary'>
+                              <i
+                                className={
+                                  "bx " + report.iconClass + " font-size-24"
+                                }
+                              ></i>
+                            </span>
+                          </div>
+                        </CardHeader>
+                        <CardBody>
+                          <CardTitle tag='h1'>{report.title}</CardTitle>
+                          <CardText>{report.description}</CardText>
+                        </CardBody>
+                      </Card> */}
                     </Link>
                   </Col>
                 ))}
               </Row>
 
-              {/* <Card>
+              <Card>
                 <CardBody>
                   <div className='d-sm-flex flex-wrap'>
                     <h4 className='card-title mb-4'>BI records overview</h4>
@@ -170,10 +198,9 @@ const Dashboard = (props) => {
                     dataColors='["--bs-success", "--bs-warning", "--bs-danger"]'
                   />
                 </CardBody>
-              </Card> */}
+              </Card>
             </Col>
           </Row>
-
           {/* <Row>
             <Col xl='4'>
               <SocialSource />
@@ -186,17 +213,15 @@ const Dashboard = (props) => {
               <TopCities />
             </Col>
           </Row> */}
-          {/* 
           <Row>
             <Col lg='12'>
               <LatestTranaction />
             </Col>
-          </Row> */}
+          </Row>
         </Container>
       </div>
 
-      {/* subscribe ModalHeader */}
-      <Modal
+      {/* <Modal
         isOpen={subscribemodal}
         role='dialog'
         autoFocus={true}
@@ -243,9 +268,9 @@ const Dashboard = (props) => {
             </div>
           </div>
         </div>
-      </Modal>
+      </Modal> */}
 
-      <Modal
+      {/* <Modal
         isOpen={modal}
         role='dialog'
         autoFocus={true}
@@ -348,7 +373,7 @@ const Dashboard = (props) => {
             </Button>
           </ModalFooter>
         </div>
-      </Modal>
+      </Modal> */}
     </React.Fragment>
   );
 };
