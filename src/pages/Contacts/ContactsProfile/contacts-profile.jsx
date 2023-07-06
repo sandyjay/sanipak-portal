@@ -41,12 +41,12 @@ const ContactsProfile = (props) => {
   // eslint-disable-next-line no-unused-vars
   const [miniCards, setMiniCards] = useState([
     {
-      title: "Completed Projects",
+      title: "PM Contract Type",
       iconClass: "bx-check-circle",
-      text: "125",
+      text: "Quarterly",
     },
-    { title: "Pending Projects", iconClass: "bx-hourglass", text: "12" },
-    { title: "Total Revenue", iconClass: "bx-package", text: "$36,524" },
+    { title: "Last Visit", iconClass: "bx-hourglass", text: "May 25, 2023" },
+    { title: "Upcoming Visit", iconClass: "bx-package", text: "Nov 10, 2023" },
   ]);
 
   useEffect(() => {
@@ -56,16 +56,7 @@ const ContactsProfile = (props) => {
   const columns = useMemo(
     () => [
       {
-        Header: "#",
-        accessor: "id",
-        disableFilters: true,
-        filterable: true,
-        Cell: (cellProps) => {
-          return <Idno {...cellProps} />;
-        },
-      },
-      {
-        Header: "Project",
+        Header: "Facility / Department",
         accessor: "name",
         disableFilters: true,
         filterable: true,
@@ -74,7 +65,7 @@ const ContactsProfile = (props) => {
         },
       },
       {
-        Header: "Start Date",
+        Header: "Visit Date",
         accessor: "startDate",
         disableFilters: true,
         filterable: true,
@@ -83,21 +74,12 @@ const ContactsProfile = (props) => {
         },
       },
       {
-        Header: "Deadline",
+        Header: "Comments",
         accessor: "deadline",
         disableFilters: true,
         filterable: true,
         Cell: (cellProps) => {
-          return <Ddate {...cellProps} />;
-        },
-      },
-      {
-        Header: "Budget",
-        accessor: "budget",
-        disableFilters: true,
-        filterable: true,
-        Cell: (cellProps) => {
-          return <Budget {...cellProps} />;
+          return "Visit was succesful";
         },
       },
     ],
@@ -183,7 +165,7 @@ const ContactsProfile = (props) => {
                     <Table className='table-nowrap mb-0'>
                       <tbody>
                         <tr>
-                          <th scope='row'>Full Name :</th>
+                          <th scope='row'>Point of Contact :</th>
                           <td>{userProfile.name}</td>
                         </tr>
                         <tr>
@@ -195,8 +177,31 @@ const ContactsProfile = (props) => {
                           <td>{userProfile.email}</td>
                         </tr>
                         <tr>
-                          <th scope='row'>Location :</th>
+                          <th scope='row'>Facility Address :</th>
                           <td>{userProfile.location}</td>
+                        </tr>
+                      </tbody>
+                    </Table>
+                  </div>
+                </CardBody>
+              </Card>
+
+              <Card>
+                <CardBody>
+                  <CardTitle className='mb-4'>Machine Information</CardTitle>
+                  <p className='text-muted mb-4'>
+                    {userProfile.personalDetail}
+                  </p>
+                  <div className='table-responsive'>
+                    <Table className='table-nowrap mb-0'>
+                      <tbody>
+                        <tr>
+                          <th scope='row'>Type of machine: :</th>
+                          <td>Machine XYZ</td>
+                        </tr>
+                        <tr>
+                          <th scope='row'>Installation Date :</th>
+                          <td>May 25, 2009</td>
                         </tr>
                       </tbody>
                     </Table>
@@ -272,17 +277,10 @@ const ContactsProfile = (props) => {
                   />
                 ))}
               </Row>
-              {/* <Card>
+
+              <Card>
                 <CardBody>
-                  <CardTitle className='mb-4'>Revenue</CardTitle>
-                  <div id='revenue-chart'>
-                    <ApexRevenue dataColors='["--bs-primary"]' />
-                  </div>
-                </CardBody>
-              </Card> */}
-              {/* <Card>
-                <CardBody>
-                  <CardTitle className='mb-4'>My Projects</CardTitle>
+                  <CardTitle className='mb-4'>Visits history</CardTitle>
 
                   <TableContainer
                     columns={columns}
@@ -292,7 +290,7 @@ const ContactsProfile = (props) => {
                     customPageSizeOptions={true}
                   />
                 </CardBody>
-              </Card> */}
+              </Card>
             </Col>
           </Row>
         </Container>

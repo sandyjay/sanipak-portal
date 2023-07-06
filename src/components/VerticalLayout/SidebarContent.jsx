@@ -12,6 +12,7 @@ import withRouter from "../Common/withRouter";
 //i18n
 import { withTranslation } from "react-i18next";
 import { useCallback } from "react";
+import { Button } from "reactstrap";
 
 const SidebarContent = (props) => {
   const ref = useRef();
@@ -163,7 +164,7 @@ const SidebarContent = (props) => {
               </Link>
             </li>
             <li>
-              <Link to='/documents-list'>
+              <Link to='/apps-filemanager'>
                 <i className='bx bx-file'></i>
                 <span>{props.t("Customer resources")}</span>
               </Link>
@@ -183,9 +184,25 @@ const SidebarContent = (props) => {
               </Link>
             </li>
             <li>
+              <Link to='/service'>
+                <i className='bx bx-cog'></i>
+                {props.t("Service")}
+              </Link>
+            </li>
+            <li>
               <Link to='/pages-faqs'>
                 <i className='bx bx-support'></i>
                 {props.t("Get help")}
+              </Link>
+            </li>
+            <li>
+              <Link to='/service'>
+                <Button
+                  color='danger'
+                  className='btn btn-secondary waves-effect waves-light mt-16'
+                >
+                  Request Service / Visit
+                </Button>
               </Link>
             </li>
           </ul>

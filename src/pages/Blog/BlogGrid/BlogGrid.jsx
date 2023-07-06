@@ -14,6 +14,7 @@ import img1 from "../../../assets/images/small/img-2.jpg";
 import img2 from "../../../assets/images/small/img-6.jpg";
 import img3 from "../../../assets/images/small/img-1.jpg";
 import { Link } from "react-router-dom";
+import RecentFile from "../../FileManager/RecentFile";
 
 const BlogGrid = () => {
   const [activeTab, toggleTab] = useState("1");
@@ -25,7 +26,7 @@ const BlogGrid = () => {
     <React.Fragment>
       <Col xl={12} lg={12}>
         <Card>
-          {/* <ul
+          <ul
             className='nav nav-tabs nav-tabs-custom justify-content-center pt-2'
             role='tablist'
           >
@@ -39,7 +40,7 @@ const BlogGrid = () => {
                   toggleTab("1");
                 }}
               >
-                PDFs
+                Training Videos
               </NavLink>
             </NavItem>
             <NavItem>
@@ -52,47 +53,16 @@ const BlogGrid = () => {
                   toggleTab("2");
                 }}
               >
-                Vidoes
+                Downloadable Files
               </NavLink>
             </NavItem>
-          </ul> */}
+          </ul>
           <TabContent className='p-4' activeTab={activeTab}>
             <TabPane tabId='1'>
               <div>
                 <Row className='justify-content-center'>
                   <Col xl={8}>
                     <div>
-                      {/* <div className='row align-items-center'>
-                        <Col xs={8}>
-                          <div className='float-end'>
-                            <ul className='nav nav-pills'>
-                              <NavItem>
-                                <NavLink
-                                  className='disabled'
-                                  to='#'
-                                  tabIndex='-1'
-                                >
-                                  View :
-                                </NavLink>
-                              </NavItem>
-                              <NavItem>
-                                <Link className='nav-link' to='/blog-list'>
-                                  <i className='mdi mdi-format-list-bulleted'></i>
-                                </Link>
-                              </NavItem>
-                              <NavItem>
-                                <Link
-                                  to='/blog-grid '
-                                  className='nav-link active'
-                                >
-                                  <i className='mdi mdi-view-grid-outline'></i>
-                                </Link>
-                              </NavItem>
-                            </ul>
-                          </div>
-                        </Col>
-                      </div> */}
-
                       <hr className='mb-4' />
 
                       <Row>
@@ -545,7 +515,7 @@ const BlogGrid = () => {
             </TabPane>
 
             <TabPane tabId='2'>
-              <div>
+              {/* <div>
                 <Row className='justify-content-center'>
                   <Col xl={8}>
                     <h5>Archive</h5>
@@ -695,7 +665,8 @@ const BlogGrid = () => {
                     </div>
                   </Col>
                 </Row>
-              </div>
+              </div> */}
+              <RecentFile />
             </TabPane>
           </TabContent>
         </Card>

@@ -182,6 +182,7 @@ import Pages500 from "../pages/Utility/pages-500";
 import ContactsGrid from "../pages/Contacts/contacts-grid";
 import ContactsList from "../pages/Contacts/ContactList/contacts-list";
 import ContactsProfile from "../pages/Contacts/ContactsProfile/contacts-profile";
+import Service from "../pages/Contacts/ContactsProfile/service";
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: <Dashboard /> },
@@ -268,6 +269,7 @@ const authProtectedRoutes = [
   { path: "/contacts-grid", component: <ContactsGrid /> },
   { path: "/contacts-list", component: <ContactsList /> },
   { path: "/contacts-profile", component: <ContactsProfile /> },
+  { path: "/service", component: <Service /> },
 
   //   //Charts
   { path: "/apex-charts", component: <ChartApex /> },

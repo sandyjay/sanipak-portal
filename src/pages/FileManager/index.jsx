@@ -16,15 +16,15 @@ const Index = () => {
     "File Manager | Skote - Vite React Admin & Dashboard Template";
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
-          <Breadcrumbs title="Apps" breadcrumbItem="File Manager" />
-          <div className="d-xl-flex">
-            <div className="w-100">
-              <div className="d-md-flex">
+          <Breadcrumbs title='Files' breadcrumbItem='Customer resources' />
+          <div className='d-xl-flex'>
+            <div className='w-100'>
+              <div className='d-md-flex'>
                 {/* FileRightBar  */}
-                <FileLeftBar />
-                <div className="w-100">
+                {/* <FileLeftBar /> */}
+                <div className='w-100'>
                   <Card>
                     <CardBody>
                       <FileList />
