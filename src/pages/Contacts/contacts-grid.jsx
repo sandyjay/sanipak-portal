@@ -17,7 +17,8 @@ import { getUsers as onGetUsers } from "/src/store/contacts/actions";
 
 const ContactsGrid = () => {
   //meta title
-  document.title = "User Grid | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "User Grid | San-i-pak - Vite React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
 
@@ -33,10 +34,10 @@ const ContactsGrid = () => {
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Contacts" breadcrumbItem="User Grid" />
+          <Breadcrumbs title='Contacts' breadcrumbItem='User Grid' />
 
           <Row>
             {map(users, (user, key) => (
@@ -45,10 +46,10 @@ const ContactsGrid = () => {
           </Row>
 
           <Row>
-            <Col xs="12">
-              <div className="text-center my-3">
-                <Link to="#" className="text-success">
-                  <i className="bx bx-hourglass bx-spin me-2" />
+            <Col xs='12'>
+              <div className='text-center my-3'>
+                <Link to='#' className='text-success'>
+                  <i className='bx bx-hourglass bx-spin me-2' />
                   Load more
                 </Link>
               </div>

@@ -46,22 +46,23 @@ import { useSelector, useDispatch } from "react-redux";
 const ProjectStatus = ({ status }) => {
   switch (status) {
     case "Pending":
-      return <Badge className="bg-warning"> {status} </Badge>;
+      return <Badge className='bg-warning'> {status} </Badge>;
 
     case "Delay":
-      return <Badge className="bg-danger"> {status} </Badge>;
+      return <Badge className='bg-danger'> {status} </Badge>;
 
     case "Completed":
-      return <Badge className="bg-success"> {status} </Badge>;
+      return <Badge className='bg-success'> {status} </Badge>;
 
     default:
-      return <Badge className="bg-success"> {status} </Badge>;
+      return <Badge className='bg-success'> {status} </Badge>;
   }
 };
 
 const ProjectsList = () => {
   //meta title
-  document.title = "Project List | Skote - React Admin & Dashboard Template";
+  document.title =
+    "Project List | San-i-pak - React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
   const [project, setProject] = useState();
@@ -194,26 +195,26 @@ const ProjectsList = () => {
         onDeleteClick={handleDeleteOrder}
         onCloseClick={() => setDeleteModal(false)}
       />
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Projects" breadcrumbItem="Projects List" />
+          <Breadcrumbs title='Projects' breadcrumbItem='Projects List' />
 
           <Row>
-            <Col lg="12">
+            <Col lg='12'>
               <div>
-                <div className="table-responsive">
-                  <Table className="project-list-table table-nowrap align-middle table-borderless">
+                <div className='table-responsive'>
+                  <Table className='project-list-table table-nowrap align-middle table-borderless'>
                     <thead>
                       <tr>
-                        <th scope="col" style={{ width: "100px" }}>
+                        <th scope='col' style={{ width: "100px" }}>
                           #
                         </th>
-                        <th scope="col">Projects</th>
-                        <th scope="col">Due Date</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Team</th>
-                        <th scope="col">Action</th>
+                        <th scope='col'>Projects</th>
+                        <th scope='col'>Due Date</th>
+                        <th scope='col'>Status</th>
+                        <th scope='col'>Team</th>
+                        <th scope='col'>Action</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -222,20 +223,20 @@ const ProjectsList = () => {
                           <td>
                             <img
                               src={companies[project.img]}
-                              alt=""
-                              className="avatar-sm"
+                              alt=''
+                              className='avatar-sm'
                             />
                           </td>
                           <td>
-                            <h5 className="text-truncate font-size-14">
+                            <h5 className='text-truncate font-size-14'>
                               <Link
                                 to={`/projects-overview/${project.id}`}
-                                className="text-dark"
+                                className='text-dark'
                               >
                                 {project.name}
                               </Link>
                             </h5>
-                            <p className="text-muted mb-0">
+                            <p className='text-muted mb-0'>
                               {project.description}
                             </p>
                           </td>
@@ -247,26 +248,26 @@ const ProjectsList = () => {
                             </Badge> */}
                           </td>
                           <td>
-                            <div className="avatar-group">
+                            <div className='avatar-group'>
                               {map(project.team, (member, index) =>
                                 !member.img || member.img !== "Null" ? (
                                   <div
-                                    className="avatar-group-item"
+                                    className='avatar-group-item'
                                     key={index}
                                   >
                                     <Link
-                                      to="#"
-                                      className="team-member d-inline-block"
-                                      id="member1"
+                                      to='#'
+                                      className='team-member d-inline-block'
+                                      id='member1'
                                     >
                                       <img
                                         src={images[member.img]}
-                                        className="rounded-circle avatar-xs"
-                                        alt=""
+                                        className='rounded-circle avatar-xs'
+                                        alt=''
                                       />
                                       <UncontrolledTooltip
-                                        placement="top"
-                                        target="member1"
+                                        placement='top'
+                                        target='member1'
                                       >
                                         {member.name}
                                       </UncontrolledTooltip>
@@ -274,15 +275,15 @@ const ProjectsList = () => {
                                   </div>
                                 ) : (
                                   <div
-                                    className="avatar-group-item"
+                                    className='avatar-group-item'
                                     key={"_team_" + index}
                                   >
                                     <Link
-                                      to="#"
-                                      className="d-inline-block"
+                                      to='#'
+                                      className='d-inline-block'
                                       id={"member" + member.id}
                                     >
-                                      <div className="avatar-xs">
+                                      <div className='avatar-xs'>
                                         <span
                                           className={
                                             "avatar-title rounded-circle bg-soft bg-" +
@@ -295,7 +296,7 @@ const ProjectsList = () => {
                                           {member.name.charAt(0)}
                                         </span>
                                         <UncontrolledTooltip
-                                          placement="top"
+                                          placement='top'
                                           target={"member" + member.id}
                                         >
                                           {member.name}
@@ -310,25 +311,25 @@ const ProjectsList = () => {
                           <td>
                             <UncontrolledDropdown>
                               <DropdownToggle
-                                href="#"
-                                className="card-drop"
-                                tag="a"
+                                href='#'
+                                className='card-drop'
+                                tag='a'
                               >
-                                <i className="mdi mdi-dots-horizontal font-size-18" />
+                                <i className='mdi mdi-dots-horizontal font-size-18' />
                               </DropdownToggle>
-                              <DropdownMenu className="dropdown-menu-end">
+                              <DropdownMenu className='dropdown-menu-end'>
                                 <DropdownItem
-                                  href="#"
+                                  href='#'
                                   onClick={() => handleProjectClick(project)}
                                 >
-                                  <i className="mdi mdi-pencil font-size-16 text-success me-1" />{" "}
+                                  <i className='mdi mdi-pencil font-size-16 text-success me-1' />{" "}
                                   Edit
                                 </DropdownItem>
                                 <DropdownItem
-                                  href="#"
+                                  href='#'
                                   onClick={() => onClickDelete(project)}
                                 >
-                                  <i className="mdi mdi-trash-can font-size-16 text-danger me-1" />{" "}
+                                  <i className='mdi mdi-trash-can font-size-16 text-danger me-1' />{" "}
                                   Delete
                                 </DropdownItem>
                               </DropdownMenu>
@@ -339,7 +340,7 @@ const ProjectsList = () => {
                     </tbody>
                   </Table>
                   <Modal isOpen={modal} toggle={toggle}>
-                    <ModalHeader toggle={toggle} tag="h4">
+                    <ModalHeader toggle={toggle} tag='h4'>
                       {!!isEdit ? "Edit Project" : "Add Project"}
                     </ModalHeader>
                     <ModalBody>
@@ -353,21 +354,21 @@ const ProjectsList = () => {
                         <Row>
                           <Col xs={12}>
                             <Input
-                              type="hidden"
+                              type='hidden'
                               value={validation.values.img || ""}
-                              name="img"
+                              name='img'
                             />
 
                             <Input
-                              type="hidden"
+                              type='hidden'
                               value={validation.values.team || ""}
-                              name="team"
+                              name='team'
                             />
-                            <div className="mb-3">
-                              <Label className="form-label">Name</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>Name</Label>
                               <Input
-                                name="name"
-                                type="text"
+                                name='name'
+                                type='text'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.name || ""}
@@ -380,17 +381,17 @@ const ProjectsList = () => {
                               />
                               {validation.touched.name &&
                               validation.errors.name ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.name}
                                 </FormFeedback>
                               ) : null}
                             </div>
 
-                            <div className="mb-3">
-                              <Label className="form-label">Description</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>Description</Label>
                               <Input
-                                name="description"
-                                type="text"
+                                name='description'
+                                type='text'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.description || ""}
@@ -403,19 +404,19 @@ const ProjectsList = () => {
                               />
                               {validation.touched.description &&
                               validation.errors.description ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.description}
                                 </FormFeedback>
                               ) : null}
                             </div>
 
-                            <div className="mb-3">
-                              <Label className="form-label">Status</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>Status</Label>
                               <Input
-                                name="status"
-                                id="status1"
-                                type="select"
-                                className="form-select"
+                                name='status'
+                                id='status1'
+                                type='select'
+                                className='form-select'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.status || ""}
@@ -426,18 +427,18 @@ const ProjectsList = () => {
                               </Input>
                               {validation.touched.status &&
                               validation.errors.status ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.status}
                                 </FormFeedback>
                               ) : null}
                             </div>
 
-                            <div className="mb-3">
-                              <Label className="form-label">Color</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>Color</Label>
                               <Input
-                                name="color"
-                                type="select"
-                                className="form-select"
+                                name='color'
+                                type='select'
+                                className='form-select'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.color || ""}
@@ -454,18 +455,18 @@ const ProjectsList = () => {
                               </Input>
                               {validation.touched.color &&
                               validation.errors.color ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.color}
                                 </FormFeedback>
                               ) : null}
                             </div>
 
-                            <div className="mb-3">
-                              <Label className="form-label">dueDate</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>dueDate</Label>
                               <Input
-                                name="dueDate"
-                                type="date"
-                                format="YYYY/MM/DD"
+                                name='dueDate'
+                                type='date'
+                                format='YYYY/MM/DD'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 invalid={
@@ -478,7 +479,7 @@ const ProjectsList = () => {
                               ></Input>
                               {validation.touched.dueDate &&
                               validation.errors.dueDate ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.dueDate}
                                 </FormFeedback>
                               ) : null}
@@ -487,10 +488,10 @@ const ProjectsList = () => {
                         </Row>
                         <Row>
                           <Col>
-                            <div className="text-end">
+                            <div className='text-end'>
                               <button
-                                type="submit"
-                                className="btn btn-success save-user"
+                                type='submit'
+                                className='btn btn-success save-user'
                               >
                                 Save
                               </button>
@@ -506,10 +507,10 @@ const ProjectsList = () => {
           </Row>
 
           <Row>
-            <Col xs="12">
-              <div className="text-center my-3">
-                <Link to="#" className="text-success">
-                  <i className="bx bx-loader bx-spin font-size-18 align-middle me-2" />
+            <Col xs='12'>
+              <div className='text-center my-3'>
+                <Link to='#' className='text-success'>
+                  <i className='bx bx-loader bx-spin font-size-18 align-middle me-2' />
                   Load more
                 </Link>
               </div>

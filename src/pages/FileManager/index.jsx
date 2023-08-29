@@ -13,7 +13,7 @@ import Storage from "./Storage";
 const Index = () => {
   //meta title
   document.title =
-    "File Manager | Skote - Vite React Admin & Dashboard Template";
+    "File Manager | San-i-pak - Vite React Admin & Dashboard Template";
   return (
     <React.Fragment>
       <div className='page-content'>
@@ -28,13 +28,12 @@ const Index = () => {
                   <Card>
                     <CardBody>
                       <FileList />
-                      <RecentFile />
+                      {/* <RecentFile /> */}
                     </CardBody>
                   </Card>
                 </div>
               </div>
             </div>
-            <Storage dataColors='["--bs-primary"]' />
           </div>
         </Container>
       </div>

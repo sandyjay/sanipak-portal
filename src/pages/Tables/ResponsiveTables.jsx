@@ -9,48 +9,49 @@ import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 const ResponsiveTables = () => {
   //meta title
-  document.title = "Responsive Table | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Responsive Table | San-i-pak - Vite React Admin & Dashboard Template";
   return (
     <React.Fragment>
-      <div className="page-content">
-        <div className="container-fluid">
-          <Breadcrumbs title="Tables" breadcrumbItem="Responsive Table" />
+      <div className='page-content'>
+        <div className='container-fluid'>
+          <Breadcrumbs title='Tables' breadcrumbItem='Responsive Table' />
           <Row>
             <Col>
               <Card>
                 <CardBody>
                   <CardTitle>Example </CardTitle>
-                  <CardSubtitle className="mb-3">
+                  <CardSubtitle className='mb-3'>
                     This is an experimental awesome solution for responsive
                     tables with complex data.
                   </CardSubtitle>
 
-                  <div className="table-rep-plugin">
+                  <div className='table-rep-plugin'>
                     <div
-                      className="table-responsive mb-0"
-                      data-pattern="priority-columns"
+                      className='table-responsive mb-0'
+                      data-pattern='priority-columns'
                     >
                       <Table
-                        id="tech-companies-1"
-                        className="table table-striped table-bordered"
+                        id='tech-companies-1'
+                        className='table table-striped table-bordered'
                       >
                         <Thead>
                           <Tr>
                             <Th>Company</Th>
-                            <Th data-priority="1">Last Trade</Th>
-                            <Th data-priority="3">Trade Time</Th>
-                            <Th data-priority="1">Change</Th>
-                            <Th data-priority="3">Prev Close</Th>
-                            <Th data-priority="3">Open</Th>
-                            <Th data-priority="6">Bid</Th>
-                            <Th data-priority="6">Ask</Th>
-                            <Th data-priority="6">1y Target Est</Th>
+                            <Th data-priority='1'>Last Trade</Th>
+                            <Th data-priority='3'>Trade Time</Th>
+                            <Th data-priority='1'>Change</Th>
+                            <Th data-priority='3'>Prev Close</Th>
+                            <Th data-priority='3'>Open</Th>
+                            <Th data-priority='6'>Bid</Th>
+                            <Th data-priority='6'>Ask</Th>
+                            <Th data-priority='6'>1y Target Est</Th>
                           </Tr>
                         </Thead>
                         <Tbody>
                           <Tr>
                             <Th>
-                              GOOG <span className="co-name">Google Inc.</span>
+                              GOOG <span className='co-name'>Google Inc.</span>
                             </Th>
                             <Td>597.74</Td>
                             <Td>12:12PM</Td>
@@ -63,7 +64,7 @@ const ResponsiveTables = () => {
                           </Tr>
                           <Tr>
                             <Th>
-                              AAPL <span className="co-name">Apple Inc.</span>
+                              AAPL <span className='co-name'>Apple Inc.</span>
                             </Th>
                             <Td>378.94</Td>
                             <Td>12:22PM</Td>
@@ -77,7 +78,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               AMZN{" "}
-                              <span className="co-name">Amazon.com Inc.</span>
+                              <span className='co-name'>Amazon.com Inc.</span>
                             </Th>
                             <Td>191.55</Td>
                             <Td>12:23PM</Td>
@@ -91,7 +92,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               ORCL{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Oracle Corporation
                               </span>
                             </Th>
@@ -107,7 +108,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               MSFT{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Microsoft Corporation
                               </span>
                             </Th>
@@ -123,7 +124,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               CSCO{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Cisco Systems, Inc.
                               </span>
                             </Th>
@@ -138,7 +139,7 @@ const ResponsiveTables = () => {
                           </Tr>
                           <Tr>
                             <Th>
-                              YHOO <span className="co-name">Yahoo! Inc.</span>
+                              YHOO <span className='co-name'>Yahoo! Inc.</span>
                             </Th>
                             <Td>15.81</Td>
                             <Td>12:25PM</Td>
@@ -151,7 +152,7 @@ const ResponsiveTables = () => {
                           </Tr>
                           <Tr>
                             <Th>
-                              GOOG <span className="co-name">Google Inc.</span>
+                              GOOG <span className='co-name'>Google Inc.</span>
                             </Th>
                             <Td>597.74</Td>
                             <Td>12:12PM</Td>
@@ -164,7 +165,7 @@ const ResponsiveTables = () => {
                           </Tr>
                           <Tr>
                             <Th>
-                              AAPL <span className="co-name">Apple Inc.</span>
+                              AAPL <span className='co-name'>Apple Inc.</span>
                             </Th>
                             <Td>378.94</Td>
                             <Td>12:22PM</Td>
@@ -178,7 +179,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               AMZN{" "}
-                              <span className="co-name">Amazon.com Inc.</span>
+                              <span className='co-name'>Amazon.com Inc.</span>
                             </Th>
                             <Td>191.55</Td>
                             <Td>12:23PM</Td>
@@ -192,7 +193,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               ORCL{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Oracle Corporation
                               </span>
                             </Th>
@@ -208,7 +209,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               MSFT{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Microsoft Corporation
                               </span>
                             </Th>
@@ -224,7 +225,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               CSCO{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Cisco Systems, Inc.
                               </span>
                             </Th>
@@ -239,7 +240,7 @@ const ResponsiveTables = () => {
                           </Tr>
                           <Tr>
                             <Th>
-                              YHOO <span className="co-name">Yahoo! Inc.</span>
+                              YHOO <span className='co-name'>Yahoo! Inc.</span>
                             </Th>
                             <Td>15.81</Td>
                             <Td>12:25PM</Td>
@@ -252,7 +253,7 @@ const ResponsiveTables = () => {
                           </Tr>
                           <Tr>
                             <Th>
-                              GOOG <span className="co-name">Google Inc.</span>
+                              GOOG <span className='co-name'>Google Inc.</span>
                             </Th>
                             <Td>597.74</Td>
                             <Td>12:12PM</Td>
@@ -265,7 +266,7 @@ const ResponsiveTables = () => {
                           </Tr>
                           <Tr>
                             <Th>
-                              AAPL <span className="co-name">Apple Inc.</span>
+                              AAPL <span className='co-name'>Apple Inc.</span>
                             </Th>
                             <Td>378.94</Td>
                             <Td>12:22PM</Td>
@@ -279,7 +280,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               AMZN{" "}
-                              <span className="co-name">Amazon.com Inc.</span>
+                              <span className='co-name'>Amazon.com Inc.</span>
                             </Th>
                             <Td>191.55</Td>
                             <Td>12:23PM</Td>
@@ -293,7 +294,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               ORCL{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Oracle Corporation
                               </span>
                             </Th>
@@ -309,7 +310,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               MSFT{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Microsoft Corporation
                               </span>
                             </Th>
@@ -325,7 +326,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               CSCO{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Cisco Systems, Inc.
                               </span>
                             </Th>
@@ -340,7 +341,7 @@ const ResponsiveTables = () => {
                           </Tr>
                           <Tr>
                             <Th>
-                              YHOO <span className="co-name">Yahoo! Inc.</span>
+                              YHOO <span className='co-name'>Yahoo! Inc.</span>
                             </Th>
                             <Td>15.81</Td>
                             <Td>12:25PM</Td>
@@ -353,7 +354,7 @@ const ResponsiveTables = () => {
                           </Tr>
                           <Tr>
                             <Th>
-                              GOOG <span className="co-name">Google Inc.</span>
+                              GOOG <span className='co-name'>Google Inc.</span>
                             </Th>
                             <Td>597.74</Td>
                             <Td>12:12PM</Td>
@@ -366,7 +367,7 @@ const ResponsiveTables = () => {
                           </Tr>
                           <Tr>
                             <Th>
-                              AAPL <span className="co-name">Apple Inc.</span>
+                              AAPL <span className='co-name'>Apple Inc.</span>
                             </Th>
                             <Td>378.94</Td>
                             <Td>12:22PM</Td>
@@ -380,7 +381,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               AMZN{" "}
-                              <span className="co-name">Amazon.com Inc.</span>
+                              <span className='co-name'>Amazon.com Inc.</span>
                             </Th>
                             <Td>191.55</Td>
                             <Td>12:23PM</Td>
@@ -394,7 +395,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               ORCL{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Oracle Corporation
                               </span>
                             </Th>
@@ -410,7 +411,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               MSFT{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Microsoft Corporation
                               </span>
                             </Th>
@@ -426,7 +427,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               CSCO{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Cisco Systems, Inc.
                               </span>
                             </Th>
@@ -441,7 +442,7 @@ const ResponsiveTables = () => {
                           </Tr>
                           <Tr>
                             <Th>
-                              YHOO <span className="co-name">Yahoo! Inc.</span>
+                              YHOO <span className='co-name'>Yahoo! Inc.</span>
                             </Th>
                             <Td>15.81</Td>
                             <Td>12:25PM</Td>
@@ -454,7 +455,7 @@ const ResponsiveTables = () => {
                           </Tr>
                           <Tr>
                             <Th>
-                              GOOG <span className="co-name">Google Inc.</span>
+                              GOOG <span className='co-name'>Google Inc.</span>
                             </Th>
                             <Td>597.74</Td>
                             <Td>12:12PM</Td>
@@ -467,7 +468,7 @@ const ResponsiveTables = () => {
                           </Tr>
                           <Tr>
                             <Th>
-                              AAPL <span className="co-name">Apple Inc.</span>
+                              AAPL <span className='co-name'>Apple Inc.</span>
                             </Th>
                             <Td>378.94</Td>
                             <Td>12:22PM</Td>
@@ -481,7 +482,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               AMZN{" "}
-                              <span className="co-name">Amazon.com Inc.</span>
+                              <span className='co-name'>Amazon.com Inc.</span>
                             </Th>
                             <Td>191.55</Td>
                             <Td>12:23PM</Td>
@@ -495,7 +496,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               ORCL{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Oracle Corporation
                               </span>
                             </Th>
@@ -511,7 +512,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               MSFT{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Microsoft Corporation
                               </span>
                             </Th>
@@ -527,7 +528,7 @@ const ResponsiveTables = () => {
                           <Tr>
                             <Th>
                               CSCO{" "}
-                              <span className="co-name">
+                              <span className='co-name'>
                                 Cisco Systems, Inc.
                               </span>
                             </Th>
@@ -542,7 +543,7 @@ const ResponsiveTables = () => {
                           </Tr>
                           <Tr>
                             <Th>
-                              YHOO <span className="co-name">Yahoo! Inc.</span>
+                              YHOO <span className='co-name'>Yahoo! Inc.</span>
                             </Th>
                             <Td>15.81</Td>
                             <Td>12:25PM</Td>
@@ -560,7 +561,7 @@ const ResponsiveTables = () => {
                 </CardBody>
               </Card>
             </Col>
-          </Row> 
+          </Row>
         </div>
       </div>
     </React.Fragment>

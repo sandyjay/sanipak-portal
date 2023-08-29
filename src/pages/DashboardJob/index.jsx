@@ -12,7 +12,8 @@ import Section from "./Section";
 import StatisticsApplications from "./StatisticsApplications";
 
 const DashboardJob = () => {
-  document.title = "Job Dashboard | Skote - React Admin & Dashboard Template";
+  document.title =
+    "Job Dashboard | San-i-pak - React Admin & Dashboard Template";
   const chartsData = [
     {
       id: 1,
@@ -74,7 +75,7 @@ const DashboardJob = () => {
   ];
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           <Section />
 

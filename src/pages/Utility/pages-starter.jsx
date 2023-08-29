@@ -1,24 +1,24 @@
 import React from "react";
-import { Container } from "reactstrap"
+import { Container } from "reactstrap";
 
 //Import Breadcrumb
-import Breadcrumbs from "../../components/Common/Breadcrumb"
+import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 const PagesStarter = () => {
-
-    //meta title
-    document.title="Stater Page | Skote - Vite React Admin & Dashboard Template";
+  //meta title
+  document.title =
+    "Stater Page | San-i-pak - Vite React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Utility" breadcrumbItem="Starter Page" />
+          <Breadcrumbs title='Utility' breadcrumbItem='Starter Page' />
         </Container>
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default PagesStarter
+export default PagesStarter;

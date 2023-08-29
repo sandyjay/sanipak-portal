@@ -1,22 +1,23 @@
-import React from "react"
-import { Row, Col } from "reactstrap"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
 
 //Import Breadcrumb
-import Breadcrumbs from "../../components/Common/Breadcrumb"
+import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 const EmailBasicTemplte = () => {
-   //meta title
-   document.title="Basic Action | Skote - Vite React Admin & Dashboard Template";
+  //meta title
+  document.title =
+    "Basic Action | San-i-pak - Vite React Admin & Dashboard Template";
   return (
     <React.Fragment>
-      <div className="page-content">
-        <div className="container-fluid">
-          <Breadcrumbs title="Email Template" breadcrumbItem="Basic Action" />
-          <Row className="email-template">
-            <Col md="12">
+      <div className='page-content'>
+        <div className='container-fluid'>
+          <Breadcrumbs title='Email Template' breadcrumbItem='Basic Action' />
+          <Row className='email-template'>
+            <Col md='12'>
               <table
-                className="body-wrap"
+                className='body-wrap'
                 style={{
                   fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif",
                   boxSizing: "border-box",
@@ -24,15 +25,14 @@ const EmailBasicTemplte = () => {
                   margin: "0",
                   width: "100%",
                   backgroundColor: "transparent",
-                  color: "#495057"
+                  color: "#495057",
                 }}
-                bgcolor="#f6f6f6"
+                bgcolor='#f6f6f6'
               >
                 <tbody>
                   <tr
                     style={{
-                      fontFamily:
-                        "'Helvetica Neue',Helvetica,Arial,sans-serif",
+                      fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif",
                       boxSizing: "border-box",
                       fontSize: "14px",
                       margin: "0",
@@ -47,12 +47,12 @@ const EmailBasicTemplte = () => {
                         margin: "0",
                         verticalAlign: "top",
                       }}
-                      valign="top"
+                      valign='top'
                     ></td>
 
                     <td
-                      className="container"
-                      width="600"
+                      className='container'
+                      width='600'
                       style={{
                         fontFamily:
                           "'Helvetica Neue',Helvetica,Arial,sans-serif",
@@ -64,10 +64,10 @@ const EmailBasicTemplte = () => {
                         margin: "0px auto",
                         verticalAlign: "top",
                       }}
-                      valign="top"
+                      valign='top'
                     >
                       <div
-                        className="content"
+                        className='content'
                         style={{
                           fontFamily:
                             "'Helvetica Neue',Helvetica,Arial,sans-serif",
@@ -80,13 +80,13 @@ const EmailBasicTemplte = () => {
                         }}
                       >
                         <table
-                          className="main"
-                          width="100%"
-                          cellPadding="0"
-                          cellSpacing="0"
-                          itemProp="action"
+                          className='main'
+                          width='100%'
+                          cellPadding='0'
+                          cellSpacing='0'
+                          itemProp='action'
                           itemScope
-                          itemType="http://schema.org/ConfirmAction"
+                          itemType='http://schema.org/ConfirmAction'
                           style={{
                             fontFamily:
                               "'Helvetica Neue',Helvetica,Arial,sans-serif",
@@ -108,7 +108,7 @@ const EmailBasicTemplte = () => {
                               }}
                             >
                               <td
-                                className="content-wrap"
+                                className='content-wrap'
                                 style={{
                                   fontFamily:
                                     "'Helvetica Neue',Helvetica,Arial,sans-serif",
@@ -119,13 +119,14 @@ const EmailBasicTemplte = () => {
                                   padding: "30px",
                                   borderRadius: "7px",
                                   backgroundColor: "#fff",
-                                  boxShadow: "0 0.75rem 1.5rem rgba(18,38,63,.03)"
+                                  boxShadow:
+                                    "0 0.75rem 1.5rem rgba(18,38,63,.03)",
                                 }}
-                                valign="top"
+                                valign='top'
                               >
                                 <meta
-                                  itemProp="name"
-                                  content="Confirm Email"
+                                  itemProp='name'
+                                  content='Confirm Email'
                                   style={{
                                     fontFamily:
                                       "'Helvetica Neue',Helvetica,Arial,sans-serif",
@@ -136,9 +137,9 @@ const EmailBasicTemplte = () => {
                                 />
 
                                 <table
-                                  width="100%"
-                                  cellPadding="0"
-                                  cellSpacing="0"
+                                  width='100%'
+                                  cellPadding='0'
+                                  cellSpacing='0'
                                   style={{
                                     fontFamily:
                                       "'Helvetica Neue',Helvetica,Arial,sans-serif",
@@ -158,7 +159,7 @@ const EmailBasicTemplte = () => {
                                       }}
                                     >
                                       <td
-                                        className="content-block"
+                                        className='content-block'
                                         style={{
                                           fontFamily:
                                             "'Helvetica Neue',Helvetica,Arial,sans-serif",
@@ -168,11 +169,11 @@ const EmailBasicTemplte = () => {
                                           margin: "0px",
                                           padding: "0 0 20px",
                                         }}
-                                        valign="top"
+                                        valign='top'
                                       >
                                         Please confirm your email address by
                                         clicking the link below.
-                                        </td>
+                                      </td>
                                     </tr>
 
                                     <tr
@@ -185,7 +186,7 @@ const EmailBasicTemplte = () => {
                                       }}
                                     >
                                       <td
-                                        className="content-block"
+                                        className='content-block'
                                         style={{
                                           fontFamily:
                                             "'Helvetica Neue',Helvetica,Arial,sans-serif",
@@ -195,13 +196,13 @@ const EmailBasicTemplte = () => {
                                           margin: "0px",
                                           padding: "0 0 20px",
                                         }}
-                                        valign="top"
+                                        valign='top'
                                       >
                                         We may need to send you critical
-                                        information about our service and it
-                                        is important that we have an accurate
-                                        email address.
-                                        </td>
+                                        information about our service and it is
+                                        important that we have an accurate email
+                                        address.
+                                      </td>
                                     </tr>
 
                                     <tr
@@ -214,10 +215,10 @@ const EmailBasicTemplte = () => {
                                       }}
                                     >
                                       <td
-                                        className="content-block"
-                                        itemProp="handler"
+                                        className='content-block'
+                                        itemProp='handler'
                                         itemScope
-                                        itemType="http://schema.org/HttpActionHandler"
+                                        itemType='http://schema.org/HttpActionHandler'
                                         style={{
                                           fontFamily:
                                             "'Helvetica Neue',Helvetica,Arial,sans-serif",
@@ -227,12 +228,12 @@ const EmailBasicTemplte = () => {
                                           margin: "0px",
                                           padding: "0 0 20px",
                                         }}
-                                        valign="top"
+                                        valign='top'
                                       >
                                         <Link
-                                          to="#"
-                                          color="primary"
-                                          itemProp="url"
+                                          to='#'
+                                          color='primary'
+                                          itemProp='url'
                                           style={{
                                             fontFamily:
                                               "'Helvetica Neue',Helvetica,Arial,sans-serif",
@@ -255,7 +256,7 @@ const EmailBasicTemplte = () => {
                                           }}
                                         >
                                           Confirm email address
-                                          </Link>
+                                        </Link>
                                       </td>
                                     </tr>
 
@@ -269,7 +270,7 @@ const EmailBasicTemplte = () => {
                                       }}
                                     >
                                       <td
-                                        className="content-block"
+                                        className='content-block'
                                         style={{
                                           fontFamily:
                                             "'Helvetica Neue',Helvetica,Arial,sans-serif",
@@ -279,9 +280,9 @@ const EmailBasicTemplte = () => {
                                           margin: "0px",
                                           padding: "0 0 20px",
                                         }}
-                                        valign="top"
+                                        valign='top'
                                       >
-                                        <b>Skote</b>
+                                        <b>San-i-pak</b>
                                         <p>Support Team</p>
                                       </td>
                                     </tr>
@@ -296,7 +297,7 @@ const EmailBasicTemplte = () => {
                                       }}
                                     >
                                       <td
-                                        className="content-block"
+                                        className='content-block'
                                         style={{
                                           fontFamily:
                                             "'Helvetica Neue',Helvetica,Arial,sans-serif",
@@ -307,10 +308,10 @@ const EmailBasicTemplte = () => {
                                           padding: "0",
                                           textAlign: "center",
                                         }}
-                                        valign="top"
+                                        valign='top'
                                       >
-                                        © {new Date().getFullYear()} Skote
-                                        </td>
+                                        © {new Date().getFullYear()} San-i-pak
+                                      </td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -329,6 +330,6 @@ const EmailBasicTemplte = () => {
       </div>
     </React.Fragment>
   );
-}
+};
 
 export default EmailBasicTemplte;

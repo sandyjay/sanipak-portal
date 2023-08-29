@@ -30,9 +30,8 @@ import avatar from "../../assets/images/users/avatar-1.jpg";
 import { editProfile, resetProfileFlag } from "../../store/actions";
 
 const UserProfile = (props) => {
-
   //meta title
-  document.title = "Profile | Skote - React Admin & Dashboard Template";
+  document.title = "Profile | San-i-pak - React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
 
@@ -40,7 +39,7 @@ const UserProfile = (props) => {
   const [name, setname] = useState("");
   const [idx, setidx] = useState(1);
 
-  const { error, success } = useSelector(state => ({
+  const { error, success } = useSelector((state) => ({
     error: state.Profile.error,
     success: state.Profile.success,
   }));
@@ -70,44 +69,44 @@ const UserProfile = (props) => {
     enableReinitialize: true,
 
     initialValues: {
-      username: name || '',
-      idx: idx || '',
+      username: name || "",
+      idx: idx || "",
     },
     validationSchema: Yup.object({
       username: Yup.string().required("Please Enter Your UserName"),
     }),
     onSubmit: (values) => {
       dispatch(editProfile(values));
-    }
+    },
   });
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumb */}
-          <Breadcrumb title="Skote" breadcrumbItem="Profile" />
+          <Breadcrumb title='San-i-pak' breadcrumbItem='Profile' />
 
           <Row>
-            <Col lg="12">
-              {error && error ? <Alert color="danger">{error}</Alert> : null}
-              {success ? <Alert color="success">{success}</Alert> : null}
+            <Col lg='12'>
+              {error && error ? <Alert color='danger'>{error}</Alert> : null}
+              {success ? <Alert color='success'>{success}</Alert> : null}
 
               <Card>
                 <CardBody>
-                  <div className="d-flex">
-                    <div className="ms-3">
+                  <div className='d-flex'>
+                    <div className='ms-3'>
                       <img
                         src={avatar}
-                        alt=""
-                        className="avatar-md rounded-circle img-thumbnail"
+                        alt=''
+                        className='avatar-md rounded-circle img-thumbnail'
                       />
                     </div>
-                    <div className="flex-grow-1 align-self-center">
-                      <div className="text-muted">
+                    <div className='flex-grow-1 align-self-center'>
+                      <div className='text-muted'>
                         <h5>{name}</h5>
-                        <p className="mb-1">{email}</p>
-                        <p className="mb-0">Id no: #{idx}</p>
+                        <p className='mb-1'>{email}</p>
+                        <p className='mb-0'>Id no: #{idx}</p>
                       </div>
                     </div>
                   </div>
@@ -116,40 +115,44 @@ const UserProfile = (props) => {
             </Col>
           </Row>
 
-          <h4 className="card-title mb-4">Change User Name</h4>
+          <h4 className='card-title mb-4'>Change User Name</h4>
 
           <Card>
             <CardBody>
               <Form
-                className="form-horizontal"
+                className='form-horizontal'
                 onSubmit={(e) => {
                   e.preventDefault();
                   validation.handleSubmit();
                   return false;
                 }}
               >
-                <div className="form-group">
-                  <Label className="form-label">User Name</Label>
+                <div className='form-group'>
+                  <Label className='form-label'>User Name</Label>
                   <Input
-                    name="username"
+                    name='username'
                     // value={name}
-                    className="form-control"
-                    placeholder="Enter User Name"
-                    type="text"
+                    className='form-control'
+                    placeholder='Enter User Name'
+                    type='text'
                     onChange={validation.handleChange}
                     onBlur={validation.handleBlur}
                     value={validation.values.username || ""}
                     invalid={
-                      validation.touched.username && validation.errors.username ? true : false
+                      validation.touched.username && validation.errors.username
+                        ? true
+                        : false
                     }
                   />
                   {validation.touched.username && validation.errors.username ? (
-                    <FormFeedback type="invalid">{validation.errors.username}</FormFeedback>
+                    <FormFeedback type='invalid'>
+                      {validation.errors.username}
+                    </FormFeedback>
                   ) : null}
-                  <Input name="idx" value={idx} type="hidden" />
+                  <Input name='idx' value={idx} type='hidden' />
                 </div>
-                <div className="text-center mt-4">
-                  <Button type="submit" color="danger">
+                <div className='text-center mt-4'>
+                  <Button type='submit' color='danger'>
                     Update User Name
                   </Button>
                 </div>

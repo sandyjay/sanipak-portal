@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import {
   Container,
   Row,
@@ -18,23 +18,23 @@ import {
   DropdownItem,
   Input,
   InputGroup,
-} from "reactstrap"
-import classnames from "classnames"
-import ReactApexChart from "react-apexcharts"
+} from "reactstrap";
+import classnames from "classnames";
+import ReactApexChart from "react-apexcharts";
 
 //Simple bar
-import SimpleBar from "simplebar-react"
+import SimpleBar from "simplebar-react";
 
 //Import Breadcrumb
-import Breadcrumbs from "../../components/Common/Breadcrumb"
+import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 //Import Images
-import avatar from "../../assets/images/users/avatar-1.jpg"
+import avatar from "../../assets/images/users/avatar-1.jpg";
 
-const CryptoExchange = props => {
-
+const CryptoExchange = (props) => {
   //meta title
-  document.title="Exchange | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Exchange | San-i-pak - Vite React Admin & Dashboard Template";
 
   const series = [
     {
@@ -125,7 +125,7 @@ const CryptoExchange = props => {
         { x: new Date(15388848e5), y: [6604.98, 6606, 6604.07, 6606] },
       ],
     },
-  ]
+  ];
 
   const options = {
     chart: { toolbar: !1, zoom: { enabled: !0 } },
@@ -134,7 +134,7 @@ const CryptoExchange = props => {
     },
     xaxis: { type: "datetime" },
     yaxis: { tooltip: { enabled: !0 } },
-  }
+  };
 
   const notofications = [
     {
@@ -160,87 +160,87 @@ const CryptoExchange = props => {
       desc: "It will seem like simplified English as a skeptical Cambridge.",
     },
     { date: "9 Mar", desc: "To achieve this, it would be necessary." },
-  ]
+  ];
 
-  const [isMenu, setisMenu] = useState(false)
-  const [activeTab, setActiveTab] = useState("1")
+  const [isMenu, setisMenu] = useState(false);
+  const [activeTab, setActiveTab] = useState("1");
 
-  const toggleTab = tab => {
+  const toggleTab = (tab) => {
     if (activeTab !== tab) {
-      setActiveTab(tab)
+      setActiveTab(tab);
     }
-  }
+  };
 
   const toggleMenu = () => {
-    setisMenu(!isMenu)
-  }
+    setisMenu(!isMenu);
+  };
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumb */}
-          <Breadcrumbs title="Crypto" breadcrumbItem="Exchange" />
+          <Breadcrumbs title='Crypto' breadcrumbItem='Exchange' />
 
           <Row>
-            <Col lg="12">
+            <Col lg='12'>
               <Card>
                 <CardBody>
-                  <div className="d-flex">
-                    <div className="me-3">
+                  <div className='d-flex'>
+                    <div className='me-3'>
                       <img
                         src={avatar}
-                        alt=""
-                        className="avatar-md rounded-circle img-thumbnail"
+                        alt=''
+                        className='avatar-md rounded-circle img-thumbnail'
                       />
                     </div>
-                    <div className="flex-grow-1 align-self-center">
-                      <div className="text-muted">
+                    <div className='flex-grow-1 align-self-center'>
+                      <div className='text-muted'>
                         <h5>Henry wells</h5>
-                        <p className="mb-1">henrywells@abc.com</p>
-                        <p className="mb-0">Id no: #SK0234</p>
+                        <p className='mb-1'>henrywells@abc.com</p>
+                        <p className='mb-0'>Id no: #SK0234</p>
                       </div>
                     </div>
                     <Dropdown
-                      direction="left"
+                      direction='left'
                       isOpen={isMenu}
                       toggle={toggleMenu}
                     >
                       <DropdownToggle
-                        type="button"
-                        tag="button"
-                        className="btn btn-light"
+                        type='button'
+                        tag='button'
+                        className='btn btn-light'
                       >
-                        <i className="mdi mdi-wallet me-1" />
-                        <span className="d-none d-sm-inline-block">
-                          Wallet Balance <i className="mdi mdi-chevron-down" />
+                        <i className='mdi mdi-wallet me-1' />
+                        <span className='d-none d-sm-inline-block'>
+                          Wallet Balance <i className='mdi mdi-chevron-down' />
                         </span>
                       </DropdownToggle>
-                      <DropdownMenu className="dropdown-menu-md dropdown-menu-end">
-                        <div className="dropdown-item-text">
+                      <DropdownMenu className='dropdown-menu-md dropdown-menu-end'>
+                        <div className='dropdown-item-text'>
                           <div>
-                            <p className="text-muted mb-2">Available Balance</p>
-                            <h5 className="mb-0">$ 9148.23</h5>
+                            <p className='text-muted mb-2'>Available Balance</p>
+                            <h5 className='mb-0'>$ 9148.23</h5>
                           </div>
                         </div>
 
                         <DropdownItem divider />
 
-                        <DropdownItem href="#">
-                          BTC : <span className="float-end">1.02356</span>
+                        <DropdownItem href='#'>
+                          BTC : <span className='float-end'>1.02356</span>
                         </DropdownItem>
-                        <DropdownItem href="#">
-                          ETH : <span className="float-end">0.04121</span>
+                        <DropdownItem href='#'>
+                          ETH : <span className='float-end'>0.04121</span>
                         </DropdownItem>
-                        <DropdownItem href="#">
-                          LTC : <span className="float-end">0.00356</span>
+                        <DropdownItem href='#'>
+                          LTC : <span className='float-end'>0.00356</span>
                         </DropdownItem>
 
                         <DropdownItem divider />
 
                         <DropdownItem
-                          className="text-primary text-center"
-                          href="#"
+                          className='text-primary text-center'
+                          href='#'
                         >
                           Learn more
                         </DropdownItem>
@@ -253,52 +253,52 @@ const CryptoExchange = props => {
           </Row>
 
           <Row>
-            <Col xl="8">
+            <Col xl='8'>
               <Card>
                 <CardBody>
-                  <h4 className="card-title mb-4">Price</h4>
+                  <h4 className='card-title mb-4'>Price</h4>
 
                   <Row>
-                    <Col xl="3" sm="4">
-                      <div className="d-flex">
-                        <div className="avatar-sm me-3">
-                          <span className="avatar-title rounded-circle bg-warning bg-soft text-warning font-size-22">
-                            <i className="mdi mdi-bitcoin" />
+                    <Col xl='3' sm='4'>
+                      <div className='d-flex'>
+                        <div className='avatar-sm me-3'>
+                          <span className='avatar-title rounded-circle bg-warning bg-soft text-warning font-size-22'>
+                            <i className='mdi mdi-bitcoin' />
                           </span>
                         </div>
 
-                        <div className="flex-grow-1">
-                          <p className="text-muted mb-2">Bitcoin</p>
+                        <div className='flex-grow-1'>
+                          <p className='text-muted mb-2'>Bitcoin</p>
                           <h5>1.02356 BTC</h5>
                         </div>
                       </div>
                     </Col>
 
-                    <Col xl="3" sm="4">
-                      <div className="mt-4 mt-sm-0">
-                        <p className="text-muted mb-2">In USD</p>
+                    <Col xl='3' sm='4'>
+                      <div className='mt-4 mt-sm-0'>
+                        <p className='text-muted mb-2'>In USD</p>
                         <h5>6310.22 USD</h5>
                       </div>
                     </Col>
 
-                    <Col xl="3" sm="4">
-                      <div className="mt-4 mt-sm-0">
-                        <p className="text-muted mb-2">Last 24 hrs</p>
+                    <Col xl='3' sm='4'>
+                      <div className='mt-4 mt-sm-0'>
+                        <p className='text-muted mb-2'>Last 24 hrs</p>
                         <h5>
-                          0.24 % <i className="mdi mdi-arrow-up text-success" />
+                          0.24 % <i className='mdi mdi-arrow-up text-success' />
                         </h5>
                       </div>
                     </Col>
                   </Row>
 
-                  <div className="mt-4">
-                    <div id="candlestick-chart" dir="ltr">
+                  <div className='mt-4'>
+                    <div id='candlestick-chart' dir='ltr'>
                       <ReactApexChart
                         series={series}
                         options={options}
-                        type="candlestick"
+                        type='candlestick'
                         height={310}
-                        className="apex-charts"
+                        className='apex-charts'
                       />
                     </div>
                   </div>
@@ -306,27 +306,27 @@ const CryptoExchange = props => {
               </Card>
             </Col>
 
-            <Col xl="4">
+            <Col xl='4'>
               <Card>
                 <CardBody>
-                  <h4 className="card-title mb-4">Buy / Sell</h4>
+                  <h4 className='card-title mb-4'>Buy / Sell</h4>
 
                   <div>
-                    <p className="text-muted mb-2">
-                      <i className="mdi mdi-wallet me-1" /> Wallet Balance
+                    <p className='text-muted mb-2'>
+                      <i className='mdi mdi-wallet me-1' /> Wallet Balance
                     </p>
                     <h5>$ 9148.23</h5>
                   </div>
 
-                  <div className="mt-4">
-                    <Nav pills className="bg-light rounded" role="tablist">
+                  <div className='mt-4'>
+                    <Nav pills className='bg-light rounded' role='tablist'>
                       <NavItem>
                         <NavLink
                           className={classnames({
                             active: activeTab === "1",
                           })}
                           onClick={() => {
-                            toggleTab("1")
+                            toggleTab("1");
                           }}
                         >
                           Buy
@@ -338,103 +338,119 @@ const CryptoExchange = props => {
                             active: activeTab === "2",
                           })}
                           onClick={() => {
-                            toggleTab("2")
+                            toggleTab("2");
                           }}
                         >
                           Sell
                         </NavLink>
-                      </NavItem>                      
+                      </NavItem>
                     </Nav>
 
-                    <TabContent activeTab={activeTab} className="mt-4">
-                      <TabPane tabId="1" id="buy-tab">
-                        <h5 className="font-size-14 mb-4">Buy Coin</h5>
+                    <TabContent activeTab={activeTab} className='mt-4'>
+                      <TabPane tabId='1' id='buy-tab'>
+                        <h5 className='font-size-14 mb-4'>Buy Coin</h5>
 
                         <div>
                           <div>
                             <Label>Add Amount :</Label>
-                            <InputGroup className="mb-3">
-                              <Label className="input-group-text">Amount</Label>
+                            <InputGroup className='mb-3'>
+                              <Label className='input-group-text'>Amount</Label>
                               <select
-                                className="form-select"
+                                className='form-select'
                                 style={{ maxWidth: "90px" }}
                               >
-                                <option value="1" defaultValue>
+                                <option value='1' defaultValue>
                                   BTC
                                 </option>
-                                <option value="2">ETH</option>
-                                <option value="3">LTC</option>
+                                <option value='2'>ETH</option>
+                                <option value='3'>LTC</option>
                               </select>
-                              <Input type="text" className="form-control" />
+                              <Input type='text' className='form-control' />
                             </InputGroup>
 
-                            <InputGroup className="mb-3">
-                              <Label className="input-group-text">Price</Label>
-                              <Input type="text" className="form-control" placeholder="Price"/>
-                              <Label className="input-group-text">$</Label>
+                            <InputGroup className='mb-3'>
+                              <Label className='input-group-text'>Price</Label>
+                              <Input
+                                type='text'
+                                className='form-control'
+                                placeholder='Price'
+                              />
+                              <Label className='input-group-text'>$</Label>
                             </InputGroup>
 
-                            <InputGroup className="mb-3">
-                              <Label className="input-group-text">Total</Label>
-                              <Input type="text" className="form-control" placeholder="Total"/>
+                            <InputGroup className='mb-3'>
+                              <Label className='input-group-text'>Total</Label>
+                              <Input
+                                type='text'
+                                className='form-control'
+                                placeholder='Total'
+                              />
                             </InputGroup>
                           </div>
 
-                          <div className="text-center">
+                          <div className='text-center'>
                             <Button
-                              type="button"
-                              color="success"
-                              className="w-md"
+                              type='button'
+                              color='success'
+                              className='w-md'
                             >
                               Buy Coin
                             </Button>
                           </div>
                         </div>
                       </TabPane>
-                      <TabPane tabId="2" id="sell-tab">
-                        <h5 className="font-size-14 mb-4">Sell Coin</h5>
+                      <TabPane tabId='2' id='sell-tab'>
+                        <h5 className='font-size-14 mb-4'>Sell Coin</h5>
 
                         <div>
                           <div>
                             <Label>Add Amount :</Label>
-                            <InputGroup className="mb-3">
-                              <Label className="input-group-text">Amount</Label>
+                            <InputGroup className='mb-3'>
+                              <Label className='input-group-text'>Amount</Label>
                               <select
-                                className="form-select"
+                                className='form-select'
                                 style={{ maxWidth: "90px" }}
                               >
-                                <option value="1" defaultValue>
+                                <option value='1' defaultValue>
                                   BTC
                                 </option>
-                                <option value="2">ETH</option>
-                                <option value="3">LTC</option>
+                                <option value='2'>ETH</option>
+                                <option value='3'>LTC</option>
                               </select>
-                              <Input type="text" className="form-control" />
+                              <Input type='text' className='form-control' />
                             </InputGroup>
 
-                            <InputGroup className="mb-3">
-                              <Label className="input-group-text">Price</Label>
-                              <Input type="text" className="form-control" placeholder="Price"/>
-                              <Label className="input-group-text">$</Label>
+                            <InputGroup className='mb-3'>
+                              <Label className='input-group-text'>Price</Label>
+                              <Input
+                                type='text'
+                                className='form-control'
+                                placeholder='Price'
+                              />
+                              <Label className='input-group-text'>$</Label>
                             </InputGroup>
 
-                            <InputGroup className="mb-3">
-                              <Label className="input-group-text">Total</Label>
-                              <Input type="text" className="form-control" placeholder="Total"/>
+                            <InputGroup className='mb-3'>
+                              <Label className='input-group-text'>Total</Label>
+                              <Input
+                                type='text'
+                                className='form-control'
+                                placeholder='Total'
+                              />
                             </InputGroup>
                           </div>
 
-                          <div className="text-center">
+                          <div className='text-center'>
                             <Button
-                              type="button"
-                              color="danger"
-                              className="w-md"
+                              type='button'
+                              color='danger'
+                              className='w-md'
                             >
                               Sell Coin
                             </Button>
                           </div>
                         </div>
-                      </TabPane>                      
+                      </TabPane>
                     </TabContent>
                   </div>
                 </CardBody>
@@ -443,25 +459,25 @@ const CryptoExchange = props => {
           </Row>
 
           <Row>
-            <Col xl="6">
+            <Col xl='6'>
               <Card>
                 <CardBody>
-                  <h4 className="card-title mb-4">Order book</h4>
+                  <h4 className='card-title mb-4'>Order book</h4>
 
-                  <div className="table-responsive">
-                    <table className="table table-bordered mb-0">
+                  <div className='table-responsive'>
+                    <table className='table table-bordered mb-0'>
                       <thead>
-                        <tr className="text-center">
-                          <th colSpan="3">Buy</th>
-                          <th colSpan="3">Sell</th>
+                        <tr className='text-center'>
+                          <th colSpan='3'>Buy</th>
+                          <th colSpan='3'>Sell</th>
                         </tr>
                         <tr>
-                          <th scope="col">Amount</th>
-                          <th scope="col">Total</th>
-                          <th scope="col">Price</th>
-                          <th scope="col">Amount</th>
-                          <th scope="col">Total</th>
-                          <th scope="col">Price</th>
+                          <th scope='col'>Amount</th>
+                          <th scope='col'>Total</th>
+                          <th scope='col'>Price</th>
+                          <th scope='col'>Amount</th>
+                          <th scope='col'>Total</th>
+                          <th scope='col'>Price</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -511,26 +527,26 @@ const CryptoExchange = props => {
                 </CardBody>
               </Card>
             </Col>
-            <Col xl="6">
+            <Col xl='6'>
               <Card>
                 <CardBody>
-                  <h4 className="card-title mb-4">Notifications</h4>
+                  <h4 className='card-title mb-4'>Notifications</h4>
 
                   <SimpleBar style={{ maxHeight: "310px" }}>
-                    <ul className="verti-timeline list-unstyled">
+                    <ul className='verti-timeline list-unstyled'>
                       {notofications.map((notification, key) => (
-                        <li key={key} className="event-list">
-                          <div className="event-timeline-dot">
-                            <i className="bx bx-right-arrow-circle font-size-18" />
+                        <li key={key} className='event-list'>
+                          <div className='event-timeline-dot'>
+                            <i className='bx bx-right-arrow-circle font-size-18' />
                           </div>
-                          <div className="d-flex">
-                            <div className="me-3">
-                              <h5 className="font-size-14">
+                          <div className='d-flex'>
+                            <div className='me-3'>
+                              <h5 className='font-size-14'>
                                 {notification.date}{" "}
-                                <i className="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2" />
+                                <i className='bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2' />
                               </h5>
                             </div>
-                            <div className="flex-grow-1">
+                            <div className='flex-grow-1'>
                               <div>{notification.desc}</div>
                             </div>
                           </div>
@@ -545,7 +561,7 @@ const CryptoExchange = props => {
         </Container>
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default CryptoExchange
+export default CryptoExchange;

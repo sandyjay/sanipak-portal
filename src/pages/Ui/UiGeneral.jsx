@@ -24,9 +24,9 @@ import {
 import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 const UiGeneral = () => {
-
   //meta title
-  document.title = "General | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "General | San-i-pak - Vite React Admin & Dashboard Template";
 
   const [popovertop, setpopovertop] = useState(false);
   const [popoverleft, setpopoverleft] = useState(false);
@@ -41,9 +41,9 @@ const UiGeneral = () => {
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid={true}>
-          <Breadcrumbs title="UI Elements" breadcrumbItem="General UI" />
+          <Breadcrumbs title='UI Elements' breadcrumbItem='General UI' />
 
           <Row>
             <Col lg={12}>
@@ -53,59 +53,55 @@ const UiGeneral = () => {
                     <Col xl={6}>
                       <div>
                         <CardTitle>Badges</CardTitle>
-                        <p className="card-title-desc">
+                        <p className='card-title-desc'>
                           Add any of the below mentioned modifier classes to
                           change the appearance of a badge.
                         </p>
                         <div>
-                          <Badge color="primary" className="me-1">
+                          <Badge color='primary' className='me-1'>
                             Primary
                           </Badge>
-                          <Badge color="success" className="me-1">
+                          <Badge color='success' className='me-1'>
                             Success
                           </Badge>
-                          <Badge color="info" className="me-1">
+                          <Badge color='info' className='me-1'>
                             Info
                           </Badge>
-                          <Badge color="warning" className="me-1">
+                          <Badge color='warning' className='me-1'>
                             Warning
                           </Badge>
-                          <Badge color="danger" className="me-1">
+                          <Badge color='danger' className='me-1'>
                             Danger
                           </Badge>
-                          <Badge color="dark" className="me-1">
+                          <Badge color='dark' className='me-1'>
                             Dark
                           </Badge>
                         </div>
 
-                        <div className="mt-5">
-                          <h5 className="font-size-14">Soft Badge</h5>
-                          <div className="mt-1">
-                            <Badge className="badge-soft-primary me-1">
+                        <div className='mt-5'>
+                          <h5 className='font-size-14'>Soft Badge</h5>
+                          <div className='mt-1'>
+                            <Badge className='badge-soft-primary me-1'>
                               Primary
                             </Badge>
-                            <Badge className="badge-soft-success me-1">
+                            <Badge className='badge-soft-success me-1'>
                               Success
                             </Badge>
-                            <Badge className="badge-soft-info me-1">
-                              Info
-                            </Badge>
-                            <Badge className="badge-soft-warning me-1">
+                            <Badge className='badge-soft-info me-1'>Info</Badge>
+                            <Badge className='badge-soft-warning me-1'>
                               Warning
                             </Badge>
-                            <Badge className="badge-soft-danger me-1">
+                            <Badge className='badge-soft-danger me-1'>
                               Danger
                             </Badge>
-                            <Badge className="badge-soft-dark me-1">
-                              Dark
-                            </Badge>
+                            <Badge className='badge-soft-dark me-1'>Dark</Badge>
                           </div>
                         </div>
                       </div>
                     </Col>
                     <Col lg={6}>
                       <CardTitle>Pill badges</CardTitle>
-                      <p className="card-title-desc">
+                      <p className='card-title-desc'>
                         Use the <code>.rounded-pill</code> modifier className to
                         make badges more rounded (with a larger{" "}
                         <code>border-radius</code>
@@ -114,112 +110,155 @@ const UiGeneral = () => {
                       </p>
 
                       <div>
-                        <Badge pill color="primary" className="me-1">
+                        <Badge pill color='primary' className='me-1'>
                           Primary
                         </Badge>
-                        <Badge pill color="success" className="me-1">
+                        <Badge pill color='success' className='me-1'>
                           Success
                         </Badge>
-                        <Badge pill color="info" className="me-1">
+                        <Badge pill color='info' className='me-1'>
                           Info
                         </Badge>
-                        <Badge pill color="warning" className="me-1">
+                        <Badge pill color='warning' className='me-1'>
                           Warning
                         </Badge>
-                        <Badge pill color="danger" className="me-1">
+                        <Badge pill color='danger' className='me-1'>
                           Danger
                         </Badge>
-                        <Badge pill color="dark" className="me-1">
+                        <Badge pill color='dark' className='me-1'>
                           Dark
                         </Badge>
                       </div>
 
-                      <div className="mt-5">
-                        <h5 className="font-size-14">Soft Badge</h5>
-                        <div className="mt-1">
-                          <Badge pill className="badge-soft-primary ms-1">
+                      <div className='mt-5'>
+                        <h5 className='font-size-14'>Soft Badge</h5>
+                        <div className='mt-1'>
+                          <Badge pill className='badge-soft-primary ms-1'>
                             Primary
                           </Badge>
-                          <Badge pill className="badge-soft-success ms-1">
+                          <Badge pill className='badge-soft-success ms-1'>
                             Success
                           </Badge>
-                          <Badge pill className="badge-soft-info ms-1">
+                          <Badge pill className='badge-soft-info ms-1'>
                             Info
                           </Badge>
-                          <Badge pill className="badge-soft-warning ms-1">
+                          <Badge pill className='badge-soft-warning ms-1'>
                             Warning
                           </Badge>
-                          <Badge pill className="badge-soft-danger ms-1">
+                          <Badge pill className='badge-soft-danger ms-1'>
                             Danger
                           </Badge>
-                          <Badge pill className="badge-soft-dark ms-1">
+                          <Badge pill className='badge-soft-dark ms-1'>
                             Dark
                           </Badge>
                         </div>
                       </div>
                     </Col>
                   </Row>
-                  <hr className="mt-5" />
+                  <hr className='mt-5' />
                   <Row>
-                    <Col xl="6">
-                      <div className="mt-4">
-                        <h4 className="card-title">Badges in Buttons</h4>
-                        <p className="card-title-desc">Badges can be used as part of links or buttons to provide a counter.</p>
+                    <Col xl='6'>
+                      <div className='mt-4'>
+                        <h4 className='card-title'>Badges in Buttons</h4>
+                        <p className='card-title-desc'>
+                          Badges can be used as part of links or buttons to
+                          provide a counter.
+                        </p>
 
-                        <div className="d-flex flex-wrap gap-2">
-                          <button type="button" className="btn btn-primary">
-                            Notifications <Badge className="bg-success ms-1">4</Badge>
+                        <div className='d-flex flex-wrap gap-2'>
+                          <button type='button' className='btn btn-primary'>
+                            Notifications{" "}
+                            <Badge className='bg-success ms-1'>4</Badge>
                           </button>
-                          <button type="button" className="btn btn-success">
-                            Messages <span className="badge bg-danger ms-1">2</span>
+                          <button type='button' className='btn btn-success'>
+                            Messages{" "}
+                            <span className='badge bg-danger ms-1'>2</span>
                           </button>
-                          <button type="button" className="btn btn-outline-secondary">
-                            Draft <span className="badge bg-success ms-1">2</span>
+                          <button
+                            type='button'
+                            className='btn btn-outline-secondary'
+                          >
+                            Draft{" "}
+                            <span className='badge bg-success ms-1'>2</span>
                           </button>
                         </div>
                       </div>
                     </Col>
 
-                    <Col xl="6">
-                      <div className="mt-4">
-                        <h4 className="card-title">Badges Position Examples</h4>
-                        <p className="card-title-desc">Example of Badges Position</p>
+                    <Col xl='6'>
+                      <div className='mt-4'>
+                        <h4 className='card-title'>Badges Position Examples</h4>
+                        <p className='card-title-desc'>
+                          Example of Badges Position
+                        </p>
 
-                        <div className="d-flex flex-wrap gap-3">
-                          <button type="button" className="btn btn-primary position-relative">
-                            Mails <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">+99 <span className="visually-hidden">unread messages</span></span>
-                          </button>
-
-
-                          <button type="button" className="btn btn-light position-relative">
-                            Alerts <span className="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1"><span className="visually-hidden">unread messages</span></span>
-                          </button>
-
-                          <button type="button" className="btn btn-primary position-relative p-0 avatar-xs rounded">
-                            <span className="avatar-title bg-transparent">
-                              <i className="bx bxs-envelope"></i>
-                            </span>
-                            <span className="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1"><span className="visually-hidden">unread messages</span></span>
-                          </button>
-
-                          <button type="button" className="btn btn-light position-relative p-0 avatar-xs rounded-circle">
-                            <span className="avatar-title bg-transparent text-reset">
-                              <i className="bx bxs-bell"></i>
+                        <div className='d-flex flex-wrap gap-3'>
+                          <button
+                            type='button'
+                            className='btn btn-primary position-relative'
+                          >
+                            Mails{" "}
+                            <span className='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success'>
+                              +99{" "}
+                              <span className='visually-hidden'>
+                                unread messages
+                              </span>
                             </span>
                           </button>
 
-                          <button type="button" className="btn btn-light position-relative p-0 avatar-xs rounded-circle">
-                            <span className="avatar-title bg-transparent text-reset">
-                              <i className="bx bx-menu"></i>
+                          <button
+                            type='button'
+                            className='btn btn-light position-relative'
+                          >
+                            Alerts{" "}
+                            <span className='position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1'>
+                              <span className='visually-hidden'>
+                                unread messages
+                              </span>
                             </span>
-                            <span className="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-success p-1"><span className="visually-hidden">unread messages</span></span>
+                          </button>
+
+                          <button
+                            type='button'
+                            className='btn btn-primary position-relative p-0 avatar-xs rounded'
+                          >
+                            <span className='avatar-title bg-transparent'>
+                              <i className='bx bxs-envelope'></i>
+                            </span>
+                            <span className='position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1'>
+                              <span className='visually-hidden'>
+                                unread messages
+                              </span>
+                            </span>
+                          </button>
+
+                          <button
+                            type='button'
+                            className='btn btn-light position-relative p-0 avatar-xs rounded-circle'
+                          >
+                            <span className='avatar-title bg-transparent text-reset'>
+                              <i className='bx bxs-bell'></i>
+                            </span>
+                          </button>
+
+                          <button
+                            type='button'
+                            className='btn btn-light position-relative p-0 avatar-xs rounded-circle'
+                          >
+                            <span className='avatar-title bg-transparent text-reset'>
+                              <i className='bx bx-menu'></i>
+                            </span>
+                            <span className='position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-success p-1'>
+                              <span className='visually-hidden'>
+                                unread messages
+                              </span>
+                            </span>
                           </button>
                         </div>
                       </div>
                     </Col>
                   </Row>
                 </CardBody>
-
               </Card>
             </Col>
           </Row>
@@ -229,14 +268,15 @@ const UiGeneral = () => {
               <Card>
                 <CardBody>
                   <CardTitle>Popovers</CardTitle>
-                  <p className="card-title-desc">
-                    Four options are available: top, right, bottom, and left aligned.
-                    Directions are mirrored when using Bootstrap in RTL.
+                  <p className='card-title-desc'>
+                    Four options are available: top, right, bottom, and left
+                    aligned. Directions are mirrored when using Bootstrap in
+                    RTL.
                   </p>
-                  <div className="d-flex flex-wrap gap-2">
+                  <div className='d-flex flex-wrap gap-2'>
                     <Button
-                      id="Popovertop"
-                      color="secondary"
+                      id='Popovertop'
+                      color='secondary'
                       onClick={() => {
                         setpopovertop(!popovertop);
                       }}
@@ -244,9 +284,9 @@ const UiGeneral = () => {
                       Popover on top
                     </Button>
                     <Popover
-                      placement="top"
+                      placement='top'
                       isOpen={popovertop}
-                      target="Popovertop"
+                      target='Popovertop'
                       toggle={() => {
                         setpopovertop(!popovertop);
                       }}
@@ -258,18 +298,18 @@ const UiGeneral = () => {
                     </Popover>
 
                     <Button
-                      id="Popoverright"
+                      id='Popoverright'
                       onClick={() => {
                         setpopoverright(!popoverright);
                       }}
-                      color="secondary"
+                      color='secondary'
                     >
                       Popover on right
                     </Button>
                     <Popover
-                      placement="right"
+                      placement='right'
                       isOpen={popoverright}
-                      target="Popoverright"
+                      target='Popoverright'
                       toggle={() => {
                         setpopoverright(!popoverright);
                       }}
@@ -279,20 +319,20 @@ const UiGeneral = () => {
                         Vivamus sagittis lacus vel augue laoreet rutrum faucibus
                       </PopoverBody>
                     </Popover>
-                    
+
                     <Button
-                      id="Popoverbottom"
+                      id='Popoverbottom'
                       onClick={() => {
                         setpopoverbottom(!popoverbottom);
                       }}
-                      color="secondary"
+                      color='secondary'
                     >
                       Popover on bottom
                     </Button>
                     <Popover
-                      placement="bottom"
+                      placement='bottom'
                       isOpen={popoverbottom}
-                      target="Popoverbottom"
+                      target='Popoverbottom'
                       toggle={() => {
                         setpopoverbottom(!popoverbottom);
                       }}
@@ -304,18 +344,18 @@ const UiGeneral = () => {
                     </Popover>
 
                     <Button
-                      id="Popoverleft"
+                      id='Popoverleft'
                       onClick={() => {
                         setpopoverleft(!popoverleft);
                       }}
-                      color="secondary"
+                      color='secondary'
                     >
                       Popover on left
                     </Button>
                     <Popover
-                      placement="left"
+                      placement='left'
                       isOpen={popoverleft}
-                      target="Popoverleft"
+                      target='Popoverleft'
                       toggle={() => {
                         setpopoverleft(!popoverleft);
                       }}
@@ -327,8 +367,8 @@ const UiGeneral = () => {
                     </Popover>
 
                     <Button
-                      id="Popoverdismiss"
-                      className="btn btn-success"
+                      id='Popoverdismiss'
+                      className='btn btn-success'
                       onClick={() => {
                         setpopoverdismiss(!popoverdismiss);
                       }}
@@ -336,13 +376,14 @@ const UiGeneral = () => {
                       Dismissible popover
                     </Button>
                     <UncontrolledPopover
-                      trigger="focus"
-                      target="Popoverdismiss"
-                      placement="right"
+                      trigger='focus'
+                      target='Popoverdismiss'
+                      placement='right'
                     >
                       <PopoverHeader>Dismissible popover</PopoverHeader>
                       <PopoverBody>
-                        And here's some amazing content. It's very engaging. Right?
+                        And here's some amazing content. It's very engaging.
+                        Right?
                       </PopoverBody>
                     </UncontrolledPopover>
                   </div>
@@ -354,15 +395,15 @@ const UiGeneral = () => {
               <Card>
                 <CardBody>
                   <CardTitle>Tooltips</CardTitle>
-                  <CardSubtitle className="mb-3">
+                  <CardSubtitle className='mb-3'>
                     Hover over the links below to see tooltips:
                   </CardSubtitle>
 
-                  <div className="d-flex flex-wrap gap-2">
+                  <div className='d-flex flex-wrap gap-2'>
                     <Tooltip
-                      placement="top"
+                      placement='top'
                       isOpen={ttop}
-                      target="TooltipTop"
+                      target='TooltipTop'
                       toggle={() => {
                         setttop(!ttop);
                       }}
@@ -370,9 +411,9 @@ const UiGeneral = () => {
                       Hello world!
                     </Tooltip>
                     <Tooltip
-                      placement="right"
+                      placement='right'
                       isOpen={tright}
-                      target="TooltipRight"
+                      target='TooltipRight'
                       toggle={() => {
                         settright(!tright);
                       }}
@@ -380,9 +421,9 @@ const UiGeneral = () => {
                       Hello world!
                     </Tooltip>
                     <Tooltip
-                      placement="bottom"
+                      placement='bottom'
                       isOpen={tbottom}
-                      target="TooltipBottom"
+                      target='TooltipBottom'
                       toggle={() => {
                         settbottom(!tbottom);
                       }}
@@ -390,9 +431,9 @@ const UiGeneral = () => {
                       Hello world!
                     </Tooltip>
                     <Tooltip
-                      placement="left"
+                      placement='left'
                       isOpen={tleft}
-                      target="TooltipLeft"
+                      target='TooltipLeft'
                       toggle={() => {
                         settleft(!tleft);
                       }}
@@ -401,38 +442,37 @@ const UiGeneral = () => {
                     </Tooltip>
 
                     <button
-                      type="button"
-                      className="btn btn-primary"
-                      id="TooltipTop"
+                      type='button'
+                      className='btn btn-primary'
+                      id='TooltipTop'
                     >
                       {" "}
                       Tooltip on top
                     </button>
                     <button
-                      type="button"
-                      className="btn btn-primary"
-                      id="TooltipRight"
+                      type='button'
+                      className='btn btn-primary'
+                      id='TooltipRight'
                     >
                       {" "}
                       Tooltip on Right
                     </button>
                     <button
-                      type="button"
-                      className="btn btn-primary"
-                      id="TooltipBottom"
+                      type='button'
+                      className='btn btn-primary'
+                      id='TooltipBottom'
                     >
                       {" "}
                       Tooltip on Bottom
                     </button>
                     <button
-                      type="button"
-                      className="btn btn-primary"
-                      id="TooltipLeft"
+                      type='button'
+                      className='btn btn-primary'
+                      id='TooltipLeft'
                     >
                       {" "}
                       Tooltip on Left
                     </button>
-                   
                   </div>
                 </CardBody>
               </Card>
@@ -441,51 +481,51 @@ const UiGeneral = () => {
             <Col lg={12}>
               <Card>
                 <CardBody>
-                  <CardTitle className="mb-4">Pagination</CardTitle>
+                  <CardTitle className='mb-4'>Pagination</CardTitle>
                   <Row>
                     <Col lg={6}>
                       <CardTitle>Default Example</CardTitle>
-                      <CardSubtitle className="mb-3">
+                      <CardSubtitle className='mb-3'>
                         Pagination links indicate a series of related content
                         exists across multiple pages.
                       </CardSubtitle>
 
-                      <Pagination aria-label="Page navigation example">
+                      <Pagination aria-label='Page navigation example'>
                         <PaginationItem>
-                          <PaginationLink href="#">Previous</PaginationLink>
+                          <PaginationLink href='#'>Previous</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">1</PaginationLink>
+                          <PaginationLink href='#'>1</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">2</PaginationLink>
+                          <PaginationLink href='#'>2</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">3</PaginationLink>
+                          <PaginationLink href='#'>3</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">Next</PaginationLink>
+                          <PaginationLink href='#'>Next</PaginationLink>
                         </PaginationItem>
                       </Pagination>
 
-                      <Pagination aria-label="Page navigation example">
+                      <Pagination aria-label='Page navigation example'>
                         <PaginationItem>
-                          <PaginationLink href="#" previous>
-                            <i className="mdi mdi-chevron-left" />
+                          <PaginationLink href='#' previous>
+                            <i className='mdi mdi-chevron-left' />
                           </PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">1</PaginationLink>
+                          <PaginationLink href='#'>1</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">2</PaginationLink>
+                          <PaginationLink href='#'>2</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">3</PaginationLink>
+                          <PaginationLink href='#'>3</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
                           <PaginationLink next>
-                            <i className="mdi mdi-chevron-right" />
+                            <i className='mdi mdi-chevron-right' />
                           </PaginationLink>
                         </PaginationItem>
                       </Pagination>
@@ -493,55 +533,55 @@ const UiGeneral = () => {
 
                     <Col lg={6}>
                       <CardTitle>Disabled and active states</CardTitle>
-                      <CardSubtitle className="mb-3">
+                      <CardSubtitle className='mb-3'>
                         Pagination links are customizable for different
                         circumstances. Use <code>.disabled</code> for links that
                         appear un-clickable and <code>.active</code> to indicate
                         the current page.
                       </CardSubtitle>
 
-                      <Pagination aria-label="Page navigation example">
+                      <Pagination aria-label='Page navigation example'>
                         <PaginationItem disabled>
-                          <PaginationLink href="#" tabIndex="-1">
+                          <PaginationLink href='#' tabIndex='-1'>
                             Previous
                           </PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">1</PaginationLink>
+                          <PaginationLink href='#'>1</PaginationLink>
                         </PaginationItem>
                         <PaginationItem active>
-                          <PaginationLink href="#">
-                            2 <span className="sr-only">(current)</span>
+                          <PaginationLink href='#'>
+                            2 <span className='sr-only'>(current)</span>
                           </PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">3</PaginationLink>
+                          <PaginationLink href='#'>3</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">Next</PaginationLink>
+                          <PaginationLink href='#'>Next</PaginationLink>
                         </PaginationItem>
                       </Pagination>
 
-                      <Pagination aria-label="Page navigation example">
+                      <Pagination aria-label='Page navigation example'>
                         <PaginationItem disabled>
                           <PaginationLink>
-                            <i className="mdi mdi-chevron-left" />
+                            <i className='mdi mdi-chevron-left' />
                           </PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">1</PaginationLink>
+                          <PaginationLink href='#'>1</PaginationLink>
                         </PaginationItem>
                         <PaginationItem active>
                           <PaginationLink>
-                            2<span className="sr-only">(current)</span>
+                            2<span className='sr-only'>(current)</span>
                           </PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">3</PaginationLink>
+                          <PaginationLink href='#'>3</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">
-                            <i className="mdi mdi-chevron-right" />
+                          <PaginationLink href='#'>
+                            <i className='mdi mdi-chevron-right' />
                           </PaginationLink>
                         </PaginationItem>
                       </Pagination>
@@ -551,109 +591,109 @@ const UiGeneral = () => {
                   <Row>
                     <Col lg={6}>
                       <CardTitle>Sizing</CardTitle>
-                      <CardSubtitle className="mb-3">
+                      <CardSubtitle className='mb-3'>
                         Fancy larger or smaller pagination? Add{" "}
                         <code>.pagination-lg</code> or{" "}
                         <code>.pagination-sm</code> for additional sizes.
                       </CardSubtitle>
 
                       <Pagination
-                        size="lg"
-                        aria-label="Page navigation example"
+                        size='lg'
+                        aria-label='Page navigation example'
                       >
                         <PaginationItem disabled>
-                          <PaginationLink href="#" tabIndex="-1">
+                          <PaginationLink href='#' tabIndex='-1'>
                             Previous
                           </PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">1</PaginationLink>
+                          <PaginationLink href='#'>1</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">2</PaginationLink>
+                          <PaginationLink href='#'>2</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">3</PaginationLink>
+                          <PaginationLink href='#'>3</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">Next</PaginationLink>
+                          <PaginationLink href='#'>Next</PaginationLink>
                         </PaginationItem>
                       </Pagination>
 
                       <Pagination
-                        size="sm"
-                        aria-label="Page navigation example"
+                        size='sm'
+                        aria-label='Page navigation example'
                       >
                         <PaginationItem disabled>
-                          <PaginationLink href="#" tabIndex="-1">
+                          <PaginationLink href='#' tabIndex='-1'>
                             Previous
                           </PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">1</PaginationLink>
+                          <PaginationLink href='#'>1</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">2</PaginationLink>
+                          <PaginationLink href='#'>2</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">3</PaginationLink>
+                          <PaginationLink href='#'>3</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">Next</PaginationLink>
+                          <PaginationLink href='#'>Next</PaginationLink>
                         </PaginationItem>
                       </Pagination>
                     </Col>
 
                     <Col lg={6}>
                       <CardTitle>Alignment</CardTitle>
-                      <CardSubtitle className="mb-3">
+                      <CardSubtitle className='mb-3'>
                         Change the alignment of pagination components with
                         flexbox utilities.
                       </CardSubtitle>
 
                       <Pagination
-                        aria-label="Page navigation example"
-                        listClassName="justify-content-center"
+                        aria-label='Page navigation example'
+                        listClassName='justify-content-center'
                       >
                         <PaginationItem disabled>
-                          <PaginationLink href="#" tabIndex="-1">
+                          <PaginationLink href='#' tabIndex='-1'>
                             Previous
                           </PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">1</PaginationLink>
+                          <PaginationLink href='#'>1</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">2</PaginationLink>
+                          <PaginationLink href='#'>2</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">3</PaginationLink>
+                          <PaginationLink href='#'>3</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">Next</PaginationLink>
+                          <PaginationLink href='#'>Next</PaginationLink>
                         </PaginationItem>
                       </Pagination>
 
                       <Pagination
-                        aria-label="Page navigation example"
-                        listClassName="justify-content-end"
+                        aria-label='Page navigation example'
+                        listClassName='justify-content-end'
                       >
                         <PaginationItem disabled>
-                          <PaginationLink href="#" tabIndex="-1">
+                          <PaginationLink href='#' tabIndex='-1'>
                             Previous
                           </PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">1</PaginationLink>
+                          <PaginationLink href='#'>1</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">2</PaginationLink>
+                          <PaginationLink href='#'>2</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">3</PaginationLink>
+                          <PaginationLink href='#'>3</PaginationLink>
                         </PaginationItem>
                         <PaginationItem>
-                          <PaginationLink href="#">Next</PaginationLink>
+                          <PaginationLink href='#'>Next</PaginationLink>
                         </PaginationItem>
                       </Pagination>
                     </Col>
@@ -668,18 +708,18 @@ const UiGeneral = () => {
               <Card>
                 <CardBody>
                   <CardTitle>Border spinner</CardTitle>
-                  <CardSubtitle className="mb-3">
+                  <CardSubtitle className='mb-3'>
                     Use the border spinners for a lightweight loading indicator.
                   </CardSubtitle>
                   <div>
-                    <Spinner className="ms-2" color="primary" />
-                    <Spinner className="ms-2" color="secondary" />
-                    <Spinner className="ms-2" color="success" />
-                    <Spinner className="ms-2" color="danger" />
-                    <Spinner className="ms-2" color="warning" />
-                    <Spinner className="ms-2" color="info" />
-                    <Spinner className="ms-2" color="light" />
-                    <Spinner className="ms-2" color="dark" />
+                    <Spinner className='ms-2' color='primary' />
+                    <Spinner className='ms-2' color='secondary' />
+                    <Spinner className='ms-2' color='success' />
+                    <Spinner className='ms-2' color='danger' />
+                    <Spinner className='ms-2' color='warning' />
+                    <Spinner className='ms-2' color='info' />
+                    <Spinner className='ms-2' color='light' />
+                    <Spinner className='ms-2' color='dark' />
                   </div>
                 </CardBody>{" "}
               </Card>
@@ -688,20 +728,20 @@ const UiGeneral = () => {
               <Card>
                 <CardBody>
                   <CardTitle>Growing spinner</CardTitle>
-                  <CardSubtitle className="mb-3">
+                  <CardSubtitle className='mb-3'>
                     If you don’t fancy a border spinner, switch to the grow
                     spinner. While it doesn’t technically spin, it does
                     repeatedly grow!
                   </CardSubtitle>
                   <div>
-                    <Spinner type="grow" className="ms-2" color="primary" />
-                    <Spinner type="grow" className="ms-2" color="secondary" />
-                    <Spinner type="grow" className="ms-2" color="success" />
-                    <Spinner type="grow" className="ms-2" color="danger" />
-                    <Spinner type="grow" className="ms-2" color="warning" />
-                    <Spinner type="grow" className="ms-2" color="info" />
-                    <Spinner type="grow" className="ms-2" color="light" />
-                    <Spinner type="grow" className="ms-2" color="dark" />
+                    <Spinner type='grow' className='ms-2' color='primary' />
+                    <Spinner type='grow' className='ms-2' color='secondary' />
+                    <Spinner type='grow' className='ms-2' color='success' />
+                    <Spinner type='grow' className='ms-2' color='danger' />
+                    <Spinner type='grow' className='ms-2' color='warning' />
+                    <Spinner type='grow' className='ms-2' color='info' />
+                    <Spinner type='grow' className='ms-2' color='light' />
+                    <Spinner type='grow' className='ms-2' color='dark' />
                   </div>
                 </CardBody>
               </Card>
@@ -712,11 +752,22 @@ const UiGeneral = () => {
             <Col xl={6}>
               <Card>
                 <CardBody>
-                  <h4 className="card-title">Close Button</h4>
-                  <p className="card-title-desc">Provide an option to dismiss or close a component with <code>.btn-close</code>. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default <code>background-image</code>. <strong>Be sure to include text for screen readers</strong>, as we’ve done with <code>aria-label</code>.</p>
+                  <h4 className='card-title'>Close Button</h4>
+                  <p className='card-title-desc'>
+                    Provide an option to dismiss or close a component with{" "}
+                    <code>.btn-close</code>. Default styling is limited, but
+                    highly customizable. Modify the Sass variables to replace
+                    the default <code>background-image</code>.{" "}
+                    <strong>Be sure to include text for screen readers</strong>,
+                    as we’ve done with <code>aria-label</code>.
+                  </p>
 
                   <div>
-                    <button type="button" className="btn-close" aria-label="Close"></button>
+                    <button
+                      type='button'
+                      className='btn-close'
+                      aria-label='Close'
+                    ></button>
                   </div>
                 </CardBody>
               </Card>
@@ -724,13 +775,22 @@ const UiGeneral = () => {
             <Col xl={6}>
               <Card>
                 <CardBody>
-                  <h4 className="card-title">Disable Close Button</h4>
-                  <p className="card-title-desc">Disabled close buttons change their <code>opacity</code>. We’ve also applied <code>pointer-events: none</code> and <code>user-select: none</code> to preventing hover and active states from triggering.</p>
+                  <h4 className='card-title'>Disable Close Button</h4>
+                  <p className='card-title-desc'>
+                    Disabled close buttons change their <code>opacity</code>.
+                    We’ve also applied <code>pointer-events: none</code> and{" "}
+                    <code>user-select: none</code> to preventing hover and
+                    active states from triggering.
+                  </p>
 
                   <div>
-                    <button type="button" className="btn-close" disabled aria-label="Close"></button>
+                    <button
+                      type='button'
+                      className='btn-close'
+                      disabled
+                      aria-label='Close'
+                    ></button>
                   </div>
-
                 </CardBody>
               </Card>
             </Col>
@@ -740,19 +800,31 @@ const UiGeneral = () => {
             <Col xl={6}>
               <Card>
                 <CardBody>
-                  <h4 className="card-title">Close Button White Variant</h4>
-                  <p className="card-title-desc">Change the default <code>.btn-close</code> to be white with the <code>.btn-close-white</code> class. This class uses the <code>filter</code> property to invert the <code>background-image</code>.</p>
+                  <h4 className='card-title'>Close Button White Variant</h4>
+                  <p className='card-title-desc'>
+                    Change the default <code>.btn-close</code> to be white with
+                    the <code>.btn-close-white</code> class. This class uses the{" "}
+                    <code>filter</code> property to invert the{" "}
+                    <code>background-image</code>.
+                  </p>
 
-                  <div className="card-body bg-dark">
-                    <button type="button" className="btn-close btn-close-white" aria-label="Close"></button>
-                    <button type="button" className="btn-close btn-close-white" disabled aria-label="Close"></button>
+                  <div className='card-body bg-dark'>
+                    <button
+                      type='button'
+                      className='btn-close btn-close-white'
+                      aria-label='Close'
+                    ></button>
+                    <button
+                      type='button'
+                      className='btn-close btn-close-white'
+                      disabled
+                      aria-label='Close'
+                    ></button>
                   </div>
-
                 </CardBody>
               </Card>
             </Col>
           </Row>
-
         </Container>
       </div>
     </React.Fragment>

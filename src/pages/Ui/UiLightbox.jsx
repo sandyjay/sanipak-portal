@@ -44,7 +44,8 @@ const UiLightbox = (props) => {
   const selectedPlace = {};
 
   //meta title
-  document.title = "Lightbox | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Lightbox | San-i-pak - Vite React Admin & Dashboard Template";
 
   const [photoIndex, setphotoIndex] = useState(0);
   const [isFits, setisFits] = useState(false);
@@ -60,9 +61,9 @@ const UiLightbox = (props) => {
   }
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid={true}>
-          <Breadcrumbs title="UI Elements" breadcrumbItem="Lightbox" />
+          <Breadcrumbs title='UI Elements' breadcrumbItem='Lightbox' />
 
           {isFits ? (
             <Lightbox
@@ -134,38 +135,38 @@ const UiLightbox = (props) => {
               <Card>
                 <CardBody>
                   <CardTitle>Single image lightbox</CardTitle>
-                  <p className="card-title-desc">
+                  <p className='card-title-desc'>
                     Three simple popups with different scaling settings.
                   </p>
                   <Row>
-                    <Col className="col-6">
+                    <Col className='col-6'>
                       <div>
-                        <h5 className="mt-0 font-size-14">Fits (Horz/Vert)</h5>
+                        <h5 className='mt-0 font-size-14'>Fits (Horz/Vert)</h5>
                         <img
                           onClick={() => {
                             setisFits(true);
                           }}
-                          className="img-fluid"
-                          alt="Skote"
+                          className='img-fluid'
+                          alt='San-i-pak'
                           src={img2}
-                          width="145"
+                          width='145'
                         />
                       </div>
                     </Col>
-                    <Col className="col-6">
+                    <Col className='col-6'>
                       <div>
-                        <h5 className="mt-0 font-size-14">Effects</h5>
+                        <h5 className='mt-0 font-size-14'>Effects</h5>
                         <img
                           onClick={() => {
                             setisEffects(true);
                           }}
-                          className="img-fluid"
-                          alt=""
+                          className='img-fluid'
+                          alt=''
                           src={img3}
-                          width="75"
+                          width='75'
                         />
 
-                        <CardText className="mt-2 mb-0 text-muted">
+                        <CardText className='mt-2 mb-0 text-muted'>
                           No gaps, zoom animation, close icon in top-right
                           corner.
                         </CardText>
@@ -179,76 +180,76 @@ const UiLightbox = (props) => {
             <Col xl={6}>
               <Card>
                 <CardBody>
-                  <CardTitle className="h4">Lightbox gallery</CardTitle>
-                  <p className="card-title-desc">
+                  <CardTitle className='h4'>Lightbox gallery</CardTitle>
+                  <p className='card-title-desc'>
                     In this example lazy-loading of images is enabled for the
                     next image based on move direction.{" "}
                   </p>
-                  <div className="popup-gallery d-flex flex-wrap">
-                    <div className="img-fluid float-left">
+                  <div className='popup-gallery d-flex flex-wrap'>
+                    <div className='img-fluid float-left'>
                       <img
                         src={img1}
                         onClick={() => {
                           setisGallery(true);
                           setphotoIndex(0);
                         }}
-                        alt=""
-                        width="120"
+                        alt=''
+                        width='120'
                       />
                     </div>
-                    <div className="img-fluid float-left">
+                    <div className='img-fluid float-left'>
                       <img
                         src={img2}
                         onClick={() => {
                           setisGallery(true);
                           setphotoIndex(1);
                         }}
-                        alt=""
-                        width="120"
+                        alt=''
+                        width='120'
                       />
                     </div>
-                    <div className="img-fluid float-left">
+                    <div className='img-fluid float-left'>
                       <img
                         src={img3}
                         onClick={() => {
                           setisGallery(true);
                           setphotoIndex(2);
                         }}
-                        alt=""
-                        width="120"
+                        alt=''
+                        width='120'
                       />
                     </div>
-                    <div className="img-fluid float-left">
+                    <div className='img-fluid float-left'>
                       <img
                         src={img4}
                         onClick={() => {
                           setisGallery(true);
                           setphotoIndex(3);
                         }}
-                        alt=""
-                        width="120"
+                        alt=''
+                        width='120'
                       />
                     </div>
-                    <div className="img-fluid float-left">
+                    <div className='img-fluid float-left'>
                       <img
                         src={img5}
                         onClick={() => {
                           setisGallery(true);
                           setphotoIndex(4);
                         }}
-                        alt=""
-                        width="120"
+                        alt=''
+                        width='120'
                       />
                     </div>
-                    <div className="img-fluid float-left">
+                    <div className='img-fluid float-left'>
                       <img
                         src={img6}
                         onClick={() => {
                           setisGallery(true);
                           setphotoIndex(5);
                         }}
-                        alt=""
-                        width="120"
+                        alt=''
+                        width='120'
                       />
                     </div>
                   </div>
@@ -261,31 +262,31 @@ const UiLightbox = (props) => {
             <Col lg={6}>
               <Card>
                 <CardBody>
-                  <CardTitle className="h4">Zoom Gallery</CardTitle>
-                  <p className="card-title-desc">
+                  <CardTitle className='h4'>Zoom Gallery</CardTitle>
+                  <p className='card-title-desc'>
                     Zoom effect works only with images.
                   </p>
 
-                  <div className="zoom-gallery">
+                  <div className='zoom-gallery'>
                     <img
                       src={img3}
-                      className="float-left"
+                      className='float-left'
                       onClick={() => {
                         setisGalleryZoom(true);
                         setphotoIndex(0);
                       }}
-                      alt=""
-                      width="275"
+                      alt=''
+                      width='275'
                     />
                     <img
                       src={img7}
-                      className="float-left"
+                      className='float-left'
                       onClick={() => {
                         setisGalleryZoom(true);
                         setphotoIndex(1);
                       }}
-                      alt=""
-                      width="275"
+                      alt=''
+                      width='275'
                     />
                   </div>
                 </CardBody>
@@ -295,8 +296,8 @@ const UiLightbox = (props) => {
             <Col lg={6}>
               <Card>
                 <CardBody>
-                  <CardTitle className="h4">Popup with video or map</CardTitle>
-                  <p className="card-title-desc">
+                  <CardTitle className='h4'>Popup with video or map</CardTitle>
+                  <p className='card-title-desc'>
                     In this example lazy-loading of images is enabled for the
                     next image based on move direction.{" "}
                   </p>
@@ -304,7 +305,7 @@ const UiLightbox = (props) => {
                   <Row>
                     <Col>
                       <Button
-                        className="btn btn-secondary me-1"
+                        className='btn btn-secondary me-1'
                         onClick={() => {
                           setisOpen(!isOpen);
                         }}
@@ -312,7 +313,7 @@ const UiLightbox = (props) => {
                         Open Youtube Video
                       </Button>{" "}
                       <Button
-                        className="btn btn-secondary me-1"
+                        className='btn btn-secondary me-1'
                         onClick={() => {
                           setisOpen1(!isOpen1);
                         }}
@@ -323,21 +324,21 @@ const UiLightbox = (props) => {
                         onClick={() => {
                           tog_map();
                         }}
-                        className="popup-gmaps btn btn-secondary mo-mb-2"
+                        className='popup-gmaps btn btn-secondary mo-mb-2'
                       >
                         Open Google Map
                       </Button>
                       <ModalVideo
-                        videoId="L61p2uyiMSo"
-                        channel="youtube"
+                        videoId='L61p2uyiMSo'
+                        channel='youtube'
                         isOpen={isOpen}
                         onClose={() => {
                           setisOpen(!isOpen);
                         }}
                       />
                       <ModalVideo
-                        videoId="L61p2uyiMSo"
-                        channel="youtube"
+                        videoId='L61p2uyiMSo'
+                        channel='youtube'
                         isOpen={isOpen1}
                         onClose={() => {
                           setisOpen1(false);
@@ -346,7 +347,7 @@ const UiLightbox = (props) => {
                       <Modal
                         centered
                         isOpen={map}
-                        size="lg"
+                        size='lg'
                         toggle={() => {
                           tog_map();
                         }}
@@ -354,8 +355,8 @@ const UiLightbox = (props) => {
                         <ModalHeader toggle={tog_map}>Google Map</ModalHeader>
                         <ModalBody>
                           <div
-                            id="gmaps-markers"
-                            className="gmaps"
+                            id='gmaps-markers'
+                            className='gmaps'
                             style={{ position: "relative" }}
                           >
                             <Map
@@ -379,21 +380,21 @@ const UiLightbox = (props) => {
 
               <Card>
                 <CardBody>
-                  <CardTitle className="h4 mb-4">Popup with form</CardTitle>
+                  <CardTitle className='h4 mb-4'>Popup with form</CardTitle>
                   <div>
                     <Link
                       onClick={() => {
                         setmodal(!modal);
                       }}
-                      to="#"
-                      className="popup-form btn btn-primary"
+                      to='#'
+                      className='popup-form btn btn-primary'
                     >
                       Popup form
                     </Link>
                   </div>
 
                   <Modal
-                    size="xl"
+                    size='xl'
                     isOpen={modal}
                     toggle={() => {
                       setmodal(!modal);
@@ -404,7 +405,7 @@ const UiLightbox = (props) => {
                       toggle={() => {
                         setmodal(!modal);
                       }}
-                      className="h4"
+                      className='h4'
                     >
                       Form
                     </ModalHeader>
@@ -412,55 +413,55 @@ const UiLightbox = (props) => {
                       <form>
                         <Row>
                           <Col lg={4}>
-                            <div className="mb-3">
-                              <label htmlFor="name">Name</label>
+                            <div className='mb-3'>
+                              <label htmlFor='name'>Name</label>
                               <input
-                                type="text"
-                                className="form-control"
-                                id="name"
-                                placeholder="Enter Name"
+                                type='text'
+                                className='form-control'
+                                id='name'
+                                placeholder='Enter Name'
                               />
                             </div>
                           </Col>
                           <Col lg={4}>
-                            <div className="mb-3">
-                              <label htmlFor="email">Email</label>
+                            <div className='mb-3'>
+                              <label htmlFor='email'>Email</label>
                               <input
-                                type="email"
-                                className="form-control"
-                                id="email"
-                                placeholder="Enter Email"
+                                type='email'
+                                className='form-control'
+                                id='email'
+                                placeholder='Enter Email'
                               />
                             </div>
                           </Col>
                           <Col lg={4}>
-                            <div className="mb-3">
-                              <label htmlFor="password">Password</label>
+                            <div className='mb-3'>
+                              <label htmlFor='password'>Password</label>
                               <input
-                                type="password"
-                                className="form-control"
-                                id="password"
-                                placeholder="Enter Password"
+                                type='password'
+                                className='form-control'
+                                id='password'
+                                placeholder='Enter Password'
                               />
                             </div>
                           </Col>
                         </Row>
                         <Row>
                           <Col lg={12}>
-                            <div className="mb-3">
-                              <label htmlFor="subject">Subject</label>
+                            <div className='mb-3'>
+                              <label htmlFor='subject'>Subject</label>
                               <textarea
-                                className="form-control"
-                                id="subject"
-                                rows="3"
+                                className='form-control'
+                                id='subject'
+                                rows='3'
                               />
                             </div>
                           </Col>
                         </Row>
                         <Row>
                           <Col lg={12}>
-                            <div className="text-end">
-                              <button type="submit" className="btn btn-primary">
+                            <div className='text-end'>
+                              <button type='submit' className='btn btn-primary'>
                                 Submit
                               </button>
                             </div>

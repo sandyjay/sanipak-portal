@@ -20,7 +20,7 @@ import { useSelector, useDispatch } from "react-redux";
 const ProjectsOverview = (props) => {
   //meta title
   document.title =
-    "Project Overview | Skote - Vite React Admin & Dashboard Template";
+    "Project Overview | San-i-pak - Vite React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
 
@@ -40,33 +40,33 @@ const ProjectsOverview = (props) => {
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Projects" breadcrumbItem="Project Overview" />
+          <Breadcrumbs title='Projects' breadcrumbItem='Project Overview' />
 
           {!isEmpty(projectDetail) && (
             <>
               <Row>
-                <Col lg="8">
+                <Col lg='8'>
                   <ProjectDetail project={projectDetail} />
                 </Col>
 
-                <Col lg="4">
+                <Col lg='4'>
                   <TeamMembers team={projectDetail.team} />
                 </Col>
               </Row>
 
               <Row>
-                <Col lg="4">
+                <Col lg='4'>
                   <OverviewChart dataColors='["--bs-primary"]' />
                 </Col>
 
-                <Col lg="4">
+                <Col lg='4'>
                   <AttachedFiles files={projectDetail.files} />
                 </Col>
 
-                <Col lg="4">
+                <Col lg='4'>
                   <Comments comments={projectDetail.comments} />
                 </Col>
               </Row>

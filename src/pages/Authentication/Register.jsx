@@ -1,5 +1,16 @@
 import React, { useEffect } from "react";
-import { Row, Col, CardBody, Card, Alert, Container, Input, Label, Form, FormFeedback } from "reactstrap";
+import {
+  Row,
+  Col,
+  CardBody,
+  Card,
+  Alert,
+  Container,
+  Input,
+  Label,
+  Form,
+  FormFeedback,
+} from "reactstrap";
 
 // Formik Validation
 import * as Yup from "yup";
@@ -17,8 +28,9 @@ import { Link } from "react-router-dom";
 import profileImg from "../../assets/images/profile-img.png";
 import logoImg from "../../assets/images/logo.svg";
 
-const Register = props => {
-  document.title = "Register | Skote - Vite React Admin & Dashboard Template";
+const Register = (props) => {
+  document.title =
+    "Register | San-i-pak - Vite React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
 
@@ -27,9 +39,9 @@ const Register = props => {
     enableReinitialize: true,
 
     initialValues: {
-      email: '',
-      username: '',
-      password: '',
+      email: "",
+      username: "",
+      password: "",
     },
     validationSchema: Yup.object({
       email: Yup.string().required("Please Enter Your Email"),
@@ -38,10 +50,10 @@ const Register = props => {
     }),
     onSubmit: (values) => {
       dispatch(registerUser(values));
-    }
+    },
   });
 
-  const { user, registrationError, loading } = useSelector(state => ({
+  const { user, registrationError, loading } = useSelector((state) => ({
     user: state.Account.user,
     registrationError: state.Account.registrationError,
     loading: state.Account.loading,
@@ -53,48 +65,47 @@ const Register = props => {
 
   return (
     <React.Fragment>
-
-      <div className="home-btn d-none d-sm-block">
-        <Link to="/" className="text-dark">
-          <i className="bx bx-home h2" />
+      <div className='home-btn d-none d-sm-block'>
+        <Link to='/' className='text-dark'>
+          <i className='bx bx-home h2' />
         </Link>
       </div>
-      <div className="account-pages my-5 pt-sm-5">
+      <div className='account-pages my-5 pt-sm-5'>
         <Container>
-          <Row className="justify-content-center">
+          <Row className='justify-content-center'>
             <Col md={8} lg={6} xl={5}>
-              <Card className="overflow-hidden">
-                <div className="bg-primary bg-soft">
+              <Card className='overflow-hidden'>
+                <div className='bg-primary bg-soft'>
                   <Row>
-                    <Col className="col-7">
-                      <div className="text-primary p-4">
-                        <h5 className="text-primary">Free Register</h5>
-                        <p>Get your free Skote account now.</p>
+                    <Col className='col-7'>
+                      <div className='text-primary p-4'>
+                        <h5 className='text-primary'>Free Register</h5>
+                        <p>Get your free San-i-pak account now.</p>
                       </div>
                     </Col>
-                    <Col className="col-5 align-self-end">
-                      <img src={profileImg} alt="" className="img-fluid" />
+                    <Col className='col-5 align-self-end'>
+                      <img src={profileImg} alt='' className='img-fluid' />
                     </Col>
                   </Row>
                 </div>
-                <CardBody className="pt-0">
+                <CardBody className='pt-0'>
                   <div>
-                    <Link to="/">
-                      <div className="avatar-md profile-user-wid mb-4">
-                        <span className="avatar-title rounded-circle bg-light">
+                    <Link to='/'>
+                      <div className='avatar-md profile-user-wid mb-4'>
+                        <span className='avatar-title rounded-circle bg-light'>
                           <img
                             src={logoImg}
-                            alt=""
-                            className="rounded-circle"
-                            height="34"
+                            alt=''
+                            className='rounded-circle'
+                            height='34'
                           />
                         </span>
                       </div>
                     </Link>
                   </div>
-                  <div className="p-2">
+                  <div className='p-2'>
                     <Form
-                      className="form-horizontal"
+                      className='form-horizontal'
                       onSubmit={(e) => {
                         e.preventDefault();
                         validation.handleSubmit();
@@ -102,83 +113,99 @@ const Register = props => {
                       }}
                     >
                       {user && user ? (
-                        <Alert color="success">
+                        <Alert color='success'>
                           Register User Successfully
                         </Alert>
                       ) : null}
 
                       {registrationError && registrationError ? (
-                        <Alert color="danger">{registrationError}</Alert>
+                        <Alert color='danger'>{registrationError}</Alert>
                       ) : null}
 
-                      <div className="mb-3">
-                        <Label className="form-label">Email</Label>
+                      <div className='mb-3'>
+                        <Label className='form-label'>Email</Label>
                         <Input
-                          id="email"
-                          name="email"
-                          className="form-control"
-                          placeholder="Enter email"
-                          type="email"
+                          id='email'
+                          name='email'
+                          className='form-control'
+                          placeholder='Enter email'
+                          type='email'
                           onChange={validation.handleChange}
                           onBlur={validation.handleBlur}
                           value={validation.values.email || ""}
                           invalid={
-                            validation.touched.email && validation.errors.email ? true : false
+                            validation.touched.email && validation.errors.email
+                              ? true
+                              : false
                           }
                         />
                         {validation.touched.email && validation.errors.email ? (
-                          <FormFeedback type="invalid">{validation.errors.email}</FormFeedback>
+                          <FormFeedback type='invalid'>
+                            {validation.errors.email}
+                          </FormFeedback>
                         ) : null}
                       </div>
 
-                      <div className="mb-3">
-                        <Label className="form-label">Username</Label>
+                      <div className='mb-3'>
+                        <Label className='form-label'>Username</Label>
                         <Input
-                          name="username"
-                          type="text"
-                          placeholder="Enter username"
+                          name='username'
+                          type='text'
+                          placeholder='Enter username'
                           onChange={validation.handleChange}
                           onBlur={validation.handleBlur}
                           value={validation.values.username || ""}
                           invalid={
-                            validation.touched.username && validation.errors.username ? true : false
+                            validation.touched.username &&
+                            validation.errors.username
+                              ? true
+                              : false
                           }
                         />
-                        {validation.touched.username && validation.errors.username ? (
-                          <FormFeedback type="invalid">{validation.errors.username}</FormFeedback>
+                        {validation.touched.username &&
+                        validation.errors.username ? (
+                          <FormFeedback type='invalid'>
+                            {validation.errors.username}
+                          </FormFeedback>
                         ) : null}
                       </div>
-                      <div className="mb-3">
-                        <Label className="form-label">Password</Label>
+                      <div className='mb-3'>
+                        <Label className='form-label'>Password</Label>
                         <Input
-                          name="password"
-                          type="password"
-                          placeholder="Enter Password"
+                          name='password'
+                          type='password'
+                          placeholder='Enter Password'
                           onChange={validation.handleChange}
                           onBlur={validation.handleBlur}
                           value={validation.values.password || ""}
                           invalid={
-                            validation.touched.password && validation.errors.password ? true : false
+                            validation.touched.password &&
+                            validation.errors.password
+                              ? true
+                              : false
                           }
                         />
-                        {validation.touched.password && validation.errors.password ? (
-                          <FormFeedback type="invalid">{validation.errors.password}</FormFeedback>
+                        {validation.touched.password &&
+                        validation.errors.password ? (
+                          <FormFeedback type='invalid'>
+                            {validation.errors.password}
+                          </FormFeedback>
                         ) : null}
                       </div>
 
-                      <div className="mt-4">
+                      <div className='mt-4'>
                         <button
-                          className="btn btn-primary btn-block "
-                          type="submit"
+                          className='btn btn-primary btn-block '
+                          type='submit'
                         >
                           Register
                         </button>
                       </div>
 
-                      <div className="mt-4 text-center">
-                        <p className="mb-0">
-                          By registering you agree to the Skote{" "}
-                          <Link to="#" className="text-primary">
+                      <div className='mt-4 text-center'>
+                        <p className='mb-0'>
+                          By registering you agree to the San-i-pak{" "}
+                          <Link to='#' className='text-primary'>
                             Terms of Use
                           </Link>
                         </p>
@@ -187,17 +214,17 @@ const Register = props => {
                   </div>
                 </CardBody>
               </Card>
-              <div className="mt-5 text-center">
+              <div className='mt-5 text-center'>
                 <p>
                   Already have an account ?{" "}
-                  <Link to="/login" className="font-weight-medium text-primary">
+                  <Link to='/login' className='font-weight-medium text-primary'>
                     {" "}
                     Login
                   </Link>{" "}
                 </p>
                 <p>
-                  © {new Date().getFullYear()} Skote. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
+                  © {new Date().getFullYear()} San-i-pak. Crafted with{" "}
+                  <i className='mdi mdi-heart text-danger' /> by theclaymedia
                 </p>
               </div>
             </Col>

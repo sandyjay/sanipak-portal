@@ -1,46 +1,46 @@
 import React from "react";
 
-import { Container, Row, Col, Card, CardBody } from "reactstrap"
+import { Container, Row, Col, Card, CardBody } from "reactstrap";
 
 //Import maps
-import SimpleMap from "./LeafletMap/SimpleMap"
-import MapWithPopup from "./LeafletMap/MapWithPopup"
-import MapVectorLayers from "./LeafletMap/MapVectorLayers"
-import MapMarkerCustomIcons from "./LeafletMap/MapMarkerCustomIcons"
-import LayerGroup from "./LeafletMap/LayerGroup"
-import MapLayerControl from "./LeafletMap/MapLayerControl"
+import SimpleMap from "./LeafletMap/SimpleMap";
+import MapWithPopup from "./LeafletMap/MapWithPopup";
+import MapVectorLayers from "./LeafletMap/MapVectorLayers";
+import MapMarkerCustomIcons from "./LeafletMap/MapMarkerCustomIcons";
+import LayerGroup from "./LeafletMap/LayerGroup";
+import MapLayerControl from "./LeafletMap/MapLayerControl";
 
 //Import Breadcrumb
-import Breadcrumbs from "../../components/Common/Breadcrumb"
+import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 const MapsLeaflet = () => {
-
   //meta title
-  document.title = "Leaflet Maps | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Leaflet Maps | San-i-pak - Vite React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
-          <Breadcrumbs title="Maps" breadcrumbItem="Leaflet Maps" />
+          <Breadcrumbs title='Maps' breadcrumbItem='Leaflet Maps' />
           <Row>
-            <Col lg="6">
+            <Col lg='6'>
               <Card>
                 <CardBody>
-                  <h4 className="card-title mb-4">Example</h4>
-                  <div id="leaflet-map" className="leaflet-map">
+                  <h4 className='card-title mb-4'>Example</h4>
+                  <div id='leaflet-map' className='leaflet-map'>
                     <SimpleMap />
                   </div>
                 </CardBody>
               </Card>
             </Col>
-            <Col lg="6">
+            <Col lg='6'>
               <Card>
                 <CardBody>
-                  <h4 className="card-title mb-4">
+                  <h4 className='card-title mb-4'>
                     Markers, circles and polygons
                   </h4>
-                  <div id="leaflet-map-marker" className="leaflet-map">
+                  <div id='leaflet-map-marker' className='leaflet-map'>
                     <MapVectorLayers />
                   </div>
                 </CardBody>
@@ -49,21 +49,21 @@ const MapsLeaflet = () => {
           </Row>
 
           <Row>
-            <Col lg="6">
+            <Col lg='6'>
               <Card>
                 <CardBody>
-                  <h4 className="card-title mb-4">Working with popups</h4>
-                  <div id="leaflet-map-popup" className="leaflet-map">
+                  <h4 className='card-title mb-4'>Working with popups</h4>
+                  <div id='leaflet-map-popup' className='leaflet-map'>
                     <MapWithPopup />
                   </div>
                 </CardBody>
               </Card>
             </Col>
-            <Col lg="6">
+            <Col lg='6'>
               <Card>
                 <CardBody>
-                  <h4 className="card-title mb-4">Markers with Custom Icons</h4>
-                  <div id="leaflet-map-custom-icons" className="leaflet-map">
+                  <h4 className='card-title mb-4'>Markers with Custom Icons</h4>
+                  <div id='leaflet-map-custom-icons' className='leaflet-map'>
                     <MapMarkerCustomIcons />
                   </div>
                 </CardBody>
@@ -72,26 +72,26 @@ const MapsLeaflet = () => {
           </Row>
 
           <Row>
-            <Col lg="6">
+            <Col lg='6'>
               <Card>
                 <CardBody>
-                  <h4 className="card-title mb-4">
+                  <h4 className='card-title mb-4'>
                     Layer Group & Feature Group
                   </h4>
 
-                  <div id="leaflet-map-interactive-map" className="leaflet-map">
+                  <div id='leaflet-map-interactive-map' className='leaflet-map'>
                     <LayerGroup />
                   </div>
                 </CardBody>
               </Card>
             </Col>
-            <Col lg="6">
+            <Col lg='6'>
               <Card>
                 <CardBody>
-                  <h4 className="card-title mb-4">
+                  <h4 className='card-title mb-4'>
                     Layer Groups and Layers Control
                   </h4>
-                  <div id="leaflet-map-group-control" className="leaflet-map">
+                  <div id='leaflet-map-group-control' className='leaflet-map'>
                     <MapLayerControl />
                   </div>
                 </CardBody>
@@ -101,7 +101,7 @@ const MapsLeaflet = () => {
         </Container>
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default MapsLeaflet
+export default MapsLeaflet;

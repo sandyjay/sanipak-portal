@@ -46,7 +46,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 const EcommerceProducts = (props) => {
   //meta title
-  document.title = "Products | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Products | San-i-pak - Vite React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -178,30 +179,30 @@ const EcommerceProducts = (props) => {
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
-          <Breadcrumbs title="Ecommerce" breadcrumbItem="Products" />
+          <Breadcrumbs title='Ecommerce' breadcrumbItem='Products' />
           <Row>
-            <Col lg="3">
+            <Col lg='3'>
               <Card>
                 <CardBody>
-                  <CardTitle className="mb-4">Filter</CardTitle>
+                  <CardTitle className='mb-4'>Filter</CardTitle>
                   <div>
-                    <h5 className="font-size-14 mb-3">Clothes</h5>
+                    <h5 className='font-size-14 mb-3'>Clothes</h5>
                     {/* Render Cloth Categories */}
-                    <ul className="list-unstyled product-list">
+                    <ul className='list-unstyled product-list'>
                       {FilterClothes.map((cloth, key) => (
                         <li key={"_li_" + key}>
                           <Link to={cloth.link}>
-                            <i className="mdi mdi-chevron-right me-2" />
+                            <i className='mdi mdi-chevron-right me-2' />
                             {cloth.name}
                           </Link>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div className="mt-4 pt-3">
-                    <h5 className="font-size-14 mb-3">Price</h5>
+                  <div className='mt-4 pt-3'>
+                    <h5 className='font-size-14 mb-3'>Price</h5>
                     <br />
 
                     <Nouislider
@@ -215,32 +216,32 @@ const EcommerceProducts = (props) => {
                     />
                   </div>
 
-                  <div className="mt-4 pt-3">
-                    <h5 className="font-size-14 mb-3">Discount</h5>
+                  <div className='mt-4 pt-3'>
+                    <h5 className='font-size-14 mb-3'>Discount</h5>
                     {discountData.map((discount, i) => (
-                      <div className="form-check mt-2" key={i}>
+                      <div className='form-check mt-2' key={i}>
                         <Input
-                          type="checkbox"
+                          type='checkbox'
                           value={discount.value}
-                          className="form-check-input"
+                          className='form-check-input'
                           id={i}
                           onChange={onSelectDiscount}
                         />
-                        <Label className="form-check-label" htmlFor={i}>
+                        <Label className='form-check-label' htmlFor={i}>
                           {discount.label}
                         </Label>
                       </div>
                     ))}
                   </div>
 
-                  <div className="mt-4 pt-3">
-                    <h5 className="font-size-14 mb-3">Customer Rating</h5>
+                  <div className='mt-4 pt-3'>
+                    <h5 className='font-size-14 mb-3'>Customer Rating</h5>
                     <div>
-                      <div className="form-check mt-2">
+                      <div className='form-check mt-2'>
                         <Input
-                          type="checkbox"
-                          className="form-check-input"
-                          id="productratingCheck1"
+                          type='checkbox'
+                          className='form-check-input'
+                          id='productratingCheck1'
                           onChange={(e) => {
                             if (e.target.checked) {
                               onChangeRating(4);
@@ -250,17 +251,17 @@ const EcommerceProducts = (props) => {
                           }}
                         />
                         <Label
-                          className="form-check-label"
-                          htmlFor="productratingCheck1"
+                          className='form-check-label'
+                          htmlFor='productratingCheck1'
                         >
-                          4 <i className="bx bx-star text-warning" /> & Above
+                          4 <i className='bx bx-star text-warning' /> & Above
                         </Label>
                       </div>
-                      <div className="form-check mt-2">
+                      <div className='form-check mt-2'>
                         <Input
-                          type="checkbox"
-                          className="form-check-input"
-                          id="productratingCheck2"
+                          type='checkbox'
+                          className='form-check-input'
+                          id='productratingCheck2'
                           onChange={(e) => {
                             if (e.target.checked) {
                               onChangeRating(3);
@@ -270,17 +271,17 @@ const EcommerceProducts = (props) => {
                           }}
                         />
                         <Label
-                          className="form-check-label"
-                          htmlFor="productratingCheck2"
+                          className='form-check-label'
+                          htmlFor='productratingCheck2'
                         >
-                          3 <i className="bx bx-star text-warning" /> & Above
+                          3 <i className='bx bx-star text-warning' /> & Above
                         </Label>
                       </div>
-                      <div className="form-check mt-2">
+                      <div className='form-check mt-2'>
                         <Input
-                          type="checkbox"
-                          className="form-check-input"
-                          id="productratingCheck3"
+                          type='checkbox'
+                          className='form-check-input'
+                          id='productratingCheck3'
                           onChange={(e) => {
                             if (e.target.checked) {
                               onChangeRating(2);
@@ -290,17 +291,17 @@ const EcommerceProducts = (props) => {
                           }}
                         />
                         <Label
-                          className="form-check-label"
-                          htmlFor="productratingCheck3"
+                          className='form-check-label'
+                          htmlFor='productratingCheck3'
                         >
-                          2 <i className="bx bx-star text-warning" /> & Above
+                          2 <i className='bx bx-star text-warning' /> & Above
                         </Label>
                       </div>
-                      <div className="form-check mt-2">
+                      <div className='form-check mt-2'>
                         <Input
-                          type="checkbox"
-                          className="form-check-input"
-                          id="productratingCheck4"
+                          type='checkbox'
+                          className='form-check-input'
+                          id='productratingCheck4'
                           onChange={(e) => {
                             if (e.target.checked) {
                               onSelectRating(1);
@@ -310,10 +311,10 @@ const EcommerceProducts = (props) => {
                           }}
                         />
                         <Label
-                          className="form-check-label"
-                          htmlFor="productratingCheck4"
+                          className='form-check-label'
+                          htmlFor='productratingCheck4'
                         >
-                          1 <i className="bx bx-star text-warning" />
+                          1 <i className='bx bx-star text-warning' />
                         </Label>
                       </div>
                     </div>
@@ -322,26 +323,26 @@ const EcommerceProducts = (props) => {
               </Card>
             </Col>
 
-            <Col lg="9">
-              <Row className="mb-3">
-                <Col xl="4" sm="6">
-                  <div className="mt-2">
+            <Col lg='9'>
+              <Row className='mb-3'>
+                <Col xl='4' sm='6'>
+                  <div className='mt-2'>
                     <h5>Clothes</h5>
                   </div>
                 </Col>
-                <Col lg="8" sm="6">
-                  <Form className="mt-4 mt-sm-0 float-sm-end d-flex align-items-center">
-                    <div className="search-box me-2">
-                      <div className="position-relative">
+                <Col lg='8' sm='6'>
+                  <Form className='mt-4 mt-sm-0 float-sm-end d-flex align-items-center'>
+                    <div className='search-box me-2'>
+                      <div className='position-relative'>
                         <Input
-                          type="text"
-                          className="form-control border-0"
-                          placeholder="Search..."
+                          type='text'
+                          className='form-control border-0'
+                          placeholder='Search...'
                         />
-                        <i className="bx bx-search-alt search-icon" />
+                        <i className='bx bx-search-alt search-icon' />
                       </div>
                     </div>
-                    <Nav className="product-view-nav" pills>
+                    <Nav className='product-view-nav' pills>
                       <NavItem>
                         <NavLink
                           className={classnames({
@@ -351,7 +352,7 @@ const EcommerceProducts = (props) => {
                             toggleTab("1");
                           }}
                         >
-                          <i className="bx bx-grid-alt" />
+                          <i className='bx bx-grid-alt' />
                         </NavLink>
                       </NavItem>
                       <NavItem>
@@ -363,7 +364,7 @@ const EcommerceProducts = (props) => {
                             toggleTab("2");
                           }}
                         >
-                          <i className="bx bx-list-ul" />
+                          <i className='bx bx-list-ul' />
                         </NavLink>
                       </NavItem>
                     </Nav>
@@ -373,17 +374,17 @@ const EcommerceProducts = (props) => {
               <Row>
                 {!isEmpty(productList) &&
                   productList.map((product, key) => (
-                    <Col xl="4" sm="6" key={"_col_" + key}>
+                    <Col xl='4' sm='6' key={"_col_" + key}>
                       <Card
                         onClick={() =>
                           navigate(`/ecommerce-product-detail/${product.id}`)
                         }
                       >
                         <CardBody>
-                          <div className="product-img position-relative">
+                          <div className='product-img position-relative'>
                             {product.isOffer ? (
-                              <div className="avatar-sm product-ribbon">
-                                <span className="avatar-title rounded-circle bg-primary">
+                              <div className='avatar-sm product-ribbon'>
+                                <span className='avatar-title rounded-circle bg-primary'>
                                   {`- ${product.offer} %`}
                                 </span>
                               </div>
@@ -391,32 +392,32 @@ const EcommerceProducts = (props) => {
 
                             <img
                               src={productImages[product.image]}
-                              alt=""
-                              className="img-fluid mx-auto d-block"
+                              alt=''
+                              className='img-fluid mx-auto d-block'
                             />
                           </div>
-                          <div className="mt-4 text-center">
-                            <h5 className="mb-3 text-truncate">
+                          <div className='mt-4 text-center'>
+                            <h5 className='mb-3 text-truncate'>
                               <Link
                                 to={"/ecommerce-product-detail/" + product.id}
-                                className="text-dark"
+                                className='text-dark'
                               >
                                 {product.name}{" "}
                               </Link>
                             </h5>
-                            <div className="text-muted mb-3">
+                            <div className='text-muted mb-3'>
                               <StarRatings
                                 rating={product.rating}
-                                starRatedColor="#F1B44C"
-                                starEmptyColor="#74788d"
+                                starRatedColor='#F1B44C'
+                                starEmptyColor='#74788d'
                                 numberOfStars={5}
-                                name="rating"
-                                starDimension="14px"
-                                starSpacing="1px"
+                                name='rating'
+                                starDimension='14px'
+                                starSpacing='1px'
                               />
                             </div>
-                            <h5 className="my-0">
-                              <span className="text-muted me-2">
+                            <h5 className='my-0'>
+                              <span className='text-muted me-2'>
                                 <del>${product.oldPrice}</del>
                               </span>
                               <b>${product.newPrice}</b>
@@ -429,12 +430,12 @@ const EcommerceProducts = (props) => {
               </Row>
 
               <Row>
-                <Col lg="12">
-                  <Pagination className="pagination pagination-rounded justify-content-center mt-3 mb-4 pb-1">
+                <Col lg='12'>
+                  <Pagination className='pagination pagination-rounded justify-content-center mt-3 mb-4 pb-1'>
                     <PaginationItem disabled={page === 1}>
                       <PaginationLink
                         previous
-                        href="#"
+                        href='#'
                         onClick={() => handlePageClick(page - 1)}
                       />
                     </PaginationItem>
@@ -442,7 +443,7 @@ const EcommerceProducts = (props) => {
                       <PaginationItem active={i + 1 === page} key={i}>
                         <PaginationLink
                           onClick={() => handlePageClick(i + 1)}
-                          href="#"
+                          href='#'
                         >
                           {i + 1}
                         </PaginationLink>
@@ -451,7 +452,7 @@ const EcommerceProducts = (props) => {
                     <PaginationItem disabled={page === totalPage}>
                       <PaginationLink
                         next
-                        href="#"
+                        href='#'
                         onClick={() => handlePageClick(page + 1)}
                       />
                     </PaginationItem>

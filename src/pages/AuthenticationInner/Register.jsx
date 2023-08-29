@@ -6,7 +6,17 @@ import { useFormik } from "formik";
 
 import { Link } from "react-router-dom";
 
-import { Row, Col, CardBody, Card, Container, Form, Label, Input, FormFeedback } from "reactstrap";
+import {
+  Row,
+  Col,
+  CardBody,
+  Card,
+  Container,
+  Form,
+  Label,
+  Input,
+  FormFeedback,
+} from "reactstrap";
 
 // import images
 import profileImg from "../../assets/images/profile-img.png";
@@ -14,9 +24,9 @@ import logoImg from "../../assets/images/logo.svg";
 import lightlogo from "../../assets/images/logo-light.svg";
 
 const Register = () => {
-
   //meta title
-  document.title="Register | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Register | San-i-pak - Vite React Admin & Dashboard Template";
 
   //form validation
   const validation = useFormik({
@@ -24,9 +34,9 @@ const Register = () => {
     enableReinitialize: true,
 
     initialValues: {
-      email: '',
-      username: '',
-      password: '',
+      email: "",
+      username: "",
+      password: "",
     },
     validationSchema: Yup.object({
       email: Yup.string().required("Please Enter Your Email"),
@@ -35,162 +45,179 @@ const Register = () => {
     }),
     onSubmit: (values) => {
       // console.log(values);
-    }
+    },
   });
   return (
-    <React.Fragment>      
-      <div className="account-pages my-5 pt-sm-5">
+    <React.Fragment>
+      <div className='account-pages my-5 pt-sm-5'>
         <Container>
-          <Row className="justify-content-center">
+          <Row className='justify-content-center'>
             <Col md={8} lg={8} xl={5}>
-              <Card className="overflow-hidden">
-                <div className="bg-primary bg-soft">
+              <Card className='overflow-hidden'>
+                <div className='bg-primary bg-soft'>
                   <Row>
-                    <Col className="col-7">
-                      <div className="text-primary p-4">
-                        <h5 className="text-primary">Free Register</h5>
-                        <p>Get your free Skote account now.</p>
+                    <Col className='col-7'>
+                      <div className='text-primary p-4'>
+                        <h5 className='text-primary'>Free Register</h5>
+                        <p>Get your free San-i-pak account now.</p>
                       </div>
                     </Col>
-                    <Col className="col-5 align-self-end">
-                      <img src={profileImg} alt="" className="img-fluid" />
+                    <Col className='col-5 align-self-end'>
+                      <img src={profileImg} alt='' className='img-fluid' />
                     </Col>
                   </Row>
                 </div>
-                <CardBody className="pt-0">
-                  <div className="auth-logo">
-                    <Link to="/" className="auth-logo-light">
-                      <div className="avatar-md profile-user-wid mb-4">
-                        <span className="avatar-title rounded-circle bg-light">
+                <CardBody className='pt-0'>
+                  <div className='auth-logo'>
+                    <Link to='/' className='auth-logo-light'>
+                      <div className='avatar-md profile-user-wid mb-4'>
+                        <span className='avatar-title rounded-circle bg-light'>
                           <img
                             src={lightlogo}
-                            alt=""
-                            className="rounded-circle"
-                            height="34"
+                            alt=''
+                            className='rounded-circle'
+                            height='34'
                           />
                         </span>
                       </div>
                     </Link>
-                    <Link to="/" className="auth-logo-dark">
-                      <div className="avatar-md profile-user-wid mb-4">
-                        <span className="avatar-title rounded-circle bg-light">
+                    <Link to='/' className='auth-logo-dark'>
+                      <div className='avatar-md profile-user-wid mb-4'>
+                        <span className='avatar-title rounded-circle bg-light'>
                           <img
                             src={logoImg}
-                            alt=""
-                            className="rounded-circle"
-                            height="34"
+                            alt=''
+                            className='rounded-circle'
+                            height='34'
                           />
                         </span>
                       </div>
                     </Link>
                   </div>
-                  <div className="p-2">
-                    <Form className="form-horizontal"
+                  <div className='p-2'>
+                    <Form
+                      className='form-horizontal'
                       onSubmit={(e) => {
                         e.preventDefault();
                         validation.handleSubmit();
                         return false;
                       }}
                     >
-                      <div className="mb-3">
-                        <Label className="form-label">Email</Label>
+                      <div className='mb-3'>
+                        <Label className='form-label'>Email</Label>
                         <Input
-                          id="email"
-                          name="email"
-                          className="form-control"
-                          placeholder="Enter email"
-                          type="email"
+                          id='email'
+                          name='email'
+                          className='form-control'
+                          placeholder='Enter email'
+                          type='email'
                           onChange={validation.handleChange}
                           onBlur={validation.handleBlur}
                           value={validation.values.email || ""}
                           invalid={
-                            validation.touched.email && validation.errors.email ? true : false
+                            validation.touched.email && validation.errors.email
+                              ? true
+                              : false
                           }
                         />
                         {validation.touched.email && validation.errors.email ? (
-                          <FormFeedback type="invalid">{validation.errors.email}</FormFeedback>
+                          <FormFeedback type='invalid'>
+                            {validation.errors.email}
+                          </FormFeedback>
                         ) : null}
                       </div>
 
-                      <div className="mb-3">
-                        <Label className="form-label">Username</Label>
+                      <div className='mb-3'>
+                        <Label className='form-label'>Username</Label>
                         <Input
-                          name="username"
-                          type="text"
-                          placeholder="Enter username"
+                          name='username'
+                          type='text'
+                          placeholder='Enter username'
                           onChange={validation.handleChange}
                           onBlur={validation.handleBlur}
                           value={validation.values.username || ""}
                           invalid={
-                            validation.touched.username && validation.errors.username ? true : false
+                            validation.touched.username &&
+                            validation.errors.username
+                              ? true
+                              : false
                           }
                         />
-                        {validation.touched.username && validation.errors.username ? (
-                          <FormFeedback type="invalid">{validation.errors.username}</FormFeedback>
+                        {validation.touched.username &&
+                        validation.errors.username ? (
+                          <FormFeedback type='invalid'>
+                            {validation.errors.username}
+                          </FormFeedback>
                         ) : null}
                       </div>
-                      <div className="mb-3">
-                        <Label className="form-label">Password</Label>
+                      <div className='mb-3'>
+                        <Label className='form-label'>Password</Label>
                         <Input
-                          name="password"
-                          type="password"
-                          placeholder="Enter Password"
+                          name='password'
+                          type='password'
+                          placeholder='Enter Password'
                           onChange={validation.handleChange}
                           onBlur={validation.handleBlur}
                           value={validation.values.password || ""}
                           invalid={
-                            validation.touched.password && validation.errors.password ? true : false
+                            validation.touched.password &&
+                            validation.errors.password
+                              ? true
+                              : false
                           }
                         />
-                        {validation.touched.password && validation.errors.password ? (
-                          <FormFeedback type="invalid">{validation.errors.password}</FormFeedback>
+                        {validation.touched.password &&
+                        validation.errors.password ? (
+                          <FormFeedback type='invalid'>
+                            {validation.errors.password}
+                          </FormFeedback>
                         ) : null}
                       </div>
 
-                      <div className="mt-4 d-grid">
+                      <div className='mt-4 d-grid'>
                         <button
-                          className="btn btn-primary btn-block "
-                          type="submit"
+                          className='btn btn-primary btn-block '
+                          type='submit'
                         >
                           Register
                         </button>
                       </div>
 
-                      <div className="mt-4 text-center">
-                        <h5 className="font-size-14 mb-3">Sign up using</h5>
+                      <div className='mt-4 text-center'>
+                        <h5 className='font-size-14 mb-3'>Sign up using</h5>
 
-                        <ul className="list-inline">
-                          <li className="list-inline-item">
+                        <ul className='list-inline'>
+                          <li className='list-inline-item'>
                             <Link
-                              to="#"
-                              className="social-list-item bg-primary text-white border-primary"
+                              to='#'
+                              className='social-list-item bg-primary text-white border-primary'
                             >
-                              <i className="mdi mdi-facebook" />
+                              <i className='mdi mdi-facebook' />
                             </Link>
                           </li>{" "}
-                          <li className="list-inline-item">
+                          <li className='list-inline-item'>
                             <Link
-                              to="#"
-                              className="social-list-item bg-info text-white border-info"
+                              to='#'
+                              className='social-list-item bg-info text-white border-info'
                             >
-                              <i className="mdi mdi-twitter" />
+                              <i className='mdi mdi-twitter' />
                             </Link>
                           </li>{" "}
-                          <li className="list-inline-item">
+                          <li className='list-inline-item'>
                             <Link
-                              to="#"
-                              className="social-list-item bg-danger text-white border-danger"
+                              to='#'
+                              className='social-list-item bg-danger text-white border-danger'
                             >
-                              <i className="mdi mdi-google" />
+                              <i className='mdi mdi-google' />
                             </Link>
                           </li>
                         </ul>
                       </div>
 
-                      <div className="mt-4 text-center">
-                        <p className="mb-0">
-                          By registering you agree to the Skote{" "}
-                          <Link to="#" className="text-primary">
+                      <div className='mt-4 text-center'>
+                        <p className='mb-0'>
+                          By registering you agree to the San-i-pak{" "}
+                          <Link to='#' className='text-primary'>
                             Terms of Use
                           </Link>
                         </p>
@@ -199,20 +226,17 @@ const Register = () => {
                   </div>
                 </CardBody>
               </Card>
-              <div className="mt-5 text-center">
+              <div className='mt-5 text-center'>
                 <p>
                   Already have an account ?{" "}
-                  <Link
-                    to="/pages-login"
-                    className="fw-medium text-primary"
-                  >
+                  <Link to='/pages-login' className='fw-medium text-primary'>
                     {" "}
                     Login
                   </Link>{" "}
                 </p>
                 <p>
-                  © {new Date().getFullYear()} Skote. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
+                  © {new Date().getFullYear()} San-i-pak. Crafted with{" "}
+                  <i className='mdi mdi-heart text-danger' /> by theclaymedia
                 </p>
               </div>
             </Col>

@@ -16,14 +16,14 @@ import Breadcrumbs from "../../components/Common/Breadcrumb";
 const index = () => {
   //meta title
   document.title =
-    "Blog Dashboard | Skote - Vite React Admin & Dashboard Template";
+    "Blog Dashboard | San-i-pak - Vite React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumb */}
-          <Breadcrumbs title="Dashboards" breadcrumbItem="Blog" />
+          <Breadcrumbs title='Dashboards' breadcrumbItem='Blog' />
           <Row>
             {/* card user */}
             <CardUser dataColors='["--bs-primary", "--bs-warning"]' />

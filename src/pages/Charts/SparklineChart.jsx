@@ -1,8 +1,8 @@
-import React from "react"
-import { Row, Col, Card, CardBody, CardTitle } from "reactstrap"
+import React from "react";
+import { Row, Col, Card, CardBody, CardTitle } from "reactstrap";
 
 //Import Breadcrumb
-import Breadcrumbs from "../../components/Common/Breadcrumb"
+import Breadcrumbs from "../../components/Common/Breadcrumb";
 import {
   Sparklines,
   SparklinesLine,
@@ -10,25 +10,25 @@ import {
   SparklinesSpots,
   SparklinesReferenceLine,
   SparklinesCurve,
-} from "react-sparklines"
+} from "react-sparklines";
 
 const SparklineChart = () => {
-
-   //meta title
-   document.title = "Sparkline Charts | Skote - React Admin & Dashboard Template"
+  //meta title
+  document.title =
+    "Sparkline Charts | San-i-pak - React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
-      <div className="page-content">
-        <div className="container-fluid">
+      <div className='page-content'>
+        <div className='container-fluid'>
           {/* Render Breadcrumb */}
-          <Breadcrumbs title="Charts" breadcrumbItem="Sparkline Charts" />
+          <Breadcrumbs title='Charts' breadcrumbItem='Sparkline Charts' />
 
           <Row>
             <Col sm={4}>
               <Card>
                 <CardBody>
-                  <CardTitle className="mb-4">Spots Chart</CardTitle>
+                  <CardTitle className='mb-4'>Spots Chart</CardTitle>
                   <Sparklines
                     height={100}
                     data={[5, 10, 5, 20, 18, 17, 29, 10, 18]}
@@ -56,8 +56,8 @@ const SparklineChart = () => {
             <Col sm={4}>
               <Card>
                 <CardBody>
-                  <CardTitle className="mb-4">Bar Chart</CardTitle>
-                  <div className="text-center">
+                  <CardTitle className='mb-4'>Bar Chart</CardTitle>
+                  <div className='text-center'>
                     <Sparklines
                       height={100}
                       data={[5, 6, 2, 8, 9, 4, 7, 10, 11, 12, 10, 4, 7, 10]}
@@ -73,14 +73,14 @@ const SparklineChart = () => {
             </Col>
             <Col sm={4}>
               <Card>
-                <CardBody className="analytics-info">
-                  <CardTitle className="mb-4">Line Chart</CardTitle>
+                <CardBody className='analytics-info'>
+                  <CardTitle className='mb-4'>Line Chart</CardTitle>
                   <Sparklines
                     height={100}
                     data={[0, 23, 43, 35, 44, 45, 56, 37, 40, 45, 56, 7, 10]}
                   >
                     <SparklinesLine
-                      color="#3c4ccf"
+                      color='#3c4ccf'
                       lineWidth={1}
                       style={{ fill: "transparent" }}
                     />
@@ -93,7 +93,7 @@ const SparklineChart = () => {
             <Col sm={4}>
               <Card>
                 <CardBody>
-                  <CardTitle className="mb-4">Composite Bar Chart</CardTitle>
+                  <CardTitle className='mb-4'>Composite Bar Chart</CardTitle>
                   <Sparklines
                     height={100}
                     data={[5, 6, 2, 9, 4, 7, 10, 12, 4, 7, 10]}
@@ -113,25 +113,11 @@ const SparklineChart = () => {
             <Col sm={4}>
               <Card>
                 <CardBody>
-                  <CardTitle className="mb-4">Reference Line Chart</CardTitle>
+                  <CardTitle className='mb-4'>Reference Line Chart</CardTitle>
                   <Sparklines
                     height={100}
                     data={[
-                      5,
-                      10,
-                      5,
-                      20,
-                      18,
-                      17,
-                      29,
-                      10,
-                      18,
-                      15,
-                      20,
-                      18,
-                      17,
-                      29,
-                      10,
+                      5, 10, 5, 20, 18, 17, 29, 10, 18, 15, 20, 18, 17, 29, 10,
                       18,
                     ]}
                   >
@@ -144,40 +130,14 @@ const SparklineChart = () => {
               </Card>
             </Col>
             <Col sm={4}>
-              <Card className="bg-success mb-4">
+              <Card className='bg-success mb-4'>
                 <CardBody>
-                  <CardTitle className="mb-4">Real World Chart</CardTitle>
+                  <CardTitle className='mb-4'>Real World Chart</CardTitle>
                   <Sparklines
                     height={80}
                     data={[
-                      4,
-                      6,
-                      7,
-                      7,
-                      4,
-                      3,
-                      2,
-                      1,
-                      4,
-                      4,
-                      5,
-                      6,
-                      3,
-                      4,
-                      5,
-                      8,
-                      7,
-                      6,
-                      9,
-                      3,
-                      2,
-                      4,
-                      1,
-                      5,
-                      6,
-                      4,
-                      3,
-                      7,
+                      4, 6, 7, 7, 4, 3, 2, 1, 4, 4, 5, 6, 3, 4, 5, 8, 7, 6, 9,
+                      3, 2, 4, 1, 5, 6, 4, 3, 7,
                     ]}
                     width={200}
                   >
@@ -195,7 +155,7 @@ const SparklineChart = () => {
             <Col sm={4}>
               <Card>
                 <CardBody>
-                  <CardTitle className="mb-4">Normal Band</CardTitle>
+                  <CardTitle className='mb-4'>Normal Band</CardTitle>
                   <Sparklines
                     height={100}
                     data={[5, 10, 5, 20, 18, 17, 29, 10, 18]}
@@ -207,7 +167,7 @@ const SparklineChart = () => {
                         fill: "transparent",
                       }}
                     />
-                    <SparklinesReferenceLine type="mean" />
+                    <SparklinesReferenceLine type='mean' />
                   </Sparklines>
                 </CardBody>
               </Card>
@@ -216,7 +176,7 @@ const SparklineChart = () => {
         </div>
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default SparklineChart
+export default SparklineChart;

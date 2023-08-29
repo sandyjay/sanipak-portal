@@ -39,7 +39,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 const ContactsList = (props) => {
   //meta title
-  document.title = "User List | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "User List | San-i-pak - Vite React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
   const [contact, setContact] = useState();
@@ -109,7 +110,7 @@ const ContactsList = (props) => {
       {
         Header: "#",
         Cell: () => {
-          return <input type="checkbox" className="form-check-input" />;
+          return <input type='checkbox' className='form-check-input' />;
         },
       },
       {
@@ -120,17 +121,17 @@ const ContactsList = (props) => {
         accessor: (cellProps) => (
           <>
             {!cellProps.img ? (
-              <div className="avatar-xs">
-                <span className="avatar-title rounded-circle">
+              <div className='avatar-xs'>
+                <span className='avatar-title rounded-circle'>
                   {cellProps.name.charAt(0)}
                 </span>
               </div>
             ) : (
               <div>
                 <img
-                  className="rounded-circle avatar-xs"
+                  className='rounded-circle avatar-xs'
                   src={cellProps.img}
-                  alt=""
+                  alt=''
                 />
               </div>
             )}
@@ -178,30 +179,30 @@ const ContactsList = (props) => {
         Header: "Action",
         Cell: (cellProps) => {
           return (
-            <div className="d-flex gap-3">
+            <div className='d-flex gap-3'>
               <Link
-                to="#"
-                className="text-success"
+                to='#'
+                className='text-success'
                 onClick={() => {
                   const userData = cellProps.row.original;
                   handleUserClick(userData);
                 }}
               >
-                <i className="mdi mdi-pencil font-size-18" id="edittooltip" />
-                <UncontrolledTooltip placement="top" target="edittooltip">
+                <i className='mdi mdi-pencil font-size-18' id='edittooltip' />
+                <UncontrolledTooltip placement='top' target='edittooltip'>
                   Edit
                 </UncontrolledTooltip>
               </Link>
               <Link
-                to="#"
-                className="text-danger"
+                to='#'
+                className='text-danger'
                 onClick={() => {
                   const userData = cellProps.row.original;
                   onClickDelete(userData);
                 }}
               >
-                <i className="mdi mdi-delete font-size-18" id="deletetooltip" />
-                <UncontrolledTooltip placement="top" target="deletetooltip">
+                <i className='mdi mdi-delete font-size-18' id='deletetooltip' />
+                <UncontrolledTooltip placement='top' target='deletetooltip'>
                   Delete
                 </UncontrolledTooltip>
               </Link>
@@ -297,12 +298,12 @@ const ContactsList = (props) => {
         onDeleteClick={handleDeleteUser}
         onCloseClick={() => setDeleteModal(false)}
       />
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Contacts" breadcrumbItem="User List" />
+          <Breadcrumbs title='Contacts' breadcrumbItem='User List' />
           <Row>
-            <Col lg="12">
+            <Col lg='12'>
               <Card>
                 <CardBody>
                   <TableContainer
@@ -312,11 +313,11 @@ const ContactsList = (props) => {
                     isAddUserList={true}
                     handleUserClick={handleUserClicks}
                     customPageSize={10}
-                    className="custom-header-css"
+                    className='custom-header-css'
                   />
 
                   <Modal isOpen={modal} toggle={toggle}>
-                    <ModalHeader toggle={toggle} tag="h4">
+                    <ModalHeader toggle={toggle} tag='h4'>
                       {!!isEdit ? "Edit User" : "Add User"}
                     </ModalHeader>
                     <ModalBody>
@@ -329,12 +330,12 @@ const ContactsList = (props) => {
                       >
                         <Row>
                           <Col xs={12}>
-                            <div className="mb-3">
-                              <Label className="form-label">Name</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>Name</Label>
                               <Input
-                                name="name"
-                                type="text"
-                                placeholder="Insert Name"
+                                name='name'
+                                type='text'
+                                placeholder='Insert Name'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.name || ""}
@@ -347,18 +348,18 @@ const ContactsList = (props) => {
                               />
                               {validation.touched.name &&
                               validation.errors.name ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.name}
                                 </FormFeedback>
                               ) : null}
                             </div>
-                            <div className="mb-3">
-                              <Label className="form-label">Designation</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>Designation</Label>
                               <Input
-                                name="designation"
-                                label="Designation"
-                                placeholder="Insert Designation"
-                                type="text"
+                                name='designation'
+                                label='Designation'
+                                placeholder='Insert Designation'
+                                type='text'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.designation || ""}
@@ -371,18 +372,18 @@ const ContactsList = (props) => {
                               />
                               {validation.touched.designation &&
                               validation.errors.designation ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.designation}
                                 </FormFeedback>
                               ) : null}
                             </div>
-                            <div className="mb-3">
-                              <Label className="form-label">Email</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>Email</Label>
                               <Input
-                                name="email"
-                                label="Email"
-                                type="email"
-                                placeholder="Insert Email"
+                                name='email'
+                                label='Email'
+                                type='email'
+                                placeholder='Insert Email'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.email || ""}
@@ -395,17 +396,17 @@ const ContactsList = (props) => {
                               />
                               {validation.touched.email &&
                               validation.errors.email ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.email}
                                 </FormFeedback>
                               ) : null}
                             </div>
-                            <div className="mb-3">
-                              <Label className="form-label">Option</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>Option</Label>
                               <Input
-                                type="select"
-                                name="tags"
-                                className="form-select"
+                                type='select'
+                                name='tags'
+                                className='form-select'
                                 multiple={true}
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
@@ -429,18 +430,18 @@ const ContactsList = (props) => {
                               </Input>
                               {validation.touched.tags &&
                               validation.errors.tags ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.tags}
                                 </FormFeedback>
                               ) : null}
                             </div>
-                            <div className="mb-3">
-                              <Label className="form-label">Projects</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>Projects</Label>
                               <Input
-                                name="projects"
-                                label="Projects"
-                                type="text"
-                                placeholder="Insert Projects"
+                                name='projects'
+                                label='Projects'
+                                type='text'
+                                placeholder='Insert Projects'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.projects || ""}
@@ -453,7 +454,7 @@ const ContactsList = (props) => {
                               />
                               {validation.touched.projects &&
                               validation.errors.projects ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.projects}
                                 </FormFeedback>
                               ) : null}
@@ -462,10 +463,10 @@ const ContactsList = (props) => {
                         </Row>
                         <Row>
                           <Col>
-                            <div className="text-end">
+                            <div className='text-end'>
                               <button
-                                type="submit"
-                                className="btn btn-success save-user"
+                                type='submit'
+                                className='btn btn-success save-user'
                               >
                                 Save
                               </button>

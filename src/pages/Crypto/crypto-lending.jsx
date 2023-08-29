@@ -16,10 +16,10 @@ import { Link } from "react-router-dom";
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb";
 
-const CryptoLending = props => {
-
+const CryptoLending = (props) => {
   //meta title
-  document.title="Lending | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Lending | San-i-pak - Vite React Admin & Dashboard Template";
 
   const [assets] = useState([
     {
@@ -91,57 +91,57 @@ const CryptoLending = props => {
   };
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumb */}
-          <Breadcrumbs title="Crypto" breadcrumbItem="Lending" />
+          <Breadcrumbs title='Crypto' breadcrumbItem='Lending' />
 
           <Row>
-            <Col xl="4">
+            <Col xl='4'>
               <Card>
-                <CardBody className="border-bottom">
+                <CardBody className='border-bottom'>
                   <Dropdown
                     isOpen={isMenu}
                     toggle={toggleMenu}
-                    className="float-end ms-2"
+                    className='float-end ms-2'
                   >
-                    <DropdownToggle tag="a" className="text-muted">
-                      <i className="mdi mdi-dots-horizontal font-size-18" />
+                    <DropdownToggle tag='a' className='text-muted'>
+                      <i className='mdi mdi-dots-horizontal font-size-18' />
                     </DropdownToggle>
                     <DropdownMenu>
-                      <DropdownItem href="#">Action</DropdownItem>
-                      <DropdownItem href="#">Another action</DropdownItem>
-                      <DropdownItem href="#">Something else</DropdownItem>
+                      <DropdownItem href='#'>Action</DropdownItem>
+                      <DropdownItem href='#'>Another action</DropdownItem>
+                      <DropdownItem href='#'>Something else</DropdownItem>
                     </DropdownMenu>
                   </Dropdown>
 
                   <div>
-                    <div className="mb-4 me-3">
-                      <i className="mdi mdi-account-circle text-primary h1" />
+                    <div className='mb-4 me-3'>
+                      <i className='mdi mdi-account-circle text-primary h1' />
                     </div>
 
                     <div>
-                      <h5 >Henry Wells</h5>
-                      <p className="text-muted mb-1">henrywells@abc.com</p>
-                      <p className="text-muted mb-0">Id no: #SK0234</p>
+                      <h5>Henry Wells</h5>
+                      <p className='text-muted mb-1'>henrywells@abc.com</p>
+                      <p className='text-muted mb-0'>Id no: #SK0234</p>
                     </div>
                   </div>
                 </CardBody>
-                <CardBody className="border-bottom">
+                <CardBody className='border-bottom'>
                   <div>
                     <Row>
-                      <Col sm="6">
+                      <Col sm='6'>
                         <div>
-                          <p className="text-muted mb-2">Available Balance</p>
+                          <p className='text-muted mb-2'>Available Balance</p>
                           <h5>$ 9148.00</h5>
                         </div>
                       </Col>
-                      <Col sm="6">
-                        <div className="text-sm-end mt-4 mt-sm-0">
-                          <p className="text-muted mb-2">Since last month</p>
+                      <Col sm='6'>
+                        <div className='text-sm-end mt-4 mt-sm-0'>
+                          <p className='text-muted mb-2'>Since last month</p>
                           <h5>
                             + $ 215.53{" "}
-                            <span className="badge bg-success ms-1 align-bottom">
+                            <span className='badge bg-success ms-1 align-bottom'>
                               + 1.3 %
                             </span>
                           </h5>
@@ -154,22 +154,22 @@ const CryptoLending = props => {
 
               <Card>
                 <CardBody>
-                  <h4 className="card-title mb-4">How it work</h4>
+                  <h4 className='card-title mb-4'>How it work</h4>
 
                   <div>
-                    <ul className="verti-timeline list-unstyled">
-                      <li className="event-list">
-                        <div className="event-timeline-dot">
-                          <i className="bx bx-right-arrow-circle" />
+                    <ul className='verti-timeline list-unstyled'>
+                      <li className='event-list'>
+                        <div className='event-timeline-dot'>
+                          <i className='bx bx-right-arrow-circle' />
                         </div>
-                        <div className="d-flex">
-                          <div className="me-3">
-                            <i className="bx bx-user-plus h2 text-primary" />
+                        <div className='d-flex'>
+                          <div className='me-3'>
+                            <i className='bx bx-user-plus h2 text-primary' />
                           </div>
-                          <div className="flex-grow-1">
+                          <div className='flex-grow-1'>
                             <div>
-                              <h5 className="font-size-14">Register account</h5>
-                              <p className="text-muted">
+                              <h5 className='font-size-14'>Register account</h5>
+                              <p className='text-muted'>
                                 New common language will be more simple and
                                 regular than the existing.
                               </p>
@@ -177,18 +177,18 @@ const CryptoLending = props => {
                           </div>
                         </div>
                       </li>
-                      <li className="event-list">
-                        <div className="event-timeline-dot">
-                          <i className="bx bx-right-arrow-circle" />
+                      <li className='event-list'>
+                        <div className='event-timeline-dot'>
+                          <i className='bx bx-right-arrow-circle' />
                         </div>
-                        <div className="d-flex">
-                          <div className="me-3">
-                            <i className="bx bx-copy-alt h2 text-primary" />
+                        <div className='d-flex'>
+                          <div className='me-3'>
+                            <i className='bx bx-copy-alt h2 text-primary' />
                           </div>
-                          <div className="flex-grow-1">
+                          <div className='flex-grow-1'>
                             <div>
-                              <h5 className="font-size-14">Select Deposit</h5>
-                              <p className="text-muted">
+                              <h5 className='font-size-14'>Select Deposit</h5>
+                              <p className='text-muted'>
                                 To achieve this, it would be necessary to have
                                 uniform grammar.
                               </p>
@@ -197,18 +197,18 @@ const CryptoLending = props => {
                         </div>
                       </li>
 
-                      <li className="event-list">
-                        <div className="event-timeline-dot">
-                          <i className="bx bx-right-arrow-circle" />
+                      <li className='event-list'>
+                        <div className='event-timeline-dot'>
+                          <i className='bx bx-right-arrow-circle' />
                         </div>
-                        <div className="d-flex">
-                          <div className="me-3">
-                            <i className="bx bx-cloud-download h2 text-primary" />
+                        <div className='d-flex'>
+                          <div className='me-3'>
+                            <i className='bx bx-cloud-download h2 text-primary' />
                           </div>
-                          <div className="flex-grow-1">
+                          <div className='flex-grow-1'>
                             <div>
-                              <h5 className="font-size-14">Get Earnings</h5>
-                              <p className="text-muted">
+                              <h5 className='font-size-14'>Get Earnings</h5>
+                              <p className='text-muted'>
                                 New common language will be more simple and
                                 regular than the existing.
                               </p>
@@ -222,35 +222,35 @@ const CryptoLending = props => {
               </Card>
             </Col>
 
-            <Col xl="8">
+            <Col xl='8'>
               <Card>
                 <CardBody>
-                  <h4 className="card-title">Deposits</h4>
+                  <h4 className='card-title'>Deposits</h4>
 
                   <Row>
-                    <Col lg="4">
-                      <div className="border p-3 rounded mt-4">
-                        <div className="d-flex align-items-center mb-3">
-                          <div className="avatar-xs me-3">
-                            <span className="avatar-title rounded-circle bg-warning bg-soft text-warning font-size-18">
-                              <i className="mdi mdi-bitcoin" />
+                    <Col lg='4'>
+                      <div className='border p-3 rounded mt-4'>
+                        <div className='d-flex align-items-center mb-3'>
+                          <div className='avatar-xs me-3'>
+                            <span className='avatar-title rounded-circle bg-warning bg-soft text-warning font-size-18'>
+                              <i className='mdi mdi-bitcoin' />
                             </span>
                           </div>
-                          <h5 className="font-size-14 mb-0">Bitcoin</h5>
+                          <h5 className='font-size-14 mb-0'>Bitcoin</h5>
                         </div>
 
                         <Row>
-                          <div className="col-lg-6">
-                            <div className="text-muted mt-3">
+                          <div className='col-lg-6'>
+                            <div className='text-muted mt-3'>
                               <p>Annual Yield</p>
                               <h4>4.05 %</h4>
-                              <p className="mb-0">0.00745 BTC</p>
+                              <p className='mb-0'>0.00745 BTC</p>
                             </div>
                           </div>
 
-                          <div className="col-lg-6 align-self-end">
-                            <div className="float-end mt-3">
-                              <Link to="#" className="btn btn-primary">
+                          <div className='col-lg-6 align-self-end'>
+                            <div className='float-end mt-3'>
+                              <Link to='#' className='btn btn-primary'>
                                 Select
                               </Link>
                             </div>
@@ -258,29 +258,29 @@ const CryptoLending = props => {
                         </Row>
                       </div>
                     </Col>
-                    <Col lg="4">
-                      <div className="border p-3 rounded mt-4">
-                        <div className="d-flex align-items-center mb-3">
-                          <div className="avatar-xs me-3">
-                            <span className="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-18">
-                              <i className="mdi mdi-ethereum" />
+                    <Col lg='4'>
+                      <div className='border p-3 rounded mt-4'>
+                        <div className='d-flex align-items-center mb-3'>
+                          <div className='avatar-xs me-3'>
+                            <span className='avatar-title rounded-circle bg-primary bg-soft text-primary font-size-18'>
+                              <i className='mdi mdi-ethereum' />
                             </span>
                           </div>
-                          <h5 className="font-size-14 mb-0">Ethereum</h5>
+                          <h5 className='font-size-14 mb-0'>Ethereum</h5>
                         </div>
 
                         <Row>
-                          <div className="col-lg-6">
-                            <div className="text-muted mt-3">
+                          <div className='col-lg-6'>
+                            <div className='text-muted mt-3'>
                               <p>Annual Yield</p>
                               <h4>5.08 %</h4>
-                              <p className="mb-0">0.0056 ETH</p>
+                              <p className='mb-0'>0.0056 ETH</p>
                             </div>
                           </div>
 
-                          <div className="col-lg-6 align-self-end">
-                            <div className="float-end mt-3">
-                              <Link to="#" className="btn btn-primary">
+                          <div className='col-lg-6 align-self-end'>
+                            <div className='float-end mt-3'>
+                              <Link to='#' className='btn btn-primary'>
                                 Select
                               </Link>
                             </div>
@@ -288,29 +288,29 @@ const CryptoLending = props => {
                         </Row>
                       </div>
                     </Col>
-                    <Col lg="4">
-                      <div className="border p-3 rounded mt-4">
-                        <div className="d-flex align-items-center mb-3">
-                          <div className="avatar-xs me-3">
-                            <span className="avatar-title rounded-circle bg-info bg-soft text-info font-size-18">
-                              <i className="mdi mdi-litecoin" />
+                    <Col lg='4'>
+                      <div className='border p-3 rounded mt-4'>
+                        <div className='d-flex align-items-center mb-3'>
+                          <div className='avatar-xs me-3'>
+                            <span className='avatar-title rounded-circle bg-info bg-soft text-info font-size-18'>
+                              <i className='mdi mdi-litecoin' />
                             </span>
                           </div>
-                          <h5 className="font-size-14 mb-0">Litecoin</h5>
+                          <h5 className='font-size-14 mb-0'>Litecoin</h5>
                         </div>
 
                         <Row>
-                          <div className="col-lg-6">
-                            <div className="text-muted mt-3">
+                          <div className='col-lg-6'>
+                            <div className='text-muted mt-3'>
                               <p>Annual Yield</p>
                               <h4>4.12 %</h4>
-                              <p className="mb-0">0.00245 LTC</p>
+                              <p className='mb-0'>0.00245 LTC</p>
                             </div>
                           </div>
 
-                          <div className="col-lg-6 align-self-end">
-                            <div className="float-end mt-3">
-                              <Link to="#" className="btn btn-primary">
+                          <div className='col-lg-6 align-self-end'>
+                            <div className='float-end mt-3'>
+                              <Link to='#' className='btn btn-primary'>
                                 Select
                               </Link>
                             </div>
@@ -323,17 +323,17 @@ const CryptoLending = props => {
               </Card>
               <Card>
                 <CardBody>
-                  <h4 className="card-title mb-4">My Assets</h4>
+                  <h4 className='card-title mb-4'>My Assets</h4>
 
-                  <div className="table-responsive">
-                    <Table className="table table-nowrap align-middle mb-0">
+                  <div className='table-responsive'>
+                    <Table className='table table-nowrap align-middle mb-0'>
                       <thead>
                         <tr>
-                          <th scope="col">Token</th>
-                          <th scope="col">Price</th>
-                          <th scope="col">Invest</th>
-                          <th scope="col">Loans</th>
-                          <th scope="col" colSpan="2">
+                          <th scope='col'>Token</th>
+                          <th scope='col'>Price</th>
+                          <th scope='col'>Invest</th>
+                          <th scope='col'>Loans</th>
+                          <th scope='col' colSpan='2'>
                             Total
                           </th>
                         </tr>
@@ -341,9 +341,9 @@ const CryptoLending = props => {
                       <tbody>
                         {assets.map((asset, key) => (
                           <tr key={key}>
-                            <th scope="row">
-                              <div className="d-flex align-items-center">
-                                <div className="avatar-xs me-3">
+                            <th scope='row'>
+                              <div className='d-flex align-items-center'>
+                                <div className='avatar-xs me-3'>
                                   <span
                                     className={
                                       "avatar-title rounded-circle bg-soft bg-" +
@@ -360,36 +360,36 @@ const CryptoLending = props => {
                               </div>
                             </th>
                             <td>
-                              <div className="text-muted">$ {asset.price}</div>
+                              <div className='text-muted'>$ {asset.price}</div>
                             </td>
                             <td>
-                              <h5 className="font-size-14 mb-1">
+                              <h5 className='font-size-14 mb-1'>
                                 {asset.investRate}
                               </h5>
-                              <div className="text-muted">
+                              <div className='text-muted'>
                                 ${asset.investPrice}
                               </div>
                             </td>
                             <td>
-                              <h5 className="font-size-14 mb-1">
+                              <h5 className='font-size-14 mb-1'>
                                 {asset.loansRate}
                               </h5>
-                              <div className="text-muted">
+                              <div className='text-muted'>
                                 ${asset.loansPrice}
                               </div>
                             </td>
                             <td>
-                              <h5 className="font-size-14 mb-1">
+                              <h5 className='font-size-14 mb-1'>
                                 {asset.totalRate}
                               </h5>
-                              <div className="text-muted">
+                              <div className='text-muted'>
                                 ${asset.totalPrice}
                               </div>
                             </td>
                             <td style={{ width: "120px" }}>
                               <Link
-                                to="#"
-                                className="btn btn-primary btn-sm w-xs"
+                                to='#'
+                                className='btn btn-primary btn-sm w-xs'
                               >
                                 View
                               </Link>

@@ -1,30 +1,31 @@
-import React from "react"
-import { Row, Col, Container } from "reactstrap"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Row, Col, Container } from "reactstrap";
+import { Link } from "react-router-dom";
 
 //Import Breadcrumb
-import Breadcrumbs from "../../components/Common/Breadcrumb"
+import Breadcrumbs from "../../components/Common/Breadcrumb";
 
-const EmailAlertTemplte = props => {
-   //meta title
-   document.title="Alert Email | Skote - Vite React Admin & Dashboard Template";
+const EmailAlertTemplte = (props) => {
+  //meta title
+  document.title =
+    "Alert Email | San-i-pak - Vite React Admin & Dashboard Template";
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
-          <Breadcrumbs title="Email Template" breadcrumbItem="Alert Email" />
+          <Breadcrumbs title='Email Template' breadcrumbItem='Alert Email' />
 
-          <Row className="email-template">
+          <Row className='email-template'>
             <Col md={12}>
               <table
-                className="body-wrap"
+                className='body-wrap'
                 style={{
                   fontFamily: "Helvetica Neue,Helvetica,Arial,sans-serif",
                   boxSizing: "border-box",
                   fontSize: "14px",
                   width: "100%",
                   margin: "0",
-                  color: "#495057"
+                  color: "#495057",
                 }}
               >
                 <tbody>
@@ -38,21 +39,19 @@ const EmailAlertTemplte = props => {
                   >
                     <td
                       style={{
-                        fontFamily:
-                          "Helvetica Neue,Helvetica,Arial,sans-serif",
+                        fontFamily: "Helvetica Neue,Helvetica,Arial,sans-serif",
                         boxSizing: "border-box",
                         fontSize: "14px",
                         verticalAlign: "top",
                         margin: "0",
                       }}
-                      valign="top"
+                      valign='top'
                     ></td>
                     <td
-                      className="container"
-                      width="600"
+                      className='container'
+                      width='600'
                       style={{
-                        fontFamily:
-                          "Helvetica Neue,Helvetica,Arial,sans-serif",
+                        fontFamily: "Helvetica Neue,Helvetica,Arial,sans-serif",
                         boxSizing: "border-box",
                         fontSize: "14px",
                         verticalAlign: "top",
@@ -61,10 +60,10 @@ const EmailAlertTemplte = props => {
                         clear: "both",
                         margin: "0 auto",
                       }}
-                      valign="top"
+                      valign='top'
                     >
                       <div
-                        className="content"
+                        className='content'
                         style={{
                           fontFamily:
                             "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -77,10 +76,10 @@ const EmailAlertTemplte = props => {
                         }}
                       >
                         <table
-                          className="main"
-                          width="100%"
-                          cellPadding="0"
-                          cellSpacing="0"
+                          className='main'
+                          width='100%'
+                          cellPadding='0'
+                          cellSpacing='0'
                           style={{
                             fontFamily:
                               "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -103,7 +102,7 @@ const EmailAlertTemplte = props => {
                               }}
                             >
                               <td
-                                className="alert alert-warning"
+                                className='alert alert-warning'
                                 style={{
                                   fontFamily:
                                     "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -118,11 +117,11 @@ const EmailAlertTemplte = props => {
                                   margin: "0",
                                   padding: "20px",
                                 }}
-                                align="center"
-                                valign="top"
+                                align='center'
+                                valign='top'
                               >
-                                Warning: You&apos;re approaching your limit. Please
-                                upgrade.
+                                Warning: You&apos;re approaching your limit.
+                                Please upgrade.
                               </td>
                             </tr>
                             <tr
@@ -135,7 +134,7 @@ const EmailAlertTemplte = props => {
                               }}
                             >
                               <td
-                                className="content-wrap"
+                                className='content-wrap'
                                 style={{
                                   fontFamily:
                                     "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -145,12 +144,12 @@ const EmailAlertTemplte = props => {
                                   margin: "0",
                                   padding: "20px",
                                 }}
-                                valign="top"
+                                valign='top'
                               >
                                 <table
-                                  width="100%"
-                                  cellPadding="0"
-                                  cellSpacing="0"
+                                  width='100%'
+                                  cellPadding='0'
+                                  cellSpacing='0'
                                   style={{
                                     fontFamily:
                                       "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -170,7 +169,7 @@ const EmailAlertTemplte = props => {
                                       }}
                                     >
                                       <td
-                                        className="content-block"
+                                        className='content-block'
                                         style={{
                                           fontFamily:
                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -180,7 +179,7 @@ const EmailAlertTemplte = props => {
                                           margin: "0",
                                           padding: "0 0 20px",
                                         }}
-                                        valign="top"
+                                        valign='top'
                                       >
                                         You have{" "}
                                         <strong
@@ -217,7 +216,7 @@ const EmailAlertTemplte = props => {
                                       }}
                                     >
                                       <td
-                                        className="content-block"
+                                        className='content-block'
                                         style={{
                                           fontFamily:
                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -227,12 +226,11 @@ const EmailAlertTemplte = props => {
                                           margin: "0",
                                           padding: "0 0 20px",
                                         }}
-                                        valign="top"
+                                        valign='top'
                                       >
-                                        Add your credit card now to upgrade
-                                        your account to a premium plan to
-                                        ensure you don&apos;t miss out on any
-                                        reports.
+                                        Add your credit card now to upgrade your
+                                        account to a premium plan to ensure you
+                                        don&apos;t miss out on any reports.
                                       </td>
                                     </tr>
                                     <tr
@@ -245,7 +243,7 @@ const EmailAlertTemplte = props => {
                                       }}
                                     >
                                       <td
-                                        className="content-block"
+                                        className='content-block'
                                         style={{
                                           fontFamily:
                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -255,11 +253,11 @@ const EmailAlertTemplte = props => {
                                           margin: "0",
                                           padding: "0 0 20px",
                                         }}
-                                        valign="top"
+                                        valign='top'
                                       >
                                         <Link
-                                          to="#"
-                                          className="btn-primary"
+                                          to='#'
+                                          className='btn-primary'
                                           style={{
                                             fontFamily:
                                               "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -295,7 +293,7 @@ const EmailAlertTemplte = props => {
                                       }}
                                     >
                                       <td
-                                        className="content-block"
+                                        className='content-block'
                                         style={{
                                           fontFamily:
                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -305,9 +303,9 @@ const EmailAlertTemplte = props => {
                                           margin: "0",
                                           padding: "0 0 20px",
                                         }}
-                                        valign="top"
+                                        valign='top'
                                       >
-                                        Thanks for choosing <b>Skote</b>{" "}
+                                        Thanks for choosing <b>San-i-pak</b>{" "}
                                         Admin.
                                       </td>
                                     </tr>
@@ -321,7 +319,7 @@ const EmailAlertTemplte = props => {
                                       }}
                                     >
                                       <td
-                                        className="content-block"
+                                        className='content-block'
                                         style={{
                                           fontFamily:
                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -331,9 +329,9 @@ const EmailAlertTemplte = props => {
                                           margin: "0",
                                           padding: "0 0 20px",
                                         }}
-                                        valign="top"
+                                        valign='top'
                                       >
-                                        <b>Skote</b>
+                                        <b>San-i-pak</b>
                                         <p>Support Team</p>
                                       </td>
                                     </tr>
@@ -348,7 +346,7 @@ const EmailAlertTemplte = props => {
                                       }}
                                     >
                                       <td
-                                        className="content-block"
+                                        className='content-block'
                                         style={{
                                           textAlign: "center",
                                           fontFamily:
@@ -359,9 +357,9 @@ const EmailAlertTemplte = props => {
                                           margin: "0",
                                           padding: "0",
                                         }}
-                                        valign="top"
+                                        valign='top'
                                       >
-                                        © {new Date().getFullYear()} Skote
+                                        © {new Date().getFullYear()} San-i-pak
                                       </td>
                                     </tr>
                                   </tbody>
@@ -380,7 +378,7 @@ const EmailAlertTemplte = props => {
         </Container>
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default EmailAlertTemplte
+export default EmailAlertTemplte;

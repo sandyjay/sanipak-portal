@@ -34,137 +34,134 @@ import {
   getProductComments,
   onAddReply as onAddReplyAction,
   onAddComment as onAddCommentAction,
-} from "/src/store/actions"
-import RecentProducts from "./RecentProducts"
-import Reviews from "./Reviews"
+} from "/src/store/actions";
+import RecentProducts from "./RecentProducts";
+import Reviews from "./Reviews";
 
 //redux
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector, useDispatch } from "react-redux";
 
-const EcommerceProductDetail = props => {
-  
+const EcommerceProductDetail = (props) => {
   //meta title
-  document.title="Product Details | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Product Details | San-i-pak - Vite React Admin & Dashboard Template";
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const { product, productComments } = useSelector(state => ({
+  const { product, productComments } = useSelector((state) => ({
     product: state.ecommerce.product,
     productComments: state.ecommerce.productComments,
-  }))
+  }));
 
-  const [activeTab, setActiveTab] = useState("1")
-  
+  const [activeTab, setActiveTab] = useState("1");
+
   const params = props.router.params;
   useEffect(() => {
     if (params && params.id) {
-      dispatch(onGetProductDetail(params.id))
+      dispatch(onGetProductDetail(params.id));
     } else {
-      dispatch(onGetProductDetail(1))
+      dispatch(onGetProductDetail(1));
     }
-  }, [dispatch])
+  }, [dispatch]);
 
-  const toggleTab = tab => {
+  const toggleTab = (tab) => {
     if (activeTab !== tab) {
-      setActiveTab(tab)
+      setActiveTab(tab);
     }
-  }
+  };
 
   const imageShow = (img, id) => {
-    const expandImg = document.getElementById("expandedImg" + id)
-    expandImg.src = img
-  }
+    const expandImg = document.getElementById("expandedImg" + id);
+    expandImg.src = img;
+  };
 
   useEffect(() => {
-    dispatch(getProductComments())
-  }, [dispatch])
+    dispatch(getProductComments());
+  }, [dispatch]);
 
-  const [comments, setComments] = useState([])
+  const [comments, setComments] = useState([]);
   useEffect(() => {
     if (productComments) {
-      setComments(productComments)
+      setComments(productComments);
     }
-  }, [productComments])
+  }, [productComments]);
 
-  const onClickReply = commentId => {
-    const modifiedComments = [...comments]
+  const onClickReply = (commentId) => {
+    const modifiedComments = [...comments];
 
     const commentIdx = (modifiedComments || []).findIndex(
-      comment => comment.commentId.toString() === commentId.toString()
-    )
+      (comment) => comment.commentId.toString() === commentId.toString()
+    );
     if (commentIdx > -1) {
       if (modifiedComments[commentIdx]) {
-        modifiedComments[commentIdx]["showAddComment"] = true
+        modifiedComments[commentIdx]["showAddComment"] = true;
 
         for (let i = 0; i < (modifiedComments || []).length; i++) {
           if (i !== commentIdx) {
-            modifiedComments[i]["showAddComment"] = false
+            modifiedComments[i]["showAddComment"] = false;
           }
         }
       } else {
-        modifiedComments[commentIdx]["showAddComment"] = false
+        modifiedComments[commentIdx]["showAddComment"] = false;
       }
-      setComments(modifiedComments)
+      setComments(modifiedComments);
     }
-  }
+  };
 
-  const onCancelReply = commentId => {
+  const onCancelReply = (commentId) => {
     if (commentId) {
-      const modifiedComments = [...comments]
+      const modifiedComments = [...comments];
       for (let i = 0; i < (modifiedComments || []).length; i++) {
-        modifiedComments[i]["showAddComment"] = false
+        modifiedComments[i]["showAddComment"] = false;
       }
-      setComments(modifiedComments)
+      setComments(modifiedComments);
     }
-  }
+  };
 
   const onAddReply = (commentId, replyText) => {
     if (commentId) {
-      const productId = params.id || 1
-      dispatch(onAddReplyAction(commentId, productId, replyText))
+      const productId = params.id || 1;
+      dispatch(onAddReplyAction(commentId, productId, replyText));
     }
-  }
+  };
 
-  const onAddComment = commentText => {
-    const productId = params.id || 1
-    dispatch(onAddCommentAction(productId, commentText))
-  }
+  const onAddComment = (commentText) => {
+    const productId = params.id || 1;
+    dispatch(onAddCommentAction(productId, commentText));
+  };
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
-          <Breadcrumbs title="Ecommerce" breadcrumbItem="Product Detail" />
+          <Breadcrumbs title='Ecommerce' breadcrumbItem='Product Detail' />
           {!isEmpty(product) && (
             <Row>
               <Col>
                 <Card>
                   <CardBody>
                     <Row>
-                      <Col xl="6">
-                        <div className="product-detai-imgs">
+                      <Col xl='6'>
+                        <div className='product-detai-imgs'>
                           <Row>
-                            <Col md="2" xs="3">
-                              <Nav className="flex-column" pills>
+                            <Col md='2' xs='3'>
+                              <Nav className='flex-column' pills>
                                 <NavItem>
                                   <NavLink
                                     className={classnames({
                                       active: activeTab === "1",
                                     })}
                                     onClick={() => {
-                                      toggleTab("1")
+                                      toggleTab("1");
                                     }}
                                   >
                                     <img
                                       src={product["subImage"][0]}
-                                      alt=""
+                                      alt=''
                                       onClick={() => {
-                                        imageShow(
-                                          product["subImage"][0],
-                                          1
-                                        )
+                                        imageShow(product["subImage"][0], 1);
                                       }}
-                                      className="img-fluid mx-auto d-block rounded"
+                                      className='img-fluid mx-auto d-block rounded'
                                     />
                                   </NavLink>
                                 </NavItem>
@@ -174,19 +171,16 @@ const EcommerceProductDetail = props => {
                                       active: activeTab === "2",
                                     })}
                                     onClick={() => {
-                                      toggleTab("2")
+                                      toggleTab("2");
                                     }}
                                   >
                                     <img
                                       src={product["subImage"][1]}
-                                      alt=""
+                                      alt=''
                                       onClick={() => {
-                                        imageShow(
-                                          product["subImage"][1],
-                                          2
-                                        )
+                                        imageShow(product["subImage"][1], 2);
                                       }}
-                                      className="img-fluid mx-auto d-block rounded"
+                                      className='img-fluid mx-auto d-block rounded'
                                     />
                                   </NavLink>
                                 </NavItem>
@@ -196,81 +190,78 @@ const EcommerceProductDetail = props => {
                                       active: activeTab === "3",
                                     })}
                                     onClick={() => {
-                                      toggleTab("3")
+                                      toggleTab("3");
                                     }}
                                   >
                                     <img
                                       src={product["subImage"][2]}
-                                      alt=""
+                                      alt=''
                                       onClick={() => {
-                                        imageShow(
-                                          product["subImage"][2],
-                                          3
-                                        )
+                                        imageShow(product["subImage"][2], 3);
                                       }}
-                                      className="img-fluid mx-auto d-block rounded"
+                                      className='img-fluid mx-auto d-block rounded'
                                     />
                                   </NavLink>
                                 </NavItem>
                               </Nav>
                             </Col>
-                            <Col md={{ size: 7, offset: 1 }} xs="9">
+                            <Col md={{ size: 7, offset: 1 }} xs='9'>
                               <TabContent activeTab={activeTab}>
-                                <TabPane tabId="1">
+                                <TabPane tabId='1'>
                                   <div>
                                     <img
                                       src={productImages[product.image]}
-                                      alt=""
-                                      id="expandedImg1"
-                                      className="img-fluid mx-auto d-block"
+                                      alt=''
+                                      id='expandedImg1'
+                                      className='img-fluid mx-auto d-block'
                                     />
                                   </div>
                                 </TabPane>
-                                <TabPane tabId="2">
+                                <TabPane tabId='2'>
                                   <div>
                                     <img
                                       src={productImages[product.image]}
-                                      id="expandedImg2"
-                                      alt=""
-                                      className="img-fluid mx-auto d-block"
+                                      id='expandedImg2'
+                                      alt=''
+                                      className='img-fluid mx-auto d-block'
                                     />
                                   </div>
                                 </TabPane>
-                                <TabPane tabId="3">
+                                <TabPane tabId='3'>
                                   <div>
                                     <img
                                       src={productImages[product.image]}
-                                      id="expandedImg3"
-                                      alt=""
-                                      className="img-fluid mx-auto d-block"
+                                      id='expandedImg3'
+                                      alt=''
+                                      className='img-fluid mx-auto d-block'
                                     />
                                   </div>
                                 </TabPane>
-                                <TabPane tabId="4">
+                                <TabPane tabId='4'>
                                   <div>
                                     <img
                                       src={productImages[product.image]}
-                                      id="expandedImg4"
-                                      alt=""
-                                      className="img-fluid mx-auto d-block"
+                                      id='expandedImg4'
+                                      alt=''
+                                      className='img-fluid mx-auto d-block'
                                     />
                                   </div>
                                 </TabPane>
                               </TabContent>
-                              <div className="text-center">
+                              <div className='text-center'>
                                 <Button
-                                  type="button"
-                                  color="primary"
-                                  className="btn  mt-2 me-1"
+                                  type='button'
+                                  color='primary'
+                                  className='btn  mt-2 me-1'
                                 >
-                                  <i className="bx bx-cart me-2" /> Add to cart
+                                  <i className='bx bx-cart me-2' /> Add to cart
                                 </Button>
                                 <Button
-                                  type="button"
-                                  color="success"
-                                  className="ms-1 btn mt-2"
+                                  type='button'
+                                  color='success'
+                                  className='ms-1 btn mt-2'
                                 >
-                                  <i className="bx bx-shopping-bag me-2" />
+                                  <i className='bx bx-shopping-bag me-2' />
                                   Buy now
                                 </Button>
                               </div>
@@ -279,51 +270,51 @@ const EcommerceProductDetail = props => {
                         </div>
                       </Col>
 
-                      <Col xl="6">
-                        <div className="mt-4 mt-xl-3">
-                          <Link to="#" className="text-primary">
+                      <Col xl='6'>
+                        <div className='mt-4 mt-xl-3'>
+                          <Link to='#' className='text-primary'>
                             {product.category}
                           </Link>
-                          <h4 className="mt-1 mb-3">{product.name}</h4>
+                          <h4 className='mt-1 mb-3'>{product.name}</h4>
 
-                          <div className="text-muted float-start me-3">
+                          <div className='text-muted float-start me-3'>
                             <StarRatings
                               rating={4}
-                              starRatedColor="#F1B44C"
-                              starEmptyColor="#74788d"
+                              starRatedColor='#F1B44C'
+                              starEmptyColor='#74788d'
                               numberOfStars={5}
-                              name="rating"
-                              starDimension="14px"
-                              starSpacing="3px"
+                              name='rating'
+                              starDimension='14px'
+                              starSpacing='3px'
                             />
                           </div>
-                          <p className="text-muted mb-4">
+                          <p className='text-muted mb-4'>
                             ( {product.reviews} Customers Review )
                           </p>
 
                           {!!product.isOffer && (
-                            <h6 className="text-success text-uppercase">
+                            <h6 className='text-success text-uppercase'>
                               {product.offer} % Off
                             </h6>
                           )}
-                          <h5 className="mb-4">
+                          <h5 className='mb-4'>
                             Price :{" "}
-                            <span className="text-muted me-2">
+                            <span className='text-muted me-2'>
                               <del>${product.oldPrice} USD</del>
                             </span>{" "}
                             <b>${product.newPrice} USD</b>
                           </h5>
-                          <p className="text-muted mb-4">
+                          <p className='text-muted mb-4'>
                             To achieve this, it would be necessary to have
                             uniform grammar pronunciation and more common words
                             If several languages coalesce
                           </p>
-                          <Row className="mb-3">
-                            <Col md="6">
+                          <Row className='mb-3'>
+                            <Col md='6'>
                               {product.features &&
                                 product.features.map((item, i) => (
                                   <div key={i}>
-                                    <p className="text-muted">
+                                    <p className='text-muted'>
                                       <i
                                         className={classnames(
                                           item.icon,
@@ -336,11 +327,11 @@ const EcommerceProductDetail = props => {
                                   </div>
                                 ))}
                             </Col>
-                            <Col md="6">
+                            <Col md='6'>
                               {product.features &&
                                 product.features.map((item, i) => (
                                   <div key={i}>
-                                    <p className="text-muted">
+                                    <p className='text-muted'>
                                       <i
                                         className={classnames(
                                           item.icon,
@@ -355,16 +346,16 @@ const EcommerceProductDetail = props => {
                             </Col>
                           </Row>
 
-                          <div className="product-color">
-                            <h5 className="font-size-15">Color :</h5>
+                          <div className='product-color'>
+                            <h5 className='font-size-15'>Color :</h5>
                             {product.colorOptions &&
                               product.colorOptions.map((option, i) => (
-                                <Link to="#" className="active" key={i}>
-                                  <div className="product-color-item border rounded">
+                                <Link to='#' className='active' key={i}>
+                                  <div className='product-color-item border rounded'>
                                     <img
                                       src={productImages[option.image]}
-                                      alt=""
-                                      className="avatar-md"
+                                      alt=''
+                                      className='avatar-md'
                                     />
                                   </div>
                                   <p>{option.color}</p>
@@ -375,17 +366,17 @@ const EcommerceProductDetail = props => {
                       </Col>
                     </Row>
 
-                    <div className="mt-5">
-                      <h5 className="mb-3">Specifications :</h5>
+                    <div className='mt-5'>
+                      <h5 className='mb-3'>Specifications :</h5>
 
-                      <div className="table-responsive">
-                        <Table className="table mb-0 table-bordered">
+                      <div className='table-responsive'>
+                        <Table className='table mb-0 table-bordered'>
                           <tbody>
                             {product.specification &&
                               product.specification.map((specification, i) => (
                                 <tr key={i}>
                                   <th
-                                    scope="row"
+                                    scope='row'
                                     style={{ width: "400px" }}
                                     className={"text-capitalize"}
                                   >
@@ -416,13 +407,13 @@ const EcommerceProductDetail = props => {
         </Container>
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
 EcommerceProductDetail.propTypes = {
   product: PropTypes.object,
   match: PropTypes.any,
   onGetProductDetail: PropTypes.func,
-}
+};
 
-export default withRouter(EcommerceProductDetail)
+export default withRouter(EcommerceProductDetail);

@@ -54,7 +54,8 @@ import {
 
 function JobList() {
   //meta title
-  document.title = "Jobs List | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Jobs List | San-i-pak - Vite React Admin & Dashboard Template";
 
   const [modal, setModal] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
@@ -191,7 +192,7 @@ function JobList() {
     if (job && job.id) {
       dispatch(onDeleteJobList(job.id));
       setDeleteModal(false);
-      setJob("")
+      setJob("");
     }
   };
   const handleJobClicks = () => {
@@ -284,27 +285,27 @@ function JobList() {
         disableFilters: true,
         Cell: (cellProps) => {
           return (
-            <ul className="list-unstyled hstack gap-1 mb-0">
-              <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                <Link to="/job-details" className="btn btn-sm btn-soft-primary">
-                  <i className="mdi mdi-eye-outline" id="viewtooltip"></i>
+            <ul className='list-unstyled hstack gap-1 mb-0'>
+              <li data-bs-toggle='tooltip' data-bs-placement='top' title='View'>
+                <Link to='/job-details' className='btn btn-sm btn-soft-primary'>
+                  <i className='mdi mdi-eye-outline' id='viewtooltip'></i>
                 </Link>
               </li>
-              <UncontrolledTooltip placement="top" target="viewtooltip">
+              <UncontrolledTooltip placement='top' target='viewtooltip'>
                 View
               </UncontrolledTooltip>
 
               <li>
                 <Link
-                  to="#"
-                  className="btn btn-sm btn-soft-info"
+                  to='#'
+                  className='btn btn-sm btn-soft-info'
                   onClick={() => {
                     const jobData = cellProps.row.original;
                     handleJobClick(jobData);
                   }}
                 >
-                  <i className="mdi mdi-pencil-outline" id="edittooltip" />
-                  <UncontrolledTooltip placement="top" target="edittooltip">
+                  <i className='mdi mdi-pencil-outline' id='edittooltip' />
+                  <UncontrolledTooltip placement='top' target='edittooltip'>
                     Edit
                   </UncontrolledTooltip>
                 </Link>
@@ -312,15 +313,15 @@ function JobList() {
 
               <li>
                 <Link
-                  to="#"
-                  className="btn btn-sm btn-soft-danger"
+                  to='#'
+                  className='btn btn-sm btn-soft-danger'
                   onClick={() => {
                     const jobData = cellProps.row.original;
                     onClickDelete(jobData);
                   }}
                 >
-                  <i className="mdi mdi-delete-outline" id="deletetooltip" />
-                  <UncontrolledTooltip placement="top" target="deletetooltip">
+                  <i className='mdi mdi-delete-outline' id='deletetooltip' />
+                  <UncontrolledTooltip placement='top' target='deletetooltip'>
                     Delete
                   </UncontrolledTooltip>
                 </Link>
@@ -340,43 +341,43 @@ function JobList() {
         onDeleteClick={handleDeletejob}
         onCloseClick={() => setDeleteModal(false)}
       />
-      <div className="page-content">
-        <div className="container-fluid">
-          <Breadcrumbs title="Jobs" breadcrumbItem="Jobs Lists" />
+      <div className='page-content'>
+        <div className='container-fluid'>
+          <Breadcrumbs title='Jobs' breadcrumbItem='Jobs Lists' />
           <Row>
-            <Col lg="12">
+            <Col lg='12'>
               <Card>
-                <CardBody className="border-bottom">
-                  <div className="d-flex align-items-center">
-                    <h5 className="mb-0 card-title flex-grow-1">Jobs Lists</h5>
-                    <div className="flex-shrink-0">
+                <CardBody className='border-bottom'>
+                  <div className='d-flex align-items-center'>
+                    <h5 className='mb-0 card-title flex-grow-1'>Jobs Lists</h5>
+                    <div className='flex-shrink-0'>
                       <Link
-                        to="#!"
+                        to='#!'
                         onClick={() => setModal(true)}
-                        className="btn btn-primary me-1"
+                        className='btn btn-primary me-1'
                       >
                         Add New Job
                       </Link>
-                      <Link to="#!" className="btn btn-light me-1">
-                        <i className="mdi mdi-refresh"></i>
+                      <Link to='#!' className='btn btn-light me-1'>
+                        <i className='mdi mdi-refresh'></i>
                       </Link>
-                      <UncontrolledDropdown className="dropdown d-inline-block me-1">
+                      <UncontrolledDropdown className='dropdown d-inline-block me-1'>
                         <DropdownToggle
-                          type="menu"
-                          className="btn btn-success"
-                          id="dropdownMenuButton1"
+                          type='menu'
+                          className='btn btn-success'
+                          id='dropdownMenuButton1'
                         >
-                          <i className="mdi mdi-dots-vertical"></i>
+                          <i className='mdi mdi-dots-vertical'></i>
                         </DropdownToggle>
                         <DropdownMenu>
                           <li>
-                            <DropdownItem href="#">Action</DropdownItem>
+                            <DropdownItem href='#'>Action</DropdownItem>
                           </li>
                           <li>
-                            <DropdownItem href="#">Another action</DropdownItem>
+                            <DropdownItem href='#'>Another action</DropdownItem>
                           </li>
                           <li>
-                            <DropdownItem href="#">
+                            <DropdownItem href='#'>
                               Something else here
                             </DropdownItem>
                           </li>
@@ -400,7 +401,7 @@ function JobList() {
             </Col>
           </Row>
           <Modal isOpen={modal} toggle={toggle}>
-            <ModalHeader toggle={toggle} tag="h4">
+            <ModalHeader toggle={toggle} tag='h4'>
               {!!isEdit ? "Edit Job" : "Add Job"}
             </ModalHeader>
             <ModalBody>
@@ -412,13 +413,13 @@ function JobList() {
                 }}
               >
                 <Row>
-                  <Col className="col-12">
-                    <div className="mb-3">
-                      <Label className="form-label"> Job Id</Label>
+                  <Col className='col-12'>
+                    <div className='mb-3'>
+                      <Label className='form-label'> Job Id</Label>
                       <Input
-                        name="jobId"
-                        type="text"
-                        placeholder="Insert Job Id"
+                        name='jobId'
+                        type='text'
+                        placeholder='Insert Job Id'
                         validate={{
                           required: { value: true },
                         }}
@@ -432,17 +433,17 @@ function JobList() {
                         }
                       />
                       {validation.touched.jobId && validation.errors.jobId ? (
-                        <FormFeedback type="invalid">
+                        <FormFeedback type='invalid'>
                           {validation.errors.jobId}
                         </FormFeedback>
                       ) : null}
                     </div>
-                    <div className="mb-3">
-                      <Label className="form-label">Job Title</Label>
+                    <div className='mb-3'>
+                      <Label className='form-label'>Job Title</Label>
                       <Input
-                        name="jobTitle"
-                        type="text"
-                        placeholder="Insert Job Title"
+                        name='jobTitle'
+                        type='text'
+                        placeholder='Insert Job Title'
                         validate={{
                           required: { value: true },
                         }}
@@ -458,17 +459,17 @@ function JobList() {
                       />
                       {validation.touched.jobTitle &&
                       validation.errors.jobTitle ? (
-                        <FormFeedback type="invalid">
+                        <FormFeedback type='invalid'>
                           {validation.errors.jobTitle}
                         </FormFeedback>
                       ) : null}
                     </div>
-                    <div className="mb-3">
-                      <Label className="form-label">Company Name</Label>
+                    <div className='mb-3'>
+                      <Label className='form-label'>Company Name</Label>
                       <Input
-                        name="companyName"
-                        type="text"
-                        placeholder="Insert Company Name"
+                        name='companyName'
+                        type='text'
+                        placeholder='Insert Company Name'
                         onChange={validation.handleChange}
                         onBlur={validation.handleBlur}
                         value={validation.values.companyName || ""}
@@ -481,17 +482,17 @@ function JobList() {
                       />
                       {validation.touched.companyName &&
                       validation.errors.companyName ? (
-                        <FormFeedback type="invalid">
+                        <FormFeedback type='invalid'>
                           {validation.errors.companyName}
                         </FormFeedback>
                       ) : null}
                     </div>
-                    <div className="mb-3">
-                      <Label className="form-label">Location</Label>
+                    <div className='mb-3'>
+                      <Label className='form-label'>Location</Label>
                       <Input
-                        name="location"
-                        type="text"
-                        placeholder="Insert Location"
+                        name='location'
+                        type='text'
+                        placeholder='Insert Location'
                         onChange={validation.handleChange}
                         onBlur={validation.handleBlur}
                         value={validation.values.location || ""}
@@ -504,17 +505,17 @@ function JobList() {
                       />
                       {validation.touched.location &&
                       validation.errors.location ? (
-                        <FormFeedback type="invalid">
+                        <FormFeedback type='invalid'>
                           {validation.errors.location}
                         </FormFeedback>
                       ) : null}
                     </div>
-                    <div className="mb-3">
-                      <Label className="form-label">Experience</Label>
+                    <div className='mb-3'>
+                      <Label className='form-label'>Experience</Label>
                       <Input
-                        name="experience"
-                        type="text"
-                        placeholder="Insert Experience"
+                        name='experience'
+                        type='text'
+                        placeholder='Insert Experience'
                         onChange={validation.handleChange}
                         onBlur={validation.handleBlur}
                         value={validation.values.experience || ""}
@@ -527,17 +528,17 @@ function JobList() {
                       />
                       {validation.touched.experience &&
                       validation.errors.experience ? (
-                        <FormFeedback type="invalid">
+                        <FormFeedback type='invalid'>
                           {validation.errors.experience}
                         </FormFeedback>
                       ) : null}
                     </div>
-                    <div className="mb-3">
-                      <Label className="form-label">Position</Label>
+                    <div className='mb-3'>
+                      <Label className='form-label'>Position</Label>
                       <Input
-                        name="position"
-                        type="text"
-                        placeholder="Insert Position"
+                        name='position'
+                        type='text'
+                        placeholder='Insert Position'
                         onChange={validation.handleChange}
                         onBlur={validation.handleBlur}
                         value={validation.values.position || ""}
@@ -550,17 +551,17 @@ function JobList() {
                       />
                       {validation.touched.position &&
                       validation.errors.position ? (
-                        <FormFeedback type="invalid">
+                        <FormFeedback type='invalid'>
                           {validation.errors.position}
                         </FormFeedback>
                       ) : null}
                     </div>
-                    <div className="mb-3">
-                      <Label className="form-label">Type</Label>
+                    <div className='mb-3'>
+                      <Label className='form-label'>Type</Label>
                       <Input
-                        name="type"
-                        type="select"
-                        className="form-select"
+                        name='type'
+                        type='select'
+                        className='form-select'
                         onChange={validation.handleChange}
                         onBlur={validation.handleBlur}
                         value={validation.values.type || ""}
@@ -576,16 +577,16 @@ function JobList() {
                         <option>Internship</option>
                       </Input>
                       {validation.touched.type && validation.errors.type ? (
-                        <FormFeedback type="invalid">
+                        <FormFeedback type='invalid'>
                           {validation.errors.type}
                         </FormFeedback>
                       ) : null}
                     </div>
-                    <div className="mb-3">
-                      <Label className="form-label">Status</Label>
+                    <div className='mb-3'>
+                      <Label className='form-label'>Status</Label>
                       <Input
-                        name="status"
-                        type="select"
+                        name='status'
+                        type='select'
                         onChange={validation.handleChange}
                         onBlur={validation.handleBlur}
                         value={validation.values.status || ""}
@@ -600,7 +601,7 @@ function JobList() {
                         <option>Close</option>
                       </Input>
                       {validation.touched.status && validation.errors.status ? (
-                        <FormFeedback status="invalid">
+                        <FormFeedback status='invalid'>
                           {validation.errors.status}
                         </FormFeedback>
                       ) : null}
@@ -609,10 +610,10 @@ function JobList() {
                 </Row>
                 <Row>
                   <Col>
-                    <div className="text-end">
+                    <div className='text-end'>
                       <button
-                        type="submit"
-                        className="btn btn-success save-user"
+                        type='submit'
+                        className='btn btn-success save-user'
                       >
                         Save
                       </button>

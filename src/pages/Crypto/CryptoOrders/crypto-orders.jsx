@@ -35,7 +35,7 @@ import { getCryptoOrders } from "/src/store/crypto/actions";
 
 const CryptoOrders = (props) => {
   //meta title
-  document.title = "Orders | Skote - Vite React Admin & Dashboard Template";
+  document.title = "Orders | San-i-pak - Vite React Admin & Dashboard Template";
 
   const { orders, onGetOrders } = props;
   const [activeTab, setActiveTab] = useState("1");
@@ -329,18 +329,18 @@ const CryptoOrders = (props) => {
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumb */}
-          <Breadcrumbs title="Crypto" breadcrumbItem="Orders" />
+          <Breadcrumbs title='Crypto' breadcrumbItem='Orders' />
 
           <Row>
-            <Col lg="12">
+            <Col lg='12'>
               <Card>
                 <CardBody>
-                  <h4 className="card-title mb-3">Orders</h4>
+                  <h4 className='card-title mb-3'>Orders</h4>
 
-                  <ul className="nav nav-tabs nav-tabs-custom" role="tablist">
+                  <ul className='nav nav-tabs nav-tabs-custom' role='tablist'>
                     <NavItem>
                       <NavLink
                         className={classnames({
@@ -367,64 +367,64 @@ const CryptoOrders = (props) => {
                     </NavItem>
                   </ul>
 
-                  <TabContent activeTab={activeTab} className="p-3">
-                    <TabPane tabId="1" id="all-order">
+                  <TabContent activeTab={activeTab} className='p-3'>
+                    <TabPane tabId='1' id='all-order'>
                       <Form>
-                        <Row className="mb-4">
-                          <div className="col-xl col-sm-6">
-                            <FormGroup className="mt-3 mb-0">
+                        <Row className='mb-4'>
+                          <div className='col-xl col-sm-6'>
+                            <FormGroup className='mt-3 mb-0'>
                               <Label>Date :</Label>
                               <DatePicker
                                 onChange={handleChange}
-                                className="form-control"
-                                placeholderText="Select date"
+                                className='form-control'
+                                placeholderText='Select date'
                               />
                             </FormGroup>
                           </div>
 
-                          <div className="col-xl col-sm-6">
-                            <FormGroup className="mt-3 mb-0">
+                          <div className='col-xl col-sm-6'>
+                            <FormGroup className='mt-3 mb-0'>
                               <Label>Coin</Label>
-                              <select className="form-control select2-search-disable">
-                                <option value="BTC" defaultValue>
+                              <select className='form-control select2-search-disable'>
+                                <option value='BTC' defaultValue>
                                   Bitcoin
                                 </option>
-                                <option value="ETH">Ethereum</option>
-                                <option value="LTC">litecoin</option>
+                                <option value='ETH'>Ethereum</option>
+                                <option value='LTC'>litecoin</option>
                               </select>
                             </FormGroup>
                           </div>
 
-                          <div className="col-xl col-sm-6">
-                            <FormGroup className="mt-3 mb-0">
+                          <div className='col-xl col-sm-6'>
+                            <FormGroup className='mt-3 mb-0'>
                               <Label>Type</Label>
-                              <select className="form-control select2-search-disable">
-                                <option value="BU" defaultValue>
+                              <select className='form-control select2-search-disable'>
+                                <option value='BU' defaultValue>
                                   Buy
                                 </option>
-                                <option value="SE">Sell</option>
+                                <option value='SE'>Sell</option>
                               </select>
                             </FormGroup>
                           </div>
 
-                          <div className="col-xl col-sm-6">
-                            <FormGroup className="mt-3 mb-0">
+                          <div className='col-xl col-sm-6'>
+                            <FormGroup className='mt-3 mb-0'>
                               <Label>Status</Label>
-                              <select className="form-control select2-search-disable">
-                                <option value="CO" defaultValue>
+                              <select className='form-control select2-search-disable'>
+                                <option value='CO' defaultValue>
                                   Completed
                                 </option>
-                                <option value="PE">Pending</option>
+                                <option value='PE'>Pending</option>
                               </select>
                             </FormGroup>
                           </div>
 
-                          <div className="col-xl col-sm-6 align-self-end">
-                            <div className="mb-3">
+                          <div className='col-xl col-sm-6 align-self-end'>
+                            <div className='mb-3'>
                               <Button
-                                type="button"
-                                color="primary"
-                                className="w-md"
+                                type='button'
+                                color='primary'
+                                className='w-md'
                               >
                                 Filter
                               </Button>
@@ -441,7 +441,7 @@ const CryptoOrders = (props) => {
                         customPageSize={10}
                       />
                     </TabPane>
-                    <TabPane tabId="2" id="processing">
+                    <TabPane tabId='2' id='processing'>
                       <div>
                         <TableContainer
                           columns={columns}

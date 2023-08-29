@@ -30,10 +30,10 @@ import Breadcrumbs from "../../components/Common/Breadcrumb";
 //Import images
 import verificationImg from "../../assets/images/verification-img.png";
 
-const CryptoKYCApplication = props => {
-
+const CryptoKYCApplication = (props) => {
   //meta title
-  document.title="KYC Application | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "KYC Application | San-i-pak - Vite React Admin & Dashboard Template";
 
   const [modal, setModal] = useState(false);
   const [activeTab, setActiveTab] = useState(1);
@@ -45,7 +45,7 @@ const CryptoKYCApplication = props => {
 
   const [passedSteps, setPassedSteps] = useState([1]);
 
-  const toggleTab = tab => {
+  const toggleTab = (tab) => {
     if (activeTab !== tab) {
       const modifiedSteps = [...passedSteps];
       modifiedSteps.push(tab);
@@ -54,8 +54,8 @@ const CryptoKYCApplication = props => {
     }
   };
 
-  const handleAcceptedFiles = files => {
-    files.map(file =>
+  const handleAcceptedFiles = (files) => {
+    files.map((file) =>
       Object.assign(file, {
         preview: URL.createObjectURL(file),
         formattedSize: formatBytes(file.size),
@@ -79,31 +79,29 @@ const CryptoKYCApplication = props => {
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumb */}
-          <Breadcrumbs title="Crypto" breadcrumbItem="KYC Application" />
+          <Breadcrumbs title='Crypto' breadcrumbItem='KYC Application' />
 
-          <Row className="justify-content-center mt-lg-5">
-            <Col xl="5" sm="8">
+          <Row className='justify-content-center mt-lg-5'>
+            <Col xl='5' sm='8'>
               <Card>
                 <CardBody>
-                  <div className="text-center">
-                    <Row className="justify-content-center">
-                      <Col lg="10">
-                        <h4 className="mt-4 fw-semibold">
-                          KYC Verification
-                        </h4>
-                        <p className="text-muted mt-3">
+                  <div className='text-center'>
+                    <Row className='justify-content-center'>
+                      <Col lg='10'>
+                        <h4 className='mt-4 fw-semibold'>KYC Verification</h4>
+                        <p className='text-muted mt-3'>
                           Itaque earum rerum hic tenetur a sapiente delectus ut
                           aut reiciendis perferendis asperiores repellat.
                         </p>
 
-                        <div className="mt-4">
+                        <div className='mt-4'>
                           {/* button triggers modal */}
                           <Button
-                            type="button"
-                            color="primary"
+                            type='button'
+                            color='primary'
                             onClick={togglemodal}
                           >
                             Click here for Verification
@@ -112,13 +110,13 @@ const CryptoKYCApplication = props => {
                       </Col>
                     </Row>
 
-                    <Row className="justify-content-center mt-5 mb-2">
-                      <Col sm="6" xs="8">
+                    <Row className='justify-content-center mt-5 mb-2'>
+                      <Col sm='6' xs='8'>
                         <div>
                           <img
                             src={verificationImg}
-                            alt=""
-                            className="img-fluid"
+                            alt=''
+                            className='img-fluid'
                           />
                         </div>
                       </Col>
@@ -128,20 +126,20 @@ const CryptoKYCApplication = props => {
                   {/* modal */}
                   <Modal
                     isOpen={modal}
-                    role="dialog"
-                    size="lg"
+                    role='dialog'
+                    size='lg'
                     autoFocus={true}
                     centered
-                    id="verificationModal"
+                    id='verificationModal'
                     toggle={togglemodal}
                   >
-                    <div className="modal-content">
+                    <div className='modal-content'>
                       <ModalHeader toggle={togglemodal}>
                         Verify your Account
                       </ModalHeader>
                       <ModalBody>
-                        <div id="kyc-verify-wizard" className="wizard clearfix">
-                          <div className="steps clearfix">
+                        <div id='kyc-verify-wizard' className='wizard clearfix'>
+                          <div className='steps clearfix'>
                             <ul>
                               <NavItem
                                 className={classnames({
@@ -157,7 +155,7 @@ const CryptoKYCApplication = props => {
                                   }}
                                   disabled={!passedSteps.includes(1)}
                                 >
-                                  <span className="number">1.</span>
+                                  <span className='number'>1.</span>
                                   Personal Info
                                 </NavLink>
                               </NavItem>
@@ -175,7 +173,7 @@ const CryptoKYCApplication = props => {
                                   }}
                                   disabled={!passedSteps.includes(2)}
                                 >
-                                  <span className="number">2.</span>
+                                  <span className='number'>2.</span>
                                   Confirm email
                                 </NavLink>
                               </NavItem>
@@ -193,100 +191,100 @@ const CryptoKYCApplication = props => {
                                   }}
                                   disabled={!passedSteps.includes(3)}
                                 >
-                                  <span className="number">3.</span>
+                                  <span className='number'>3.</span>
                                   Document Verification
                                 </NavLink>
                               </NavItem>
                             </ul>
                           </div>
-                          <div className="content clearfix">
+                          <div className='content clearfix'>
                             <TabContent
                               activeTab={activeTab}
-                              className="twitter-bs-wizard-tab-content"
+                              className='twitter-bs-wizard-tab-content'
                             >
-                              <TabPane tabId={1} id="personal-info">
+                              <TabPane tabId={1} id='personal-info'>
                                 <Form>
                                   <Row>
-                                    <Col lg="6">
-                                      <FormGroup className="mb-3">
+                                    <Col lg='6'>
+                                      <FormGroup className='mb-3'>
                                         <Label
-                                          htmlFor="kycfirstname-input"
-                                          className="form-label"
+                                          htmlFor='kycfirstname-input'
+                                          className='form-label'
                                         >
                                           First name
                                         </Label>
                                         <Input
-                                          type="text"
-                                          className="form-control"
-                                          id="kycfirstname-input"
-                                          placeholder="Enter First name"
+                                          type='text'
+                                          className='form-control'
+                                          id='kycfirstname-input'
+                                          placeholder='Enter First name'
                                         />
                                       </FormGroup>
                                     </Col>
-                                    <Col lg="6">
-                                      <FormGroup className="mb-3">
+                                    <Col lg='6'>
+                                      <FormGroup className='mb-3'>
                                         <Label
-                                          htmlFor="kyclastname-input"
-                                          className="form-label"
+                                          htmlFor='kyclastname-input'
+                                          className='form-label'
                                         >
                                           Last name
                                         </Label>
                                         <Input
-                                          type="text"
-                                          className="form-control"
-                                          id="kyclastname-input"
-                                          placeholder="Enter Last name"
+                                          type='text'
+                                          className='form-control'
+                                          id='kyclastname-input'
+                                          placeholder='Enter Last name'
                                         />
                                       </FormGroup>
                                     </Col>
                                   </Row>
 
                                   <Row>
-                                    <Col lg="6">
-                                      <FormGroup className="mb-3">
+                                    <Col lg='6'>
+                                      <FormGroup className='mb-3'>
                                         <Label
-                                          htmlFor="kycphoneno-input"
-                                          className="form-label"
+                                          htmlFor='kycphoneno-input'
+                                          className='form-label'
                                         >
                                           Phone
                                         </Label>
                                         <Input
-                                          type="text"
-                                          className="form-control"
-                                          id="kycphoneno-input"
-                                          placeholder="Enter Phone number"
+                                          type='text'
+                                          className='form-control'
+                                          id='kycphoneno-input'
+                                          placeholder='Enter Phone number'
                                         />
                                       </FormGroup>
                                     </Col>
-                                    <Col lg="6">
-                                      <FormGroup className="mb-3">
+                                    <Col lg='6'>
+                                      <FormGroup className='mb-3'>
                                         <Label
-                                          htmlFor="kycbirthdate-input"
-                                          className="form-label"
+                                          htmlFor='kycbirthdate-input'
+                                          className='form-label'
                                         >
                                           Date of birth
                                         </Label>
                                         <Input
-                                          type="text"
-                                          className="form-control"
-                                          id="kycbirthdate-input"
-                                          placeholder="Enter Date of birth"
+                                          type='text'
+                                          className='form-control'
+                                          id='kycbirthdate-input'
+                                          placeholder='Enter Date of birth'
                                         />
                                       </FormGroup>
                                     </Col>
                                   </Row>
                                   <Row>
-                                    <Col lg="12">
-                                      <FormGroup className="mb-3">
+                                    <Col lg='12'>
+                                      <FormGroup className='mb-3'>
                                         <Label
-                                          htmlFor="kycselectcity-input"
-                                          className="form-label"
+                                          htmlFor='kycselectcity-input'
+                                          className='form-label'
                                         >
                                           City
                                         </Label>
                                         <select
-                                          className="form-select"
-                                          id="kycselectcity-input"
+                                          className='form-select'
+                                          id='kycselectcity-input'
                                         >
                                           <option>San Francisco</option>
                                           <option>Los Angeles</option>
@@ -297,38 +295,38 @@ const CryptoKYCApplication = props => {
                                   </Row>
                                 </Form>
                               </TabPane>
-                              <TabPane tabId={2} id="confirm-email">
+                              <TabPane tabId={2} id='confirm-email'>
                                 <div>
                                   <Form>
                                     <Row>
-                                      <Col lg="12">
-                                        <FormGroup className="mb-3">
-                                          <Label htmlFor="kycemail-input">
+                                      <Col lg='12'>
+                                        <FormGroup className='mb-3'>
+                                          <Label htmlFor='kycemail-input'>
                                             Email
                                           </Label>
                                           <Input
-                                            type="email"
-                                            className="form-control"
-                                            id="kycemail-input"
-                                            placeholder="Enter Email Address"
+                                            type='email'
+                                            className='form-control'
+                                            id='kycemail-input'
+                                            placeholder='Enter Email Address'
                                           />
                                         </FormGroup>
 
-                                        <FormGroup className="mb-3">
-                                          <Label htmlFor="kycconfirmcode-input">
+                                        <FormGroup className='mb-3'>
+                                          <Label htmlFor='kycconfirmcode-input'>
                                             Confirm code
                                           </Label>
                                           <Input
-                                            type="email"
-                                            className="form-control"
-                                            id="kycconfirmcode-input"
-                                            placeholder="Enter Confirm code"
+                                            type='email'
+                                            className='form-control'
+                                            id='kycconfirmcode-input'
+                                            placeholder='Enter Confirm code'
                                           />
                                         </FormGroup>
 
-                                        <div className="mb-3">
+                                        <div className='mb-3'>
                                           Didn&apos;t receive code ?
-                                          <Button type="button" color="link">
+                                          <Button type='button' color='link'>
                                             Resend Code
                                           </Button>
                                         </div>
@@ -337,25 +335,25 @@ const CryptoKYCApplication = props => {
                                   </Form>
                                 </div>
                               </TabPane>
-                              <TabPane tabId={3} id="doc-verification">
-                                <h5 className="font-size-14 mb-3">
+                              <TabPane tabId={3} id='doc-verification'>
+                                <h5 className='font-size-14 mb-3'>
                                   Upload document file for a verification
                                 </h5>
-                                <div className="kyc-doc-verification mb-3">
+                                <div className='kyc-doc-verification mb-3'>
                                   <Dropzone
-                                    onDrop={acceptedFiles =>
+                                    onDrop={(acceptedFiles) =>
                                       handleAcceptedFiles(acceptedFiles)
                                     }
                                   >
                                     {({ getRootProps, getInputProps }) => (
-                                      <div className="dropzone">
+                                      <div className='dropzone'>
                                         <div
-                                          className="dz-message needsclick"
+                                          className='dz-message needsclick'
                                           {...getRootProps()}
                                         >
                                           <input {...getInputProps()} />
-                                          <div className="mb-3">
-                                            <i className="display-4 text-muted bx bxs-cloud-upload"></i>
+                                          <div className='mb-3'>
+                                            <i className='display-4 text-muted bx bxs-cloud-upload'></i>
                                           </div>
                                           <h4>
                                             Drop files here or click to upload.
@@ -365,34 +363,34 @@ const CryptoKYCApplication = props => {
                                     )}
                                   </Dropzone>
                                   <div
-                                    className="dropzone-previews mt-3"
-                                    id="file-previews"
+                                    className='dropzone-previews mt-3'
+                                    id='file-previews'
                                   >
                                     {selectedFiles.map((f, i) => {
                                       return (
                                         <Card
-                                          className="mt-1 mb-0 shadow-none border dz-processing dz-image-preview dz-success dz-complete"
+                                          className='mt-1 mb-0 shadow-none border dz-processing dz-image-preview dz-success dz-complete'
                                           key={i + "-file"}
                                         >
-                                          <div className="p-2">
-                                            <Row className="align-items-center">
-                                              <Col className="col-auto">
+                                          <div className='p-2'>
+                                            <Row className='align-items-center'>
+                                              <Col className='col-auto'>
                                                 <img
-                                                  data-dz-thumbnail=""
-                                                  height="80"
-                                                  className="avatar-sm rounded bg-light"
+                                                  data-dz-thumbnail=''
+                                                  height='80'
+                                                  className='avatar-sm rounded bg-light'
                                                   alt={f.name}
                                                   src={f.preview}
                                                 />
                                               </Col>
                                               <Col>
                                                 <Link
-                                                  to="#"
-                                                  className="text-muted font-weight-bold"
+                                                  to='#'
+                                                  className='text-muted font-weight-bold'
                                                 >
                                                   {f.name}
                                                 </Link>
-                                                <p className="mb-0">
+                                                <p className='mb-0'>
                                                   <strong>
                                                     {f.formattedSize}
                                                   </strong>
@@ -408,8 +406,8 @@ const CryptoKYCApplication = props => {
                               </TabPane>
                             </TabContent>
                           </div>
-                          <div className="actions clearfix">
-                            <ul role="menu" aria-label="Pagination">
+                          <div className='actions clearfix'>
+                            <ul role='menu' aria-label='Pagination'>
                               <li
                                 className={
                                   activeTab === 1
@@ -418,7 +416,7 @@ const CryptoKYCApplication = props => {
                                 }
                               >
                                 <Link
-                                  to="#"
+                                  to='#'
                                   onClick={() => {
                                     toggleTab(activeTab - 1);
                                   }}
@@ -432,7 +430,7 @@ const CryptoKYCApplication = props => {
                                 }
                               >
                                 <Link
-                                  to="#"
+                                  to='#'
                                   onClick={() => {
                                     toggleTab(activeTab + 1);
                                   }}

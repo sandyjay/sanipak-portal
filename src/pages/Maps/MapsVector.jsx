@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 import {
   Row,
@@ -8,36 +8,36 @@ import {
   CardTitle,
   CardSubtitle,
   Container,
-} from "reactstrap"
-import Vector from "./Vectormap"
+} from "reactstrap";
+import Vector from "./Vectormap";
 //Import Breadcrumb
-import Breadcrumbs from "../../components/Common/Breadcrumb"
+import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 const MapsVector = () => {
-
   //meta title
-  document.title = "Vector Maps | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Vector Maps | San-i-pak - Vite React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid={true}>
-          <Breadcrumbs title="Maps" breadcrumbItem="Vector Maps" />
+          <Breadcrumbs title='Maps' breadcrumbItem='Vector Maps' />
 
           <Row>
             <Col lg={6}>
               <Card>
                 <CardBody>
                   <CardTitle>World Map</CardTitle>
-                  <CardSubtitle className="mb-3">
+                  <CardSubtitle className='mb-3'>
                     Example of vector map.
                   </CardSubtitle>
 
-                  <div id="world-map-markers" className="vector-map-height">
+                  <div id='world-map-markers' className='vector-map-height'>
                     <Vector
-                      value="world_mill"
-                      width="500"
-                      color="rgb(98, 110, 212)"
+                      value='world_mill'
+                      width='500'
+                      color='rgb(98, 110, 212)'
                     />
                   </div>
                 </CardBody>
@@ -47,15 +47,15 @@ const MapsVector = () => {
               <Card>
                 <CardBody>
                   <CardTitle>USA Map</CardTitle>
-                  <CardSubtitle className="mb-3">
+                  <CardSubtitle className='mb-3'>
                     Example of vector map.
                   </CardSubtitle>
 
-                  <div id="usa" className="vector-map-height">
+                  <div id='usa' className='vector-map-height'>
                     <Vector
-                      value="us_aea"
-                      width="500"
-                      color="rgb(98, 110, 212)"
+                      value='us_aea'
+                      width='500'
+                      color='rgb(98, 110, 212)'
                     />
                   </div>
                 </CardBody>
@@ -68,15 +68,15 @@ const MapsVector = () => {
               <Card>
                 <CardBody>
                   <CardTitle>Canada Map</CardTitle>
-                  <CardSubtitle className="mb-3">
+                  <CardSubtitle className='mb-3'>
                     Example of vector map.
                   </CardSubtitle>
 
-                  <div id="uk" className="vector-map-height">
+                  <div id='uk' className='vector-map-height'>
                     <Vector
-                      value="ca_lcc"
-                      width="500"
-                      color="rgb(98, 110, 212)"
+                      value='ca_lcc'
+                      width='500'
+                      color='rgb(98, 110, 212)'
                     />
                   </div>
                 </CardBody>
@@ -87,15 +87,15 @@ const MapsVector = () => {
               <Card>
                 <CardBody>
                   <CardTitle>Asia Vector Map</CardTitle>
-                  <CardSubtitle className="mb-3">
+                  <CardSubtitle className='mb-3'>
                     Example of vector map.
                   </CardSubtitle>
 
-                  <div id="chicago" className="vector-map-height">
+                  <div id='chicago' className='vector-map-height'>
                     <Vector
-                      value="asia_mill"
-                      width="500"
-                      color="rgb(98, 110, 212)"
+                      value='asia_mill'
+                      width='500'
+                      color='rgb(98, 110, 212)'
                     />
                   </div>
                 </CardBody>
@@ -105,7 +105,7 @@ const MapsVector = () => {
         </Container>
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default MapsVector
+export default MapsVector;

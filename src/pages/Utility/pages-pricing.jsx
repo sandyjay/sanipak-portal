@@ -1,17 +1,16 @@
-import React from "react"
+import React from "react";
 import { Container, Row, Col } from "reactstrap";
 
-
 //Import Breadcrumb
-import Breadcrumbs from "../../components/Common/Breadcrumb"
+import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 //Import Pricing Cards
-import CardPricing from "./card-pricing"
+import CardPricing from "./card-pricing";
 
 const PagesPricing = () => {
-
   //meta title
-  document.title = "Pricing | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Pricing | San-i-pak - Vite React Admin & Dashboard Template";
 
   const pricings = [
     {
@@ -74,19 +73,19 @@ const PagesPricing = () => {
         { title: "Free Setup" },
       ],
     },
-  ]
+  ];
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Utility" breadcrumbItem="Pricing" />
+          <Breadcrumbs title='Utility' breadcrumbItem='Pricing' />
 
-          <Row className="justify-content-center">
+          <Row className='justify-content-center'>
             <Col lg={6}>
-              <div className="text-center mb-5">
+              <div className='text-center mb-5'>
                 <h4>Choose your Pricing plan</h4>
-                <p className="text-muted">
+                <p className='text-muted'>
                   To achieve this, it would be necessary to have uniform
                   grammar, pronunciation and more common words If several
                   languages coalesce
@@ -103,6 +102,6 @@ const PagesPricing = () => {
         </Container>
       </div>
     </React.Fragment>
-  )
-}
-export default PagesPricing
+  );
+};
+export default PagesPricing;

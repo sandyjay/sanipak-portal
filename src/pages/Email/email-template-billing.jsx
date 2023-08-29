@@ -4,22 +4,20 @@ import { Row, Col, Container } from "reactstrap";
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb";
 
-const EmailTemplateBilling = props => {
-   //meta title
-   document.title="Billing Email | Skote - Vite React Admin & Dashboard Template";
+const EmailTemplateBilling = (props) => {
+  //meta title
+  document.title =
+    "Billing Email | San-i-pak - Vite React Admin & Dashboard Template";
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
-          <Breadcrumbs
-            title="Email Template"
-            breadcrumbItem="Billing Email"
-          />
+          <Breadcrumbs title='Email Template' breadcrumbItem='Billing Email' />
 
-          <Row className="email-template">
-            <Col md="12">
+          <Row className='email-template'>
+            <Col md='12'>
               <table
-                className="body-wrap"
+                className='body-wrap'
                 style={{
                   fontFamily: "Helvetica Neue,Helvetica,Arial,sans-serif",
                   boxSizing: "border-box",
@@ -27,9 +25,9 @@ const EmailTemplateBilling = props => {
                   width: "100%",
                   backgroundColor: "transparent",
                   margin: "0",
-                  color: "#495057"
+                  color: "#495057",
                 }}
-                bgcolor="#f6f6f6"
+                bgcolor='#f6f6f6'
               >
                 <tbody>
                   <tr
@@ -42,21 +40,19 @@ const EmailTemplateBilling = props => {
                   >
                     <td
                       style={{
-                        fontFamily:
-                          "Helvetica Neue,Helvetica,Arial,sans-serif",
+                        fontFamily: "Helvetica Neue,Helvetica,Arial,sans-serif",
                         boxSizing: "border-box",
                         fontSize: "14px",
                         verticalAlign: "top",
                         margin: "0",
                       }}
-                      valign="top"
+                      valign='top'
                     ></td>
                     <td
-                      className="container"
-                      width="600"
+                      className='container'
+                      width='600'
                       style={{
-                        fontFamily:
-                          "Helvetica Neue,Helvetica,Arial,sans-serif",
+                        fontFamily: "Helvetica Neue,Helvetica,Arial,sans-serif",
                         boxSizing: "border-box",
                         fontSize: "14px",
                         verticalAlign: "top",
@@ -65,10 +61,10 @@ const EmailTemplateBilling = props => {
                         clear: "both",
                         margin: "0 auto",
                       }}
-                      valign="top"
+                      valign='top'
                     >
                       <div
-                        className="content"
+                        className='content'
                         style={{
                           fontFamily:
                             "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -81,10 +77,10 @@ const EmailTemplateBilling = props => {
                         }}
                       >
                         <table
-                          className="main"
-                          width="100%"
-                          cellPadding="0"
-                          cellSpacing="0"
+                          className='main'
+                          width='100%'
+                          cellPadding='0'
+                          cellSpacing='0'
                           style={{
                             fontFamily:
                               "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -106,7 +102,7 @@ const EmailTemplateBilling = props => {
                               }}
                             >
                               <td
-                                className="content-wrap aligncenter"
+                                className='content-wrap aligncenter'
                                 style={{
                                   fontFamily:
                                     "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -119,13 +115,13 @@ const EmailTemplateBilling = props => {
                                   borderRadius: "7px",
                                   backgroundColor: "#fff",
                                 }}
-                                align="center"
-                                valign="top"
+                                align='center'
+                                valign='top'
                               >
                                 <table
-                                  width="100%"
-                                  cellPadding="0"
-                                  cellSpacing="0"
+                                  width='100%'
+                                  cellPadding='0'
+                                  cellSpacing='0'
                                   style={{
                                     fontFamily:
                                       "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -145,7 +141,7 @@ const EmailTemplateBilling = props => {
                                       }}
                                     >
                                       <td
-                                        className="content-block"
+                                        className='content-block'
                                         style={{
                                           fontFamily:
                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -155,10 +151,10 @@ const EmailTemplateBilling = props => {
                                           margin: "0",
                                           padding: "0 0 20px",
                                         }}
-                                        valign="top"
+                                        valign='top'
                                       >
                                         <h2
-                                          className="aligncenter"
+                                          className='aligncenter'
                                           style={{
                                             fontFamily:
                                               "Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif",
@@ -170,12 +166,12 @@ const EmailTemplateBilling = props => {
                                             textAlign: "center",
                                             margin: "40px 0 0",
                                           }}
-                                          align="center"
+                                          align='center'
                                         >
                                           Thanks for using{" "}
                                           <b style={{ fontWeight: "600" }}>
                                             {" "}
-                                            SKOTE
+                                            San-i-pak
                                           </b>
                                           .
                                         </h2>
@@ -191,7 +187,7 @@ const EmailTemplateBilling = props => {
                                       }}
                                     >
                                       <td
-                                        className="content-block aligncenter"
+                                        className='content-block aligncenter'
                                         style={{
                                           fontFamily:
                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -202,11 +198,11 @@ const EmailTemplateBilling = props => {
                                           margin: "0",
                                           padding: "0 0 20px",
                                         }}
-                                        align="center"
-                                        valign="top"
+                                        align='center'
+                                        valign='top'
                                       >
                                         <table
-                                          className="invoice"
+                                          className='invoice'
                                           style={{
                                             fontFamily:
                                               "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -237,7 +233,7 @@ const EmailTemplateBilling = props => {
                                                   margin: "0",
                                                   padding: "5px 0",
                                                 }}
-                                                valign="top"
+                                                valign='top'
                                               >
                                                 <b>Company Name</b>
                                                 <br
@@ -281,12 +277,12 @@ const EmailTemplateBilling = props => {
                                                   margin: "0",
                                                   padding: "5px 0",
                                                 }}
-                                                valign="top"
+                                                valign='top'
                                               >
                                                 <table
-                                                  className="invoice-items"
-                                                  cellPadding="0"
-                                                  cellSpacing="0"
+                                                  className='invoice-items'
+                                                  cellPadding='0'
+                                                  cellSpacing='0'
                                                   style={{
                                                     fontFamily:
                                                       "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -301,24 +297,21 @@ const EmailTemplateBilling = props => {
                                                       style={{
                                                         fontFamily:
                                                           "Helvetica Neue,Helvetica,Arial,sans-serif",
-                                                        boxSizing:
-                                                          "border-box",
+                                                        boxSizing: "border-box",
                                                         fontSize: "14px",
                                                         margin: "0",
                                                       }}
                                                     >
                                                       <td
-                                                        className="email-billing-list"
+                                                        className='email-billing-list'
                                                         style={{
                                                           fontFamily:
                                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
                                                           boxSizing:
                                                             "border-box",
                                                           fontSize: "14px",
-                                                          verticalAlign:
-                                                            "top",
-                                                          borderTopWidth:
-                                                            "1px",
+                                                          verticalAlign: "top",
+                                                          borderTopWidth: "1px",
                                                           borderTopColor:
                                                             "#eee",
                                                           borderTopStyle:
@@ -326,23 +319,21 @@ const EmailTemplateBilling = props => {
                                                           margin: "0",
                                                           padding: "5px 0",
                                                         }}
-                                                        valign="top"
+                                                        valign='top'
                                                       >
                                                         BS-200 (1 Pc)
                                                       </td>
                                                       <td
-                                                        className="email-billing-list alignright"
+                                                        className='email-billing-list alignright'
                                                         style={{
                                                           fontFamily:
                                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
                                                           boxSizing:
                                                             "border-box",
                                                           fontSize: "14px",
-                                                          verticalAlign:
-                                                            "top",
+                                                          verticalAlign: "top",
                                                           textAlign: "right",
-                                                          borderTopWidth:
-                                                            "1px",
+                                                          borderTopWidth: "1px",
                                                           borderTopColor:
                                                             "#eee",
                                                           borderTopStyle:
@@ -350,8 +341,8 @@ const EmailTemplateBilling = props => {
                                                           margin: "0",
                                                           padding: "5px 0",
                                                         }}
-                                                        align="right"
-                                                        valign="top"
+                                                        align='right'
+                                                        valign='top'
                                                       >
                                                         $10.99
                                                       </td>
@@ -360,24 +351,21 @@ const EmailTemplateBilling = props => {
                                                       style={{
                                                         fontFamily:
                                                           "Helvetica Neue,Helvetica,Arial,sans-serif",
-                                                        boxSizing:
-                                                          "border-box",
+                                                        boxSizing: "border-box",
                                                         fontSize: "14px",
                                                         margin: "0",
                                                       }}
                                                     >
                                                       <td
-                                                        className="email-billing-list"
+                                                        className='email-billing-list'
                                                         style={{
                                                           fontFamily:
                                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
                                                           boxSizing:
                                                             "border-box",
                                                           fontSize: "14px",
-                                                          verticalAlign:
-                                                            "top",
-                                                          borderTopWidth:
-                                                            "1px",
+                                                          verticalAlign: "top",
+                                                          borderTopWidth: "1px",
                                                           borderTopColor:
                                                             "#eee",
                                                           borderTopStyle:
@@ -385,23 +373,21 @@ const EmailTemplateBilling = props => {
                                                           margin: "0",
                                                           padding: "5px 0",
                                                         }}
-                                                        valign="top"
+                                                        valign='top'
                                                       >
                                                         BS-400 (2 Pcs)
                                                       </td>
                                                       <td
-                                                        className="email-billing-list alignright"
+                                                        className='email-billing-list alignright'
                                                         style={{
                                                           fontFamily:
                                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
                                                           boxSizing:
                                                             "border-box",
                                                           fontSize: "14px",
-                                                          verticalAlign:
-                                                            "top",
+                                                          verticalAlign: "top",
                                                           textAlign: "right",
-                                                          borderTopWidth:
-                                                            "1px",
+                                                          borderTopWidth: "1px",
                                                           borderTopColor:
                                                             "#eee",
                                                           borderTopStyle:
@@ -409,8 +395,8 @@ const EmailTemplateBilling = props => {
                                                           margin: "0",
                                                           padding: "5px 0",
                                                         }}
-                                                        align="right"
-                                                        valign="top"
+                                                        align='right'
+                                                        valign='top'
                                                       >
                                                         $60.00
                                                       </td>
@@ -419,24 +405,21 @@ const EmailTemplateBilling = props => {
                                                       style={{
                                                         fontFamily:
                                                           "Helvetica Neue,Helvetica,Arial,sans-serif",
-                                                        boxSizing:
-                                                          "border-box",
+                                                        boxSizing: "border-box",
                                                         fontSize: "14px",
                                                         margin: "0",
                                                       }}
                                                     >
                                                       <td
-                                                        className="email-billing-list alignright"
+                                                        className='email-billing-list alignright'
                                                         style={{
                                                           fontFamily:
                                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
                                                           boxSizing:
                                                             "border-box",
                                                           fontSize: "14px",
-                                                          verticalAlign:
-                                                            "top",
-                                                          borderTopWidth:
-                                                            "1px",
+                                                          verticalAlign: "top",
+                                                          borderTopWidth: "1px",
                                                           borderTopColor:
                                                             "#eee",
                                                           borderTopStyle:
@@ -444,23 +427,21 @@ const EmailTemplateBilling = props => {
                                                           margin: "0",
                                                           padding: "5px 0",
                                                         }}
-                                                        valign="top"
+                                                        valign='top'
                                                       >
                                                         BS-1000 (1 Pc)
                                                       </td>
                                                       <td
-                                                        className="alignright"
+                                                        className='alignright'
                                                         style={{
                                                           fontFamily:
                                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
                                                           boxSizing:
                                                             "border-box",
                                                           fontSize: "14px",
-                                                          verticalAlign:
-                                                            "top",
+                                                          verticalAlign: "top",
                                                           textAlign: "right",
-                                                          borderTopWidth:
-                                                            "1px",
+                                                          borderTopWidth: "1px",
                                                           borderTopColor:
                                                             "#eee",
                                                           borderTopStyle:
@@ -468,37 +449,34 @@ const EmailTemplateBilling = props => {
                                                           margin: "0",
                                                           padding: "5px 0",
                                                         }}
-                                                        align="right"
-                                                        valign="top"
+                                                        align='right'
+                                                        valign='top'
                                                       >
                                                         $600.00
                                                       </td>
                                                     </tr>
                                                     <tr
-                                                      className="total"
+                                                      className='total'
                                                       style={{
                                                         fontFamily:
                                                           "Helvetica Neue,Helvetica,Arial,sans-serif",
-                                                        boxSizing:
-                                                          "border-box",
+                                                        boxSizing: "border-box",
                                                         fontSize: "14px",
                                                         margin: "0",
                                                       }}
                                                     >
                                                       <td
-                                                        className="alignright"
-                                                        width="80%"
+                                                        className='alignright'
+                                                        width='80%'
                                                         style={{
                                                           fontFamily:
                                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
                                                           boxSizing:
                                                             "border-box",
                                                           fontSize: "14px",
-                                                          verticalAlign:
-                                                            "top",
+                                                          verticalAlign: "top",
                                                           textAlign: "right",
-                                                          borderTopWidth:
-                                                            "2px",
+                                                          borderTopWidth: "2px",
                                                           borderTopColor:
                                                             "#333",
                                                           borderTopStyle:
@@ -513,24 +491,22 @@ const EmailTemplateBilling = props => {
                                                           margin: "0",
                                                           padding: "5px 0",
                                                         }}
-                                                        align="right"
-                                                        valign="top"
+                                                        align='right'
+                                                        valign='top'
                                                       >
                                                         Total
                                                       </td>
                                                       <td
-                                                        className="alignright"
+                                                        className='alignright'
                                                         style={{
                                                           fontFamily:
                                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
                                                           boxSizing:
                                                             "border-box",
                                                           fontSize: "14px",
-                                                          verticalAlign:
-                                                            "top",
+                                                          verticalAlign: "top",
                                                           textAlign: "right",
-                                                          borderTopWidth:
-                                                            "2px",
+                                                          borderTopWidth: "2px",
                                                           borderTopColor:
                                                             "#333",
                                                           borderTopStyle:
@@ -545,8 +521,8 @@ const EmailTemplateBilling = props => {
                                                           margin: "0",
                                                           padding: "5px 0",
                                                         }}
-                                                        align="right"
-                                                        valign="top"
+                                                        align='right'
+                                                        valign='top'
                                                       >
                                                         $670.99
                                                       </td>
@@ -569,7 +545,7 @@ const EmailTemplateBilling = props => {
                                       }}
                                     >
                                       <td
-                                        className="content-block aligncenter"
+                                        className='content-block aligncenter'
                                         style={{
                                           fontFamily:
                                             "Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -580,10 +556,10 @@ const EmailTemplateBilling = props => {
                                           margin: " 0",
                                           padding: " 0 0 20px",
                                         }}
-                                        align="center"
-                                        valign="top"
+                                        align='center'
+                                        valign='top'
                                       >
-                                        Skote Inc. 2896 Howell Rd,
+                                        San-i-pak Inc. 2896 Howell Rd,
                                         Russellville, AR, 72823
                                       </td>
                                     </tr>
@@ -598,7 +574,7 @@ const EmailTemplateBilling = props => {
                                       }}
                                     >
                                       <td
-                                        className="content-block"
+                                        className='content-block'
                                         style={{
                                           textAlign: "center",
                                           fontFamily:
@@ -609,9 +585,9 @@ const EmailTemplateBilling = props => {
                                           margin: "0",
                                           padding: "0",
                                         }}
-                                        valign="top"
+                                        valign='top'
                                       >
-                                        © {new Date().getFullYear()} Skote
+                                        © {new Date().getFullYear()} San-i-pak
                                       </td>
                                     </tr>
                                   </tbody>

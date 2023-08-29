@@ -125,18 +125,18 @@ const Dashboard = () => {
 
   //meta title
   document.title =
-    "Crypto Dashboard | Skote - Vite React Admin & Dashboard Template";
+    "Crypto Dashboard | San-i-pak - Vite React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumb */}
-          <Breadcrumbs title="Dashboards" breadcrumbItem="Crypto" />
+          <Breadcrumbs title='Dashboards' breadcrumbItem='Crypto' />
           <Row>
             <CardUser />
 
-            <Col xl="8">
+            <Col xl='8'>
               <CardWelcome />
 
               <Row>

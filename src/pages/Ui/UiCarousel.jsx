@@ -22,22 +22,22 @@ import SlideDark from "./CarouselTypes/slideDark";
 import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 const UiCarousel = () => {
-
   //meta title
-  document.title = "Carousel | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Carousel | San-i-pak - Vite React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid={true}>
-          <Breadcrumbs title="UI Elements" breadcrumbItem="Carousel" />
+          <Breadcrumbs title='UI Elements' breadcrumbItem='Carousel' />
 
           <Row>
             <Col lg={6}>
               <Card>
                 <CardBody>
                   <CardTitle> Slides Only</CardTitle>
-                  <CardSubtitle className="mb-3">
+                  <CardSubtitle className='mb-3'>
                     Here’s a carousel with slides only. Note the presence of the{" "}
                     <code>.d-block</code> and <code>.img-fluid</code> on
                     carousel images to prevent browser default image alignment.
@@ -50,7 +50,7 @@ const UiCarousel = () => {
               <Card>
                 <CardBody>
                   <CardTitle>With controls</CardTitle>
-                  <CardSubtitle className="mb-3">
+                  <CardSubtitle className='mb-3'>
                     Adding in the previous and next controls:
                   </CardSubtitle>
                   <Slidewithcontrol />
@@ -63,7 +63,7 @@ const UiCarousel = () => {
               <Card>
                 <CardBody>
                   <CardTitle>With indicators</CardTitle>
-                  <CardSubtitle className="mb-3">
+                  <CardSubtitle className='mb-3'>
                     You can also add the indicators to the carousel, alongside
                     the controls, too.
                   </CardSubtitle>
@@ -75,7 +75,7 @@ const UiCarousel = () => {
               <Card>
                 <CardBody>
                   <CardTitle>With captions</CardTitle>
-                  <CardSubtitle className="mb-3">
+                  <CardSubtitle className='mb-3'>
                     Add captions to your slides easily with the{" "}
                     <code>.carousel-caption</code> element within any{" "}
                     <code>.carousel-item</code>.
@@ -86,11 +86,11 @@ const UiCarousel = () => {
             </Col>
           </Row>
           <Row>
-            <Col lg="6">
+            <Col lg='6'>
               <Card>
                 <CardBody>
                   <CardTitle>Crossfade</CardTitle>
-                  <CardSubtitle className="mb-3">
+                  <CardSubtitle className='mb-3'>
                     Add <code>.carousel-fade</code> to your carousel to animate
                     slides with a fade transition instead of a slide.
                   </CardSubtitle>
@@ -99,12 +99,18 @@ const UiCarousel = () => {
               </Card>
             </Col>
 
-            <Col xl="6">
+            <Col xl='6'>
               <Card>
                 <CardBody>
-                  <CardTitle>Individual <code>.carousel-item</code> interval</CardTitle>
-                  <p className="card-title-desc">Add <code>data-bs-interval=""</code> to a <code>.carousel-item</code>
-                    to change the amount of time to delay between automatically cycling to the next item.</p>
+                  <CardTitle>
+                    Individual <code>.carousel-item</code> interval
+                  </CardTitle>
+                  <p className='card-title-desc'>
+                    Add <code>data-bs-interval=""</code> to a{" "}
+                    <code>.carousel-item</code>
+                    to change the amount of time to delay between automatically
+                    cycling to the next item.
+                  </p>
                   <IndividualInterval />
                 </CardBody>
               </Card>
@@ -116,10 +122,15 @@ const UiCarousel = () => {
               <Card>
                 <CardBody>
                   <CardTitle>Dark variant</CardTitle>
-                  <p className="card-title-desc">Add <code>.carousel-dark</code> to the <code>.carousel </code>
-                    for darker controls, indicators, and captions. Controls have been inverted from their default white fill with the
-                    <code> filter </code> CSS property. Captions and controls have additional Sass variables that customize the
-                    <code> color </code> and <code>background-color</code>.</p>
+                  <p className='card-title-desc'>
+                    Add <code>.carousel-dark</code> to the{" "}
+                    <code>.carousel </code>
+                    for darker controls, indicators, and captions. Controls have
+                    been inverted from their default white fill with the
+                    <code> filter </code> CSS property. Captions and controls
+                    have additional Sass variables that customize the
+                    <code> color </code> and <code>background-color</code>.
+                  </p>
                   <SlideDark />
                 </CardBody>
               </Card>

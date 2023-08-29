@@ -14,40 +14,40 @@ import Breadcrumbs from "../../components/Common/Breadcrumb";
 import EmailSideBar from "./email-sidebar";
 
 const EmailRead = () => {
-
-   //meta title
-  document.title="Read Email | Skote - Vite React Admin & Dashboard Template";
+  //meta title
+  document.title =
+    "Read Email | San-i-pak - Vite React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Email" breadcrumbItem="Read Email" />
+          <Breadcrumbs title='Email' breadcrumbItem='Read Email' />
 
           <Row>
-            <Col xs="12">
+            <Col xs='12'>
               {/* Render Email SideBar */}
               <EmailSideBar />
 
-              <div className="email-rightbar mb-3">
-                <Card>                
+              <div className='email-rightbar mb-3'>
+                <Card>
                   <CardBody>
-                    <div className="d-flex mb-4">
+                    <div className='d-flex mb-4'>
                       <img
-                        className="d-flex me-3 rounded-circle avatar-sm"
+                        className='d-flex me-3 rounded-circle avatar-sm'
                         src={avatar2}
-                        alt="skote"
+                        alt='San-i-pak'
                       />
-                      <div className="flex-grow-1">
-                        <h5 className="font-size-14 mt-1">
+                      <div className='flex-grow-1'>
+                        <h5 className='font-size-14 mt-1'>
                           Humberto D. Champion
                         </h5>
-                        <small className="text-muted">support@domain.com</small>
+                        <small className='text-muted'>support@domain.com</small>
                       </div>
                     </div>
 
-                    <h4 className="mt-0 font-size-16">
+                    <h4 className='mt-0 font-size-16'>
                       This Week&apos;s Top Stories
                     </h4>
 
@@ -71,29 +71,29 @@ const EmailRead = () => {
                     <hr />
 
                     <Row>
-                      <Col xl="2" xs="6">
+                      <Col xl='2' xs='6'>
                         <Card>
                           <img
-                            className="card-img-top img-fluid"
+                            className='card-img-top img-fluid'
                             src={img3}
-                            alt="skote"
+                            alt='San-i-pak'
                           />
-                          <div className="py-2 text-center">
-                            <Link to="" className="fw-medium">
+                          <div className='py-2 text-center'>
+                            <Link to='' className='fw-medium'>
                               Download
                             </Link>
                           </div>
                         </Card>
                       </Col>
-                      <Col xl="2" xs="6">
+                      <Col xl='2' xs='6'>
                         <Card>
                           <img
-                            className="card-img-top img-fluid"
+                            className='card-img-top img-fluid'
                             src={img4}
-                            alt="skote"
+                            alt='San-i-pak'
                           />
-                          <div className="py-2 text-center">
-                            <Link to="" className="fw-medium">
+                          <div className='py-2 text-center'>
+                            <Link to='' className='fw-medium'>
                               Download
                             </Link>
                           </div>
@@ -101,11 +101,8 @@ const EmailRead = () => {
                       </Col>
                     </Row>
 
-                    <Link
-                      to="#"
-                      className="btn btn-secondary  mt-4"
-                    >
-                      <i className="mdi mdi-reply"></i> Reply
+                    <Link to='#' className='btn btn-secondary  mt-4'>
+                      <i className='mdi mdi-reply'></i> Reply
                     </Link>
                   </CardBody>
                 </Card>
@@ -115,7 +112,7 @@ const EmailRead = () => {
         </Container>
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default EmailRead
+export default EmailRead;

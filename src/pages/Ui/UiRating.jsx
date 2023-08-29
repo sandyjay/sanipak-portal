@@ -9,13 +9,12 @@ import Rating from "react-rating";
 import RatingTooltip from "react-rating-tooltip";
 
 const UiRating = () => {
-
   //meta title
-  document.title = "Rating | Skote - Vite React Admin & Dashboard Template";
+  document.title = "Rating | San-i-pak - Vite React Admin & Dashboard Template";
 
   const [def, setdef] = useState("");
   const [rate, setRate] = useState("");
-  const [rating, setRating] = useState("")
+  const [rating, setRating] = useState("");
   const [secondrate, setSecondRate] = useState("");
   const [startrate, setStartrate] = useState("");
   const [customize, setcustomize] = useState("");
@@ -40,59 +39,59 @@ const UiRating = () => {
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid={true}>
-          <Breadcrumbs title="UI Elements" breadcrumbItem="Rating" />
+          <Breadcrumbs title='UI Elements' breadcrumbItem='Rating' />
 
           <Row>
-            <Col className="col-12">
+            <Col className='col-12'>
               <Card>
                 <CardBody>
                   <Row>
-                    <Col xl="3" md="4" sm="6">
-                      <div className="p-4 text-center">
-                        <h5 className="font-size-15">Default rating</h5>
-                        <div className="d-flex justify-content-center align-items-center">
+                    <Col xl='3' md='4' sm='6'>
+                      <div className='p-4 text-center'>
+                        <h5 className='font-size-15'>Default rating</h5>
+                        <div className='d-flex justify-content-center align-items-center'>
                           <Rating
                             max={5}
                             initialRating
-                            emptySymbol="mdi mdi-star-outline text-muted"
-                            fullSymbol="mdi mdi-star text-primary"
-                            className="rating-symbol-background"
+                            emptySymbol='mdi mdi-star-outline text-muted'
+                            fullSymbol='mdi mdi-star text-primary'
+                            className='rating-symbol-background'
                           />
                         </div>
                       </div>
                     </Col>
 
-                    <Col xl="3" md="4" sm="6">
-                      <div className="p-4 text-center">
-                        <h5 className="font-size-15">Half rating</h5>
-                        <div className="d-flex justify-content-center align-items-center">
+                    <Col xl='3' md='4' sm='6'>
+                      <div className='p-4 text-center'>
+                        <h5 className='font-size-15'>Half rating</h5>
+                        <div className='d-flex justify-content-center align-items-center'>
                           <Rating
                             max={5}
                             initialRating={1.5}
                             fractions={2}
-                            emptySymbol="mdi mdi-star-outline text-primary "
-                            fullSymbol="mdi mdi-star text-primary "
-                            className="rating-symbol-background"
+                            emptySymbol='mdi mdi-star-outline text-primary '
+                            fullSymbol='mdi mdi-star text-primary '
+                            className='rating-symbol-background'
                           />
                         </div>
                       </div>
                     </Col>
 
-                    <Col xl="3" md="4" sm="6">
-                      <div className="p-4 text-center">
-                        <h5 className="font-size-15">Disabled rating</h5>
+                    <Col xl='3' md='4' sm='6'>
+                      <div className='p-4 text-center'>
+                        <h5 className='font-size-15'>Disabled rating</h5>
                         <Rating
                           ActiveComponent={
                             <i
-                              className="mdi mdi-star text-primary rating-symbol-background"
+                              className='mdi mdi-star text-primary rating-symbol-background'
                               style={starStyle}
                             />
                           }
                           InActiveComponent={
                             <i
-                              className="mdi mdi-star-outline text-muted"
+                              className='mdi mdi-star-outline text-muted'
                               style={starStyle}
                             />
                           }
@@ -101,56 +100,58 @@ const UiRating = () => {
                       </div>
                     </Col>
 
-                    <Col xl="3" md="4" sm="6">
-                      <div className="p-4 text-center">
-                        <h5 className="font-size-15">
+                    <Col xl='3' md='4' sm='6'>
+                      <div className='p-4 text-center'>
+                        <h5 className='font-size-15'>
                           Readonly rating with a value
                         </h5>
                         <Rating
                           stop={5}
-                          emptySymbol="mdi mdi-star-outline text-primary "
-                          fullSymbol="mdi mdi-star text-primary "
-                          className="rating-symbol-background"
+                          emptySymbol='mdi mdi-star-outline text-primary '
+                          fullSymbol='mdi mdi-star text-primary '
+                          className='rating-symbol-background'
                           initialRating={2.5}
                           readonly
                         />
                       </div>
                     </Col>
 
-                    <Col xl="3" md="4" sm="6">
-                      <div className="p-4 text-center">
-                        <h5 className="font-16 m-b-15">
+                    <Col xl='3' md='4' sm='6'>
+                      <div className='p-4 text-center'>
+                        <h5 className='font-16 m-b-15'>
                           Customized heart rating
                         </h5>
-                        <div className="d-flex justify-content-center align-items-center">
+                        <div className='d-flex justify-content-center align-items-center'>
                           <Rating
                             max={5}
                             onChange={(def) => {
                               setdef(def);
                             }}
-                            emptySymbol="mdi mdi-heart-outline text-danger "
-                            fullSymbol="mdi mdi-heart text-danger "
-                            className="rating-symbol-background"
+                            emptySymbol='mdi mdi-heart-outline text-danger '
+                            fullSymbol='mdi mdi-heart text-danger '
+                            className='rating-symbol-background'
                           />
-                          <Badge color="info" className="ms-2">{def}</Badge>
+                          <Badge color='info' className='ms-2'>
+                            {def}
+                          </Badge>
                         </div>
                       </div>
                     </Col>
 
-                    <Col xl="3" md="4" sm="6">
-                      <div className="p-4 text-center">
-                        <h5 className="font-16 m-b-15">Handle events</h5>
+                    <Col xl='3' md='4' sm='6'>
+                      <div className='p-4 text-center'>
+                        <h5 className='font-16 m-b-15'>Handle events</h5>
                         <Rating
-                          onChange={rate => alert("Rating : " + rate)}
+                          onChange={(rate) => alert("Rating : " + rate)}
                           ActiveComponent={
                             <i
-                              className="mdi mdi-star text-primary"
+                              className='mdi mdi-star text-primary'
                               style={starStyle}
                             />
                           }
                           InActiveComponent={
                             <i
-                              className="mdi mdi-star-outline text-muted"
+                              className='mdi mdi-star-outline text-muted'
                               style={starStyle}
                             />
                           }
@@ -158,25 +159,25 @@ const UiRating = () => {
                       </div>
                     </Col>
 
-                    <Col xl="3" md="4" sm="6">
-                      <div className="p-4 text-center">
-                        <h5 className="font-16 m-b-15">Customize tooltips</h5>
+                    <Col xl='3' md='4' sm='6'>
+                      <div className='p-4 text-center'>
+                        <h5 className='font-16 m-b-15'>Customize tooltips</h5>
                         <Rating
                           max={5}
                           clearRating={false}
-                          onChange={rate => {
+                          onChange={(rate) => {
                             setdef(rate);
                           }}
                           tooltipContent={tooltipContent}
                           ActiveComponent={
                             <i
-                              className="mdi mdi-star text-primary"
+                              className='mdi mdi-star text-primary'
                               style={starStyle}
                             />
                           }
                           InActiveComponent={
                             <i
-                              className="mdi mdi-star-outline text-muted"
+                              className='mdi mdi-star-outline text-muted'
                               style={starStyle}
                             />
                           }
@@ -184,22 +185,22 @@ const UiRating = () => {
                       </div>
                     </Col>
 
-                    <Col xl="3" md="4" sm="6">
-                      <div className="p-4 text-center">
-                        <h5 className="font-16 m-b-15">Default rating</h5>
+                    <Col xl='3' md='4' sm='6'>
+                      <div className='p-4 text-center'>
+                        <h5 className='font-16 m-b-15'>Default rating</h5>
                         <Rating
                           max={8}
                           clearRating={false}
                           tooltipContent={tooltipContentMore}
                           ActiveComponent={
                             <i
-                              className="mdi mdi-star text-primary"
+                              className='mdi mdi-star text-primary'
                               style={starStyle}
                             />
                           }
                           InActiveComponent={
                             <i
-                              className="mdi mdi-star-outline text-muted"
+                              className='mdi mdi-star-outline text-muted'
                               style={starStyle}
                             />
                           }
@@ -207,9 +208,9 @@ const UiRating = () => {
                       </div>
                     </Col>
 
-                    <Col xl="3" md="4" sm="6">
-                      <div className="p-4 text-center">
-                        <h5 className="font-16 m-b-15">
+                    <Col xl='3' md='4' sm='6'>
+                      <div className='p-4 text-center'>
+                        <h5 className='font-16 m-b-15'>
                           Set start rate to 5 [6..10]
                         </h5>
                         <Rating
@@ -217,16 +218,16 @@ const UiRating = () => {
                           onChange={() => {
                             setStartrate(!startrate);
                           }}
-                          emptySymbol="mdi mdi-star-outline text-primary "
-                          fullSymbol="mdi mdi-star text-primary "
-                          className="rating-symbol-background"
+                          emptySymbol='mdi mdi-star-outline text-primary '
+                          fullSymbol='mdi mdi-star text-primary '
+                          className='rating-symbol-background'
                         />
                       </div>
                     </Col>
 
-                    <Col xl="3" md="4" sm="6">
-                      <div className="p-4 text-center">
-                        <h5 className="font-16 m-b-15">
+                    <Col xl='3' md='4' sm='6'>
+                      <div className='p-4 text-center'>
+                        <h5 className='font-16 m-b-15'>
                           Set start and stop rate [2..10]
                         </h5>
                         <Rating
@@ -239,13 +240,13 @@ const UiRating = () => {
                           defaultRating={4}
                           ActiveComponent={
                             <i
-                              className="mdi mdi-star text-primary"
+                              className='mdi mdi-star text-primary'
                               style={starStyle}
                             />
                           }
                           InActiveComponent={
                             <i
-                              className="mdi mdi-star-outline text-muted"
+                              className='mdi mdi-star-outline text-muted'
                               style={starStyle}
                             />
                           }
@@ -253,30 +254,33 @@ const UiRating = () => {
                       </div>
                     </Col>
 
-                    <Col xl="3" md="4" sm="6">
-                      <div className="p-4 text-center">
-                        <h5 className="font-16 m-b-15">
-                          On Hover Event
-                        </h5>
-                        <div className="d-flex justify-content-center align-items-center">
+                    <Col xl='3' md='4' sm='6'>
+                      <div className='p-4 text-center'>
+                        <h5 className='font-16 m-b-15'>On Hover Event</h5>
+                        <div className='d-flex justify-content-center align-items-center'>
                           <Rating
                             stop={5}
-                            emptySymbol="mdi mdi-star-outline text-primary "
-                            fullSymbol="mdi mdi-star text-primary "
+                            emptySymbol='mdi mdi-star-outline text-primary '
+                            fullSymbol='mdi mdi-star text-primary '
                             onChange={(customize) => setcustomize(customize)}
-                            className="rating-symbol-background"
+                            className='rating-symbol-background'
                           />
-                          <Badge color="info" className="ratingnum align-middle ms-2">{customize}</Badge>
+                          <Badge
+                            color='info'
+                            className='ratingnum align-middle ms-2'
+                          >
+                            {customize}
+                          </Badge>
                         </div>
                       </div>
                     </Col>
 
-                    <Col xl="3" md="4" sm="6">
-                      <div className="p-4 text-center">
-                        <h5 className="font-16 m-b-15">Custom icons</h5>
+                    <Col xl='3' md='4' sm='6'>
+                      <div className='p-4 text-center'>
+                        <h5 className='font-16 m-b-15'>Custom icons</h5>
                         <Rating
                           stop={5}
-                          emptySymbol="mdi mdi-battery-outline fa-2x text-muted"
+                          emptySymbol='mdi mdi-battery-outline fa-2x text-muted'
                           fullSymbol={[
                             "mdi mdi-battery-20 fa-2x text-primary",
                             "mdi mdi-battery-50 fa-2x text-primary",
@@ -287,19 +291,19 @@ const UiRating = () => {
                       </div>
                     </Col>
 
-                    <Col xl="3" md="4" sm="6">
-                      <div className="p-4 text-center">
-                        <h5 className="font-16 m-b-15">Fractional rating</h5>
+                    <Col xl='3' md='4' sm='6'>
+                      <div className='p-4 text-center'>
+                        <h5 className='font-16 m-b-15'>Fractional rating</h5>
                         <Rating
                           ActiveComponent={
                             <i
-                              className="mdi mdi-star text-primary"
+                              className='mdi mdi-star text-primary'
                               style={starStyle}
                             />
                           }
                           InActiveComponent={
                             <i
-                              className="mdi mdi-star-outline text-muted"
+                              className='mdi mdi-star-outline text-muted'
                               style={starStyle}
                             />
                           }
@@ -308,12 +312,15 @@ const UiRating = () => {
                       </div>
                     </Col>
 
-                    <Col xl="3" md="4" sm="6">
-                      <div className="p-4 text-center">
-                        <h5 className="font-16 m-b-15">Custom CSS icons</h5>
-                        <Rating onChange={(rating) => {
-                          setRating(rating);
-                        }} fractions={2} />
+                    <Col xl='3' md='4' sm='6'>
+                      <div className='p-4 text-center'>
+                        <h5 className='font-16 m-b-15'>Custom CSS icons</h5>
+                        <Rating
+                          onChange={(rating) => {
+                            setRating(rating);
+                          }}
+                          fractions={2}
+                        />
                       </div>
                     </Col>
                   </Row>{" "}

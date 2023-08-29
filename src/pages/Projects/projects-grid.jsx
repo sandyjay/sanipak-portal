@@ -23,7 +23,7 @@ import { useSelector, useDispatch } from "react-redux";
 const ProjectsGrid = (props) => {
   //meta title
   document.title =
-    "Projects Grid | Skote - Vite React Admin & Dashboard Template";
+    "Projects Grid | San-i-pak - Vite React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
 
@@ -44,10 +44,10 @@ const ProjectsGrid = (props) => {
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Projects" breadcrumbItem="Projects Grid" />
+          <Breadcrumbs title='Projects' breadcrumbItem='Projects Grid' />
 
           <Row>
             {/* Import Cards */}
@@ -55,12 +55,12 @@ const ProjectsGrid = (props) => {
           </Row>
 
           <Row>
-            <Col lg="12">
-              <ul className="pagination pagination-rounded justify-content-center mt-2 mb-5">
+            <Col lg='12'>
+              <ul className='pagination pagination-rounded justify-content-center mt-2 mb-5'>
                 <PaginationItem disabled={page === 1}>
                   <PaginationLink
                     previous
-                    href="#"
+                    href='#'
                     onClick={() => handlePageClick(page - 1)}
                   />
                 </PaginationItem>
@@ -68,7 +68,7 @@ const ProjectsGrid = (props) => {
                   <PaginationItem active={i + 1 === page} key={i}>
                     <PaginationLink
                       onClick={() => handlePageClick(i + 1)}
-                      href="#"
+                      href='#'
                     >
                       {i + 1}
                     </PaginationLink>
@@ -77,7 +77,7 @@ const ProjectsGrid = (props) => {
                 <PaginationItem disabled={page === totalPage}>
                   <PaginationLink
                     next
-                    href="#"
+                    href='#'
                     onClick={() => handlePageClick(page + 1)}
                   />
                 </PaginationItem>

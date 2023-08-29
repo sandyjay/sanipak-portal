@@ -6,130 +6,132 @@ const RecentFile = (props) => {
   const recentfile = [
     {
       id: 1,
-      icon: "mdi mdi-file-document font-size-16 align-middle text-primary me-2",
-      file: "index.html",
+      facility: "Facility A",
       date: "12-10-2020, 09:45",
-      size: "09",
+      technician: "Harry Simons",
     },
     {
       id: 2,
-      icon: "mdi mdi-folder-zip font-size-16 align-middle text-warning me-2",
-      file: "Project-A.zip",
+      facility: "Facility B",
       date: "11-10-2020, 17:05",
-      size: "115",
+      technician: "Jessica Jones",
     },
     {
       id: 3,
-      icon: "mdi mdi-image font-size-16 align-middle text-muted me-2",
-      file: "Img-1.jpeg",
+      facility: "Facility C",
       date: "11-10-2020, 13:26",
-      size: "86",
+      technician: "Harry Simons",
     },
     {
       id: 4,
-      icon: "mdi mdi-text-box font-size-16 align-middle text-muted me-2",
-      file: "update list.txt",
+      facility: "Facility D",
       date: "10-10-2020, 11:32",
-      size: "08",
+      technician: "Jessica Jones",
     },
     {
       id: 5,
-      icon: "mdi mdi-folder font-size-16 align-middle text-warning me-2",
-      file: "Project B",
+      facility: "Facility E",
       date: "10-10-2020, 10:51",
-      size: "72",
+      technician: "Harry Simons",
     },
     {
       id: 6,
-      icon: "mdi mdi-text-box font-size-16 align-middle text-muted me-2",
-      file: "Changes list.txt",
+      facility: "Facility D",
       date: "09-10-2020, 17:05",
-      size: "07",
+      technician: "Jessica Jones",
     },
     {
       id: 7,
-      icon: "mdi mdi-image font-size-16 align-middle text-success me-2",
-      file: "Img-2.png",
+      facility: "Facility E",
       date: "09-10-2020, 15:12",
-      size: "31",
+      technician: "Harry Simons",
     },
     {
       id: 8,
-      icon: "mdi mdi-folder font-size-16 align-middle text-warning me-2",
-      file: "Project C",
+      facility: "Facility F",
       date: "09-10-2020, 10:11",
-      size: "20",
+      technician: "Jessica Jones",
     },
     {
       id: 9,
-      icon: "bx bxs-file font-size-16 align-middle text-primary me-2",
-      file: "starter-page.html",
+      facility: "Facility G",
       date: "08-10-2020, 03:22",
-      size: "11",
+      technician: "Jessica Jones",
+    },
+    {
+      id: 10,
+      facility: "Facility H",
+      date: "08-10-2020, 03:22",
+      technician: "Jessica Jones",
+    },
+    {
+      id: 11,
+      facility: "Facility I",
+      date: "08-10-2020, 03:22",
+      technician: "Jessica Jones",
+    },
+    {
+      id: 12,
+      facility: "Facility J",
+      date: "08-10-2020, 03:22",
+      technician: "Jessica Jones",
+    },
+    {
+      id: 13,
+      facility: "Facility K",
+      date: "08-10-2020, 03:22",
+      technician: "Jessica Jones",
+    },
+    {
+      id: 14,
+      facility: "Facility L",
+      date: "08-10-2020, 03:22",
+      technician: "Jessica Jones",
+    },
+    {
+      id: 15,
+      facility: "Facility M",
+      date: "08-10-2020, 03:22",
+      technician: "Jessica Jones",
+    },
+    {
+      id: 16,
+      facility: "Facility N",
+      date: "08-10-2020, 03:22",
+      technician: "Jessica Jones",
+    },
+    {
+      id: 17,
+      facility: "Facility O",
+      date: "08-10-2020, 03:22",
+      technician: "Jessica Jones",
     },
   ];
   return (
     <React.Fragment>
-      <div className='mt-4'>
-        <div className='d-flex flex-wrap'>
-          <h5 className='font-size-16 me-3'>
-            {props.service ? "" : "Recent Files"}
-          </h5>
-
-          <div className='ms-auto'>
-            <Link to='#' className='fw-medium text-reset'>
-              View All
-            </Link>
-          </div>
-        </div>
-        <hr className='mt-2' />
-
-        <div className='table-responsive'>
-          <Table className='table align-middle table-nowrap table-hover mb-0'>
-            <thead>
-              <tr>
-                <th scope='col'>Name</th>
-                <th scope='col'>Date </th>
-                <th scope='col' colSpan='2'>
-                  Size
-                </th>
+      <div className='table-responsive'>
+        <Table className='table align-middle table-nowrap table-hover mb-0'>
+          <thead>
+            <tr>
+              <th scope='col'>Facility</th>
+              <th scope='col'>Technician</th>
+              <th scope='col'>Date </th>
+              <th scope='col'>Action </th>
+            </tr>
+          </thead>
+          <tbody>
+            {recentfile.map((item, key) => (
+              <tr key={key}>
+                <td>{item.facility}</td>
+                <td>{item.technician}</td>
+                <td>{item.date}</td>
+                <td>
+                  Download <i className='arrow-down'></i>
+                </td>
               </tr>
-            </thead>
-            <tbody>
-              {recentfile.map((item, key) => (
-                <tr key={key}>
-                  <td>
-                    <Link to='#' className='text-dark fw-medium'>
-                      <i className={item.icon}></i> {item.file}
-                    </Link>
-                  </td>
-                  <td>{item.date}</td>
-                  <td>{item.size} KB</td>
-                  <td>
-                    {/* <UncontrolledDropdown>
-                      <DropdownToggle
-                        tag='a'
-                        className='font-size-16 text-muted'
-                        role='button'
-                      >
-                        <i className='mdi mdi-dots-horizontal'></i>
-                      </DropdownToggle>
-
-                      <DropdownMenu className='dropdown-menu-end'>
-                        <DropdownItem href='#'>Open</DropdownItem>
-                        <DropdownItem href='#'>Edit</DropdownItem>
-                        <DropdownItem href='#'>Rename</DropdownItem>
-                        <div className='dropdown-divider'></div>
-                        <DropdownItem href='#'>Remove</DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown> */}
-                    Download <i className='arrow-down'></i>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
-        </div>
+            ))}
+          </tbody>
+        </Table>
       </div>
     </React.Fragment>
   );

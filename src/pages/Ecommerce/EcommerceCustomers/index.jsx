@@ -47,7 +47,8 @@ import {
 
 const EcommerceCustomers = (props) => {
   //meta title
-  document.title = "Customers | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Customers | San-i-pak - Vite React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
 
@@ -145,7 +146,7 @@ const EcommerceCustomers = (props) => {
       {
         Header: "#",
         Cell: () => {
-          return <input type="checkbox" className="form-check-input" />;
+          return <input type='checkbox' className='form-check-input' />;
         },
       },
       {
@@ -199,30 +200,30 @@ const EcommerceCustomers = (props) => {
         Header: "Action",
         Cell: (cellProps) => {
           return (
-            <div className="d-flex gap-3">
+            <div className='d-flex gap-3'>
               <Link
-                to="#"
-                className="text-success"
+                to='#'
+                className='text-success'
                 onClick={() => {
                   const customerData = cellProps.row.original;
                   handleCustomerClick(customerData);
                 }}
               >
-                <i className="mdi mdi-pencil font-size-18" id="edittooltip" />
-                <UncontrolledTooltip placement="top" target="edittooltip">
+                <i className='mdi mdi-pencil font-size-18' id='edittooltip' />
+                <UncontrolledTooltip placement='top' target='edittooltip'>
                   Edit
                 </UncontrolledTooltip>
               </Link>
               <Link
-                to="#"
-                className="text-danger"
+                to='#'
+                className='text-danger'
                 onClick={() => {
                   const customerData = cellProps.row.original;
                   onClickDelete(customerData);
                 }}
               >
-                <i className="mdi mdi-delete font-size-18" id="deletetooltip" />
-                <UncontrolledTooltip placement="top" target="deletetooltip">
+                <i className='mdi mdi-delete font-size-18' id='deletetooltip' />
+                <UncontrolledTooltip placement='top' target='deletetooltip'>
                   Delete
                 </UncontrolledTooltip>
               </Link>
@@ -288,11 +289,11 @@ const EcommerceCustomers = (props) => {
         onDeleteClick={handleDeleteCustomer}
         onCloseClick={() => setDeleteModal(false)}
       />
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
-          <Breadcrumbs title="Ecommerce" breadcrumbItem="Customers" />
+          <Breadcrumbs title='Ecommerce' breadcrumbItem='Customers' />
           <Row>
-            <Col xs="12">
+            <Col xs='12'>
               <Card>
                 <CardBody>
                   <TableContainer
@@ -302,11 +303,11 @@ const EcommerceCustomers = (props) => {
                     isAddCustList={true}
                     handleCustomerClick={handleCustomerClicks}
                     customPageSize={10}
-                    className="custom-header-css"
+                    className='custom-header-css'
                   />
 
                   <Modal isOpen={modal} toggle={toggle}>
-                    <ModalHeader toggle={toggle} tag="h4">
+                    <ModalHeader toggle={toggle} tag='h4'>
                       {!!isEdit ? "Edit Customer" : "Add Customer"}
                     </ModalHeader>
                     <ModalBody>
@@ -318,13 +319,13 @@ const EcommerceCustomers = (props) => {
                         }}
                       >
                         <Row>
-                          <Col className="col-12">
-                            <div className="mb-3">
-                              <Label className="form-label">UserName</Label>
+                          <Col className='col-12'>
+                            <div className='mb-3'>
+                              <Label className='form-label'>UserName</Label>
                               <Input
-                                name="username"
-                                type="text"
-                                placeholder="Insert User Name"
+                                name='username'
+                                type='text'
+                                placeholder='Insert User Name'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.username || ""}
@@ -337,18 +338,18 @@ const EcommerceCustomers = (props) => {
                               />
                               {validation.touched.username &&
                               validation.errors.username ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.username}
                                 </FormFeedback>
                               ) : null}
                             </div>
 
-                            <div className="mb-3">
-                              <Label className="form-label">Phone No</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>Phone No</Label>
                               <Input
-                                name="phone"
-                                type="text"
-                                placeholder="Insert Phone No"
+                                name='phone'
+                                type='text'
+                                placeholder='Insert Phone No'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.phone || ""}
@@ -361,18 +362,18 @@ const EcommerceCustomers = (props) => {
                               />
                               {validation.touched.phone &&
                               validation.errors.phone ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.phone}
                                 </FormFeedback>
                               ) : null}
                             </div>
 
-                            <div className="mb-3">
-                              <Label className="form-label">Email Id</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>Email Id</Label>
                               <Input
-                                name="email"
-                                type="email"
-                                placeholder="Insert Email Id"
+                                name='email'
+                                type='email'
+                                placeholder='Insert Email Id'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.email || ""}
@@ -385,19 +386,19 @@ const EcommerceCustomers = (props) => {
                               />
                               {validation.touched.email &&
                               validation.errors.email ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.email}
                                 </FormFeedback>
                               ) : null}
                             </div>
 
-                            <div className="mb-3">
-                              <Label className="form-label">Address</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>Address</Label>
                               <Input
-                                name="address"
-                                type="textarea"
-                                placeholder="Insert Address"
-                                rows="3"
+                                name='address'
+                                type='textarea'
+                                placeholder='Insert Address'
+                                rows='3'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.address || ""}
@@ -410,18 +411,18 @@ const EcommerceCustomers = (props) => {
                               />
                               {validation.touched.address &&
                               validation.errors.address ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.address}
                                 </FormFeedback>
                               ) : null}
                             </div>
 
-                            <div className="mb-3">
-                              <Label className="form-label">Rating</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>Rating</Label>
                               <Input
-                                name="rating"
-                                type="text"
-                                placeholder="Insert Rating"
+                                name='rating'
+                                type='text'
+                                placeholder='Insert Rating'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.rating || ""}
@@ -434,20 +435,20 @@ const EcommerceCustomers = (props) => {
                               />
                               {validation.touched.rating &&
                               validation.errors.rating ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.rating}
                                 </FormFeedback>
                               ) : null}
                             </div>
 
-                            <div className="mb-3">
-                              <Label className="form-label">
+                            <div className='mb-3'>
+                              <Label className='form-label'>
                                 Wallet Balance
                               </Label>
                               <Input
-                                name="walletBalance"
-                                type="text"
-                                placeholder="Insert Wallet Balance"
+                                name='walletBalance'
+                                type='text'
+                                placeholder='Insert Wallet Balance'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.walletBalance || ""}
@@ -460,17 +461,17 @@ const EcommerceCustomers = (props) => {
                               />
                               {validation.touched.walletBalance &&
                               validation.errors.walletBalance ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.walletBalance}
                                 </FormFeedback>
                               ) : null}
                             </div>
 
-                            <div className="mb-3">
-                              <Label className="form-label">Joining Date</Label>
+                            <div className='mb-3'>
+                              <Label className='form-label'>Joining Date</Label>
                               <Input
-                                name="joiningDate"
-                                type="date"
+                                name='joiningDate'
+                                type='date'
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.joiningDate || ""}
@@ -483,7 +484,7 @@ const EcommerceCustomers = (props) => {
                               />
                               {validation.touched.joiningDate &&
                               validation.errors.joiningDate ? (
-                                <FormFeedback type="invalid">
+                                <FormFeedback type='invalid'>
                                   {validation.errors.joiningDate}
                                 </FormFeedback>
                               ) : null}
@@ -492,10 +493,10 @@ const EcommerceCustomers = (props) => {
                         </Row>
                         <Row>
                           <Col>
-                            <div className="text-end">
+                            <div className='text-end'>
                               <button
-                                type="submit"
-                                className="btn btn-success save-customer"
+                                type='submit'
+                                className='btn btn-success save-customer'
                               >
                                 Save
                               </button>

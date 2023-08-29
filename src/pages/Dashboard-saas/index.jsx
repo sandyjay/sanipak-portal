@@ -44,14 +44,14 @@ const DashboardSaas = (props) => {
 
   //meta title
   document.title =
-    "Saas Dashboard | Skote - Vite React Admin & Dashboard Template";
+    "Saas Dashboard | San-i-pak - Vite React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumb */}
-          <Breadcrumbs title="Dashboards" breadcrumbItem="Saas" />
+          <Breadcrumbs title='Dashboards' breadcrumbItem='Saas' />
 
           {/* Card User */}
           <CardUser />
@@ -60,7 +60,7 @@ const DashboardSaas = (props) => {
             {/* welcome card */}
             <CardWelcome />
 
-            <Col xl="8">
+            <Col xl='8'>
               <Row>
                 {/*mimi widgets */}
                 <MiniWidget reports={reports} />

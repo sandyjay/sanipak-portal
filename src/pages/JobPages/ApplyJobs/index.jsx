@@ -23,7 +23,8 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 
 const ApplyJobs = () => {
-  document.title = "Job Apply | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Job Apply | San-i-pak - Vite React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
 
@@ -106,26 +107,26 @@ const ApplyJobs = () => {
         Header: "Action",
         Cell: (cellProps) => {
           return (
-            <div className="list-unstyled hstack gap-1 mb-0">
+            <div className='list-unstyled hstack gap-1 mb-0'>
               <li>
-                <Link to="/job-details" className="btn btn-sm btn-soft-primary">
-                  <i className="mdi mdi-eye-outline" id="viewtooltip" />
-                  <UncontrolledTooltip placement="top" target="viewtooltip">
+                <Link to='/job-details' className='btn btn-sm btn-soft-primary'>
+                  <i className='mdi mdi-eye-outline' id='viewtooltip' />
+                  <UncontrolledTooltip placement='top' target='viewtooltip'>
                     View
                   </UncontrolledTooltip>
                 </Link>
               </li>
               <li>
                 <Link
-                  to="#"
-                  className="btn btn-sm btn-soft-danger"
+                  to='#'
+                  className='btn btn-sm btn-soft-danger'
                   onClick={() => {
                     const userData = cellProps.row.original;
                     onClickData(userData);
                   }}
                 >
-                  <i className="mdi mdi-delete-outline" id="deletetooltip" />
-                  <UncontrolledTooltip placement="top" target="deletetooltip">
+                  <i className='mdi mdi-delete-outline' id='deletetooltip' />
+                  <UncontrolledTooltip placement='top' target='deletetooltip'>
                     Delete
                   </UncontrolledTooltip>
                 </Link>
@@ -144,28 +145,28 @@ const ApplyJobs = () => {
         onDeleteClick={() => handleDeleteApplyJob()}
         onCloseClick={() => setDeleteModal(false)}
       />
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
-          <Breadcrumbs title="Jobs" breadcrumbItem="Job Apply" />
+          <Breadcrumbs title='Jobs' breadcrumbItem='Job Apply' />
           <Row>
             <Col lg={12}>
               <Card>
-                <CardBody className="border-bottom">
-                  <div className="d-flex align-items-center">
-                    <h5 className="mb-0 card-title flex-grow-1">
+                <CardBody className='border-bottom'>
+                  <div className='d-flex align-items-center'>
+                    <h5 className='mb-0 card-title flex-grow-1'>
                       Applied Jobs
                     </h5>
-                    <div className="flex-shrink-0">
+                    <div className='flex-shrink-0'>
                       <select
-                        className="form-select"
-                        aria-label="Default select example"
+                        className='form-select'
+                        aria-label='Default select example'
                       >
-                        <option value="Today" defaultValue>
+                        <option value='Today' defaultValue>
                           Today
                         </option>
-                        <option value="1 Monthly">1 Month</option>
-                        <option value="6 Month">6 Month</option>
-                        <option value="1 Years">1 Year</option>
+                        <option value='1 Monthly'>1 Month</option>
+                        <option value='6 Month'>6 Month</option>
+                        <option value='1 Years'>1 Year</option>
                       </select>
                     </div>
                   </div>

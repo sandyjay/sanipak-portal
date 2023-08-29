@@ -45,14 +45,13 @@ import {
 //redux
 import { useSelector, useDispatch } from "react-redux";
 
-const Chat = props => {
-
+const Chat = (props) => {
   //meta title
-  document.title = "Chat | Skote - Vite React Admin & Dashboard Template";
+  document.title = "Chat | San-i-pak - Vite React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
 
-  const { chats, groups, contacts, messages } = useSelector(state => ({
+  const { chats, groups, contacts, messages } = useSelector((state) => ({
     chats: state.chat.chats,
     groups: state.chat.groups,
     contacts: state.chat.contacts,
@@ -74,7 +73,8 @@ const Chat = props => {
   const [activeTab, setactiveTab] = useState("1");
   const [Chat_Box_Username, setChat_Box_Username] = useState("Steven Franklin");
   // eslint-disable-next-line no-unused-vars
-  const [Chat_Box_User_Status, setChat_Box_User_Status] = useState("Active Now");
+  const [Chat_Box_User_Status, setChat_Box_User_Status] =
+    useState("Active Now");
   const [curMessage, setcurMessage] = useState("");
 
   useEffect(() => {
@@ -105,7 +105,7 @@ const Chat = props => {
     setother_Menu(!other_Menu);
   };
 
-  const toggleTab = tab => {
+  const toggleTab = (tab) => {
     if (activeTab !== tab) {
       setactiveTab(tab);
     }
@@ -136,7 +136,7 @@ const Chat = props => {
     }
   };
 
-  const onKeyPress = e => {
+  const onKeyPress = (e) => {
     const { key, value } = e;
     if (key === "Enter") {
       setcurMessage(value);
@@ -164,31 +164,31 @@ const Chat = props => {
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className='page-content'>
         <Container fluid>
           {/* Render Breadcrumb */}
-          <Breadcrumbs title="Skote" breadcrumbItem="Chat" />
+          <Breadcrumbs title='San-i-pak' breadcrumbItem='Chat' />
 
           <Row>
-            <Col lg="12">
-              <div className="d-lg-flex">
-                <div className="chat-leftsidebar me-lg-4">
-                  <div >
-                    <div className="py-4 border-bottom">
-                      <div className="d-flex">
-                        <div className="align-self-center me-3">
+            <Col lg='12'>
+              <div className='d-lg-flex'>
+                <div className='chat-leftsidebar me-lg-4'>
+                  <div>
+                    <div className='py-4 border-bottom'>
+                      <div className='d-flex'>
+                        <div className='align-self-center me-3'>
                           <img
                             src={images.avatar1}
-                            className="avatar-xs rounded-circle"
-                            alt=""
+                            className='avatar-xs rounded-circle'
+                            alt=''
                           />
                         </div>
-                        <div className="flex-grow-1">
-                          <h5 className="font-size-15 mt-0 mb-1">
+                        <div className='flex-grow-1'>
+                          <h5 className='font-size-15 mt-0 mb-1'>
                             {currentUser.name}
                           </h5>
-                          <p className="text-muted mb-0">
-                            <i className="mdi mdi-circle text-success align-middle me-2" />
+                          <p className='text-muted mb-0'>
+                            <i className='mdi mdi-circle text-success align-middle me-2' />
                             Active
                           </p>
                         </div>
@@ -197,38 +197,39 @@ const Chat = props => {
                           <Dropdown
                             isOpen={menu1}
                             toggle={() => setMenu1(!menu1)}
-                            className="chat-noti-dropdown active"
+                            className='chat-noti-dropdown active'
                           >
-                            <DropdownToggle
-                              tag="a"
-                              className="btn"
-                            >
-                              <i className="bx bx-bell bx-tada"></i>
+                            <DropdownToggle tag='a' className='btn'>
+                              <i className='bx bx-bell bx-tada'></i>
                             </DropdownToggle>
-                            <DropdownMenu className="dropdown-menu-end">
-                              <DropdownItem href="#">Action</DropdownItem>
-                              <DropdownItem href="#">Another action</DropdownItem>
-                              <DropdownItem href="#">Something else</DropdownItem>
+                            <DropdownMenu className='dropdown-menu-end'>
+                              <DropdownItem href='#'>Action</DropdownItem>
+                              <DropdownItem href='#'>
+                                Another action
+                              </DropdownItem>
+                              <DropdownItem href='#'>
+                                Something else
+                              </DropdownItem>
                             </DropdownMenu>
                           </Dropdown>
                         </div>
                       </div>
                     </div>
 
-                    <div className="search-box chat-search-box py-4">
-                      <div className="position-relative">
+                    <div className='search-box chat-search-box py-4'>
+                      <div className='position-relative'>
                         <Input
                           onKeyUp={searchUsers}
-                          id="search-user"
-                          type="text"
-                          className="form-control"
-                          placeholder="Search..."
+                          id='search-user'
+                          type='text'
+                          className='form-control'
+                          placeholder='Search...'
                         />
-                        <i className="bx bx-search-alt search-icon" />
+                        <i className='bx bx-search-alt search-icon' />
                       </div>
                     </div>
 
-                    <div className="chat-leftsidebar-nav">
+                    <div className='chat-leftsidebar-nav'>
                       <Nav pills justified>
                         <NavItem>
                           <NavLink
@@ -239,8 +240,8 @@ const Chat = props => {
                               toggleTab("1");
                             }}
                           >
-                            <i className="bx bx-chat font-size-20 d-sm-none" />
-                            <span className="d-none d-sm-block">Chat</span>
+                            <i className='bx bx-chat font-size-20 d-sm-none' />
+                            <span className='d-none d-sm-block'>Chat</span>
                           </NavLink>
                         </NavItem>
                         <NavItem>
@@ -252,8 +253,8 @@ const Chat = props => {
                               toggleTab("2");
                             }}
                           >
-                            <i className="bx bx-group font-size-20 d-sm-none" />
-                            <span className="d-none d-sm-block">Groups</span>
+                            <i className='bx bx-group font-size-20 d-sm-none' />
+                            <span className='d-none d-sm-block'>Groups</span>
                           </NavLink>
                         </NavItem>
                         <NavItem>
@@ -265,18 +266,21 @@ const Chat = props => {
                               toggleTab("3");
                             }}
                           >
-                            <i className="bx bx-book-content font-size-20 d-sm-none" />
-                            <span className="d-none d-sm-block">Contacts</span>
+                            <i className='bx bx-book-content font-size-20 d-sm-none' />
+                            <span className='d-none d-sm-block'>Contacts</span>
                           </NavLink>
                         </NavItem>
                       </Nav>
-                      <TabContent activeTab={activeTab} className="py-4">
-                        <TabPane tabId="1">
+                      <TabContent activeTab={activeTab} className='py-4'>
+                        <TabPane tabId='1'>
                           <div>
-                            <h5 className="font-size-14 mb-3">Recent</h5>
-                            <ul className="list-unstyled chat-list" id="recent-list">
+                            <h5 className='font-size-14 mb-3'>Recent</h5>
+                            <ul
+                              className='list-unstyled chat-list'
+                              id='recent-list'
+                            >
                               <PerfectScrollbar style={{ height: "410px" }}>
-                                {map(chats, chat => (
+                                {map(chats, (chat) => (
                                   <li
                                     key={chat.id + chat.status}
                                     className={
@@ -286,7 +290,7 @@ const Chat = props => {
                                     }
                                   >
                                     <Link
-                                      to="#"
+                                      to='#'
                                       onClick={() => {
                                         userChatOpen(
                                           chat.id,
@@ -296,43 +300,43 @@ const Chat = props => {
                                         );
                                       }}
                                     >
-                                      <div className="d-flex">
-                                        <div className="align-self-center me-3">
+                                      <div className='d-flex'>
+                                        <div className='align-self-center me-3'>
                                           <i
                                             className={
                                               chat.status === "online"
                                                 ? "mdi mdi-circle text-success font-size-10"
                                                 : chat.status === "intermediate"
-                                                  ? "mdi mdi-circle text-warning font-size-10"
-                                                  : "mdi mdi-circle font-size-10"
+                                                ? "mdi mdi-circle text-warning font-size-10"
+                                                : "mdi mdi-circle font-size-10"
                                             }
                                           />
                                         </div>
-                                        {chat.isImg ?
-                                          <div className="avatar-xs align-self-center me-3">
-                                            <span className="avatar-title rounded-circle bg-primary bg-soft text-primary">
+                                        {chat.isImg ? (
+                                          <div className='avatar-xs align-self-center me-3'>
+                                            <span className='avatar-title rounded-circle bg-primary bg-soft text-primary'>
                                               {chat.profile}
                                             </span>
                                           </div>
-                                          :
-                                          <div className="align-self-center me-3">
+                                        ) : (
+                                          <div className='align-self-center me-3'>
                                             <img
                                               src={chat.image}
-                                              className="rounded-circle avatar-xs"
-                                              alt=""
+                                              className='rounded-circle avatar-xs'
+                                              alt=''
                                             />
                                           </div>
-                                        }
+                                        )}
 
-                                        <div className="flex-grow-1 overflow-hidden">
-                                          <h5 className="text-truncate font-size-14 mb-1">
+                                        <div className='flex-grow-1 overflow-hidden'>
+                                          <h5 className='text-truncate font-size-14 mb-1'>
                                             {chat.name}
                                           </h5>
-                                          <p className="text-truncate mb-0">
+                                          <p className='text-truncate mb-0'>
                                             {chat.description}
                                           </p>
                                         </div>
-                                        <div className="font-size-11">
+                                        <div className='font-size-11'>
                                           {chat.time}
                                         </div>
                                       </div>
@@ -344,15 +348,15 @@ const Chat = props => {
                           </div>
                         </TabPane>
 
-                        <TabPane tabId="2">
-                          <h5 className="font-size-14 mb-3">Group</h5>
-                          <ul className="list-unstyled chat-list">
+                        <TabPane tabId='2'>
+                          <h5 className='font-size-14 mb-3'>Group</h5>
+                          <ul className='list-unstyled chat-list'>
                             <PerfectScrollbar style={{ height: "410px" }}>
                               {groups &&
-                                groups.map(group => (
+                                groups.map((group) => (
                                   <li key={"test" + group.image}>
                                     <Link
-                                      to="#"
+                                      to='#'
                                       onClick={() => {
                                         userChatOpen(
                                           group.id,
@@ -362,15 +366,15 @@ const Chat = props => {
                                         );
                                       }}
                                     >
-                                      <div className="d-flex align-items-center">
-                                        <div className="avatar-xs me-3">
-                                          <span className="avatar-title rounded-circle bg-primary bg-soft text-primary">
+                                      <div className='d-flex align-items-center'>
+                                        <div className='avatar-xs me-3'>
+                                          <span className='avatar-title rounded-circle bg-primary bg-soft text-primary'>
                                             {group.image}
                                           </span>
                                         </div>
 
-                                        <div className="flex-grow-1">
-                                          <h5 className="font-size-14 mb-0">
+                                        <div className='flex-grow-1'>
+                                          <h5 className='font-size-14 mb-0'>
                                             {group.name}
                                           </h5>
                                         </div>
@@ -382,30 +386,30 @@ const Chat = props => {
                           </ul>
                         </TabPane>
 
-                        <TabPane tabId="3">
-                          <h5 className="font-size-14 mb-3">Contact</h5>
+                        <TabPane tabId='3'>
+                          <h5 className='font-size-14 mb-3'>Contact</h5>
 
                           <div>
                             <PerfectScrollbar style={{ height: "410px" }}>
                               {contacts &&
-                                contacts.map(contact => (
+                                contacts.map((contact) => (
                                   <div
                                     key={"test_" + contact.category}
                                     className={
                                       contact.category === "A" ? "" : "mt-4"
                                     }
                                   >
-                                    <div className="avatar-xs mb-3">
-                                      <span className="avatar-title rounded-circle bg-primary bg-soft text-primary">
+                                    <div className='avatar-xs mb-3'>
+                                      <span className='avatar-title rounded-circle bg-primary bg-soft text-primary'>
                                         {contact.category}
                                       </span>
                                     </div>
 
-                                    <ul className="list-unstyled chat-list">
-                                      {contact.child.map(array => (
+                                    <ul className='list-unstyled chat-list'>
+                                      {contact.child.map((array) => (
                                         <li key={"test" + array.id}>
                                           <Link
-                                            to="#"
+                                            to='#'
                                             onClick={() => {
                                               userChatOpen(
                                                 array.id,
@@ -415,7 +419,7 @@ const Chat = props => {
                                               );
                                             }}
                                           >
-                                            <h5 className="font-size-14 mb-0">
+                                            <h5 className='font-size-14 mb-0'>
                                               {array.name}
                                             </h5>
                                           </Link>
@@ -431,53 +435,51 @@ const Chat = props => {
                     </div>
                   </div>
                 </div>
-                <div className="w-100 user-chat">
+                <div className='w-100 user-chat'>
                   <Card>
-                    <div className="p-4 border-bottom ">
+                    <div className='p-4 border-bottom '>
                       <Row>
-                        <Col md="4" xs="9">
-                          <h5 className="font-size-15 mb-1">
+                        <Col md='4' xs='9'>
+                          <h5 className='font-size-15 mb-1'>
                             {Chat_Box_Username}
                           </h5>
 
-                          <p className="text-muted mb-0">
+                          <p className='text-muted mb-0'>
                             <i
                               className={
                                 Chat_Box_User_Status === "Active Now"
                                   ? "mdi mdi-circle text-success align-middle me-2"
                                   : Chat_Box_User_Status === "intermediate"
-                                    ? "mdi mdi-circle text-warning align-middle me-1"
-                                    : "mdi mdi-circle align-middle me-1"
+                                  ? "mdi mdi-circle text-warning align-middle me-1"
+                                  : "mdi mdi-circle align-middle me-1"
                               }
                             />
                             {Chat_Box_User_Status}
                           </p>
                         </Col>
-                        <Col md="8" xs="3">
-                          <ul className="list-inline user-chat-nav text-end mb-0">
-                            <li className="list-inline-item d-none d-sm-inline-block">
+                        <Col md='8' xs='3'>
+                          <ul className='list-inline user-chat-nav text-end mb-0'>
+                            <li className='list-inline-item d-none d-sm-inline-block'>
                               <Dropdown
                                 isOpen={search_Menu}
                                 toggle={toggleSearch}
                               >
-                                <DropdownToggle className="btn nav-btn" tag="i">
-                                  <i className="bx bx-search-alt-2" />
+                                <DropdownToggle className='btn nav-btn' tag='i'>
+                                  <i className='bx bx-search-alt-2' />
                                 </DropdownToggle>
-                                <DropdownMenu
-                                  className="dropdown-menu-md"
-                                >
-                                  <Form className="p-3">
-                                    <FormGroup className="m-0">
+                                <DropdownMenu className='dropdown-menu-md'>
+                                  <Form className='p-3'>
+                                    <FormGroup className='m-0'>
                                       <InputGroup>
                                         <Input
-                                          type="text"
-                                          className="form-control"
-                                          placeholder="Search ..."
+                                          type='text'
+                                          className='form-control'
+                                          placeholder='Search ...'
                                           aria-label="Recipient's username"
                                         />
                                         {/* <InputGroupAddon addonType="append"> */}
-                                        <Button color="primary" type="submit">
-                                          <i className="mdi mdi-magnify" />
+                                        <Button color='primary' type='submit'>
+                                          <i className='mdi mdi-magnify' />
                                         </Button>
                                         {/* </InputGroupAddon> */}
                                       </InputGroup>
@@ -486,40 +488,40 @@ const Chat = props => {
                                 </DropdownMenu>
                               </Dropdown>
                             </li>
-                            <li className="list-inline-item  d-none d-sm-inline-block">
+                            <li className='list-inline-item  d-none d-sm-inline-block'>
                               <Dropdown
                                 isOpen={settings_Menu}
                                 toggle={toggleSettings}
                               >
-                                <DropdownToggle className="btn nav-btn" tag="i">
-                                  <i className="bx bx-cog" />
+                                <DropdownToggle className='btn nav-btn' tag='i'>
+                                  <i className='bx bx-cog' />
                                 </DropdownToggle>
                                 <DropdownMenu>
-                                  <DropdownItem href="#">
+                                  <DropdownItem href='#'>
                                     View Profile
                                   </DropdownItem>
-                                  <DropdownItem href="#">
+                                  <DropdownItem href='#'>
                                     Clear chat
                                   </DropdownItem>
-                                  <DropdownItem href="#">Muted</DropdownItem>
-                                  <DropdownItem href="#">Delete</DropdownItem>
+                                  <DropdownItem href='#'>Muted</DropdownItem>
+                                  <DropdownItem href='#'>Delete</DropdownItem>
                                 </DropdownMenu>
                               </Dropdown>
                             </li>
-                            <li className="list-inline-item">
+                            <li className='list-inline-item'>
                               <Dropdown
                                 isOpen={other_Menu}
                                 toggle={toggleOther}
                               >
-                                <DropdownToggle className="btn nav-btn" tag="i">
-                                  <i className="bx bx-dots-horizontal-rounded" />
+                                <DropdownToggle className='btn nav-btn' tag='i'>
+                                  <i className='bx bx-dots-horizontal-rounded' />
                                 </DropdownToggle>
-                                <DropdownMenu className="dropdown-menu-end">
-                                  <DropdownItem href="#">Action</DropdownItem>
-                                  <DropdownItem href="#">
+                                <DropdownMenu className='dropdown-menu-end'>
+                                  <DropdownItem href='#'>Action</DropdownItem>
+                                  <DropdownItem href='#'>
                                     Another Action
                                   </DropdownItem>
-                                  <DropdownItem href="#">
+                                  <DropdownItem href='#'>
                                     Something else
                                   </DropdownItem>
                                 </DropdownMenu>
@@ -531,19 +533,19 @@ const Chat = props => {
                     </div>
 
                     <div>
-                      <div className="chat-conversation p-3">
-                        <ul className="list-unstyled">
+                      <div className='chat-conversation p-3'>
+                        <ul className='list-unstyled'>
                           <PerfectScrollbar
                             style={{ height: "470px" }}
-                            containerRef={ref => setMessageBox(ref)}
+                            containerRef={(ref) => setMessageBox(ref)}
                           >
                             <li>
-                              <div className="chat-day-title">
-                                <span className="title">Today</span>
+                              <div className='chat-day-title'>
+                                <span className='title'>Today</span>
                               </div>
                             </li>
                             {messages &&
-                              map(messages, message => (
+                              map(messages, (message) => (
                                 <li
                                   key={"test_k" + message.id}
                                   className={
@@ -552,36 +554,47 @@ const Chat = props => {
                                       : ""
                                   }
                                 >
-                                  <div className="conversation-list">
+                                  <div className='conversation-list'>
                                     <UncontrolledDropdown>
                                       <DropdownToggle
-                                        href="#"
-                                        tag="a" className="dropdown-toggle"
+                                        href='#'
+                                        tag='a'
+                                        className='dropdown-toggle'
                                       >
-                                        <i className="bx bx-dots-vertical-rounded" />
+                                        <i className='bx bx-dots-vertical-rounded' />
                                       </DropdownToggle>
                                       <DropdownMenu>
-                                        <DropdownItem onClick={(e) => copyMsg(e.target)} href="#">
+                                        <DropdownItem
+                                          onClick={(e) => copyMsg(e.target)}
+                                          href='#'
+                                        >
                                           Copy
                                         </DropdownItem>
-                                        <DropdownItem href="#">
+                                        <DropdownItem href='#'>
                                           Save
                                         </DropdownItem>
-                                        <DropdownItem href="#">
+                                        <DropdownItem href='#'>
                                           Forward
                                         </DropdownItem>
-                                        <DropdownItem onClick={(e) => toggle_deleMsg(e.target)} href="#">
+                                        <DropdownItem
+                                          onClick={(e) =>
+                                            toggle_deleMsg(e.target)
+                                          }
+                                          href='#'
+                                        >
                                           Delete
                                         </DropdownItem>
-
                                       </DropdownMenu>
                                     </UncontrolledDropdown>
-                                    <div className="ctext-wrap">
-                                      <div className="conversation-name">
+                                    <div className='ctext-wrap'>
+                                      <div className='conversation-name'>
                                         {message.sender}
                                       </div>
                                       <p>{message.message}</p>
-                                      <p className="chat-time mb-0"><i className="bx bx-time-five align-middle me-1"></i> {message.time}</p>
+                                      <p className='chat-time mb-0'>
+                                        <i className='bx bx-time-five align-middle me-1'></i>{" "}
+                                        {message.time}
+                                      </p>
                                     </div>
                                   </div>
                                 </li>
@@ -589,57 +602,57 @@ const Chat = props => {
                           </PerfectScrollbar>
                         </ul>
                       </div>
-                      <div className="p-3 chat-input-section">
+                      <div className='p-3 chat-input-section'>
                         <Row>
                           <Col>
-                            <div className="position-relative">
+                            <div className='position-relative'>
                               <input
-                                type="text"
+                                type='text'
                                 value={curMessage}
                                 onKeyPress={onKeyPress}
-                                onChange={e => setcurMessage(e.target.value)}
-                                className="form-control chat-input"
-                                placeholder="Enter Message..."
+                                onChange={(e) => setcurMessage(e.target.value)}
+                                className='form-control chat-input'
+                                placeholder='Enter Message...'
                               />
-                              <div className="chat-input-links">
-                                <ul className="list-inline mb-0">
-                                  <li className="list-inline-item">
-                                    <Link to="#">
+                              <div className='chat-input-links'>
+                                <ul className='list-inline mb-0'>
+                                  <li className='list-inline-item'>
+                                    <Link to='#'>
                                       <i
-                                        className="mdi mdi-emoticon-happy-outline"
-                                        id="Emojitooltip"
+                                        className='mdi mdi-emoticon-happy-outline'
+                                        id='Emojitooltip'
                                       />
                                       <UncontrolledTooltip
-                                        placement="top"
-                                        target="Emojitooltip"
+                                        placement='top'
+                                        target='Emojitooltip'
                                       >
                                         Emojis
                                       </UncontrolledTooltip>
                                     </Link>
                                   </li>
-                                  <li className="list-inline-item">
-                                    <Link to="#">
+                                  <li className='list-inline-item'>
+                                    <Link to='#'>
                                       <i
-                                        className="mdi mdi-file-image-outline"
-                                        id="Imagetooltip"
+                                        className='mdi mdi-file-image-outline'
+                                        id='Imagetooltip'
                                       />
                                       <UncontrolledTooltip
-                                        placement="top"
-                                        target="Imagetooltip"
+                                        placement='top'
+                                        target='Imagetooltip'
                                       >
                                         Images
                                       </UncontrolledTooltip>
                                     </Link>
                                   </li>
-                                  <li className="list-inline-item">
-                                    <Link to="#">
+                                  <li className='list-inline-item'>
+                                    <Link to='#'>
                                       <i
-                                        className="mdi mdi-file-document-outline"
-                                        id="Filetooltip"
+                                        className='mdi mdi-file-document-outline'
+                                        id='Filetooltip'
                                       />
                                       <UncontrolledTooltip
-                                        placement="top"
-                                        target="Filetooltip"
+                                        placement='top'
+                                        target='Filetooltip'
                                       >
                                         Add Files
                                       </UncontrolledTooltip>
@@ -649,19 +662,19 @@ const Chat = props => {
                               </div>
                             </div>
                           </Col>
-                          <Col className="col-auto">
+                          <Col className='col-auto'>
                             <Button
-                              type="button"
-                              color="primary"
+                              type='button'
+                              color='primary'
                               onClick={() =>
                                 addMessage(currentRoomId, currentUser.name)
                               }
-                              className="btn btn-primary btn-rounded chat-send w-md "
+                              className='btn btn-primary btn-rounded chat-send w-md '
                             >
-                              <span className="d-none d-sm-inline-block me-2">
+                              <span className='d-none d-sm-inline-block me-2'>
                                 Send
                               </span>{" "}
-                              <i className="mdi mdi-send" />
+                              <i className='mdi mdi-send' />
                             </Button>
                           </Col>
                         </Row>

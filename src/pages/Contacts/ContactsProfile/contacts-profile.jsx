@@ -35,7 +35,8 @@ import { getUserProfile } from "/src/store/actions";
 
 const ContactsProfile = (props) => {
   //meta title
-  document.title = "Profile | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Profile | San-i-pak - Vite React Admin & Dashboard Template";
 
   const { userProfile, onGetUserProfile } = props;
   // eslint-disable-next-line no-unused-vars

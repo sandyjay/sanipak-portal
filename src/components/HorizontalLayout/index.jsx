@@ -41,7 +41,7 @@ const Layout = (props) => {
     let currentage = title.charAt(1).toUpperCase() + title.slice(2);
 
     document.title =
-      currentage + " | Skote - Vite React Admin & Dashboard Template";
+      currentage + " | San-i-pak - Vite React Admin & Dashboard Template";
   }, [pathName.pathname]);
 
   useEffect(() => {
@@ -105,27 +105,27 @@ const Layout = (props) => {
 
   return (
     <React.Fragment>
-      <div id="preloader">
-        <div id="status">
-          <div className="spinner-chase">
-            <div className="chase-dot" />
-            <div className="chase-dot" />
-            <div className="chase-dot" />
-            <div className="chase-dot" />
-            <div className="chase-dot" />
-            <div className="chase-dot" />
+      <div id='preloader'>
+        <div id='status'>
+          <div className='spinner-chase'>
+            <div className='chase-dot' />
+            <div className='chase-dot' />
+            <div className='chase-dot' />
+            <div className='chase-dot' />
+            <div className='chase-dot' />
+            <div className='chase-dot' />
           </div>
         </div>
       </div>
 
-      <div id="layout-wrapper">
+      <div id='layout-wrapper'>
         <Header
           theme={topbarTheme}
           isMenuOpened={isMenuOpened}
           openLeftMenuCallBack={openMenu}
         />
         <Navbar menuOpen={isMenuOpened} />
-        <div className="main-content">{props.children}</div>
+        <div className='main-content'>{props.children}</div>
         <Footer />
       </div>
 

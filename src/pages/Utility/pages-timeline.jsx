@@ -1,21 +1,22 @@
-import React from "react"
-import { Row, Col, Card, CardBody, CardTitle } from "reactstrap"
+import React from "react";
+import { Row, Col, Card, CardBody, CardTitle } from "reactstrap";
 
 //Import Breadcrumb
-import Breadcrumbs from "../../components/Common/Breadcrumb"
+import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 //swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 import "../../../node_modules/swiper/swiper.scss";
 
-const PagesTimeline = () => { 
+const PagesTimeline = () => {
   const statuses = [
     {
       id: 1,
       stausTitle: "Ordered",
       iconClass: "bx-copy-alt",
-      description: "New common language will be more simple and regular than the existing.",
+      description:
+        "New common language will be more simple and regular than the existing.",
     },
     {
       id: 2,
@@ -41,22 +42,23 @@ const PagesTimeline = () => {
   ];
 
   //meta title
-  document.title = "Timeline | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Timeline | San-i-pak - Vite React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
-      <div className="page-content">
-        <div className="container-fluid">
+      <div className='page-content'>
+        <div className='container-fluid'>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Utility" breadcrumbItem="Timeline" />
+          <Breadcrumbs title='Utility' breadcrumbItem='Timeline' />
 
           <Row>
-            <Col lg="12">
+            <Col lg='12'>
               <Card>
                 <CardBody>
-                  <CardTitle className="mb-4">Horizontal Timeline</CardTitle>
+                  <CardTitle className='mb-4'>Horizontal Timeline</CardTitle>
 
-                  <div className="hori-timeline">
+                  <div className='hori-timeline'>
                     <Swiper
                       slidesPerView={1}
                       // spaceBetween={10}
@@ -73,155 +75,146 @@ const PagesTimeline = () => {
                         },
                         1400: {
                           slidesPerView: 4,
-                        }
-                      }}                     
+                        },
+                      }}
                       loop={true}
                       modules={[Pagination, Navigation]}
-                      className="owl-carousel owl-theme  navs-carousel events"
-                      id="timeline-carousel"
+                      className='owl-carousel owl-theme  navs-carousel events'
+                      id='timeline-carousel'
                     >
                       <SwiperSlide
-                        className="item event-list"
+                        className='item event-list'
                         style={{ display: "inline-table" }}
                       >
                         <div>
-                          <div className="event-date">
-                            <div className="text-primary mb-1">
+                          <div className='event-date'>
+                            <div className='text-primary mb-1'>
                               12 September
                             </div>
-                            <h5 className="mb-4">First event</h5>
+                            <h5 className='mb-4'>First event</h5>
                           </div>
-                          <div className="event-down-icon">
-                            <i className="bx bx-down-arrow-circle h1 text-primary down-arrow-icon" />
+                          <div className='event-down-icon'>
+                            <i className='bx bx-down-arrow-circle h1 text-primary down-arrow-icon' />
                           </div>
 
-                          <div className="mt-3 px-3">
-                            <p className="text-muted">
-                              It will be as simple as occidental in fact it
-                              will be Cambridge
+                          <div className='mt-3 px-3'>
+                            <p className='text-muted'>
+                              It will be as simple as occidental in fact it will
+                              be Cambridge
                             </p>
                           </div>
                         </div>
                       </SwiperSlide>
 
                       <SwiperSlide
-                        className="item event-list"
+                        className='item event-list'
                         style={{ display: "inline-table" }}
                       >
                         <div>
-                          <div className="event-date">
-                            <div className="text-primary mb-1">
-                              06 October
-                            </div>
-                            <h5 className="mb-4">Second event</h5>
+                          <div className='event-date'>
+                            <div className='text-primary mb-1'>06 October</div>
+                            <h5 className='mb-4'>Second event</h5>
                           </div>
-                          <div className="event-down-icon">
-                            <i className="bx bx-down-arrow-circle h1 text-primary down-arrow-icon" />
+                          <div className='event-down-icon'>
+                            <i className='bx bx-down-arrow-circle h1 text-primary down-arrow-icon' />
                           </div>
 
-                          <div className="mt-3 px-3">
-                            <p className="text-muted">
-                              To an English person, it will seem like
-                              simplified English existence.
+                          <div className='mt-3 px-3'>
+                            <p className='text-muted'>
+                              To an English person, it will seem like simplified
+                              English existence.
                             </p>
                           </div>
                         </div>
                       </SwiperSlide>
 
                       <SwiperSlide
-                        className="item event-list active"
+                        className='item event-list active'
                         style={{ display: "inline-table" }}
                       >
                         <div>
-                          <div className="event-date">
-                            <div className="text-primary mb-1">
-                              25 October
-                            </div>
-                            <h5 className="mb-4">Third event</h5>
+                          <div className='event-date'>
+                            <div className='text-primary mb-1'>25 October</div>
+                            <h5 className='mb-4'>Third event</h5>
                           </div>
-                          <div className="event-down-icon">
-                            <i className="bx bx-down-arrow-circle h1 text-primary down-arrow-icon" />
+                          <div className='event-down-icon'>
+                            <i className='bx bx-down-arrow-circle h1 text-primary down-arrow-icon' />
                           </div>
 
-                          <div className="mt-3 px-3">
-                            <p className="text-muted">
-                              For science, music, sport, etc, Europe uses
-                              the same vocabulary.
+                          <div className='mt-3 px-3'>
+                            <p className='text-muted'>
+                              For science, music, sport, etc, Europe uses the
+                              same vocabulary.
                             </p>
                           </div>
                         </div>
                       </SwiperSlide>
 
                       <SwiperSlide
-                        className="item event-list active"
+                        className='item event-list active'
                         style={{ display: "inline-table" }}
                       >
                         <div>
-                          <div className="event-date">
-                            <div className="text-primary mb-1">
-                              04 November
-                            </div>
-                            <h5 className="mb-4">Fourth event</h5>
+                          <div className='event-date'>
+                            <div className='text-primary mb-1'>04 November</div>
+                            <h5 className='mb-4'>Fourth event</h5>
                           </div>
-                          <div className="event-down-icon">
-                            <i className="bx bx-down-arrow-circle h1 text-primary down-arrow-icon" />
+                          <div className='event-down-icon'>
+                            <i className='bx bx-down-arrow-circle h1 text-primary down-arrow-icon' />
                           </div>
 
-                          <div className="mt-3 px-3">
-                            <p className="text-muted">
-                              New common language will be more simple than existing.
+                          <div className='mt-3 px-3'>
+                            <p className='text-muted'>
+                              New common language will be more simple than
+                              existing.
                             </p>
                           </div>
                         </div>
                       </SwiperSlide>
 
                       <SwiperSlide
-                        className="item event-list"
+                        className='item event-list'
                         style={{ display: "inline-table" }}
                       >
                         <div>
-                          <div className="event-date">
-                            <div className="text-primary mb-1">
-                              19 November
-                            </div>
-                            <h5 className="mb-4">Sixth event</h5>
+                          <div className='event-date'>
+                            <div className='text-primary mb-1'>19 November</div>
+                            <h5 className='mb-4'>Sixth event</h5>
                           </div>
-                          <div className="event-down-icon">
-                            <i className="bx bx-down-arrow-circle h1 text-primary down-arrow-icon" />
+                          <div className='event-down-icon'>
+                            <i className='bx bx-down-arrow-circle h1 text-primary down-arrow-icon' />
                           </div>
 
-                          <div className="mt-3 px-3">
-                            <p className="text-muted">
-                              It will be as simple as occidental in fact it
-                              will be Cambridge
+                          <div className='mt-3 px-3'>
+                            <p className='text-muted'>
+                              It will be as simple as occidental in fact it will
+                              be Cambridge
                             </p>
                           </div>
                         </div>
                       </SwiperSlide>
 
                       <SwiperSlide
-                        className="item event-list"
+                        className='item event-list'
                         style={{ display: "inline-table" }}
                       >
                         <div>
-                          <div className="event-date">
-                            <div className="text-primary mb-1">
-                              21 December
-                            </div>
-                            <h5 className="mb-4">Seventh event</h5>
+                          <div className='event-date'>
+                            <div className='text-primary mb-1'>21 December</div>
+                            <h5 className='mb-4'>Seventh event</h5>
                           </div>
-                          <div className="event-down-icon">
-                            <i className="bx bx-down-arrow-circle h1 text-primary down-arrow-icon" />
+                          <div className='event-down-icon'>
+                            <i className='bx bx-down-arrow-circle h1 text-primary down-arrow-icon' />
                           </div>
 
-                          <div className="mt-3 px-3">
-                            <p className="text-muted">
-                              To an English person, it will seem like
-                              simplified English existence.
+                          <div className='mt-3 px-3'>
+                            <p className='text-muted'>
+                              To an English person, it will seem like simplified
+                              English existence.
                             </p>
                           </div>
                         </div>
-                      </SwiperSlide>               
+                      </SwiperSlide>
                     </Swiper>
                   </div>
                 </CardBody>
@@ -230,16 +223,16 @@ const PagesTimeline = () => {
           </Row>
 
           <Row>
-            <Col lg="12">
+            <Col lg='12'>
               <Card>
                 <CardBody>
-                  <CardTitle className="mb-5">Vertical Timeline</CardTitle>
-                  <div >
-                    <ul className="verti-timeline list-unstyled">
+                  <CardTitle className='mb-5'>Vertical Timeline</CardTitle>
+                  <div>
+                    <ul className='verti-timeline list-unstyled'>
                       {/* Render Horizontal Timeline Events */}
                       {statuses.map((status, key) => (
-                        <li key={key} className="event-list">
-                          <div className="event-timeline-dot">
+                        <li key={key} className='event-list'>
+                          <div className='event-timeline-dot'>
                             <i
                               className={
                                 status.id === 3
@@ -248,18 +241,18 @@ const PagesTimeline = () => {
                               }
                             />
                           </div>
-                          <div className="d-flex">
-                            <div className="me-3">
+                          <div className='d-flex'>
+                            <div className='me-3'>
                               <i
                                 className={
                                   "bx " + status.iconClass + " h2 text-primary"
                                 }
                               />
                             </div>
-                            <div className="flex-grow-1">
+                            <div className='flex-grow-1'>
                               <div>
                                 <h5>{status.stausTitle}</h5>
-                                <p className="text-muted">
+                                <p className='text-muted'>
                                   {status.description}
                                 </p>
                               </div>
@@ -276,7 +269,7 @@ const PagesTimeline = () => {
         </div>
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default PagesTimeline
+export default PagesTimeline;
