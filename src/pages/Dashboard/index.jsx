@@ -60,18 +60,19 @@ const Dashboard = (props) => {
       title: "Create, edit and delete BI records",
       iconClass: "bx-task",
       description: "BI records",
-      color: "#f0f8ff",
+      color: "#ade3d0",
     },
     {
       title: "Watch, read or download helpful docs",
       iconClass: "bx-video",
       description: "Training Materials",
-      color: "",
+      color: "#fce1b5",
     },
     {
       title: "View and download invoices",
       iconClass: "bx-receipt",
       description: "Invoices",
+      color: "#ffc8ff",
     },
     {
       title: "Agreements, contracts and others",
@@ -82,11 +83,13 @@ const Dashboard = (props) => {
       title: "Agreements, contracts and others",
       iconClass: "bx-file",
       description: "Client Overview",
+      color: "#ffaeae",
     },
     {
       title: "FAQs and contact information",
       iconClass: "bx-support",
       description: "Get Help",
+      color: "#d7d8da",
     },
   ];
 
@@ -140,7 +143,10 @@ const Dashboard = (props) => {
                             : "mini-stats-wid bluebg"
                         }
                       >
-                        <CardBody className='d-flex dashboard-cardbody'>
+                        <CardBody
+                          className='d-flex dashboard-cardbody'
+                          style={{ background: report.color }}
+                        >
                           <div className='avatar-sm rounded-circle mini-stat-icon mb-4'>
                             <span className='avatar-title rounded-circle bg-primary mb-15'>
                               <i
