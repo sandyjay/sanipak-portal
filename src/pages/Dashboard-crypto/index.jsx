@@ -46,7 +46,7 @@ const series2 = [
 const options2 = {
   chart: { sparkline: { enabled: !0 } },
   stroke: { curve: "smooth", width: 2 },
-  colors: ["#556ee6"],
+  colors: ["#4d72d0"],
   fill: {
     type: "gradient",
     gradient: {

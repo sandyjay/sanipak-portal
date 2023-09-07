@@ -42,7 +42,7 @@ const theme = {
     },
   },
   series: {
-    colors: ["#34c38f", "#556ee6"],
+    colors: ["#34c38f", "#4d72d0"],
   },
 };
 TuiChart.registerTheme("San-i-pakTheme", theme);

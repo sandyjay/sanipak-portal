@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Table } from "reactstrap";
+import { Table, Button } from "reactstrap";
 
 const RecentFile = (props) => {
   const recentfile = [
@@ -126,7 +126,15 @@ const RecentFile = (props) => {
                 <td>{item.technician}</td>
                 <td>{item.date}</td>
                 <td>
-                  Download <i className='arrow-down'></i>
+                  {
+                    <Button
+                      type='button'
+                      color='primary'
+                      className='btn-sm btn-rounded'
+                    >
+                      Download PDF
+                    </Button>
+                  }
                 </td>
               </tr>
             ))}

@@ -60,36 +60,37 @@ const Dashboard = (props) => {
       title: "Create, edit and delete BI records",
       iconClass: "bx-task",
       description: "BI records",
-      color: "#ade3d0",
+      color: "#167a7a",
     },
     {
       title: "Watch, read or download helpful docs",
       iconClass: "bx-video",
       description: "Training Materials",
-      color: "#fce1b5",
+      color: "#ecbd6c",
     },
     {
       title: "View and download invoices",
       iconClass: "bx-receipt",
       description: "Invoices",
-      color: "#ffc8ff",
+      color: "#fa747d",
     },
     {
       title: "Agreements, contracts and others",
       iconClass: "bx-file",
       description: "Documents",
+      color: "#525b88",
     },
     {
       title: "Agreements, contracts and others",
       iconClass: "bx-file",
       description: "Client Overview",
-      color: "#ffaeae",
+      color: "#b8c16b",
     },
     {
       title: "FAQs and contact information",
       iconClass: "bx-support",
       description: "Get Help",
-      color: "#d7d8da",
+      color: "#4d72d0",
     },
   ];
 
@@ -124,10 +125,10 @@ const Dashboard = (props) => {
       <div className='page-content'>
         <Container fluid>
           <Row>
-            {/* <Col xl='8'>
+            <Col xl='12'>
               <WelcomeComp />
             </Col>
-            <Col xl='4'>
+            {/* <Col xl='4'>
               <ActivityComp />
             </Col> */}
             <Col xl='12'>
@@ -148,7 +149,10 @@ const Dashboard = (props) => {
                           style={{ background: report.color }}
                         >
                           <div className='avatar-sm rounded-circle mini-stat-icon mb-4'>
-                            <span className='avatar-title rounded-circle bg-primary mb-15'>
+                            <span
+                              className='avatar-title rounded-circle mb-15'
+                              style={{ color: report.color }}
+                            >
                               <i
                                 className={
                                   "bx " + report.iconClass + " font-size-24"
@@ -158,8 +162,13 @@ const Dashboard = (props) => {
                           </div>
                           <div className='d-flex'>
                             <div className='flex-grow-1'>
-                              <h4 className='mb-3'>{report.description}</h4>
-                              <p className='text-muted fw-medium' color='#fff'>
+                              <h4 className='mb-3' style={{ color: "#fff" }}>
+                                {report.description}
+                              </h4>
+                              <p
+                                className='fw-medium'
+                                style={{ color: "#fff" }}
+                              >
                                 {report.title}
                               </p>
                             </div>
@@ -201,7 +210,7 @@ const Dashboard = (props) => {
                   </div>
                   <StackedColumnChart
                     periodData={periodData}
-                    dataColors='["--bs-success", "--bs-warning", "--bs-danger"]'
+                    dataColors='["#167a7a", "#ecbd6c", "#fa747d"]'
                   />
                 </CardBody>
               </Card>

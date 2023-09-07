@@ -22,6 +22,22 @@ const BlogGrid = () => {
   const toggle = (tab) => {
     if (activeTab !== tab) toggleTab(tab);
   };
+  const playVideo = (e) => {
+    const popup = document.querySelector(".training-video-popup");
+    const backdrop = document.querySelector(".video-popup-backdrop");
+    const videoSrc = e.getAttribute("data-vid");
+    const popupMedia = popup.querySelector("iframe");
+    popup.setAttribute("style", "display:block;");
+    popupMedia.setAttribute(
+      "src",
+      videoSrc +
+        "?modestbranding=1&rel=0&controls=1&showinfo=0&html5=1&autoplay=1"
+    );
+    backdrop.addEventListener("click", function () {
+      popup.setAttribute("style", "display:none;");
+      popupMedia.setAttribute("src", "");
+    });
+  };
   return (
     <React.Fragment>
       <Col xl={12} lg={12}>
@@ -57,418 +73,123 @@ const BlogGrid = () => {
               </NavLink>
             </NavItem>
           </ul>
+
+          <div className='training-video-popup'>
+            <div className='video-popup-body'>
+              <div className='video-popup-backdrop'></div>
+              <div className='video-popup-inner'>
+                <div className='media-box'>
+                  <iframe
+                    src='https://www.youtube.com/embed/ILmeK5CNHFM'
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <TabContent className='p-4' activeTab={activeTab}>
             <TabPane tabId='1'>
               <div>
                 <Row className='justify-content-center'>
-                  <Col xl={8}>
+                  <Col xl={10}>
                     <div>
                       <hr className='mb-4' />
 
                       <Row>
                         <Col lg={6}>
-                          <iframe
-                            width='100%'
-                            height='315'
-                            src='https://www.youtube.com/embed/ILmeK5CNHFM'
-                            title='YouTube video player'
-                            frameborder='0'
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                            allowfullscreen
-                          ></iframe>
-                          <iframe
-                            width='100%'
-                            height='315'
-                            src='https://www.youtube.com/embed/ILmeK5CNHFM'
-                            title='YouTube video player'
-                            frameborder='0'
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                            allowfullscreen
-                          ></iframe>
-                        </Col>
-
-                        <Col sm={6}>
-                          {/* <Card className='p-1 border shadow-none'>
-                            <div className='p-3'>
-                              <h5>
-                                <Link to='blog-details' className='text-dark'>
-                                  Drawing a sketch
-                                </Link>
-                              </h5>
-                              <p className='text-muted mb-0'>24 Mar, 2020</p>
-                            </div>
-
-                            <div className='position-relative'>
+                          <div className='video-box'>
+                            <div
+                              className='media-box'
+                              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                              onClick={(e) => playVideo(e.target.parentNode)}
+                            >
                               <img
-                                src={img2}
+                                src='src/assets/images/training/traning-vid-1.jpeg'
                                 alt=''
-                                className='img-thumbnail'
                               />
-
-                              <div className='blog-play-icon'>
-                                <Link
-                                  to='#'
-                                  className='avatar-sm d-block mx-auto'
-                                >
-                                  <span className='avatar-title rounded-circle font-size-18'>
-                                    <i className='mdi mdi-play'></i>
-                                  </span>
-                                </Link>
-                              </div>
+                              <div className='play-btn'></div>
                             </div>
-                            <div className='p-3'>
-                              <ul className='list-inline'>
-                                <li className='list-inline-item me-3'>
-                                  <Link to='#' className='text-muted'>
-                                    <i className='bx bx-purchase-tag-alt align-middle text-muted me-1'></i>{" "}
-                                    Development
-                                  </Link>
-                                </li>
-                                <li className='list-inline-item me-3'>
-                                  <Link to='#' className='text-muted'>
-                                    <i className='bx bx-comment-dots align-middle text-muted me-1'></i>{" "}
-                                    08 Comments
-                                  </Link>
-                                </li>
-                              </ul>
-
-                              <p>
-                                At vero eos et accusamus et iusto odio
-                                dignissimos ducimus quos
-                              </p>
-
-                              <div>
-                                <Link to='#' className='text-primary'>
-                                  Read more{" "}
-                                  <i className='mdi mdi-arrow-right'></i>
-                                </Link>
-                              </div>
-                            </div>
-                          </Card> */}
-                          <iframe
-                            width='100%'
-                            height='315'
-                            src='https://www.youtube.com/embed/ILmeK5CNHFM'
-                            title='YouTube video player'
-                            frameborder='0'
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                            allowfullscreen
-                          ></iframe>
-                          <iframe
-                            width='100%'
-                            height='315'
-                            src='https://www.youtube.com/embed/ILmeK5CNHFM'
-                            title='YouTube video player'
-                            frameborder='0'
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                            allowfullscreen
-                          ></iframe>
+                          </div>
                         </Col>
-                      </Row>
-                      <Row>
                         <Col lg={6}>
-                          <iframe
-                            width='100%'
-                            height='315'
-                            src='https://www.youtube.com/embed/ILmeK5CNHFM'
-                            title='YouTube video player'
-                            frameborder='0'
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                            allowfullscreen
-                          ></iframe>
-                          <iframe
-                            width='100%'
-                            height='315'
-                            src='https://www.youtube.com/embed/ILmeK5CNHFM'
-                            title='YouTube video player'
-                            frameborder='0'
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                            allowfullscreen
-                          ></iframe>
-                        </Col>
-
-                        <Col sm={6}>
-                          {/* <Card className='p-1 border shadow-none'>
-                            <div className='p-3'>
-                              <h5>
-                                <Link to='blog-details' className='text-dark'>
-                                  Drawing a sketch
-                                </Link>
-                              </h5>
-                              <p className='text-muted mb-0'>24 Mar, 2020</p>
-                            </div>
-
-                            <div className='position-relative'>
+                          <div className='video-box'>
+                            <div
+                              className='media-box'
+                              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                              onClick={(e) => playVideo(e.target.parentNode)}
+                            >
                               <img
-                                src={img2}
+                                src='src/assets/images/training/traning-vid-1.jpeg'
                                 alt=''
-                                className='img-thumbnail'
                               />
-
-                              <div className='blog-play-icon'>
-                                <Link
-                                  to='#'
-                                  className='avatar-sm d-block mx-auto'
-                                >
-                                  <span className='avatar-title rounded-circle font-size-18'>
-                                    <i className='mdi mdi-play'></i>
-                                  </span>
-                                </Link>
-                              </div>
+                              <div className='play-btn'></div>
                             </div>
-                            <div className='p-3'>
-                              <ul className='list-inline'>
-                                <li className='list-inline-item me-3'>
-                                  <Link to='#' className='text-muted'>
-                                    <i className='bx bx-purchase-tag-alt align-middle text-muted me-1'></i>{" "}
-                                    Development
-                                  </Link>
-                                </li>
-                                <li className='list-inline-item me-3'>
-                                  <Link to='#' className='text-muted'>
-                                    <i className='bx bx-comment-dots align-middle text-muted me-1'></i>{" "}
-                                    08 Comments
-                                  </Link>
-                                </li>
-                              </ul>
-
-                              <p>
-                                At vero eos et accusamus et iusto odio
-                                dignissimos ducimus quos
-                              </p>
-
-                              <div>
-                                <Link to='#' className='text-primary'>
-                                  Read more{" "}
-                                  <i className='mdi mdi-arrow-right'></i>
-                                </Link>
-                              </div>
-                            </div>
-                          </Card> */}
-                          <iframe
-                            width='100%'
-                            height='315'
-                            src='https://www.youtube.com/embed/ILmeK5CNHFM'
-                            title='YouTube video player'
-                            frameborder='0'
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                            allowfullscreen
-                          ></iframe>
-                          <iframe
-                            width='100%'
-                            height='315'
-                            src='https://www.youtube.com/embed/ILmeK5CNHFM'
-                            title='YouTube video player'
-                            frameborder='0'
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                            allowfullscreen
-                          ></iframe>
+                          </div>
                         </Col>
-                      </Row>
-                      <Row>
                         <Col lg={6}>
-                          <iframe
-                            width='100%'
-                            height='315'
-                            src='https://www.youtube.com/embed/ILmeK5CNHFM'
-                            title='YouTube video player'
-                            frameborder='0'
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                            allowfullscreen
-                          ></iframe>
-                          <iframe
-                            width='100%'
-                            height='315'
-                            src='https://www.youtube.com/embed/ILmeK5CNHFM'
-                            title='YouTube video player'
-                            frameborder='0'
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                            allowfullscreen
-                          ></iframe>
-                        </Col>
-
-                        <Col sm={6}>
-                          {/* <Card className='p-1 border shadow-none'>
-                            <div className='p-3'>
-                              <h5>
-                                <Link to='blog-details' className='text-dark'>
-                                  Drawing a sketch
-                                </Link>
-                              </h5>
-                              <p className='text-muted mb-0'>24 Mar, 2020</p>
-                            </div>
-
-                            <div className='position-relative'>
+                          <div className='video-box'>
+                            <div
+                              className='media-box'
+                              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                              onClick={(e) => playVideo(e.target.parentNode)}
+                            >
                               <img
-                                src={img2}
+                                src='src/assets/images/training/traning-vid-1.jpeg'
                                 alt=''
-                                className='img-thumbnail'
                               />
-
-                              <div className='blog-play-icon'>
-                                <Link
-                                  to='#'
-                                  className='avatar-sm d-block mx-auto'
-                                >
-                                  <span className='avatar-title rounded-circle font-size-18'>
-                                    <i className='mdi mdi-play'></i>
-                                  </span>
-                                </Link>
-                              </div>
+                              <div className='play-btn'></div>
                             </div>
-                            <div className='p-3'>
-                              <ul className='list-inline'>
-                                <li className='list-inline-item me-3'>
-                                  <Link to='#' className='text-muted'>
-                                    <i className='bx bx-purchase-tag-alt align-middle text-muted me-1'></i>{" "}
-                                    Development
-                                  </Link>
-                                </li>
-                                <li className='list-inline-item me-3'>
-                                  <Link to='#' className='text-muted'>
-                                    <i className='bx bx-comment-dots align-middle text-muted me-1'></i>{" "}
-                                    08 Comments
-                                  </Link>
-                                </li>
-                              </ul>
-
-                              <p>
-                                At vero eos et accusamus et iusto odio
-                                dignissimos ducimus quos
-                              </p>
-
-                              <div>
-                                <Link to='#' className='text-primary'>
-                                  Read more{" "}
-                                  <i className='mdi mdi-arrow-right'></i>
-                                </Link>
-                              </div>
+                          </div>
+                        </Col>
+                        <Col lg={6}>
+                          <div className='video-box'>
+                            <div
+                              className='media-box'
+                              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                              onClick={(e) => playVideo(e.target.parentNode)}
+                            >
+                              <img
+                                src='src/assets/images/training/traning-vid-1.jpeg'
+                                alt=''
+                              />
+                              <div className='play-btn'></div>
                             </div>
-                          </Card> */}
-                          <iframe
-                            width='100%'
-                            height='315'
-                            src='https://www.youtube.com/embed/ILmeK5CNHFM'
-                            title='YouTube video player'
-                            frameborder='0'
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                            allowfullscreen
-                          ></iframe>
-                          <iframe
-                            width='100%'
-                            height='315'
-                            src='https://www.youtube.com/embed/ILmeK5CNHFM'
-                            title='YouTube video player'
-                            frameborder='0'
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                            allowfullscreen
-                          ></iframe>
+                          </div>
+                        </Col>
+                        <Col lg={6}>
+                          <div className='video-box'>
+                            <div
+                              className='media-box'
+                              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                              onClick={(e) => playVideo(e.target.parentNode)}
+                            >
+                              <img
+                                src='src/assets/images/training/traning-vid-1.jpeg'
+                                alt=''
+                              />
+                              <div className='play-btn'></div>
+                            </div>
+                          </div>
+                        </Col>
+                        <Col lg={6}>
+                          <div className='video-box'>
+                            <div
+                              className='media-box'
+                              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                              onClick={(e) => playVideo(e.target.parentNode)}
+                            >
+                              <img
+                                src='src/assets/images/training/traning-vid-1.jpeg'
+                                alt=''
+                              />
+                              <div className='play-btn'></div>
+                            </div>
+                          </div>
                         </Col>
                       </Row>
-
-                      {/* <Row>
-                        <Col sm={6}>
-                          <Card className='p-1 border shadow-none'>
-                            <div className='p-3'>
-                              <h5>
-                                <Link to='/blog-details' className='text-dark'>
-                                  Riding bike on road
-                                </Link>
-                              </h5>
-                              <p className='text-muted mb-0'>10 Apr, 2020</p>
-                            </div>
-
-                            <div className='position-relative'>
-                              <img
-                                src={img3}
-                                alt=''
-                                className='img-thumbnail'
-                              />
-                            </div>
-
-                            <div className='p-3'>
-                              <ul className='list-inline'>
-                                <li className='list-inline-item me-3'>
-                                  <Link to='#' className='text-muted'>
-                                    <i className='bx bx-purchase-tag-alt align-middle text-muted me-1'></i>{" "}
-                                    Travel
-                                  </Link>
-                                </li>
-                                <li className='list-inline-item me-3'>
-                                  <Link to='#' className='text-muted'>
-                                    <i className='bx bx-comment-dots align-middle text-muted me-1'></i>{" "}
-                                    08 Comments
-                                  </Link>
-                                </li>
-                              </ul>
-                              <p>
-                                Itaque earum rerum hic tenetur a sapiente
-                                delectus ut aut
-                              </p>
-
-                              <div>
-                                <Link to='#' className='text-primary'>
-                                  Read more{" "}
-                                  <i className='mdi mdi-arrow-right'></i>
-                                </Link>
-                              </div>
-                            </div>
-                          </Card>
-                        </Col>
-
-                        <Col sm={6}>
-                          <Card className='p-1 border shadow-none'>
-                            <div className='p-3'>
-                              <h5>
-                                <Link to='/blog-details' className='text-dark'>
-                                  Project discussion with team
-                                </Link>
-                              </h5>
-                              <p className='text-muted mb-0'>24 Mar, 2020</p>
-                            </div>
-
-                            <div className='position-relative'>
-                              <img
-                                src={img1}
-                                alt=''
-                                className='img-thumbnail'
-                              />
-                            </div>
-
-                            <div className='p-3'>
-                              <ul className='list-inline'>
-                                <li className='list-inline-item me-3'>
-                                  <Link to='#' className='text-muted'>
-                                    <i className='bx bx-purchase-tag-alt align-middle text-muted me-1'></i>{" "}
-                                    Development
-                                  </Link>
-                                </li>
-                                <li className='list-inline-item me-3'>
-                                  <Link to='#' className='text-muted'>
-                                    <i className='bx bx-comment-dots align-middle text-muted me-1'></i>{" "}
-                                    08 Comments
-                                  </Link>
-                                </li>
-                              </ul>
-
-                              <p>
-                                Sed ut perspiciatis unde omnis iste eaque natus
-                                error sit
-                              </p>
-
-                              <div>
-                                <Link to='#' className='text-primary'>
-                                  Read more{" "}
-                                  <i className='mdi mdi-arrow-right'></i>
-                                </Link>
-                              </div>
-                            </div>
-                          </Card>
-                        </Col>
-                      </Row> */}
 
                       <hr className='my-4' />
-
                       <div className='text-center'>
                         <ul className='pagination justify-content-center pagination-rounded'>
                           <li className='page-item disabled'>
@@ -476,12 +197,12 @@ const BlogGrid = () => {
                               <i className='mdi mdi-chevron-left'></i>
                             </Link>
                           </li>
-                          <li className='page-item'>
+                          <li className='page-item active'>
                             <Link to='#' className='page-link'>
                               1
                             </Link>
                           </li>
-                          <li className='page-item active'>
+                          <li className='page-item'>
                             <Link to='#' className='page-link'>
                               2
                             </Link>
