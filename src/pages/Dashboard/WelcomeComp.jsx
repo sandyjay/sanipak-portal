@@ -17,7 +17,7 @@ const WelcomeComp = () => {
                 <h5 className='font-size-35'>Welcome Kaylah</h5>
                 <h5 className='font-size-25 '>Project Lead, Sanipak</h5>
                 <br></br>
-                <p className='font-size-20'>
+                {/* <p className='font-size-20'>
                   This your place to read all the information we provide to you
                   as well as perform operational tasks like adding records,
                   keeping track of your invoices and getting access to all the
@@ -27,15 +27,11 @@ const WelcomeComp = () => {
                 <p className='font-size-20'>
                   If you have any questions, please contact us at
                   support@sanipak.com.
-                </p>
+                </p> */}
               </div>
             </Col>
             <Col xs='6' className='align-self-end'>
-              <img
-                src='https://res.cloudinary.com/devstroke/image/upload/v1694104385/IMG_7225_1_z2marh.jpg'
-                alt=''
-                className='img-fluid'
-              />
+              <img src={profileImg} alt='' className='img-fluid' />
             </Col>
           </Row>
         </div>
