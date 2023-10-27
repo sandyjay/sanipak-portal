@@ -25,7 +25,7 @@ import withRouter from "../../components/Common/withRouter";
 //Import Breadcrumb
 import Breadcrumb from "../../components/Common/Breadcrumb";
 
-import avatar from "../../assets/images/users/avatar-1.jpg";
+import avatar from "../../assets/images/users/avatark.png";
 // actions
 import { editProfile, resetProfileFlag } from "../../store/actions";
 
@@ -105,8 +105,12 @@ const UserProfile = (props) => {
                     <div className='flex-grow-1 align-self-center'>
                       <div className='text-muted'>
                         <h5>{name}</h5>
-                        <p className='mb-1'>{email}</p>
-                        <p className='mb-0'>Id no: #{idx}</p>
+                        <a href='mailto: kaylahblas@sanipak.com'>
+                          kaylahblas@sanipak.com
+                        </a>
+                        <p className='mb-0'>
+                          Facility: Intermountain medical center
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -115,7 +119,7 @@ const UserProfile = (props) => {
             </Col>
           </Row>
 
-          <h4 className='card-title mb-4'>Change User Name</h4>
+          <h4 className='card-title mb-4'>Update Profile Information</h4>
 
           <Card>
             <CardBody>
@@ -128,16 +132,48 @@ const UserProfile = (props) => {
                 }}
               >
                 <div className='form-group'>
-                  <Label className='form-label'>User Name</Label>
+                  <Label className='form-label'>Email</Label>
                   <Input
                     name='username'
                     // value={name}
                     className='form-control'
-                    placeholder='Enter User Name'
+                    placeholder='Email'
                     type='text'
                     onChange={validation.handleChange}
                     onBlur={validation.handleBlur}
-                    value={validation.values.username || ""}
+                    value='kaylahblas@sanipak.com'
+                    invalid={
+                      validation.touched.username && validation.errors.username
+                        ? true
+                        : false
+                    }
+                  />
+                  <br></br>
+                  <Input
+                    name='username'
+                    // value={name}
+                    className='form-control'
+                    placeholder='Facility'
+                    type='text'
+                    onChange={validation.handleChange}
+                    onBlur={validation.handleBlur}
+                    value='Intermountain medical center'
+                    invalid={
+                      validation.touched.username && validation.errors.username
+                        ? true
+                        : false
+                    }
+                  />{" "}
+                  <br></br>
+                  <Input
+                    name='username'
+                    // value={name}
+                    className='form-control'
+                    placeholder='Phone'
+                    type='text'
+                    onChange={validation.handleChange}
+                    onBlur={validation.handleBlur}
+                    value=''
                     invalid={
                       validation.touched.username && validation.errors.username
                         ? true

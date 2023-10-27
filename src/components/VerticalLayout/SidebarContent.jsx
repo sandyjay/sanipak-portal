@@ -148,7 +148,7 @@ const SidebarContent = (props) => {
             <li>
               <Link to='/dashboard'>
                 <i className='bx bx-home-circle'></i>
-                <span>{props.t("Dashboards")}</span>
+                <span>{props.t("Dashboard")}</span>
               </Link>
             </li>
             <li>

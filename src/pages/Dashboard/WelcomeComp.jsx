@@ -9,15 +9,14 @@ import profileImg from "../../assets/images/profile-img.png";
 const WelcomeComp = () => {
   return (
     <React.Fragment>
-      <Card className='overflow-hidden'>
-        <div className='bg-primary bg-soft'>
-          <Row>
-            <Col xs='6'>
-              <div className='text-primary p-4' style={{ paddingTop: "20px" }}>
-                <h5 className='font-size-35'>Welcome Kaylah</h5>
+      <Card>
+        <Row>
+          <Col xs='12'>
+            <div className='p-4' style={{ paddingTop: "20px" }}>
+              {/* <h5 className='font-size-35'>Welcome Kaylah</h5>
                 <h5 className='font-size-25 '>Project Lead, Sanipak</h5>
-                <br></br>
-                {/* <p className='font-size-20'>
+                <br></br> */}
+              {/* <p className='font-size-20'>
                   This your place to read all the information we provide to you
                   as well as perform operational tasks like adding records,
                   keeping track of your invoices and getting access to all the
@@ -28,29 +27,41 @@ const WelcomeComp = () => {
                   If you have any questions, please contact us at
                   support@sanipak.com.
                 </p> */}
-              </div>
-            </Col>
-            <Col xs='6' className='align-self-end'>
-              <img src={profileImg} alt='' className='img-fluid' />
-            </Col>
-          </Row>
-        </div>
+              <img
+                width='100%'
+                src='https://res.cloudinary.com/devstroke/image/upload/v1698152377/Untitled_design_8_qvn91z.jpg'
+              />
+            </div>
+          </Col>
+        </Row>
         <CardBody className='pt-0'>
           <Row>
             <Col sm='12'>
               <div className='pt-4'>
                 <Row>
-                  <Col xs='4'>
+                  <Col xs='3'>
+                    <h5 className='font-size-35'>Client Name</h5>
+                    <p className='mb-1'>Kaylah Blas</p>
+                    <p className='text-muted mb-0'>
+                      Associate Facility Planner
+                    </p>
+                  </Col>
+                  <Col xs='3'>
+                    <h5 className='font-size-35'>Facility</h5>
+                    <p className='text-muted mb-0'>
+                      Intermountain Medical Center
+                    </p>
+                  </Col>
+                  <Col xs='3'>
                     <h5 className='font-size-35'>PM Contract Type</h5>
                     <p className='text-muted mb-0'>Quarterly</p>
                   </Col>
-                  <Col xs='4'>
-                    <h5 className='font-size-35'>Last Visit</h5>
-                    <p className='text-muted mb-0'>June 23, 2023</p>
-                  </Col>
-                  <Col xs='4'>
-                    <h5 className='font-size-35'>Upcoming Visit</h5>
-                    <p className='text-muted mb-0'>Oct 12, 2023</p>
+                  <Col xs='3'>
+                    <h5 className='font-size-35'>Visits History</h5>
+                    <p className='text-muted mb-0'>Last Visit: June 23, 2023</p>
+                    <p className='text-muted mb-0'>
+                      Upcoming Visit: Dec 23, 2023
+                    </p>
                   </Col>
                 </Row>
               </div>

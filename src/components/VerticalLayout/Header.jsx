@@ -107,7 +107,7 @@ const Header = (props) => {
               <i className='fa fa-fw fa-bars' />
             </button> */}
             <div className='d-flex flex-wrap gap-2 m-4'>
-              <a href='https://sanipak.com' target='_blank'>
+              <a href='https://sanipak.com' target='_blank' rel='noreferrer'>
                 <Button
                   color='primary'
                   className='btn btn-primary waves-effect waves-light'
@@ -115,7 +115,11 @@ const Header = (props) => {
                   Sanipak Website
                 </Button>
               </a>
-              <a href='https://records.sanipak.com/' target='_blank'>
+              <a
+                href='https://records.sanipak.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
                 <Button
                   color='danger'
                   className='btn btn-secondary waves-effect waves-light'
@@ -126,7 +130,7 @@ const Header = (props) => {
             </div>
           </div>
           <div className='d-flex'>
-            <NotificationDropdown />
+            {/* <NotificationDropdown /> */}
             <ProfileMenu />
           </div>
         </div>
