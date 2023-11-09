@@ -57,37 +57,38 @@ const Dashboard = (props) => {
 
   const reports = [
     {
-      title: "Create, edit and delete BI records",
-      iconClass: "bx-task",
+      title: "Create, edit, import and delete BI records",
+      iconClass: "bxs-folder",
       description: "BI records",
       color: "#167a7a",
     },
     {
-      title: "Watch, read or download helpful docs",
-      iconClass: "bx-video",
+      title: "Watch, read or download training resources",
+      iconClass: "bxs-video",
       description: "Training Materials",
       color: "#ecbd6c",
     },
     {
-      title: "View and download invoices",
-      iconClass: "bx-receipt",
-      description: "Invoices",
+      title: "View, download, and pay invoices",
+      iconClass: "bxs-credit-card-alt",
+      description: "Accounting",
       color: "#fa747d",
     },
     {
-      title: "Agreements, contracts and others",
-      iconClass: "bx-file",
-      description: "Documents",
+      title: "Agreements, contracts, and others",
+      iconClass: "bxs-user",
+      description: "Resources",
       color: "#525b88",
     },
     {
-      title: "Agreements, contracts and others",
-      iconClass: "bx-file",
-      description: "Client Overview",
+      title:
+        "View any service-related documents (PMs, Service Call Sheets, Calibration, etc.)",
+      iconClass: "bxs-cog",
+      description: "Service",
       color: "#b8c16b",
     },
     {
-      title: "FAQs and contact information",
+      title: "FAQs and Troubleshooting",
       iconClass: "bx-support",
       description: "Get Help",
       color: "#4d72d0",
@@ -210,7 +211,7 @@ const Dashboard = (props) => {
                   </div>
                   <StackedColumnChart
                     periodData={periodData}
-                    dataColors='["#167a7a", "#ecbd6c", "#fa747d"]'
+                    dataColors='["#a1762b", "#532093", "#ecbd6c"]'
                   />
                 </CardBody>
               </Card>

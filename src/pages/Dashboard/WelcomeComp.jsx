@@ -45,11 +45,17 @@ const WelcomeComp = () => {
                     <p className='text-muted mb-0'>
                       Associate Facility Planner
                     </p>
-                  </Col>
-                  <Col xs='3'>
-                    <h5 className='font-size-35'>Facility</h5>
                     <p className='text-muted mb-0'>
                       Intermountain Medical Center
+                    </p>
+                  </Col>
+                  <Col xs='3'>
+                    <h5 className='font-size-35'>Machine Information</h5>
+                    <p className='text-muted mb-0'>
+                      Type of Machine: Machine XYZ
+                    </p>
+                    <p className='text-muted mb-0'>
+                      Date of Installation: May 25, 2009
                     </p>
                   </Col>
                   <Col xs='3'>

@@ -88,7 +88,9 @@ const Login = (props) => {
                       <Col xs={8}>
                         <div className='text-primary p-4'>
                           <h5 className='text-primary'>Welcome Back !</h5>
-                          <p>Sign in to continue to San-i-pak.</p>
+                          <p>
+                            Sign in to continue to San-I-Pak Customer Portal
+                          </p>
                         </div>
                       </Col>
                     </Row>

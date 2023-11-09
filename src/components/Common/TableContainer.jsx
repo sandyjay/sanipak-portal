@@ -152,6 +152,15 @@ const TableContainer = ({
                 <i className='mdi mdi-plus me-1' />
                 Add a new record
               </Button>
+              <Button
+                type='button'
+                color='info'
+                className='btn-rounded  mb-2 me-2'
+                href='/apps-filemanager'
+              >
+                <i className='mdi mdi-upload me-1' />
+                Upload photos/pdfs
+              </Button>
             </div>
           </Col>
         )}

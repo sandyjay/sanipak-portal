@@ -49,7 +49,7 @@ import {
 
 function EcommerceOrder() {
   //meta title
-  document.title = "Orders | San-i-pak - Vite React Admin & Dashboard Template";
+  document.title = "BI Records | San-i-pak ";
 
   const [modal, setModal] = useState(false);
   const [modal1, setModal1] = useState(false);
@@ -65,13 +65,15 @@ function EcommerceOrder() {
 
     initialValues: {
       orderId: (order && order.orderId) || "",
-      color: (order && order.color) || "black",
-      billingName: (order && order.billingName) || "",
+      version: (order && order.version) || "Test",
       orderdate: (order && order.orderdate) || "",
+      chamber: (order && order.chamber) || "",
+      paymentStatus: (order && order.paymentStatus) || "Pass",
+      color: (order && order.color) || "yellow",
+      billingName: (order && order.billingName) || "Kaylah Blas",
       total: (order && order.total) || "",
-      paymentStatus: (order && order.paymentStatus) || "Paid",
-      badgeclass: (order && order.badgeclass) || "success",
-      paymentMethod: (order && order.paymentMethod) || "Mastercard",
+      paymentMethod: (order && order.paymentMethod) || "",
+      paymentMethosd: (order && order.paymentMethosd) || "",
     },
     validationSchema: Yup.object({
       orderId: Yup.string()
@@ -91,13 +93,15 @@ function EcommerceOrder() {
         const updateOrder = {
           id: order ? order.id : 0,
           orderId: values.orderId,
+          version: values.version,
+          orderdate: values.orderdate,
+          chamber: values.chamber,
+          paymentStatus: values.paymentStatus,
           color: values.color,
           billingName: values.billingName,
-          orderdate: values.orderdate,
           total: values.total,
-          paymentStatus: values.paymentStatus,
           paymentMethod: values.paymentMethod,
-          badgeclass: values.badgeclass,
+          paymentMethosd: values.paymentMethosd,
         };
         // update order
         dispatch(onUpdateOrder(updateOrder));
@@ -106,13 +110,15 @@ function EcommerceOrder() {
         const newOrder = {
           id: Math.floor(Math.random() * (30 - 20)) + 20,
           orderId: values["orderId"],
+          version: values["version"],
+          orderdate: values["orderdate"],
+          chamber: values["chamber"],
+          paymentStatus: values["paymentStatus"],
           color: values["color"],
           billingName: values["billingName"],
-          orderdate: values["orderdate"],
           total: values["total"],
-          paymentStatus: values["paymentStatus"],
           paymentMethod: values["paymentMethod"],
-          badgeclass: values["badgeclass"],
+          paymentMethosd: values["paymentMethosd"],
         };
         // save new order
         dispatch(onAddNewOrder(newOrder));
@@ -160,12 +166,15 @@ function EcommerceOrder() {
     setOrder({
       id: order.id,
       orderId: order.orderId,
-      billingName: order.billingName,
+      version: order.version,
       orderdate: order.orderdate,
-      total: order.total,
+      chamber: order.chamber,
       paymentStatus: order.paymentStatus,
+      color: order.color,
+      billingName: order.billingName,
+      total: order.total,
       paymentMethod: order.paymentMethod,
-      badgeclass: order.badgeclass,
+      paymentMethosd: order.paymentMethosd,
     });
 
     setIsEdit(true);
@@ -197,31 +206,22 @@ function EcommerceOrder() {
   const columns = useMemo(
     () => [
       {
-        Header: "BI Lot",
+        Header: "BI Lot#",
         accessor: "orderId",
+        disableFilters: true,
         width: "150px",
         style: {
           textAlign: "center",
           width: "10%",
           background: "#0000",
         },
-        filterable: true,
         Cell: (cellProps) => {
           return <OrderId {...cellProps} />;
         },
       },
       {
-        Header: "Color",
-        accessor: "color",
-        filterable: true,
-        Cell: () => {
-          return "Purple";
-        },
-      },
-      {
         Header: "Version",
         accessor: "verion",
-        filterable: true,
         Cell: (cellProps) => {
           return "Test";
         },
@@ -235,9 +235,16 @@ function EcommerceOrder() {
         },
       },
       {
-        Header: "Created at",
+        Header: "Test Date (MM/DD/YYYY)",
         accessor: "orderdate",
-        filterable: true,
+        Cell: (cellProps) => {
+          return <Date {...cellProps} />;
+        },
+      },
+      {
+        Header: "Chamber #",
+        accessor: "chamber",
+        disableFilters: true,
         Cell: (cellProps) => {
           return <Date {...cellProps} />;
         },
@@ -251,7 +258,16 @@ function EcommerceOrder() {
         },
       },
       {
-        Header: "Temp",
+        Header: "Color",
+        accessor: "color",
+        disableFilters: true,
+        Cell: () => {
+          return "Purple";
+        },
+      },
+      {
+        Header: "Incubation Temperature",
+        disableFilters: true,
         accessor: "total",
         filterable: true,
         Cell: (cellProps) => {
@@ -260,15 +276,17 @@ function EcommerceOrder() {
       },
 
       {
-        Header: "Time in",
+        Header: "Incubation start time",
         accessor: "paymentMethod",
+        disableFilters: true,
         Cell: (cellProps) => {
           return "2023-01-06, 04:19PM";
         },
       },
       {
-        Header: "Time out",
+        Header: "Incubation end time",
         accessor: "paymentMethosd",
+        disableFilters: true,
         Cell: (cellProps) => {
           return "2023-01-06, 04:19PM";
         },
@@ -346,7 +364,7 @@ function EcommerceOrder() {
           </Row>
           <Modal isOpen={modal} toggle={toggle}>
             <ModalHeader toggle={toggle} tag='h4'>
-              {!!isEdit ? "Edit Order" : "Add a new record"}
+              {!!isEdit ? "Edit record" : "Add a new record"}
             </ModalHeader>
             <ModalBody>
               <Form
@@ -363,7 +381,7 @@ function EcommerceOrder() {
                       <Input
                         name='orderId'
                         type='text'
-                        placeholder='Insert Order Id'
+                        placeholder='Insert BI lot number'
                         onChange={validation.handleChange}
                         onBlur={validation.handleBlur}
                         value={validation.values.orderId || ""}
@@ -382,38 +400,33 @@ function EcommerceOrder() {
                       ) : null}
                     </div>
                     <div className='mb-3'>
-                      <Label className='form-label'>Billing Name</Label>
+                      <Label className='form-label'>Version</Label>
                       <Input
-                        name='billingName'
-                        type='text'
-                        placeholder='Insert Billing Name'
-                        validate={{
-                          required: { value: true },
-                        }}
+                        name='version'
+                        type='select'
+                        placeholder='Insert Payment Status'
+                        className='form-select'
                         onChange={validation.handleChange}
                         onBlur={validation.handleBlur}
-                        value={validation.values.billingName || ""}
-                        invalid={
-                          validation.touched.billingName &&
-                          validation.errors.billingName
-                            ? true
-                            : false
-                        }
-                      />
-                      {validation.touched.billingName &&
-                      validation.errors.billingName ? (
+                        value={validation.values.paymentStatus || ""}
+                      >
+                        <option>Test</option>
+                        <option>Control</option>
+                      </Input>
+                      {validation.touched.paymentStatus &&
+                      validation.errors.paymentStatus ? (
                         <FormFeedback type='invalid'>
-                          {validation.errors.billingName}
+                          {validation.errors.paymentStatus}
                         </FormFeedback>
                       ) : null}
                     </div>
                     <div className='mb-3'>
-                      <Label className='form-label'>Order Date</Label>
+                      <Label className='form-label'>Test Date</Label>
                       <Input
                         name='orderdate'
                         type='date'
                         // value={orderList.orderdate || ""}
-                        placeholder='Insert Order Date'
+                        placeholder='When did you perform the test?'
                         onChange={validation.handleChange}
                         onBlur={validation.handleBlur}
                         value={validation.values.orderdate || ""}
@@ -432,10 +445,81 @@ function EcommerceOrder() {
                       ) : null}
                     </div>
                     <div className='mb-3'>
-                      <Label className='form-label'>Total</Label>
+                      <Label className='form-label'>Chamber #</Label>
+                      <Input
+                        name='chamber'
+                        type='text'
+                        placeholder='For eg chamber 1'
+                        validate={{
+                          required: { value: false },
+                        }}
+                        onChange={validation.handleChange}
+                        onBlur={validation.handleBlur}
+                        value={validation.values.chamber || ""}
+                        invalid={
+                          validation.touched.chamber &&
+                          validation.errors.chamber
+                            ? true
+                            : false
+                        }
+                      />
+                      {validation.touched.chamber &&
+                      validation.errors.chamber ? (
+                        <FormFeedback type='invalid'>
+                          {validation.errors.chamber}
+                        </FormFeedback>
+                      ) : null}
+                    </div>
+                    <div className='mb-3'>
+                      <Label className='form-label'>Results</Label>
+                      <Input
+                        name='paymentStatus'
+                        type='select'
+                        placeholder='Insert Payment Status'
+                        className='form-select'
+                        onChange={validation.handleChange}
+                        onBlur={validation.handleBlur}
+                        value={validation.values.paymentStatus || ""}
+                      >
+                        <option>Pass</option>
+                        <option>Fail</option>
+                      </Input>
+                      {validation.touched.paymentStatus &&
+                      validation.errors.paymentStatus ? (
+                        <FormFeedback type='invalid'>
+                          {validation.errors.paymentStatus}
+                        </FormFeedback>
+                      ) : null}
+                    </div>
+                    <div className='mb-3'>
+                      <Label className='form-label'>Color</Label>
+                      <Input
+                        name='color'
+                        type='select'
+                        placeholder='Insert Payment Status'
+                        className='form-select'
+                        onChange={validation.handleChange}
+                        onBlur={validation.handleBlur}
+                        value={validation.values.paymentStatus || ""}
+                      >
+                        <option>Yellow</option>
+                        <option>Purple</option>
+                        <option>Brown</option>
+                      </Input>
+                      {validation.touched.paymentStatus &&
+                      validation.errors.paymentStatus ? (
+                        <FormFeedback type='invalid'>
+                          {validation.errors.paymentStatus}
+                        </FormFeedback>
+                      ) : null}
+                    </div>
+                    <div className='mb-3'>
+                      <Label className='form-label'>
+                        Incubation Temperature
+                      </Label>
                       <Input
                         name='total'
-                        placeholder='Insert Total Amount'
+                        placeholder='Temperature in degrees'
                         type='text'
                         onChange={validation.handleChange}
                         onBlur={validation.handleBlur}
@@ -453,42 +537,52 @@ function EcommerceOrder() {
                       ) : null}
                     </div>
                     <div className='mb-3'>
-                      <Label className='form-label'>Payment Status</Label>
+                      <Label className='form-label'>
+                        Incubation start time
+                      </Label>
                       <Input
-                        name='paymentStatus'
-                        type='select'
-                        placeholder='Insert Payment Status'
-                        className='form-select'
+                        name='paymentMethod'
+                        placeholder='HH:MM'
+                        type='text'
                         onChange={validation.handleChange}
                         onBlur={validation.handleBlur}
-                        value={validation.values.paymentStatus || ""}
-                      >
-                        <option>Paid</option>
-                        <option>Overdue</option>
-                        <option>Refund</option>
-                      </Input>
-                      {validation.touched.paymentStatus &&
-                      validation.errors.paymentStatus ? (
+                        value={validation.values.paymentMethod || ""}
+                        invalid={
+                          validation.touched.paymentMethod &&
+                          validation.errors.paymentMethod
+                            ? true
+                            : false
+                        }
+                      />
+                      {validation.touched.paymentMethod &&
+                      validation.errors.paymentMethod ? (
                         <FormFeedback type='invalid'>
-                          {validation.errors.paymentStatus}
+                          {validation.errors.paymentMethod}
                         </FormFeedback>
                       ) : null}
                     </div>
                     <div className='mb-3'>
-                      <Label className='form-label'>Payment Method</Label>
+                      <Label className='form-label'>Incubation end time</Label>
                       <Input
-                        name='paymentMethod'
-                        type='select'
-                        className='form-select'
+                        name='paymentMethosd'
+                        placeholder='HH:MM'
+                        type='text'
                         onChange={validation.handleChange}
                         onBlur={validation.handleBlur}
-                        value={validation.values.paymentMethod || ""}
-                      >
-                        <option>Mastercard</option>
-                        <option>Visa</option>
-                        <option>Paypal</option>
-                        <option>COD</option>
-                      </Input>
+                        value={validation.values.paymentMethosd || ""}
+                        invalid={
+                          validation.touched.paymentMethosd &&
+                          validation.errors.paymentMethosd
+                            ? true
+                            : false
+                        }
+                      />
+                      {validation.touched.paymentMethosd &&
+                      validation.errors.paymentMethosd ? (
+                        <FormFeedback type='invalid'>
+                          {validation.errors.paymentMethosd}
+                        </FormFeedback>
+                      ) : null}
                     </div>
                   </Col>
                 </Row>
@@ -499,7 +593,7 @@ function EcommerceOrder() {
                         type='submit'
                         className='btn btn-success save-user'
                       >
-                        Save
+                        Add
                       </button>
                     </div>
                   </Col>

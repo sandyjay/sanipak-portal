@@ -54,7 +54,7 @@ const ForgetPasswordPage = () => {
                     <Col className='col-7'>
                       <div className='text-primary p-4'>
                         <h5 className='text-primary'>Welcome Back !</h5>
-                        <p>Sign in to continue to San-i-pak.</p>
+                        <p>Sign in to continue to San-I-Pak Customer Portal</p>
                       </div>
                     </Col>
                     <Col className='col-5 align-self-end'>

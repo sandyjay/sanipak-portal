@@ -74,7 +74,7 @@ const Login2 = () => {
                       <div>
                         <h5 className='text-primary'>Welcome Back !</h5>
                         <p className='text-muted'>
-                          Sign in to continue to San-i-pak.
+                          Sign in to continue to San-I-Pak Customer Portal
                         </p>
                       </div>
 
