@@ -2,37 +2,27 @@ import PropTypes from "prop-types";
 import React, { useState } from "react";
 
 import { connect } from "react-redux";
-import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 
 // Reactstrap
-import { Dropdown, DropdownToggle, DropdownMenu, Button } from "reactstrap";
+import { Button } from "reactstrap";
 
 // Import menuDropdown
-import LanguageDropdown from "../CommonForBoth/TopbarDropdown/LanguageDropdown";
-import NotificationDropdown from "../CommonForBoth/TopbarDropdown/NotificationDropdown";
 import ProfileMenu from "../CommonForBoth/TopbarDropdown/ProfileMenu";
-import megamenuImg from "../../assets/images/megamenu-img.png";
 
 // import images
-import github from "../../assets/images/brands/github.png";
-import bitbucket from "../../assets/images/brands/bitbucket.png";
-import dribbble from "../../assets/images/brands/dribbble.png";
-import dropbox from "../../assets/images/brands/dropbox.png";
-import mail_chimp from "../../assets/images/brands/mail_chimp.png";
-import slack from "../../assets/images/brands/slack.png";
 
-import logo from "../../assets/images/logo.svg";
 import logoLightSvg from "../../assets/images/logo-light.svg";
+import logo from "../../assets/images/logo.svg";
 
 //i18n
 import { withTranslation } from "react-i18next";
 
 // Redux Store
 import {
+  changeSidebarType,
   showRightSidebarAction,
   toggleLeftmenu,
-  changeSidebarType,
 } from "../../store/actions";
 
 const Header = (props) => {

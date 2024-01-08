@@ -10,10 +10,12 @@ import {
 } from "reactstrap";
 
 import classnames from "classnames";
-import img1 from "../../../assets/images/small/img-2.jpg";
-import img2 from "../../../assets/images/small/img-6.jpg";
-import img3 from "../../../assets/images/small/img-1.jpg";
 import { Link } from "react-router-dom";
+import { Button } from "reactstrap";
+import ListItemText from "@mui/material/ListItemText";
+
+import { ListItemButton, ListItemIcon } from "@mui/material";
+import { ArrowRightIcon } from "@mui/x-date-pickers";
 import RecentFile from "../../FileManager/RecentFile";
 
 const BlogGrid = () => {
@@ -38,6 +40,65 @@ const BlogGrid = () => {
       popupMedia.setAttribute("src", "");
     });
   };
+  const [more, setMore] = useState(false);
+  const pdfs = [
+    { text: "Instruction manual for BI records", link: "#" },
+    { text: "Test template", link: "#" },
+    { text: "Service report form,", link: "#" },
+    { text: "Instruction manual for BI records", link: "#" },
+    { text: "Test template", link: "#" },
+    { text: "Service report form,", link: "#" },
+    { text: "Instruction manual for BI records", link: "#" },
+    { text: "Test template", link: "#" },
+    { text: "Service report form,", link: "#" },
+    { text: "Instruction manual for BI records", link: "#" },
+    { text: "Test template", link: "#" },
+    { text: "Service report form,", link: "#" },
+  ];
+
+  function getMoreItems() {
+    return (
+      <>
+        <Col lg={4}>
+          <div className='video-box'>
+            <div
+              className='media-box'
+              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+              onClick={(e) => playVideo(e.target.parentNode)}
+            >
+              <img src='src/assets/images/training/traning-vid-1.jpeg' alt='' />
+              <div className='play-btn'></div>
+            </div>
+          </div>
+        </Col>
+        <Col lg={4}>
+          <div className='video-box'>
+            <div
+              className='media-box'
+              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+              onClick={(e) => playVideo(e.target.parentNode)}
+            >
+              <img src='src/assets/images/training/traning-vid-1.jpeg' alt='' />
+              <div className='play-btn'></div>
+            </div>
+          </div>
+        </Col>
+        <Col lg={4}>
+          <div className='video-box'>
+            <div
+              className='media-box'
+              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+              onClick={(e) => playVideo(e.target.parentNode)}
+            >
+              <img src='src/assets/images/training/traning-vid-1.jpeg' alt='' />
+              <div className='play-btn'></div>
+            </div>
+          </div>
+        </Col>
+      </>
+    );
+  }
+
   return (
     <React.Fragment>
       <Col xl={12} lg={12}>
@@ -91,13 +152,132 @@ const BlogGrid = () => {
           <TabContent className='p-4' activeTab={activeTab}>
             <TabPane tabId='1'>
               <div>
+                <Row className='justify-content-center' textAlign='center'>
+                  <Col
+                    xl={10}
+                    className='d-flex flex-column align-items-center'
+                  >
+                    <h3 style={{ textAlign: "center", marginBottom: "20px" }}>
+                      Machine Education
+                    </h3>
+                    <Row
+                      className='justify-content-center align-items-center'
+                      style={{ width: "100%" }}
+                    >
+                      <Col lg={4}>
+                        <div className='video-box'>
+                          <div
+                            className='media-box'
+                            data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                            onClick={(e) => playVideo(e.target.parentNode)}
+                          >
+                            <img
+                              src='src/assets/images/training/traning-vid-1.jpeg'
+                              alt=''
+                            />
+                            <div className='play-btn'></div>
+                          </div>
+                        </div>
+                        <h6>San-I-Pak AUTO SERIES</h6>
+                      </Col>
+                      <Col lg={4}>
+                        <div className='video-box'>
+                          <div
+                            className='media-box'
+                            data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                            onClick={(e) => playVideo(e.target.parentNode)}
+                          >
+                            <img
+                              src='src/assets/images/training/traning-vid-1.jpeg'
+                              alt=''
+                            />
+                            <div className='play-btn'></div>
+                          </div>
+                        </div>
+                      </Col>
+                      <Col lg={4}>
+                        <div className='video-box'>
+                          <div
+                            className='media-box'
+                            data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                            onClick={(e) => playVideo(e.target.parentNode)}
+                          >
+                            <img
+                              src='src/assets/images/training/traning-vid-1.jpeg'
+                              alt=''
+                            />
+                            <div className='play-btn'></div>
+                          </div>
+                        </div>
+                      </Col>
+                      <Col lg={4}>
+                        <div className='video-box'>
+                          <div
+                            className='media-box'
+                            data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                            onClick={(e) => playVideo(e.target.parentNode)}
+                          >
+                            <img
+                              src='src/assets/images/training/traning-vid-1.jpeg'
+                              alt=''
+                            />
+                            <div className='play-btn'></div>
+                          </div>
+                        </div>
+                      </Col>
+                      <Col lg={4}>
+                        <div className='video-box'>
+                          <div
+                            className='media-box'
+                            data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                            onClick={(e) => playVideo(e.target.parentNode)}
+                          >
+                            <img
+                              src='src/assets/images/training/traning-vid-1.jpeg'
+                              alt=''
+                            />
+                            <div className='play-btn'></div>
+                          </div>
+                        </div>
+                      </Col>
+                      <Col lg={4}>
+                        <div className='video-box'>
+                          <div
+                            className='media-box'
+                            data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                            onClick={(e) => playVideo(e.target.parentNode)}
+                          >
+                            <img
+                              src='src/assets/images/training/traning-vid-1.jpeg'
+                              alt=''
+                            />
+                            <div className='play-btn'></div>
+                          </div>
+                        </div>
+                      </Col>
+                      {more && getMoreItems()}
+                    </Row>
+
+                    <Button
+                      color='primary'
+                      className='btn btn-primary waves-effect waves-light'
+                      onClick={() => setMore(true)}
+                    >
+                      Load more
+                    </Button>
+                  </Col>
+                </Row>
+              </div>
+              <div>
                 <Row className='justify-content-center'>
                   <Col xl={10}>
                     <div>
                       <hr className='mb-4' />
-
+                      <h3 style={{ textAlign: "center", marginBottom: "20px" }}>
+                        How to add records
+                      </h3>
                       <Row>
-                        <Col lg={6}>
+                        <Col lg={4}>
                           <div className='video-box'>
                             <div
                               className='media-box'
@@ -112,7 +292,7 @@ const BlogGrid = () => {
                             </div>
                           </div>
                         </Col>
-                        <Col lg={6}>
+                        <Col lg={4}>
                           <div className='video-box'>
                             <div
                               className='media-box'
@@ -127,7 +307,7 @@ const BlogGrid = () => {
                             </div>
                           </div>
                         </Col>
-                        <Col lg={6}>
+                        <Col lg={4}>
                           <div className='video-box'>
                             <div
                               className='media-box'
@@ -142,7 +322,7 @@ const BlogGrid = () => {
                             </div>
                           </div>
                         </Col>
-                        <Col lg={6}>
+                        <Col lg={4}>
                           <div className='video-box'>
                             <div
                               className='media-box'
@@ -157,7 +337,7 @@ const BlogGrid = () => {
                             </div>
                           </div>
                         </Col>
-                        <Col lg={6}>
+                        <Col lg={4}>
                           <div className='video-box'>
                             <div
                               className='media-box'
@@ -172,7 +352,152 @@ const BlogGrid = () => {
                             </div>
                           </div>
                         </Col>
-                        <Col lg={6}>
+                        <Col lg={4}>
+                          <div className='video-box'>
+                            <div
+                              className='media-box'
+                              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                              onClick={(e) => playVideo(e.target.parentNode)}
+                            >
+                              <img
+                                src='src/assets/images/training/traning-vid-1.jpeg'
+                                alt=''
+                              />
+                              <div className='play-btn'></div>
+                            </div>
+                          </div>
+                        </Col>
+                      </Row>
+
+                      <hr className='my-4' />
+                      <div className='text-center'>
+                        <ul className='pagination justify-content-center pagination-rounded'>
+                          <li className='page-item disabled'>
+                            <Link to='#' className='page-link'>
+                              <i className='mdi mdi-chevron-left'></i>
+                            </Link>
+                          </li>
+                          <li className='page-item active'>
+                            <Link to='#' className='page-link'>
+                              1
+                            </Link>
+                          </li>
+                          <li className='page-item'>
+                            <Link to='#' className='page-link'>
+                              2
+                            </Link>
+                          </li>
+                          <li className='page-item'>
+                            <Link to='#' className='page-link'>
+                              3
+                            </Link>
+                          </li>
+                          <li className='page-item'>
+                            <Link to='#' className='page-link'>
+                              ...
+                            </Link>
+                          </li>
+                          <li className='page-item'>
+                            <Link to='#' className='page-link'>
+                              10
+                            </Link>
+                          </li>
+                          <li className='page-item'>
+                            <Link to='#' className='page-link'>
+                              <i className='mdi mdi-chevron-right'></i>
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+              <div>
+                <Row className='justify-content-center'>
+                  <Col xl={10}>
+                    <div>
+                      <hr className='mb-4' />
+                      <h3 style={{ textAlign: "center", marginBottom: "20px" }}>
+                        Training video 1
+                      </h3>
+                      <Row>
+                        <Col lg={4}>
+                          <div className='video-box'>
+                            <div
+                              className='media-box'
+                              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                              onClick={(e) => playVideo(e.target.parentNode)}
+                            >
+                              <img
+                                src='src/assets/images/training/traning-vid-1.jpeg'
+                                alt=''
+                              />
+                              <div className='play-btn'></div>
+                            </div>
+                          </div>
+                        </Col>
+                        <Col lg={4}>
+                          <div className='video-box'>
+                            <div
+                              className='media-box'
+                              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                              onClick={(e) => playVideo(e.target.parentNode)}
+                            >
+                              <img
+                                src='src/assets/images/training/traning-vid-1.jpeg'
+                                alt=''
+                              />
+                              <div className='play-btn'></div>
+                            </div>
+                          </div>
+                        </Col>
+                        <Col lg={4}>
+                          <div className='video-box'>
+                            <div
+                              className='media-box'
+                              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                              onClick={(e) => playVideo(e.target.parentNode)}
+                            >
+                              <img
+                                src='src/assets/images/training/traning-vid-1.jpeg'
+                                alt=''
+                              />
+                              <div className='play-btn'></div>
+                            </div>
+                          </div>
+                        </Col>
+                        <Col lg={4}>
+                          <div className='video-box'>
+                            <div
+                              className='media-box'
+                              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                              onClick={(e) => playVideo(e.target.parentNode)}
+                            >
+                              <img
+                                src='src/assets/images/training/traning-vid-1.jpeg'
+                                alt=''
+                              />
+                              <div className='play-btn'></div>
+                            </div>
+                          </div>
+                        </Col>
+                        <Col lg={4}>
+                          <div className='video-box'>
+                            <div
+                              className='media-box'
+                              data-vid='https://www.youtube.com/embed/ILmeK5CNHFM'
+                              onClick={(e) => playVideo(e.target.parentNode)}
+                            >
+                              <img
+                                src='src/assets/images/training/traning-vid-1.jpeg'
+                                alt=''
+                              />
+                              <div className='play-btn'></div>
+                            </div>
+                          </div>
+                        </Col>
+                        <Col lg={4}>
                           <div className='video-box'>
                             <div
                               className='media-box'
@@ -236,158 +561,25 @@ const BlogGrid = () => {
             </TabPane>
 
             <TabPane tabId='2'>
-              {/* <div>
-                <Row className='justify-content-center'>
-                  <Col xl={8}>
-                    <h5>Archive</h5>
-
-                    <div className='mt-5'>
-                      <div className='d-flex flex-wrap'>
-                        <div className='ms-2'>
-                          <h4>2020</h4>
-                        </div>
-                        <div className='ms-auto'>
-                          <span className='badge badge-soft-success badge-pill float-right ms-1 font-size-12'>
-                            03
-                          </span>
-                        </div>
-                      </div>
-                      <hr className='mt-2' />
-
-                      <div className='list-group list-group-flush'>
-                        <Link
-                          to='/blog-details'
-                          className='list-group-item text-muted'
-                        >
-                          <i className='mdi mdi-circle-medium ms-1'></i>{" "}
-                          Beautiful Day with Friends
-                        </Link>
-
-                        <Link
-                          to='/blog-details'
-                          className='list-group-item text-muted'
-                        >
-                          <i className='mdi mdi-circle-medium ms-1'></i> Drawing
-                          a sketch
-                        </Link>
-
-                        <Link
-                          to='/blog-details'
-                          className='list-group-item text-muted'
-                        >
-                          <i className='mdi mdi-circle-medium ms-1'></i> Project
-                          discussion with team
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className='mt-5'>
-                      <div className='d-flex flex-wrap'>
-                        <div className='ms-2'>
-                          <h4>2019</h4>
-                        </div>
-                        <div className='ms-auto'>
-                          <span className='badge badge-soft-success badge-pill float-right ms-1 font-size-12'>
-                            06
-                          </span>
-                        </div>
-                      </div>
-                      <hr className='mt-2' />
-
-                      <div className='list-group list-group-flush'>
-                        <Link
-                          to='/blog-details'
-                          className='list-group-item text-muted'
-                        >
-                          <i className='mdi mdi-circle-medium ms-1'></i> Coffee
-                          with Friends
-                        </Link>
-
-                        <Link
-                          to='/blog-details'
-                          className='list-group-item text-muted'
-                        >
-                          <i className='mdi mdi-circle-medium ms-1'></i> Neque
-                          porro quisquam est
-                        </Link>
-
-                        <Link
-                          to='/blog-details'
-                          className='list-group-item text-muted'
-                        >
-                          <i className='mdi mdi-circle-medium ms-1'></i> Quis
-                          autem vel eum iure
-                        </Link>
-
-                        <Link
-                          to='/blog-details'
-                          className='list-group-item text-muted'
-                        >
-                          <i className='mdi mdi-circle-medium ms-1'></i> Cras mi
-                          eu turpis
-                        </Link>
-
-                        <Link
-                          to='/blog-details'
-                          className='list-group-item text-muted'
-                        >
-                          <i className='mdi mdi-circle-medium ms-1'></i> Drawing
-                          a sketch
-                        </Link>
-
-                        <Link
-                          to='/blog-details'
-                          className='list-group-item text-muted'
-                        >
-                          <i className='mdi mdi-circle-medium ms-1'></i> Project
-                          discussion with team
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className='mt-5'>
-                      <div className='d-flex flex-wrap'>
-                        <div className='ms-2'>
-                          <h4>2018</h4>
-                        </div>
-                        <div className='ms-auto'>
-                          <span className='badge badge-soft-success badge-pill float-right ms-1 font-size-12'>
-                            03
-                          </span>
-                        </div>
-                      </div>
-                      <hr className='mt-2' />
-
-                      <div className='list-group list-group-flush'>
-                        <Link
-                          to='/blog-details'
-                          className='list-group-item text-muted'
-                        >
-                          <i className='mdi mdi-circle-medium ms-1'></i>{" "}
-                          Beautiful Day with Friends
-                        </Link>
-
-                        <Link
-                          to='/blog-details'
-                          className='list-group-item text-muted'
-                        >
-                          <i className='mdi mdi-circle-medium ms-1'></i> Drawing
-                          a sketch
-                        </Link>
-
-                        <Link
-                          to='/blog-details'
-                          className='list-group-item text-muted'
-                        >
-                          <i className='mdi mdi-circle-medium ms-1'></i> Project
-                          discussion with team
-                        </Link>
-                      </div>
-                    </div>
-                  </Col>
-                </Row>
-              </div> */}
-              <RecentFile />
+              {pdfs.map((pdf) => {
+                return (
+                  <>
+                    <ListItemText key={pdf.text}>
+                      <ListItemIcon>
+                        <ArrowRightIcon />
+                      </ListItemIcon>
+                      <a
+                        href='https://www.africau.edu/images/default/sample.pdf'
+                        className='text-info'
+                        target='_blank'
+                      >
+                        {pdf.text}
+                      </a>
+                    </ListItemText>
+                  </>
+                );
+              })}
+              {/* <RecentFile /> */}
             </TabPane>
           </TabContent>
         </Card>

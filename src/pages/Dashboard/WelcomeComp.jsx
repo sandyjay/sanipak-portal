@@ -43,9 +43,6 @@ const WelcomeComp = () => {
                     <h5 className='font-size-35'>Client Name</h5>
                     <p className='mb-1'>Kaylah Blas</p>
                     <p className='text-muted mb-0'>
-                      Associate Facility Planner
-                    </p>
-                    <p className='text-muted mb-0'>
                       Intermountain Medical Center
                     </p>
                   </Col>

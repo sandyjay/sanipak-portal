@@ -1,51 +1,70 @@
-import React, { useEffect, useMemo, useState } from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import { isEmpty } from "lodash";
 import "bootstrap/dist/css/bootstrap.min.css";
-import TableContainer from "../../../components/Common/TableContainer";
-import * as Yup from "yup";
 import { useFormik } from "formik";
+import { isEmpty } from "lodash";
+import PropTypes from "prop-types";
+import React, { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
+import * as Yup from "yup";
+import TableContainer from "../../../components/Common/TableContainer";
 
 //import components
-import Breadcrumbs from "../../../components/Common/Breadcrumb";
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
 import DeleteModal from "../../../components/Common/DeleteModal";
 
+
+
 import {
-  getOrders as onGetOrders,
   addNewOrder as onAddNewOrder,
-  updateOrder as onUpdateOrder,
   deleteOrder as onDeleteOrder,
+  getOrders as onGetOrders,
+  updateOrder as onUpdateOrder,
 } from "/src/store/actions";
 
 import {
-  OrderId,
   BillingName,
   Date,
-  Total,
-  PaymentStatus,
-  PaymentMethod,
+  OrderId,
+  PaymentStatus
 } from "./EcommerceOrderCol";
 
 //redux
-import { useSelector, useDispatch } from "react-redux";
-import EcommerceOrdersModal from "./EcommerceOrdersModal";
-
+import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { useDispatch, useSelector } from "react-redux";
 import {
-  Button,
-  Col,
-  Row,
-  UncontrolledTooltip,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  Form,
-  Input,
-  FormFeedback,
-  Label,
   Card,
   CardBody,
+  //Button,
+  Col,
+  Form,
+  FormFeedback,
+  Input,
+  Label,
+  Modal,
+  ModalBody,
+  ModalHeader,
+  Row,
+  UncontrolledTooltip,
+  FormGroup
 } from "reactstrap";
+import EcommerceOrdersModal from "./EcommerceOrdersModal";
+
+const VisuallyHiddenInput = styled('input')({
+  clip: 'rect(0 0 0 0)',
+  clipPath: 'inset(50%)',
+  height: 1,
+  overflow: 'hidden',
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  whiteSpace: 'nowrap',
+  width: 1,
+});
 
 function EcommerceOrder() {
   //meta title
@@ -57,7 +76,14 @@ function EcommerceOrder() {
 
   const [orderList, setOrderList] = useState([]);
   const [order, setOrder] = useState(null);
+  const [showChamber, setShowChamber] = useState(false)
+  const [showChamberUsage, setShowChamberUsage] = useState(false)
+  const [showCreatedby, setShowCreatedby] = useState(false)
+  const [value, setValue] = React.useState(30);
 
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   // validation
   const validation = useFormik({
     // enableReinitialize : use this flag when initial values needs to be changed
@@ -273,7 +299,7 @@ function EcommerceOrder() {
         Cell: (cellProps) => {
           return "36 degrees";
         },
-      },
+      }, 
 
       {
         Header: "Incubation start time",
@@ -289,6 +315,23 @@ function EcommerceOrder() {
         disableFilters: true,
         Cell: (cellProps) => {
           return "2023-01-06, 04:19PM";
+        },
+      },
+      {
+        Header: "Images",
+        accessor: "images",
+        disableFilters: true,
+        Cell: (cellProps) => {
+          return (<Link
+          to='#'
+          className='text-info'
+          onClick={() => {
+            const orderData = cellProps.row.original;
+            handleOrderClick(orderData);
+          }}
+        >
+        View images
+        </Link>)
         },
       },
       {
@@ -400,27 +443,6 @@ function EcommerceOrder() {
                       ) : null}
                     </div>
                     <div className='mb-3'>
-                      <Label className='form-label'>Version</Label>
-                      <Input
-                        name='version'
-                        type='select'
-                        placeholder='Insert Payment Status'
-                        className='form-select'
-                        onChange={validation.handleChange}
-                        onBlur={validation.handleBlur}
-                        value={validation.values.paymentStatus || ""}
-                      >
-                        <option>Test</option>
-                        <option>Control</option>
-                      </Input>
-                      {validation.touched.paymentStatus &&
-                      validation.errors.paymentStatus ? (
-                        <FormFeedback type='invalid'>
-                          {validation.errors.paymentStatus}
-                        </FormFeedback>
-                      ) : null}
-                    </div>
-                    <div className='mb-3'>
                       <Label className='form-label'>Test Date</Label>
                       <Input
                         name='orderdate'
@@ -445,8 +467,55 @@ function EcommerceOrder() {
                       ) : null}
                     </div>
                     <div className='mb-3'>
-                      <Label className='form-label'>Chamber #</Label>
+                      <Label className='form-label'>Version</Label>
                       <Input
+                        name='version'
+                        type='select'
+                        placeholder='Insert Payment Status'
+                        className='form-select'
+                        onChange={(e)=>{ e.target.value === "test" ? setShowChamber(true) : setShowChamber(false)
+                        console.log(e.target.value)}}
+                        onBlur={validation.handleBlur}
+                        value={validation.values.paymentStatus || ""}
+                      >
+                        <option value="">Select</option>
+                        <option value="test">Test</option>
+                        <option value="control">Control</option>
+                      </Input>
+                      {validation.touched.paymentStatus &&
+                      validation.errors.paymentStatus ? (
+                        <FormFeedback type='invalid'>
+                          {validation.errors.paymentStatus}
+                        </FormFeedback>
+                      ) : null}
+                    </div>
+
+                    <div className='mb-3'>
+                    {  showChamber &&  <><Label className='form-label'>Are you using multiple chambers?</Label>
+                 <Input
+                        name='version'
+                        type='select'
+                        placeholder='Insert Payment Status'
+                        className='form-select'
+                        onChange={(e)=>{ e.target.value === "yes" ? setShowChamberUsage(true) : setShowChamberUsage(false)
+                        console.log(e.target.value)}}
+                       
+                      >
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </Input></>}
+                      {validation.touched.paymentStatus &&
+                      validation.errors.paymentStatus ? (
+                        <FormFeedback type='invalid'>
+                          {validation.errors.paymentStatus}
+                        </FormFeedback>
+                      ) : null}
+                    </div>
+              
+                    <div className='mb-3'>
+                      {showChamberUsage && <><Label className='form-label'>Chamber #</Label>
+                      {/* <Input
                         name='chamber'
                         type='text'
                         placeholder='For eg chamber 1'
@@ -462,15 +531,26 @@ function EcommerceOrder() {
                             ? true
                             : false
                         }
-                      />
-                      {validation.touched.chamber &&
+                      /> */}
+                      <Box margin={2}>
+                      <Slider
+  aria-label="Chamber"
+  defaultValue={2}
+  valueLabelDisplay="on"
+  step={5}
+  marks
+  min={1}
+  max={5}
+/></Box>
+                      </>}
+                      {showChamber &&
                       validation.errors.chamber ? (
                         <FormFeedback type='invalid'>
                           {validation.errors.chamber}
                         </FormFeedback>
                       ) : null}
                     </div>
-                    <div className='mb-3'>
+                    {/* <div className='mb-3'>
                       <Label className='form-label'>Results</Label>
                       <Input
                         name='paymentStatus'
@@ -481,8 +561,8 @@ function EcommerceOrder() {
                         onBlur={validation.handleBlur}
                         value={validation.values.paymentStatus || ""}
                       >
-                        <option>Pass</option>
-                        <option>Fail</option>
+                        <option value="pass">Pass</option>
+                        <option value="fail">Fail</option>
                       </Input>
                       {validation.touched.paymentStatus &&
                       validation.errors.paymentStatus ? (
@@ -490,7 +570,7 @@ function EcommerceOrder() {
                           {validation.errors.paymentStatus}
                         </FormFeedback>
                       ) : null}
-                    </div>
+                    </div> */}
                     <div className='mb-3'>
                       <Label className='form-label'>Color</Label>
                       <Input
@@ -520,7 +600,7 @@ function EcommerceOrder() {
                       <Input
                         name='total'
                         placeholder='Temperature in degrees'
-                        type='text'
+                        type='select'
                         onChange={validation.handleChange}
                         onBlur={validation.handleBlur}
                         value={validation.values.total || ""}
@@ -529,7 +609,9 @@ function EcommerceOrder() {
                             ? true
                             : false
                         }
-                      />
+                        > <option>56 degress celcius</option>
+                        <option>60 degress celcius</option></Input>
+                   
                       {validation.touched.total && validation.errors.total ? (
                         <FormFeedback type='invalid'>
                           {validation.errors.total}
@@ -540,20 +622,11 @@ function EcommerceOrder() {
                       <Label className='form-label'>
                         Incubation start time
                       </Label>
-                      <Input
-                        name='paymentMethod'
-                        placeholder='HH:MM'
-                        type='text'
-                        onChange={validation.handleChange}
-                        onBlur={validation.handleBlur}
-                        value={validation.values.paymentMethod || ""}
-                        invalid={
-                          validation.touched.paymentMethod &&
-                          validation.errors.paymentMethod
-                            ? true
-                            : false
-                        }
-                      />
+                      <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <DemoContainer components={['DateTimePicker']}>
+        <DateTimePicker label="" />
+      </DemoContainer>
+    </LocalizationProvider>
                       {validation.touched.paymentMethod &&
                       validation.errors.paymentMethod ? (
                         <FormFeedback type='invalid'>
@@ -562,10 +635,11 @@ function EcommerceOrder() {
                       ) : null}
                     </div>
                     <div className='mb-3'>
-                      <Label className='form-label'>Incubation end time</Label>
+                      <Label className='form-label'>Total time</Label>
+              
                       <Input
                         name='paymentMethosd'
-                        placeholder='HH:MM'
+                        placeholder='10'
                         type='text'
                         onChange={validation.handleChange}
                         onBlur={validation.handleBlur}
@@ -584,6 +658,42 @@ function EcommerceOrder() {
                         </FormFeedback>
                       ) : null}
                     </div>
+                    <FormGroup>
+          <Label for="exampleSelect">Created by</Label>
+          <Input type="select" name="select" id="exampleSelect" onChange={(e)=>{ e.target.value === "ADD_NEW" ? setShowCreatedby(true) : setShowCreatedby(false)}}
+ >
+            <option>Select</option>
+            <option value="ADD_NEW">Add new</option>
+            <option>Kaylah Blas</option>
+            <option>Christopher Johnson</option>
+            <option>Adam Brown</option>
+          </Input>
+        </FormGroup>
+        {showCreatedby && <div className='mb-3'>
+                      <Label className='form-label'>Name</Label>
+              
+                      <Input
+                        name='paymentMethosd'
+                        type='text'
+                        onBlur={validation.handleBlur}
+                        invalid={
+                          validation.touched.paymentMethosd &&
+                          validation.errors.paymentMethosd
+                            ? true
+                            : false
+                        }
+                      />
+                      {validation.touched.paymentMethosd &&
+                      validation.errors.paymentMethosd ? (
+                        <FormFeedback type='invalid'>
+                          {validation.errors.paymentMethosd}
+                        </FormFeedback>
+                      ) : null}
+                    </div>}
+                    <div className="mb-3"><Button component="label" variant="contained">
+  Upload file
+  <VisuallyHiddenInput type="file" />
+</Button></div>
                   </Col>
                 </Row>
                 <Row>
